@@ -1,0 +1,234 @@
+// ============================================= 
+//Grid Systems                      
+// =============================================
+  
+
+
+.grid {
+    //Fill up the screen here
+    max-width: 767px;
+    // height: auto;
+    display: grid;
+    background-color: red;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px minmax(200px, 1fr) minmax(200px, 1fr) 200px;
+    grid-column-gap: 20px; 
+    grid-row-gap: 3px;  
+
+    grid-template-areas:  
+    "header header"
+    "nav nav"
+    "main main"
+    "main main"
+    "footer footer";
+
+    // grid-template-areas:  
+    // "header header"
+    // "main nav"
+    // "aside aside"
+    // "footer footer";
+}
+
+header {
+    display: grid;
+    background-color: darkorchid;
+    grid-area: header;
+    text-align: center;
+}
+
+nav {
+    display: grid;
+    background-color: beige;
+    grid-area: nav;
+    text-align: center;
+}
+
+aside {
+    display: grid;
+    background-color: orange;
+    grid-area: aside;
+    text-align: center;
+}
+
+footer {
+    display: grid;
+    background-color: pink;
+    grid-area: footer;
+    text-align: center;
+}
+
+main {
+    display: grid;
+    background-color: blue;
+    grid-area: main;
+    text-align: center;
+}
+//========================//
+// HEADER GRID PROPERTIES //
+//========================//
+
+.header-container {
+    display: grid;
+    max-width: 767px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: minmax(200px, 1fr);
+    grid-template-areas:  
+        "header-1 header-2 header-3 header-4 header-5";
+    justify-content: center;
+}
+
+.header-1 {
+    display: grid;
+    grid-area: header-1;
+}
+
+.header-2 {
+    display: grid;
+    grid-area: header-2;
+}
+
+.header-3 {
+    display: grid;
+    grid-area: header-3;
+}
+
+
+.header-4 {
+    display: grid;
+    grid-area: header-4;
+}
+
+.header-5 {
+    display: grid;
+    grid-area: header-5;
+}
+
+
+//=============================================================================//
+
+@media only screen and (min-width: 768px) {
+
+    .grid {
+        max-width: 768px;    
+        
+        // grid-template-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
+
+        grid-template-rows: 200px minmax(200px, 1fr) minmax(200px, 1fr)  100px;
+    
+        // Going to comment out for now
+        // grid-template-areas:  
+        // "header header"
+        // "main nav"
+        // "aside aside"
+        // "footer footer";
+    }
+    
+
+//===============//
+// Main Flex Box //
+//===============//
+
+//Use width 100% to fill ip the page in amke it responsive
+
+
+.main-container {
+    display: flex;
+    flex-direction: rows;
+}
+
+.about-me-container {
+    display: flex;
+    flex-direction: column;
+   
+}
+
+
+.announcment-countainer {
+    display: flex;
+    flex-direction: column;
+}
+
+//===============//
+// Aside Flex Box //
+//===============//
+
+
+.content-container {   //A grid within a grid!!!!!!
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 200px 200px;
+grid-column-gap: 20px; 
+grid-row-gap: 20px;  
+grid-template-areas: 
+"video video"
+"podcast blog";
+
+}
+
+
+// Because it automatically targets the upper grid >>>> no need to specify
+.video-content { //Thes class chosen classes now take effect with grid area!!!!
+display: grid;
+grid-area: video;
+
+}
+
+.podcast-content {
+    display: grid;
+grid-area: podcast;
+
+}
+
+.blog-content {
+    display: grid;
+grid-area: blog;
+}
+
+
+//===============//
+// The flex half as way of doing it //
+//===============//
+// .content-container {
+//     display: flex;
+//     flex-direction: row;
+    
+//     }
+    
+    
+//     .video-content {
+//     display: flex;
+//     flex-direction: column;
+    
+//     }
+    
+//     .podcast-content {
+//         display: flex;
+//         flex-direction: column;
+//     }
+    
+//     .blog-content {
+//         display: flex;
+//         flex-direction: column;
+    
+    
+    
+
+}
+
+
+
+
+// .row {
+//     display: flex;
+//     flex-direction: row;
+//     flex-wrap: wrap;
+//     width: 100%;
+//   }
+  
+//   .column {
+//     display: flex;
+//     flex-direction: column;
+//     flex-basis: 100%;
+//     flex: 1;
