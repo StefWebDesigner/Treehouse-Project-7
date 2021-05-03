@@ -52,12 +52,12 @@ main {
     text-align: center;
 }
 
-aside {
-    display: grid;
-    background-color: blue;
-    grid-area: aside;
-    text-align: center;
-}
+// aside {
+//     display: grid;
+//     background-color: blue;
+//     grid-area: aside;
+//     text-align: center;
+// }
 
 footer {
     display: grid;
@@ -202,19 +202,31 @@ footer {
     max-width: 320px;
     grid-template-columns: 1fr;
     // grid-template-rows: minmax(200px) minmax(200px);
-    grid-template-rows: 50px 100px;
+    grid-template-rows: 100px 100px 100px 100px;
 
     // Need to make the divisions
     grid-template-areas:  //For some reason, its is double collumn!!!! BE AWARE YO!!!!!
+        "traffic-label traffic-label"
         "traffic-nav traffic-nav "
+        "daily-label daily-label"
         "widget-container-full widget-container-full";
-    justify-content: center;
 }
 
 //The main division for traffic-nav
+
+.traffic-label {
+    display: grid;
+    grid-area: traffic-label;
+}
+
 .traffic-nav {
     display: grid;
     grid-area: traffic-nav;
+}
+
+.daily-label {
+    display: grid;
+    grid-area: daily-label;
 }
 
 .widget-container-full {
