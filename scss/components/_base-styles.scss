@@ -3,9 +3,24 @@
 // =============================================
 
 
+// traffic header grid rules
 
-img {
+.traffic-nav {
+    margin: auto;
+}
 
-width: 200px;
-height: 200px;
+.traffic-nav-link-1, .traffic-nav-link-1
+.traffic-nav-link-active-3, .traffic-nav-link-4 {
+    margin: auto;
+}
+
+.main-header {
+display: inline;
+margin: auto;
+}
+
+.main-header-search {
+// width: 50%;
+width: 25%;
+
 }

@@ -9,12 +9,13 @@
     max-width: 767px;
     // height: auto;
     display: grid;
-    background-color: red;
+    // background-color: red;
 
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 200px minmax(200px, 1fr) minmax(200px, 1fr) 200px;
-    grid-column-gap: 20px; 
-    grid-row-gap: 3px;  
+    //THIS CONTROLS THE SIZE OF THE ROWS HEIGHT
+    grid-template-rows: 50px 50px 50px 200px;
+    grid-column-gap: 20px; //TAKE THIS OUT LATER ON
+    // grid-row-gap: 3px;  
 
     grid-template-areas:  
     "header header"
@@ -32,21 +33,28 @@
 
 header {
     display: grid;
-    background-color: darkorchid;
+    background-color: #826AEE;
     grid-area: header;
     text-align: center;
 }
 
 nav {
     display: grid;
-    background-color: beige;
+    background-color: #4F2CEE;
     grid-area: nav;
+    text-align: center;
+}
+
+main {
+    display: grid;
+    background-color: white;
+    grid-area: main;
     text-align: center;
 }
 
 aside {
     display: grid;
-    background-color: orange;
+    background-color: blue;
     grid-area: aside;
     text-align: center;
 }
@@ -58,21 +66,17 @@ footer {
     text-align: center;
 }
 
-main {
-    display: grid;
-    background-color: blue;
-    grid-area: main;
-    text-align: center;
-}
 //========================//
 // HEADER GRID PROPERTIES //
 //========================//
 
+// Sub Header Container
 .header-container {
     display: grid;
-    max-width: 767px;
+    // max-width: 767px; // This is for the larger sizes
+    max-width: 320px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: minmax(200px, 1fr);
+    grid-template-rows: minmax(200px);
     grid-template-areas:  
         "header-1 header-2 header-3 header-4 header-5";
     justify-content: center;
@@ -102,6 +106,180 @@ main {
 .header-5 {
     display: grid;
     grid-area: header-5;
+}
+
+//------------------------------
+
+// Sub NAV CONTAINER
+
+.nav-container {
+    display: grid;
+    // max-width: 767px; // This is for the larger sizes
+    max-width: 320px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: minmax(200px);
+    grid-template-areas:  
+        "nav-1 nav-2 nav-3 nav-4";
+    justify-content: center;
+}
+
+.nav-1 {
+    display: grid;
+    grid-area: nav-1;
+}
+
+.nav-2 {
+    display: grid;
+    grid-area: nav-2;
+}
+
+.nav-3 {
+    display: grid;
+    grid-area: nav-3;
+}
+
+.nav-4 {
+    display: grid;
+    grid-area: nav-4;
+}
+
+//--------------------------
+
+// Sub NAV CONTAINER
+
+//The divisions arent responding
+.main-container {
+    display: grid;
+    // max-width: 767px; // This is for the larger sizes
+    max-width: 320px;
+    grid-template-columns: 1fr;
+    // grid-template-rows: minmax(200px);
+    grid-template-rows: minmax(200px) minmax(200px) minmax(200px) minmax(200px);
+
+    // Need to make the divisions
+    grid-template-areas:  
+        "main-header"
+        "alert"
+        "traffic" 
+        "daily";
+    justify-content: center;
+}
+
+// I just need to  make this horizontal >>> hopefully easy work!!!
+.main-header {
+    display: grid;
+    grid-area: main-header;
+}
+
+//It requires javascript
+.alert {
+    display: grid;
+    grid-area: alert;
+}
+
+//Need to make a subgrid for it
+.traffic { //This is the parent subgrid for .traffic-header
+    display: grid;
+    grid-area: traffic;
+}
+
+.daily {
+    display: grid;
+    grid-area: daily;
+}
+
+// .social- {
+//     display: grid;
+//     grid-area: daily;
+// }
+
+// ============================================================
+
+//This is the child frid for .traffic
+.traffic-header {
+    display: grid;
+    // max-width: 767px; // This is for the larger sizes
+    max-width: 320px;
+    grid-template-columns: 1fr;
+    // grid-template-rows: minmax(200px) minmax(200px);
+    grid-template-rows: 50px 100px;
+
+    // Need to make the divisions
+    grid-template-areas:  //For some reason, its is double collumn!!!! BE AWARE YO!!!!!
+        "traffic-nav traffic-nav "
+        "widget-container-full widget-container-full";
+    justify-content: center;
+}
+
+//The main division for traffic-nav
+.traffic-nav {
+    display: grid;
+    grid-area: traffic-nav;
+}
+
+.widget-container-full {
+    display: grid;
+    grid-area: widget-container-full;
+}
+
+// ==================================
+
+// grandchild grid for traffic-nav
+.traffic-nav {
+    display: grid;
+    // max-width: 767px; // This is for the larger sizes
+    max-width: 320px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: minmax(200px);
+    // Need to make the divisions
+    grid-template-areas:  
+        "traffic-nav-link-1 traffic-nav-link-2 traffic-nav-link-active-3 traffic-nav-link-4";
+    justify-content: center;
+}
+
+// .traffic-nav-link .1 
+.traffic-nav-link-1 {
+    display: grid;
+    grid-area: traffic-nav-link-1;
+}
+
+// .traffic-nav-link .2 {
+.traffic-nav-link-2 {
+    display: grid;
+    grid-area: traffic-nav-link-2;
+}
+
+// .traffic-nav-link-active .3 {
+.traffic-nav-link-active-3 {
+    display: grid;
+    grid-area: traffic-nav-link-active-3;
+}
+
+// .traffic-nav-link .4 {
+.traffic-nav-link-4 {
+    display: grid;
+    grid-area: traffic-nav-link-4;
+}
+
+
+// =========================================
+
+// grandchild grid for widget-container-full
+.widget-container-full {
+    display: grid;
+    // max-width: 767px; // This is for the larger sizes
+    max-width: 320px;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(200px);
+    // Need to make the divisions
+    grid-template-areas:  
+        "widget-grid-item";
+    justify-content: center;
+}
+
+widget-grid-item {
+    display: grid;
+    grid-area: widget-grid-item;
 }
 
 

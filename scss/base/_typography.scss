@@ -11,13 +11,22 @@ h1, h3, p {
   color: white;
 }
 
-header h1 {
-  font-size: 25px;
+header h1, header h3 {
+  // font-size: 25px;
+  font-size: 15px;
   padding-left: 2px;
-  text-align: center;
+  // text-align: center;
+  margin: auto;
+
 }
 
-header p {
-  font-size: 25px;
-  text-align: center;
+header h3 {
+
+text-align: unset;
+margin-bottom: 10px;
+
+}
+
+.headline {
+font-size: 12px;
 }

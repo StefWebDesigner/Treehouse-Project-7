@@ -7,20 +7,35 @@
 //=========//
 
 header img {
-    width: 75px;
-    height: 75px;
+    // width: 75px;
+    // height: 75px;
+    width: 37px;
+    height: 37px;
     border: 1px solid white;
     border-radius: 100px;
-    margin-top: 5px;
+    margin-top: 3px;
     justify-content: center;
     // margin-right: 5px;
 }
-
+//Change accordingly to the nav img
 header svg {
-    margin-top: 5px;
-    margin-left: 10px;
-    
-    justify-content: center;
+    // margin-top: 5px;
+    // margin-left: 10px;
+    width: 80%;
+    height: auto;
+    color: white;
+    margin: auto;
+}
 
+//need to make the images smaller
+nav img {
+    width: 50%;
+    height: auto;
+    //Got to double center it
+    margin: auto;
+}
 
+nav a {
+    //Got to double center it
+    margin: auto;
 }
