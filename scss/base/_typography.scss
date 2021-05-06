@@ -58,7 +58,7 @@ margin-right: 20px;
 
 // Members Font Styles
 
-.member-label {
+.member-label, .message-label {
 text-align: left;
 color: black;
 margin-left: 15px;
@@ -72,8 +72,8 @@ color: $main-purple;
 .members-text, .profile-name, .profile-birth {
 color: black;
 margin-bottom: 20px;
-
 }
+
 
 
 

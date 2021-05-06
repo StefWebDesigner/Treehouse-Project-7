@@ -1,0 +1,21 @@
+
+// Form
+
+// Message Support 
+
+.form-field {
+    margin: auto;
+    text-align: center;
+    background-color: $seconday-white;
+    @include main-border-style;
+}
+
+.message-textarea {
+    margin: auto;
+    margin-top: 5px;
+    text-align: center; 
+    background-color: $seconday-white;
+    @include main-border-style;
+}
+
+

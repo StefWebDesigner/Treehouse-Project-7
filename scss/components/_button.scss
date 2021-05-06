@@ -3,12 +3,17 @@
 // =============================================
 
   
-.alert-btn {
+.alert-btn, .button-primary  {
 color: $defult-white; 
 width: 70%;
-border: 1px solid $main-purple;
 background-color: $main-purple;
 margin: auto;
-border-radius: 5px;
 margin-top: 10px;
+@include main-border-style;
+}
+
+.button-primary {
+margin: auto;
+margin-top: 5px;
+width: 98%;
 }

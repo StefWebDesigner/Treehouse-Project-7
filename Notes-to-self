@@ -10,13 +10,64 @@ Day 1:
 - get the proper section labelled correctly
 - got the header elements on
 
+Day 2: (optimizing)
+- have the bell close to the bar
+- reduce the total size of the header section 
+(navigation)
+- insted the nav images
+- change the color
+
+Day 3: 
+- made and polished the button
+- centered the input & fixed the dashboard
+
+Troubleshooting (fixed):
+- traffic header grid formation is inconsistant with their positions
+- Weekly Monthly is the reason why it is scewd - traffic-nav
+- gradchild sytantis issues with widget containers
+
+Day 4:
+- made the grid simple
+- set all the grid working
+- the traffic and daily heading showing
+- add twitter text parts
+
+--------------
+
+Day 5:
+- Reorganized the colors into variables
+- fixed the social-text, now registering both collumns
+- make a border around pictures (make it centered)
+- make a border around stat peices
+- made the social media stats/formated correctly/color scheemed
+- add members
+- make the new grid & make it functional
+
+
+
 ====================
 /   things to do  /
 ===================
 
-Day 1:
-- have the bell close to the bar
-- reduce the total size of the header section 
+Day 5: (Social):
+- get the message grid up & running
+- fix how the overlap of the date and name
+- add line breaks to each
+
+- change font to match mockup
+- sort out the the rest of the body of the app
+- need dashboard to be inline
+
+Troubleshooting:
+- try make more container (maybe I'm not setting it right)
+- grid - line 237 - This could be the problem for row fitting
+
+----------
+- add the canvas on widget
+
+
+Another day (Extra Icon Animation)
+- change the color/line of the icons
 
 
 ===========================

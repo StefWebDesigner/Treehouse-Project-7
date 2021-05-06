@@ -165,36 +165,39 @@
 
 	<!-- Messaging support widgets -->
 	<aside class="message">
-		<h3>Message User</h3>
+		<h3 class="message-label">Message User</h3>
 		<form class="widget-container">
-			<input type="text" placeholder="Search for user"
-			class="form-field" id="userField">
-			<textarea placeholder="Message for user" class="form-area"
-			id= "messageField" ></textarea>
-			<button class="button-primary" id="send" >Send</button>
+			<div class="message-group">
+				<input type="text" placeholder="Search for user"
+				class="form-field" id="userField">
+				<textarea class="message-textarea" placeholder="Message for user" class="form-area"
+				id= "messageField" ></textarea>
+				<button class="button-primary" id="send" >Send</button>
+			</div>
 		</form>
 	</aside>
-
 
 	<!-- local settings widget -->
 	<aside class="settings">
 		<h3>Settings</h3>
-		<!-- custom CSS toggle code-->
-		<!-- custom CSS toggle code-->
-		<select class="form-field" id="timezone">
-		<option disabled selected>Select a Timezone</option>
-		<option>Eastern</option>
-		<!-- more options -->
-		</select>
+		<div class="setting-container">
+			<div class="time-settings">
+				<!-- custom CSS toggle code-->
+				<!-- custom CSS toggle code-->
+				<select class="form-field" id="timezone">
+				<option disabled selected class="option-disabled">Select a Timezone</option>
+				<option>Eastern</option>
+				<!-- more options -->
+				</select>
+			</div>
 
-		<div class="settings-button" >
-			<button class="button-primary" id="save">Save</button>
-			<button class="button-disabled" id="cancel">Cancel</button>
+			<div class="settings-button" >
+				<button class="button-primary" id="save">Save</button>
+				<button class="button-disabled" id="cancel">Cancel</button>
+			</div>
+
 		</div>
 	</aside>
-
-	</div>
-</aside>
 
 
 <!-- <footer>  -->

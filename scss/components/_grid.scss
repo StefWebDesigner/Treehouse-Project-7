@@ -14,7 +14,7 @@
     grid-template-columns: 1fr 1fr;
     //THIS CONTROLS THE SIZE OF THE ROWS HEIGHT of all the catries
     //.USSE THISSSSS
-    grid-template-rows: min(50px) min(50px) min(100px) min(350px) min(500px) min(200px);
+    grid-template-rows: min(50px) min(50px) min(100px) min(350px) min(1200px) min(200px);
     grid-template-areas:  
     "header header"
     "nav nav"
@@ -400,8 +400,9 @@ widget-grid-item {
         "profile-name profile-name"
         "profile-email profile-email"
         "profile-birth profile-birth";
-    justify-content: center;
+        justify-content: center;
 }
+
 
 .profile-image {
     display: grid;
@@ -428,8 +429,126 @@ widget-grid-item {
     grid-area: profile-birth;
 }
 
+//=============================================================================//
+// Members GRAND CHILD GRID (TIER 3)
+
+// .social-group
+.widget-container {
+    display: grid;
+    // max-width: 767px; // This is for the larger sizes
+    max-width: 320px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(100px) minmax(100px) minmax(100px) minmax(100px);
+    grid-template-areas:
+    "message-input message-input"
+    "form-field form-field"
+    "message-textarea message-textarea"
+    "button-primary button-primary";
+    justify-content: center;
+}
+
+.message-input {
+    display: grid;
+    grid-area: message-input;
+}
+
+.form-field {
+    display: grid;
+    grid-area: form-field;
+}
+
+.message-textarea {
+    display: grid;
+    grid-area: message-textarea;
+}
+
+.button-primary {
+    display: grid;
+    grid-area: button-primary;
+}
 
 //=============================================================================//
+// Settings Container GRAND CHILD GRID (TIER 3)
+.settings-container {
+    display: grid;
+    // max-width: 767px; // This is for the larger sizes
+    max-width: 320px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(100px) minmax(100px);
+    grid-template-areas:
+    "time-settings time-settings"
+    "settings-button settings-button";
+    justify-content: center;
+}
+
+.time-settings {
+    display: grid;
+    grid-area: time-settings;
+}
+
+.settings-button {
+    display: grid;
+    grid-area: settings-button;
+}
+
+//=============================================================================//
+// Time Setting  Grand grand CHILD GRID (TIER 4)
+
+.time-settings {
+    display: grid;
+    // max-width: 767px; // This is for the larger sizes
+    max-width: 320px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(100px) minmax(100px) minmax(100px) minmax(100px);
+    grid-template-areas:
+    "form-field form-field"
+    "option-disabled option-disabled"
+    "option option";
+    justify-content: center;
+}
+
+.form-field {
+    display: grid;
+    grid-area: form-field;
+}
+
+.option-disabled {
+    display: grid;
+    grid-area: option-disabled;
+}
+
+.option {
+    display: grid;
+    grid-area: option;
+}
+
+//=============================================================================//
+// SETTING-BUTTON  Grand grand CHILD GRID (TIER 4)
+
+.time-settings {
+    display: grid;
+    // max-width: 767px; // This is for the larger sizes
+    max-width: 320px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(100px) minmax(100px) minmax(100px) minmax(100px);
+    grid-template-areas:
+    "button-primary button-primary"
+    "button-disabled button-disabled";
+    justify-content: center;
+}
+
+.button-primary {
+    display: grid;
+    grid-area: button-primary;
+}
+
+.button-disabled {
+    display: grid;
+    grid-area: button-disabled;
+}
+
+
+//========================================================
 
 @media only screen and (min-width: 768px) {
 
@@ -457,58 +576,58 @@ widget-grid-item {
 //Use width 100% to fill ip the page in amke it responsive
 
 
-.main-container {
-    display: flex;
-    flex-direction: rows;
-}
+// .main-container {
+//     display: flex;
+//     flex-direction: rows;
+// }
 
-.about-me-container {
-    display: flex;
-    flex-direction: column;
+// .about-me-container {
+//     display: flex;
+//     flex-direction: column;
    
-}
+// }
 
 
-.announcment-countainer {
-    display: flex;
-    flex-direction: column;
-}
+// .announcment-countainer {
+//     display: flex;
+//     flex-direction: column;
+// }
 
-//===============//
-// Aside Flex Box //
-//===============//
-
-
-.content-container {   //A grid within a grid!!!!!!
-display: grid;
-grid-template-columns: 1fr 1fr;
-grid-template-rows: 200px 200px;
-grid-column-gap: 20px; 
-grid-row-gap: 20px;  
-grid-template-areas: 
-"video video"
-"podcast blog";
-
-}
+// //===============//
+// // Aside Flex Box //
+// //===============//
 
 
-// Because it automatically targets the upper grid >>>> no need to specify
-.video-content { //Thes class chosen classes now take effect with grid area!!!!
-display: grid;
-grid-area: video;
+// .content-container {   //A grid within a grid!!!!!!
+// display: grid;
+// grid-template-columns: 1fr 1fr;
+// grid-template-rows: 200px 200px;
+// grid-column-gap: 20px; 
+// grid-row-gap: 20px;  
+// grid-template-areas: 
+// "video video"
+// "podcast blog";
 
-}
+// }
 
-.podcast-content {
-    display: grid;
-grid-area: podcast;
 
-}
+// // Because it automatically targets the upper grid >>>> no need to specify
+// .video-content { //Thes class chosen classes now take effect with grid area!!!!
+// display: grid;
+// grid-area: video;
 
-.blog-content {
-    display: grid;
-grid-area: blog;
-}
+// }
+
+// .podcast-content {
+//     display: grid;
+// grid-area: podcast;
+
+// }
+
+// .blog-content {
+//     display: grid;
+// grid-area: blog;
+// }
 
 
 //===============//
