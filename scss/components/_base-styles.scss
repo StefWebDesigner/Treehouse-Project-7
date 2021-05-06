@@ -22,5 +22,14 @@ margin: auto;
 .main-header-search {
 // width: 50%;
 width: 25%;
+color: $seconday-white;
+}
 
+.social-text {
+ border: solid 1px grey;
+ border-radius: 10px;
+ width: 90%;
+ margin: auto;
+ margin-top: 20px;
+background-color: $seconday-white;
 }

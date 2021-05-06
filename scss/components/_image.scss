@@ -11,7 +11,7 @@ header img {
     // height: 75px;
     width: 37px;
     height: 37px;
-    border: 1px solid white;
+    border: 1px solid $defult-white;
     border-radius: 100px;
     margin-top: 3px;
     justify-content: center;
@@ -23,7 +23,7 @@ header svg {
     // margin-left: 10px;
     width: 80%;
     height: auto;
-    color: white;
+    color: $defult-white;
     margin: auto;
 }
 
@@ -41,16 +41,28 @@ nav a {
 }
 
 .social-image {
-    height: 25px;
-    width: 25px;
-    margin-top: 11px;
+    height: 30px;
+    width: 30px;
+    margin-top: 12px;
+    margin-left: 13px;
 }
 
 .social-border {
-    border: solid 1px #826aee;
-    border-radius: 50px;
-    background-color: #826aee;
-    width: 50px;
-    height: 50px;
     margin: auto;
+    border: solid 1px $main-purple;
+    border-radius: 50px;
+    background-color: $main-purple;
+    width: 55px;
+    height: 55px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.profile-image {
+margin: auto;
+border: solid 1px $defult-white;
+border-radius: 50%;
+width: 55px;
+height: 55px;
+margin-bottom: 10px;
 }

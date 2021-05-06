@@ -14,7 +14,7 @@
     grid-template-columns: 1fr 1fr;
     //THIS CONTROLS THE SIZE OF THE ROWS HEIGHT of all the catries
     //.USSE THISSSSS
-    grid-template-rows: min(50px) min(50px) min(100px) min(350px) min(500px) min(100px);
+    grid-template-rows: min(50px) min(50px) min(100px) min(350px) min(500px) min(200px);
     grid-template-areas:  
     "header header"
     "nav nav"
@@ -26,28 +26,28 @@
 
 header {
     display: grid;
-    background-color: #826AEE;
+    background-color: $main-purple;
     grid-area: header;
     text-align: center;
 }
 
 nav {
     display: grid;
-    background-color: #4F2CEE;
+    background-color: $secondary-purple;
     grid-area: nav;
     text-align: center;
 }
 
 main {
     display: grid;
-    background-color: grey;
+    background-color: $defult-white;
     grid-area: main;
     text-align: center;
 }
 
 section {
     display: grid;
-    background-color: lightblue;
+    background-color: $defult-white;
     grid-area: section;
     text-align: center;
 }
@@ -318,11 +318,11 @@ widget-grid-item {
     // max-width: 767px; // This is for the larger sizes
     max-width: 320px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: minmax(200px) minmax(200px);
-    // Need to make the divisions
+    grid-template-rows: minmax(50px) minmax(200px) minmax(200px) minmax(200px) minmax(200px);
     grid-template-areas:
         "social-group social-group"
         "members members"  
+        "recent-activity recent-activity"
         "message message"
         "settings settings";
     justify-content: center;
@@ -338,6 +338,11 @@ widget-grid-item {
     grid-area: members;
 }
 
+.recent-activity {
+    display: grid;
+    grid-area: recent-activity;
+}
+
 .message {
     display: grid;
     grid-area: message;
@@ -351,13 +356,13 @@ widget-grid-item {
 // =========================================
 // SOCIAL TEXT GRAND CHILD GRID (TIER 3)
 
+// .social-group
 .social-text {
     display: grid;
     // max-width: 767px; // This is for the larger sizes
     max-width: 320px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: minmax(100px) minmax(100);
-    // Need to make the divisions
+    grid-template-rows: minmax(100px) minmax(100px);
     grid-template-areas:
         "social-border platform"
         "social-border stat-number";
@@ -379,11 +384,50 @@ widget-grid-item {
     grid-area: stat-number;
 }
 
+// =========================================
+// Members GRAND CHILD GRID (TIER 3)
 
-.settings {
+// .social-group
+.members-container {
     display: grid;
-    grid-area: settings;
+    // max-width: 767px; // This is for the larger sizes
+    max-width: 320px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(100px) minmax(100px) minmax(100px) minmax(100px) minmax(100px);
+    grid-template-areas:
+        "profile-image profile-image"
+        "members-text members-text"
+        "profile-name profile-name"
+        "profile-email profile-email"
+        "profile-birth profile-birth";
+    justify-content: center;
 }
+
+.profile-image {
+    display: grid;
+    grid-area: profile-image;
+}
+
+.members-text {
+    display: grid;
+    grid-area: members-text;
+}
+
+.profile-name {
+    display: grid;
+    grid-area: profile-name;
+}
+
+.profile-email {
+    display: grid;
+    grid-area: profile-email;
+}
+
+.profile-birth {
+    display: grid;
+    grid-area: profile-birth;
+}
+
 
 //=============================================================================//
 
@@ -395,7 +439,7 @@ widget-grid-item {
         // grid-template-columns: 2fr 1fr;
         grid-template-columns: 2fr 1fr;
 
-        grid-template-rows: 200px minmax(200px, 1fr) minmax(200px, 1fr)  100px;
+        grid-template-rows: 200px minmax(200px, 1fr) minmax(200px, 1fr) 100px;
     
         // Going to comment out for now
         // grid-template-areas:  

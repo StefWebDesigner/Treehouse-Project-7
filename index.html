@@ -44,16 +44,7 @@
 	<a href=""><img class="nav-4" src="svgs/settings.svg" alt="the home button"></a>
 </nav>
 
-
 <main class="main-container">
-
-	<!-- row  -->
-		<!-- col 1  -->
-
-	<!-- row  -->
-		<!-- col 1  -->
-		<!-- col 2  -->
-
 	<!-- Dashboard header -->
 	<div class="main-header">  <!-- row -->
 		<h2 class="headline">Dashboard</h2>
@@ -100,69 +91,93 @@
 	</div>
 </section>
 
-<!-- This may require it's own grid -->
 <aside class="social">
 	<!-- Social status> -->
 	<div class="social-container">
-		<div class="social-group"> 
-				<div class="social-text">
-					<div class="social-border">
-						<img class="social-image" src="svgs/facebook.svg" alt="facebook icon">
+			<div class="social-group"> 
+					<div class="social-text">
+						<div class="social-border">
+							<img class="social-image" src="svgs/facebook.svg" alt="facebook icon">
+						</div>
+							<p class="platform">Facebook</p>
+							<p class="stat-number">10,345</p>
 					</div>
-						<p class="platform">Facebook</p>
-						<p class="stat-number">10,345</p>
-				</div>
-				<div class="social-text">
-					<div class="social-border">
-						<img class="social-image" src="svgs/instagram.svg" alt="instagram icon">
+					<div class="social-text">
+						<div class="social-border">
+							<img class="social-image" src="svgs/instagram.svg" alt="instagram icon">
+						</div>
+						<p class="platform">Instrgam</p>
+						<p class="stat-number">16,445</p>
 					</div>
-					<p class="platform">Instrgam</p>
-					<p class="stat-number">16,445</p>
-				</div>
-				<div class="social-text">
-					<div class="social-border">
-						<img class="social-image" src="svgs/twitter.svg" alt="twitter icon">
+					<div class="social-text">
+						<div class="social-border">
+							<img class="social-image" src="svgs/twitter.svg" alt="twitter icon">
+						</div>
+						<p class="platform">Twitter</p>
+						<p class="stat-number">22,189</p>
 					</div>
-					<p class="platform">Twitter</p>
-					<p class="stat-number">22,189</p>
-				</div>
-		</div>
-	</div>
+			</div> 
+		
 	<!-- add two more social containers and child
 	elements for other social media items -->
 
 	<!-- New memeber widgets -->
-	<section class="members">
-		<h3>New Members</h3>
+	<aside class="members">
+		<h3 class="member-label">New Members</h3>
 		<div class="members-container">
-		<img src="images/Sept2018Profile.jpg"
-		
-		class="profile-image">
-		
-		<div class="members-text">
-		<p>Victoria Chambers</p>
-		<a href="#">victoria.chambers80@example.com</a>
-		</div>
-		<p>10/15/15</p>
-		</div>
-	</section>
+			<div class="members-group">
+				<img class="profile-image" src="images/member-1.jpg">
+				<div class="members-text">
+				<p class="profile-name">Victoria Chambers</p>
+				<a class="profile-email" href="#">victoria.chambers80@example.com</a>
+				<p class="profile-birth">10/15/15</p>
+			</div>
+			<div class="members-group">
+				<img class="profile-image" src="images/member-2.jpg">
+				<div class="members-text">
+				<p class="profile-name">Dale Byrd</p>
+				<a class="profile-email" href="#">dale.byrd52@example.com</a>
+				<p class="profile-birth">10/15/15</p>
+			</div>
+			<div class="members-group">
+				<img class="profile-image" src="images/member-3.jpg">
+				<div class="members-text">
+				<p class="profile-name">Dawn Wood</p>
+				<a class="profile-email" href="#">dawn.wood16@example.com</a>
+				<p class="profile-birth">10/15/15</p>
+			</div>
+			<div class="members-group">
+				<img class="profile-image" src="images/member-4.jpg">
+				<div class="members-text">
+				<p class="profile-name">Dan Oliver</p>
+				<a class="profile-email" href="#">dan.oliver82@example.com</a>
+				<p class="profile-birth">10/15/15</p>
+			</div>
+		</div> 
+	</aside>
 
+	<!-- ADD THIS IN THE SAME FASHION AS THE MEMBERS GROUP -->
+	<!-- <aside class="recent-activity">
+		<h3 class="recent-label">Recent Activity</h3>
+		<div class="recent-activity-container">
+		</div>
+	</aside> -->
 
 	<!-- Messaging support widgets -->
-	<section class="message">
+	<aside class="message">
 		<h3>Message User</h3>
 		<form class="widget-container">
-		<input type="text" placeholder="Search for user"
-		class="form-field" id="userField">
-		<textarea placeholder="Message for user" class="form-area"
-		id= "messageField" ></textarea>
-		<button class="button-primary" id="send" >Send</button>
+			<input type="text" placeholder="Search for user"
+			class="form-field" id="userField">
+			<textarea placeholder="Message for user" class="form-area"
+			id= "messageField" ></textarea>
+			<button class="button-primary" id="send" >Send</button>
 		</form>
-	</section>
+	</aside>
 
 
 	<!-- local settings widget -->
-	<section class="settings">
+	<aside class="settings">
 		<h3>Settings</h3>
 		<!-- custom CSS toggle code-->
 		<!-- custom CSS toggle code-->
@@ -173,55 +188,13 @@
 		</select>
 
 		<div class="settings-button" >
-		<button class="button-primary" id="save">Save</button>
-		<button class="button-disabled" id="cancel">Cancel</button>
+			<button class="button-primary" id="save">Save</button>
+			<button class="button-disabled" id="cancel">Cancel</button>
 		</div>
-	</section>
+	</aside>
 
-</aside>
-
-
-<!-- See how I can reuse this code
-	<div class="main-container">
-		<div class="about-me-container"> 
-			<h2> About Me </h2> 
-				<p> I'm Stefan. Welcome to the Channel</p>
-			</h1>
-		</div>
-
-		<div class="announcment-countainer"> 
-			<h2> Announcment </h2>
-				<p> I will inlcude future updates here!</p>
-		</div>
-	</div> 
-	-->
-
-</main>
-
-
- <!-- <aside> 
-	<div class="content-container"> 
-		<div class="video-content">
-			<h1> Video Content</h1>
-		</div>
-
-		<div class="podcast-content">
-			<h1> Podcast Content</h1>
-
-			
-			<img src="../photos/06.jpg" alt="thumnail">
-			<img src="../photos/07.jpg" alt="thumnail">
-		 </div>
-
-		<div class="blog-content">
-			<h1> Blog Content</h1>
-
-			<img src="../photos/04.jpg" alt="thumnail">
-			<img src="../photos/05.jpg" alt="thumnail">
-		</div>
-		
 	</div>
-</aside> -->
+</aside>
 
 
 <!-- <footer>  -->
