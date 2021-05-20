@@ -1,12 +1,9 @@
-// ============================================= 
-//Grid Systems                      
-// =============================================
-  
+
 //PARENT GRID (TIER 1)
 
 .grid {
     //Fill up the screen here
-    max-width: 767px;
+    max-width: 320px;
     // height: auto;
     display: grid;
     // background-color: red;
@@ -14,7 +11,7 @@
     grid-template-columns: 1fr 1fr;
     //THIS CONTROLS THE SIZE OF THE ROWS HEIGHT of all the catries
     //.USSE THISSSSS
-    grid-template-rows: min(50px) min(50px) min(100px) min(350px) min(1200px) min(200px);
+    grid-template-rows: min(50px) min(50px) min(100px) min(700px) min(1200px) min(200px);
     grid-template-areas:  
     "header header"
     "nav nav"
@@ -179,13 +176,15 @@ footer {
     max-width: 320px;
     grid-template-columns: 1fr 1fr;
     // grid-template-rows: minmax(200px) minmax(200px);
-    grid-template-rows: min(100px) min(100px) min(100px) min(100px);
+    grid-template-rows: min(100px) min(150px) min(150px) (200px);
 
     // Need to make the divisions
     grid-template-areas:  //For some reason, its is double collumn!!!! BE AWARE YO!!!!!
         "traffic-header traffic-header"
         "widget-container-full widget-container-full"
-        "daily daily";
+        "daily daily"
+        "widget-container-half-2 widget-container-half-2";
+        // "social-users social users";
     }
 
 .traffic-header {
@@ -203,6 +202,24 @@ footer {
     grid-area: daily;
 }
 
+.sm-user-label {
+    display: grid;
+    grid-area: sm-user-label;
+
+}
+
+.widget-container-half-2 {
+    display: grid;
+    grid-area: widget-container-half-2;
+
+}
+
+// .social-users {
+//     display: grid;
+//     grid-area: social-users;
+
+// }
+
 // ============================================================
 
 // TRAFFIC-HEADER GRAND CHILD GRID (TIER 3)
@@ -213,8 +230,8 @@ footer {
     // grid-template-rows: minmax(200px) minmax(200px);
     grid-template-rows: min(50px) min(50px);
     grid-template-areas:  //For some reason, its is double collumn!!!! BE AWARE YO!!!!!
-        "traffic-label traffic-label"
-        "traffic-nav traffic-nav";
+        "traffic-label "
+        "traffic-nav ";
 }
 
 .traffic-label {
@@ -235,7 +252,8 @@ footer {
     max-width: 320px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     // This could be the problem for row fitting 
-    grid-template-rows: minmax(200px); 
+    grid-template-rows: minmax(200px);
+    grid-column-gap: 20px;  
     grid-template-areas:  
         "traffic-nav-link-1 traffic-nav-link-2 traffic-nav-link-active-3 traffic-nav-link-4";
     justify-content: center;
@@ -265,15 +283,16 @@ footer {
 // =========================================
 
 // WIDGET-CONTAINER-FULL GRAND CHILD GRID (TIER 3)
+// THIS IF FOR 
 .widget-container-full {
     display: grid;
     // max-width: 767px; // This is for the larger sizes
     max-width: 320px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: minmax(200px);
     // Need to make the divisions
     grid-template-areas:  
-        "widget-grid-item widget-grid-item";
+        "widget-grid-item";
     justify-content: center;
 }
 
@@ -290,12 +309,12 @@ widget-grid-item {
     display: grid;
     // max-width: 767px; // This is for the larger sizes
     max-width: 320px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: minmax(200px) minmax(200px);
     // Need to make the divisions
     grid-template-areas:  
-        "daily-label daily-label"
-        "widget-container-half widget-container-half";
+        "daily-label"
+        "widget-container-half";
     justify-content: center;
 }
 
@@ -310,6 +329,29 @@ widget-grid-item {
 }
 
 
+// =========================================
+
+// SM user chart GRAND CHILD GRID (TIER 3)
+
+// WIDGET-CONTAINER-half 2 GRAND CHILD GRID (TIER 3)
+// THIS IF FOR 
+.widget-container-full {
+    display: grid;
+    // max-width: 767px; // This is for the larger sizes
+    max-width: 320px;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(200px) minmax(200px);
+    // Need to make the divisions
+    grid-template-areas:  
+        "sm-user-label"
+        "chart3";
+    justify-content: center;
+}
+
+widget-grid-item {
+    display: grid;
+    grid-area: widget-grid-item;
+}
 // =========================================
 // SOCIAL CHILD GRID (TIER 2)
 
@@ -326,6 +368,7 @@ widget-grid-item {
         "message message"
         "settings settings";
     justify-content: center;
+    margin: auto;
 }
 
 .social-group {
@@ -392,17 +435,17 @@ widget-grid-item {
     display: grid;
     // max-width: 767px; // This is for the larger sizes
     max-width: 320px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: minmax(100px) minmax(100px) minmax(100px) minmax(100px) minmax(100px);
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(125px) minmax(125px) minmax(125px) minmax(125px) minmax(125px);
     grid-template-areas:
-        "profile-image profile-image"
-        "members-text members-text"
-        "profile-name profile-name"
-        "profile-email profile-email"
-        "profile-birth profile-birth";
+        "profile-image "
+        "members-text "
+        "profile-name "
+        "profile-email "
+        "profile-birth ";
         justify-content: center;
+        margin: auto;
 }
-
 
 .profile-image {
     display: grid;
@@ -437,13 +480,13 @@ widget-grid-item {
     display: grid;
     // max-width: 767px; // This is for the larger sizes
     max-width: 320px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: minmax(100px) minmax(100px) minmax(100px) minmax(100px);
     grid-template-areas:
-    "message-input message-input"
-    "form-field form-field"
-    "message-textarea message-textarea"
-    "button-primary button-primary";
+    "message-input"
+    "form-field "
+    "message-textarea"
+    "button-primary";
     justify-content: center;
 }
 
@@ -473,11 +516,11 @@ widget-grid-item {
     display: grid;
     // max-width: 767px; // This is for the larger sizes
     max-width: 320px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: minmax(100px) minmax(100px);
     grid-template-areas:
-    "time-settings time-settings"
-    "settings-button settings-button";
+    "time-settings"
+    "settings-button";
     justify-content: center;
 }
 
@@ -546,7 +589,6 @@ widget-grid-item {
     display: grid;
     grid-area: button-disabled;
 }
-
 
 //========================================================
 

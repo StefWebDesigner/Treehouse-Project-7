@@ -5,8 +5,14 @@
 
 // traffic header grid rules
 
-.traffic-nav {
+.traffic-nav, .traffic-label {
     margin: auto;
+}
+
+.traffic-header {
+
+    margin: auto;
+
 }
 
 .traffic-nav-link-1, .traffic-nav-link-1
@@ -32,4 +38,9 @@ color: $seconday-white;
  margin: auto;
  margin-top: 20px;
 background-color: $seconday-white;
+}
+
+.selected-traffic-nav {
+color: white;
+box-shadow: 10px 5px 5px red;
 }

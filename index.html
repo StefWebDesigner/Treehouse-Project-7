@@ -7,7 +7,9 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/styles.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js" integrity="sha512-VMsZqo0ar06BMtg0tPsdgRADvl0kDHpTbugCBBrL55KmucH6hP9zWdLIWY//OTfMnzz6xWQRxQqsUFefwHuHyg==" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&family=Roboto:ital@1&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" />
 </head>
 
 <!-- Body Sections -->
@@ -62,32 +64,115 @@
 
 	<!-- traffic Section: Line graph -->
 <section class="traffic">
-		<div class="traffic-header">
+		<div id="trafficSection" class="traffic-header">
 			<!-- Why is the traffic and daily sign not working -->
 			<h3 class="traffic-label">Traffic</h3> 
-			<ul class="traffic-nav">
-				<li class="traffic-nav-link-1">Hourly</li>
-				<li class="traffic-nav-link-2">Daily</li>
-				<li class="traffic-nav-link-active-3">Weekly</li>
-				<li class="traffic-nav-link-4">Monthly</li>
+			<ul id="traffic_nav" class="traffic-nav">
+				<li id="hourly" class="traffic-nav-link-1">Hourly</li>
+				<li id="daily" class="traffic-nav-link-2">Daily</li> 
+				<li id="weekly" class="traffic-nav-link-active-3">Weekly</li>
+				<li id="monthly" class="traffic-nav-link-4">Monthly</li>
+				<!-- <li id="hourly" class="traffic-nav-link-1">Hourly</li>
+				<li id="daily" class="traffic-nav-link-2">Daily</li> 
+				<li id="weekly" class="traffic-nav-link-active-3">Weekly</li>
+				<li id="monthly" class="traffic-nav-link-4">Monthly</li> -->
 			</ul>
 		</div>				
 		
 		<!-- I think I need another grid for this!!!!!! -->
 		<div class="widget-container-full">
 		<!-- element line graph will attach to -->
-				<canvas class="widget-grid-item" id="traffic-chart"> "I'm not their yet bud"</canvas>
+		<!-- This is traffic chart -->
+				<canvas class="widget-grid-item" id="chart1"></canvas>
 		</div>
-
+		<script> 
+			let chart1 = document.getElementById('chart1').getContext('2d');
+			let trafficChart = new Chart(chart1, {
+				type: 'line',  
+				data: {
+					labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
+					datasets: [{
+						label: "Traffic",
+						type: "line",
+						fillColor: "#826AEE",
+						borderColor: "#8e5ea2",
+						data: [550,1250,1000,2000, 1500, 1750, 1250, 1750, 2250, 1500, 2500],
+						backgroundColor: "#826AEE",
+						// strokeColor: "rgba(220,220,220,1)",
+						// pointColor: "rgba(220,220,220,1)",
+					backgroundColorHover: "#3e95cd",
+						fill: false,
+							}]
+						},
+						options: {
+							legend: { display: false },
+							elements: {
+        						line: {
+            					tension: .45
+							}
+						},											
+					}
+			});
+		</script> 
 <!-- traffic Section: bar and donunt chart -->
 	<div class="daily">
 		<div class="daily-container"> 
 			<h3 class="daily-label">Daily Traffic</h3>
 			<div class="widget-container-half">
 				<!-- element bar graph will attach to -->
-				<canvas id="daily-chart"></canvas>
+				<canvas id="chart2"></canvas>
+				<script>
+					let chart2 = document.getElementById('chart2').getContext('2d');
+					let dailyChart = new Chart(chart2, {
+						type: 'line',  
+						data: {
+							labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+							datasets: [{
+								label: "Traffic",
+								type: "bar",
+								data: [75,125,175,125, 225, 200, 100],
+								backgroundColor: "#4F2CEE",
+							backgroundColorHover: "#3e95cd",
+						// fill: false,
+							}]
+						},
+						options: {
+							legend: { display: false },
+							elements: {
+        						line: {
+            					tension: .45
+							}
+						},											
+					}
+				});
+				</script>
 			</div>
 		</div>
+	</div>
+
+	<!-- Container for the circle chart -->
+
+	<div class="widget-container-half-2">
+		<h3 class="sm-user-label">Social Media Users</h3>
+
+				<canvas class="charts-3" id="chart3"></canvas>
+				<script>
+					let chart3 = document.getElementById('chart3').getContext('2d');
+					let smUserChart = new Chart(chart3, {
+						type: 'doughnut',  
+						data: {
+							labels: ['Desktop', 'Tablet', 'Phone'],
+							datasets: [{
+								label: "Overall traffic",
+								backgroundColor: ["purple", "green", "teal"],
+								data: [60, 20, 20],
+						fill: false,
+							}]
+						},
+						options: {},											
+					
+				});
+				</script>
 	</div>
 </section>
 
@@ -179,17 +264,63 @@
 
 	<!-- local settings widget -->
 	<aside class="settings">
+
 		<h3>Settings</h3>
 		<div class="setting-container">
 			<div class="time-settings">
-				<!-- custom CSS toggle code-->
-				<!-- custom CSS toggle code-->
-				<select class="form-field" id="timezone">
+				<!-- Add a banner annountment for the change -->
+				<label class="switch-light switch-material" onclick="">
+					<input type="checkbox">
+					<strong>
+					  Send Email Notifications
+					</strong>
+					<span>
+					  <span>Off</span>
+					  <span>On</span>
+					  <a></a>
+					</span>
+				  </label>
+				<!-- Add a banner annountment for the change -->
+				  <label class="switch-light switch-material" onclick="">
+					<input type="checkbox">
+					<strong>
+					  Set Profile to public
+					<span>
+					  <span>Off</span>
+					  <span>On</span>
+					  <a></a>
+					</span>
+				  </label>
+
+				<fieldset class="switch-toggle switch-candy-blue">
+					<legend>Select a Timezone</legend>
+					<select class="form-field" id="timezone">
+						<input class="input-settings" id="eastern" name="view3" type="radio" checked>
+ 						<label for="eastern" onclick="">Eastern</label>
+						 <input class="input-settings" id="pacific" name="view3" type="radio" checked>
+ 						<label for="pacific" onclick="">Pacific</label>
+						 <input class="input-settings" id="gm-central" name="view3" type="radio" checked>
+ 						<label for="gm-central" onclick="">GM Central</label>
+						 <input class="input-settings" id="javascript" name="view3" type="radio" checked>
+ 						<label for="javascript" onclick="">Javascript Time</label>
+						 <input class="input-settings" id="code-central" name="view3" type="radio" checked>
+ 						<label for="code-central" onclick="">Code Central</label>
+						 <input class="input-settings" id="JFTZ" name="view3" type="radio" checked>
+ 						<label for="JFTZ" onclick="">Jedi Force Time</label>					
+					</select>
+				</fieldset>	
+			</div>
+
+<!-- I'M CONFUSED ON WHY i'M USING TOGGLE FOR THIS???? BUT OK -->
+			<!-- <select class="form-field" id="timezone">
 				<option disabled selected class="option-disabled">Select a Timezone</option>
 				<option>Eastern</option>
-				<!-- more options -->
-				</select>
-			</div>
+				<option>Pacific</option>
+				<option>GM Central</option>
+				<option>Javascript Time zone</option>
+				<option>Coding Time zone</option>
+				<option>Java Coffee Time zone (my favorite)</option>
+			</select> -->
 
 			<div class="settings-button" >
 				<button class="button-primary" id="save">Save</button>
@@ -198,6 +329,8 @@
 
 		</div>
 	</aside>
+
+	<script src="javascript/app.js"> </script>
 
 
 <!-- <footer>  -->
