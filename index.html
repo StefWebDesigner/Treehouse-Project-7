@@ -51,7 +51,7 @@
 	<div class="main-header">  <!-- row -->
 		<h2 class="headline">Dashboard</h2>
 		<div class="main-header-search">
-			<input type="search" placeholder="Search..." />
+			<input id="search_it" type="search" placeholder="Search..." />
 		</div>
 	</div>
 
@@ -65,7 +65,6 @@
 	<!-- traffic Section: Line graph -->
 <section class="traffic">
 		<div id="trafficSection" class="traffic-header">
-			<!-- Why is the traffic and daily sign not working -->
 			<h3 class="traffic-label">Traffic</h3> 
 			<ul id="traffic_nav" class="traffic-nav">
 				<li id="hourly" class="traffic-nav-link-1">Hourly</li>
@@ -79,10 +78,7 @@
 			</ul>
 		</div>				
 		
-		<!-- I think I need another grid for this!!!!!! -->
 		<div class="widget-container-full">
-		<!-- element line graph will attach to -->
-		<!-- This is traffic chart -->
 				<canvas class="widget-grid-item" id="chart1"></canvas>
 		</div>
 		<script> 
@@ -164,13 +160,12 @@
 							labels: ['Desktop', 'Tablet', 'Phone'],
 							datasets: [{
 								label: "Overall traffic",
-								backgroundColor: ["purple", "green", "teal"],
+								backgroundColor: ["#826AEE", "#40bf80", "#00cccc"],
 								data: [60, 20, 20],
 						fill: false,
 							}]
 						},
 						options: {},											
-					
 				});
 				</script>
 	</div>
@@ -202,9 +197,6 @@
 						<p class="stat-number">22,189</p>
 					</div>
 			</div> 
-		
-	<!-- add two more social containers and child
-	elements for other social media items -->
 
 	<!-- New memeber widgets -->
 	<aside class="members">
@@ -267,62 +259,57 @@
 
 		<h3>Settings</h3>
 		<div class="setting-container">
-			<div class="time-settings">
+			<div class="notifcation-settings">
 				<!-- Add a banner annountment for the change -->
-				<label class="switch-light switch-material" onclick="">
-					<input type="checkbox">
+				<div class="email-container">
+					<label id="email_group" class="switch-light switch-material" onclick="">
+						<input class="input-email" id="email-checkbox" type="checkbox">
+
+						<strong class="strong-email">
+							Send Email Notifications
+						</strong>
+						<span class="span-email">
+							<span class="email-active-on">Off</span>
+							<span class="email-active-off">On</span>
+						<!-- COULD i USE THESE LINKS TO CONNECT TO A FUNCTION???!!!!!
+						i NEED TO TRY IT -->
+						<a id="toggle-interacation-email"></a>
+						</span>
+					</label>
+				</div>
+				<!-- Add a banner annountment for the change -->
+				<div class="profile-container">
+				  <label id="profile_group" class="switch-light switch-material" onclick="">
+					<input id="profile-checkbox" type="checkbox">
 					<strong>
-					  Send Email Notifications
+					  Set Profile to public
 					</strong>
 					<span>
 					  <span>Off</span>
 					  <span>On</span>
-					  <a></a>
+					  <a id="toggle-interacation-profile"></a>
 					</span>
 				  </label>
-				<!-- Add a banner annountment for the change -->
-				  <label class="switch-light switch-material" onclick="">
-					<input type="checkbox">
-					<strong>
-					  Set Profile to public
-					<span>
-					  <span>Off</span>
-					  <span>On</span>
-					  <a></a>
-					</span>
-				  </label>
-
+				</div>
+			</div>
+			<div class="timezone-settings">
 				<fieldset class="switch-toggle switch-candy-blue">
-					<legend>Select a Timezone</legend>
+					<legend></legend>
 					<select class="form-field" id="timezone">
-						<input class="input-settings" id="eastern" name="view3" type="radio" checked>
- 						<label for="eastern" onclick="">Eastern</label>
-						 <input class="input-settings" id="pacific" name="view3" type="radio" checked>
- 						<label for="pacific" onclick="">Pacific</label>
-						 <input class="input-settings" id="gm-central" name="view3" type="radio" checked>
- 						<label for="gm-central" onclick="">GM Central</label>
-						 <input class="input-settings" id="javascript" name="view3" type="radio" checked>
- 						<label for="javascript" onclick="">Javascript Time</label>
-						 <input class="input-settings" id="code-central" name="view3" type="radio" checked>
- 						<label for="code-central" onclick="">Code Central</label>
-						 <input class="input-settings" id="JFTZ" name="view3" type="radio" checked>
- 						<label for="JFTZ" onclick="">Jedi Force Time</label>					
+						<!-- HAVE VISUAL CLOCKS SHOW UP WHEN SELECTING EACH OPTION -->
+						<option disabled selected class="option-disabled">Select a Timezone</option>
+						<option id="timezone_options" class="est-zone">Eastern</option>
+						<option id="timezone_options" class="pac-zone">Pacific</option>
+						<option id="timezone_options" class="gm-zone">GM Central</option>
+						<option id="timezone_options" class="java-zone" >Javascript Time zone</option>
+						<option id="timezone_options" class="code-zone">Coding Time zone</option>
+						<option id="timezone_options" class="jedi-zone">Jedi Force Time zone (my favorite)</option>
 					</select>
 				</fieldset>	
 			</div>
 
-<!-- I'M CONFUSED ON WHY i'M USING TOGGLE FOR THIS???? BUT OK -->
-			<!-- <select class="form-field" id="timezone">
-				<option disabled selected class="option-disabled">Select a Timezone</option>
-				<option>Eastern</option>
-				<option>Pacific</option>
-				<option>GM Central</option>
-				<option>Javascript Time zone</option>
-				<option>Coding Time zone</option>
-				<option>Java Coffee Time zone (my favorite)</option>
-			</select> -->
-
 			<div class="settings-button" >
+				<!-- WHY ISN'T IT SHOWING -->
 				<button class="button-primary" id="save">Save</button>
 				<button class="button-disabled" id="cancel">Cancel</button>
 			</div>

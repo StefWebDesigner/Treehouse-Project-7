@@ -11,7 +11,7 @@
     grid-template-columns: 1fr 1fr;
     //THIS CONTROLS THE SIZE OF THE ROWS HEIGHT of all the catries
     //.USSE THISSSSS
-    grid-template-rows: min(50px) min(50px) min(100px) min(700px) min(1200px) min(200px);
+    grid-template-rows: min(50px) min(50px) min(200px) min(800px) min(1500px) min(200px);
     grid-template-areas:  
     "header header"
     "nav nav"
@@ -51,14 +51,14 @@ section {
 
 aside {
     display: grid;
-    background-color: lightgreen;
+    // background-color: lightgreen;
     grid-area: aside;
     text-align: center;
 }
 
 footer {
     display: grid;
-    background-color: pink;
+    // background-color: pink;
     grid-area: footer;
     text-align: center;
 }
@@ -335,7 +335,7 @@ widget-grid-item {
 
 // WIDGET-CONTAINER-half 2 GRAND CHILD GRID (TIER 3)
 // THIS IF FOR 
-.widget-container-full {
+.widget-container-half-2 {
     display: grid;
     // max-width: 767px; // This is for the larger sizes
     max-width: 320px;
@@ -348,10 +348,16 @@ widget-grid-item {
     justify-content: center;
 }
 
-widget-grid-item {
+.sm-user-label {
     display: grid;
-    grid-area: widget-grid-item;
+    grid-area: sm-user-label;
 }
+
+.chart3 {
+    display: grid;
+    grid-area: chart3;
+}
+
 // =========================================
 // SOCIAL CHILD GRID (TIER 2)
 
@@ -360,7 +366,7 @@ widget-grid-item {
     // max-width: 767px; // This is for the larger sizes
     max-width: 320px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: minmax(50px) minmax(200px) minmax(200px) minmax(200px) minmax(200px);
+    grid-template-rows: minmax(50px) minmax(200px) minmax(200px) minmax(200px) minmax(400px);
     grid-template-areas:
         "social-group social-group"
         "members members"  
@@ -517,16 +523,23 @@ widget-grid-item {
     // max-width: 767px; // This is for the larger sizes
     max-width: 320px;
     grid-template-columns: 1fr;
-    grid-template-rows: minmax(100px) minmax(100px);
+    grid-template-rows: minmax(200px) minmax(200px) minmax(200px);
+    row-gap: 20px;
+
     grid-template-areas:
-    "time-settings"
+    "notifcation-settings"
+    "timezone-settings"
     "settings-button";
     justify-content: center;
 }
-
-.time-settings {
+.notifcation-settings {
     display: grid;
-    grid-area: time-settings;
+    grid-area: notifcation-settings;
+}
+
+.timezone-settings {
+    display: grid;
+    grid-area: timezone-settings;
 }
 
 .settings-button {
@@ -534,49 +547,139 @@ widget-grid-item {
     grid-area: settings-button;
 }
 
-//=============================================================================//
-// Time Setting  Grand grand CHILD GRID (TIER 4)
 
-.time-settings {
+//=============================================================================//
+// Notfication Setting  Grand grand CHILD GRID (TIER 4)
+
+.notifcation-settings {
+    display: grid;
+    // max-width: 767px; // This is for the larger sizes
+    max-width: 320px;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(100px) minmax(100px);
+    grid-template-areas:
+    "email-container"
+    "profile-container";
+    row-gap: 20px;
+    justify-content: center;
+}
+
+.email-container {
+    display: grid;
+    grid-area: email-container;
+}
+
+.profile-container {
+    display: grid;
+    grid-area: profile-container;
+}
+
+//=============================================================================//
+// Notfication Setting  Grand grand CHILD GRID (TIER 4)
+
+.email-container {
     display: grid;
     // max-width: 767px; // This is for the larger sizes
     max-width: 320px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: minmax(100px) minmax(100px) minmax(100px) minmax(100px);
+    grid-template-rows: minmax(100px) minmax(100px) minmax(100px);
     grid-template-areas:
-    "form-field form-field"
-    "option-disabled option-disabled"
-    "option option";
+    "strong-email input-email"
+    ". span-email";
     justify-content: center;
 }
 
-.form-field {
+.strong-email {
     display: grid;
-    grid-area: form-field;
+    grid-area: strong-email;
 }
 
-.option-disabled {
+.input-email {
     display: grid;
-    grid-area: option-disabled;
+    grid-area: input-email;
 }
 
-.option {
+.span-email {
     display: grid;
-    grid-area: option;
+    grid-area: span-email;
 }
+
+
+//=============================================================================//
+// Notfication Setting  Grand grand CHILD GRID (TIER 4)
+
+.profile-container {
+    display: grid;
+    // max-width: 767px; // This is for the larger sizes
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(100px) minmax(100px) minmax(100px);
+    grid-template-areas:
+    "strong-email input-email"
+    ". span-email";
+    justify-content: center;
+}
+
+.strong-email {
+    display: grid;
+    grid-area: strong;
+}
+
+.input-email {
+    display: grid;
+    grid-area: input;
+}
+
+.span-email {
+    display: grid;
+    grid-area: span;
+}
+
+//=============================================================================//
+// Time Setting  Grand grand CHILD GRID (TIER 4)
+
+.timezone-settings {
+    display: grid;
+    // max-width: 767px; // This is for the larger sizes
+    max-width: 320px;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(100px);
+    grid-template-areas:
+    "fieldset";
+    justify-content: center;
+}
+
+.fieldset {
+    display: grid;
+    grid-area: fieldset;
+}
+
+// .legend {
+//     display: grid;
+//     grid-area: legend;
+// }
+
+// .select {
+//     display: grid;
+//     grid-area: select;
+// }
+
+// .option {
+//     display: grid;
+//     grid-area: option;
+// }
 
 //=============================================================================//
 // SETTING-BUTTON  Grand grand CHILD GRID (TIER 4)
 
-.time-settings {
+.timezone-settings {
     display: grid;
     // max-width: 767px; // This is for the larger sizes
     max-width: 320px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: minmax(100px) minmax(100px) minmax(100px) minmax(100px);
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(100px) minmax(100px);
     grid-template-areas:
-    "button-primary button-primary"
-    "button-disabled button-disabled";
+    "button-primary"
+    "button-disabled";
     justify-content: center;
 }
 

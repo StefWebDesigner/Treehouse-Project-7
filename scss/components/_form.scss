@@ -18,3 +18,13 @@
     @include main-border-style;
 }
 
+select {
+    width: 100%;
+padding-top: 15px;
+padding-bottom: 15px;
+}
+
+fieldset {
+margin-top: 10px;
+margin-bottom: 10px;
+}

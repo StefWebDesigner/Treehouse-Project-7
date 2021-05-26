@@ -467,8 +467,8 @@ header h3 {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 50px 50px 100px 700px 1200px 200px;
-      grid-template-rows: 50px 50px 100px 700px 1200px 200px;
+  -ms-grid-rows: 50px 50px 200px 800px 1500px 200px;
+      grid-template-rows: 50px 50px 200px 800px 1500px 200px;
       grid-template-areas: "header header" "nav nav" "main main" "section section" "aside aside" "footer footer";
 }
 
@@ -519,7 +519,6 @@ section {
 aside {
   display: -ms-grid;
   display: grid;
-  background-color: lightgreen;
   -ms-grid-row: 5;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
@@ -530,7 +529,6 @@ aside {
 footer {
   display: -ms-grid;
   display: grid;
-  background-color: pink;
   -ms-grid-row: 6;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
@@ -851,7 +849,7 @@ widget-grid-item {
   grid-area: widget-container-half;
 }
 
-.widget-container-full {
+.widget-container-half-2 {
   display: -ms-grid;
   display: grid;
   max-width: 320px;
@@ -865,12 +863,20 @@ widget-grid-item {
           justify-content: center;
 }
 
-widget-grid-item {
+.sm-user-label {
   display: -ms-grid;
   display: grid;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  grid-area: widget-grid-item;
+  grid-area: sm-user-label;
+}
+
+.chart3 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: chart3;
 }
 
 .social-container {
@@ -879,8 +885,8 @@ widget-grid-item {
   max-width: 320px;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: minmax(50px) minmax(200px) minmax(200px) minmax(200px) minmax(200px);
-      grid-template-rows: minmax(50px) minmax(200px) minmax(200px) minmax(200px) minmax(200px);
+  -ms-grid-rows: minmax(50px) minmax(200px) minmax(200px) minmax(200px) minmax(400px);
+      grid-template-rows: minmax(50px) minmax(200px) minmax(200px) minmax(200px) minmax(400px);
       grid-template-areas: "social-group social-group" "members members"   "recent-activity recent-activity" "message message" "settings settings";
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1052,9 +1058,8 @@ widget-grid-item {
 .form-field {
   display: -ms-grid;
   display: grid;
-  -ms-grid-row: 1;
+  -ms-grid-row: 2;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: form-field;
 }
 
@@ -1071,7 +1076,6 @@ widget-grid-item {
   display: grid;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: button-primary;
 }
 
@@ -1081,80 +1085,170 @@ widget-grid-item {
   max-width: 320px;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: minmax(100px) minmax(100px);
-      grid-template-rows: minmax(100px) minmax(100px);
-      grid-template-areas: "time-settings" "settings-button";
+  -ms-grid-rows: minmax(200px) minmax(200px) minmax(200px);
+      grid-template-rows: minmax(200px) minmax(200px) minmax(200px);
+  row-gap: 20px;
+      grid-template-areas: "notifcation-settings" "timezone-settings" "settings-button";
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.time-settings {
+.notifcation-settings {
   display: -ms-grid;
   display: grid;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  grid-area: time-settings;
+  grid-area: notifcation-settings;
+}
+
+.timezone-settings {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: timezone-settings;
 }
 
 .settings-button {
   display: -ms-grid;
   display: grid;
-  -ms-grid-row: 2;
+  -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: settings-button;
 }
 
-.time-settings {
+.notifcation-settings {
   display: -ms-grid;
   display: grid;
   max-width: 320px;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: minmax(100px) minmax(100px) minmax(100px) minmax(100px);
-      grid-template-rows: minmax(100px) minmax(100px) minmax(100px) minmax(100px);
-      grid-template-areas: "form-field form-field" "option-disabled option-disabled" "option option";
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: minmax(100px) minmax(100px);
+      grid-template-rows: minmax(100px) minmax(100px);
+      grid-template-areas: "email-container" "profile-container";
+  row-gap: 20px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.form-field {
+.email-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: form-field;
+  grid-area: email-container;
 }
 
-.option-disabled {
+.profile-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: option-disabled;
+  grid-area: profile-container;
 }
 
-.option {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: option;
-}
-
-.time-settings {
+.email-container {
   display: -ms-grid;
   display: grid;
   max-width: 320px;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: minmax(100px) minmax(100px) minmax(100px) minmax(100px);
-      grid-template-rows: minmax(100px) minmax(100px) minmax(100px) minmax(100px);
-      grid-template-areas: "button-primary button-primary" "button-disabled button-disabled";
+  -ms-grid-rows: minmax(100px) minmax(100px) minmax(100px);
+      grid-template-rows: minmax(100px) minmax(100px) minmax(100px);
+      grid-template-areas: "strong-email input-email" ". span-email";
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.strong-email {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: strong-email;
+}
+
+.input-email {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: input-email;
+}
+
+.span-email {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: span-email;
+}
+
+.profile-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: minmax(100px) minmax(100px) minmax(100px);
+      grid-template-rows: minmax(100px) minmax(100px) minmax(100px);
+      grid-template-areas: "strong-email input-email" ". span-email";
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.strong-email {
+  display: -ms-grid;
+  display: grid;
+  grid-area: strong;
+}
+
+.input-email {
+  display: -ms-grid;
+  display: grid;
+  grid-area: input;
+}
+
+.span-email {
+  display: -ms-grid;
+  display: grid;
+  grid-area: span;
+}
+
+.timezone-settings {
+  display: -ms-grid;
+  display: grid;
+  max-width: 320px;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: minmax(100px);
+      grid-template-rows: minmax(100px);
+      grid-template-areas: "fieldset";
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.fieldset {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: fieldset;
+}
+
+.timezone-settings {
+  display: -ms-grid;
+  display: grid;
+  max-width: 320px;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: minmax(100px) minmax(100px);
+      grid-template-rows: minmax(100px) minmax(100px);
+      grid-template-areas: "button-primary" "button-disabled";
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1165,7 +1259,6 @@ widget-grid-item {
   display: grid;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: button-primary;
 }
 
@@ -1174,7 +1267,6 @@ widget-grid-item {
   display: grid;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: button-disabled;
 }
 
@@ -1263,7 +1355,19 @@ nav a {
   border-radius: 5px;
 }
 
+select {
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+fieldset {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .charts-3 {
-  height: 25px;
+  height: 15%;
+  width: 25%;
 }
 /*# sourceMappingURL=styles.css.map */

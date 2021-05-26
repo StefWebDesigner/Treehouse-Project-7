@@ -1,3 +1,69 @@
+====================
+/   things to do  /
+===================
+
+Try using div.container tab shortcut
+
+#2
+With the dashboard, put in a div as advive from the program 
+<div class="main-header"> // row
+<h2 class="headline">Dashboard</h2>
+<div class="main-header-search">
+<input type="search" placeholder="Search..." />
+</div>
+</div>
+
+//Put the reference tags on the navigation
+
+Alert (add div becaue add an anctual alert)
+<div class="alert" id="alert" >
+<!-- JS will insert alert here -->
+</div>
+
+Add recent area activyt part
+
+
+====================
+/   QUESTIONS:   /
+===================
+
+The filter: (Ask for help)
+- The dashsearch is having an issue with search_string.lengh and matching it with 
+the other members complete datasets
+
+Traffic Nav Highlighting (Ask for help):
+- When interacting(clicking on) the traffic navgation section, it registers the
+engagment with a dot instead of applying the class that is suppose to change it.
+- Also, if you touch slighly outide the title, it complete reformats to something
+different
+
+Settings: (Asked for help)
+- The toggling on of the email notification properly gives the on alert.
+However, if you toggle it off, it still keeps the older alert message.
+- Also, for the timezone, I added an alert when you click on the pacific time zone
+to confirm to the user what they chose. However, the alter is not working. 
+___
+
+
+----------
+EXTRA: 
+SETTINGS:
+- Have it distinguish between active on and off and show that in the alert
+
+Another day (Extra Icon Animation)
+- change the color/line of the icons
+
+
+===========================
+/   Checklist  /
+===========================
+
+- Media query (320, 758, 1024)
+- USe header/sidebar/nav/main-content
+- Include an alter/bell(animation)/(sound for extra)
+- Social Stat widgets
+- Create a massesage user widget functionality
+- Setting widgets for accesibiltiy and stuff
 
 =====================
 /   Completed Task  /
@@ -42,41 +108,48 @@ Day 5:
 - made the social media stats/formated correctly/color scheemed
 - add members
 - make the new grid & make it functional
+-------
+
+Day 6:
+- Download install chart.js
+- add two of the charts
+- Add the ciricle & add it to the traffic container
+
+Day 7: 
+- fix spacing between hour/month traffic header
+- make it highlight green when clicked on with javascript
 
 
+============================
+Day 8:
+Settings: 
+- Got the toggle working
+- Added listners and put it into an array
+- make sure the lister is targeting different inputs
+- add set Email Notification wwith toggle
+- add set profile to public toggle
 
-====================
-/   things to do  /
-===================
+Day 9:
+- - save the progress
+- add javascript for email/profile settings notifcation
+- Change up the= time zone section (mack the mock ups)
+- Get it polished up
+- make the input better looking
 
-Day 5: (Social):
-- get the message grid up & running
-- fix how the overlap of the date and name
-- add line breaks to each
-
-- change font to match mockup
-- sort out the the rest of the body of the app
-- need dashboard to be inline
-
-Troubleshooting:
-- try make more container (maybe I'm not setting it right)
-- grid - line 237 - This could be the problem for row fitting
-
-----------
-- add the canvas on widget
-
-
-Another day (Extra Icon Animation)
-- change the color/line of the icons
+Day 10
+- Polished & made the javascript legible
+- replaced the older array with classes type system
+- fixed the chart 3 problem
+- changed the colors of the grid & charts
+- save
 
 
 ===========================
-/   List of Total Things  /
+/   Notes  /
 ===========================
 
-- Media query (320, 758, 1024)
-- USe header/sidebar/nav/main-content
-- Include an alter/bell(animation)/(sound for extra)
-- Social Stat widgets
-- Create a massesage user widget functionality
-- Setting widgets for accesibiltiy and stuff
+mouse events (MouseEvent): mousedown, mouseup, click, dblclick, mousemove, mouseover, mousewheel, mouseout, contextmenu
+touch events (TouchEvent): touchstart, touchmove, touchend, touchcancel
+keyboard events (KeyboardEvent): keydown, keypress, keyup
+form events: focus, blur, change, submit
+window events: scroll, resize, hashchange, load, unload
