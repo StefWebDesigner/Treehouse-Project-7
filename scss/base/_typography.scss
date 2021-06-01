@@ -40,14 +40,14 @@ margin: 0;
 
 // Social Stats Grid Font Styles
 
-.platform { 
+.platform-1, .platform-2, .platform-3 { 
 color: $main-purple;
 margin-top: 10px;
 margin-bottom: -25px;
 margin-right: 31px;
 }
 
-.stat-number {
+.stat-number-1, .stat-number-2, .stat-number-3 {
 font-size: 30px;
 color: grey;
 margin-top: 20px;
@@ -56,9 +56,9 @@ margin-right: 20px;
 }
 
 
-// Members Font Styles
+// Members/Recent Activities Font Styles
 
-.member-label, .message-label {
+.member-label, .message-label, .recent-label {
 text-align: left;
 color: black;
 margin-left: 15px;
@@ -73,7 +73,6 @@ color: $main-purple;
 color: black;
 margin-bottom: 20px;
 }
-
 
 
 

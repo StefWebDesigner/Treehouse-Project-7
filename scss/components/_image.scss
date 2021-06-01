@@ -7,8 +7,6 @@
 //=========//
 
 header img {
-    // width: 75px;
-    // height: 75px;
     width: 37px;
     height: 37px;
     border: 1px solid $defult-white;
@@ -58,7 +56,7 @@ nav a {
     margin-bottom: 10px;
 }
 
-.profile-image-1, profile-image-2, profile-image-3 {
+.profile-image {
     margin: auto;
     border: solid 1px $defult-white;
     border-radius: 50%;

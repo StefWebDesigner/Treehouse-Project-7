@@ -1,0 +1,354 @@
+/* ============================================= */
+/*              @Media Breakpoints                      */
+/* ============================================= */
+
+
+@media only screen and (min-width: 1024px) {
+
+    .grid {
+        min-width: 1024px;    
+        grid-template-columns: 50px 1fr;
+    grid-template-rows: minmax(50px) minmax(50px) minmax(300px) minmax(800px) minmax(1500px) minmax(200px);
+    grid-template-areas:  
+    "header header"
+    ". ."
+    "nav main"
+    "nav section"
+    "nav aside"
+    "nav footer";
+}
+
+//==========================
+
+//Top Header
+
+.header-container {
+    display: grid;
+    min-width: 1024px;
+    // grid-template-columns: 2fr minmax(10px) minmax(10px) minmax(10px);
+    // column-gap: minmax(300px) minmax(10px) minmax(10px) minmax(10px);
+    // grid-template-areas:  
+    //     "header-app-title header-bell-icon header-me header-profile-name";
+    // justify-content: center;
+}
+
+// =========================
+
+//Dashboard & search input
+
+.main-header {
+    display: grid;
+    min-width: 1024px;
+    grid-template-columns: 15px 175px;
+    grid-template-rows: minmax(300px);
+    grid-template-areas:  
+        "headline main-header-search";
+        justify-content: center;
+}
+
+//--- main hearder variables
+
+.main-header {
+margin: 0;
+}
+
+.main-header-search {
+width: 60%;
+display: inline;
+    // margin-left: 150px;
+}
+
+.headline {
+    font-size: 25px;
+    display: inline;
+    //Unable to change the margins for whatever reason
+    // margin-top: 555px;
+    margin: 0;
+    text-align: left;
+}
+
+.daily-label {
+    font-size: 25px;
+}
+ 
+// ======================
+
+//The navigation side bar
+
+.nav-container {
+    display: grid;
+    min-width: 50px;
+    // grid-template-columns: 1fr;
+    // grid-template-rows: repeat(minmax(10px));
+    // // row-gap: -5000px;
+    // grid-template-areas:  
+    //     "nav-home"
+    //     "nav-bar"
+    //     "nav-members" 
+    //     "nav-settings";
+    // justify-content: center;
+}
+
+//========================
+
+//Traffic label and 4 (hourly/daily...monthly stuff)
+
+// .traffic-header {
+//     display: grid;
+//     min-width: 768px;
+//     grid-template-columns: minmax(10px) minmax(75px);
+// // column-gap: -10px;    
+//     grid-template-areas: 
+//         "traffic-label traffic-nav ";
+// }
+
+//-----Traffic variables -----------
+// .traffic-label {
+// font-size: 25px;
+// }
+
+
+//============================
+//General Traffic Container 
+
+// Parent Traffic Grid Container 
+
+.traffic {
+    display: grid;
+    min-width: 768px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(25px) minmax(300px) minmax(300px);
+    // row-gap: 200px;
+
+    grid-template-areas:  
+        "traffic-header traffic-header"
+        "chart-1-container-full chart-1-container-full"
+        "daily chart-3-container-full"; 
+    }
+
+    //General Traffic Grid Container
+
+.chart-1-container-full {
+    display: grid;
+    min-width: px;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(300px);
+    grid-template-areas:  
+        "chart1";
+    justify-content: center;
+}
+
+// Daily Traffic Chart Container
+
+.daily-container {
+    display: grid;
+    min-width: 320px;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(50px) minmax(200px);
+    grid-template-areas:  
+        "daily-label"
+        "chart-2-container-full";
+    justify-content: center;
+}
+
+// Circle Graph
+
+.chart-3-container-full {
+    display: grid;
+    min-width: 300px;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(50px) minmax(200px);
+    grid-template-areas:  
+        "sm-user-label"
+        "chart3";
+    justify-content: center;
+}
+
+//---- variable -----
+
+canvas .chart1 {
+    height: 15%;
+    width: 25%;
+}
+
+canvas .chart3, canvas .chart2 {
+    height: 15%;
+    width: 15%;
+    // margin-top: 2222px;
+}
+
+//=================================
+
+// Parent Social Sections
+    
+.social-container {
+    display: grid;
+    min-width: 1024px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(50px) minmax(200px)  minmax(600px);
+    // row-gap: 20px;
+    grid-template-areas:
+        "social-group social-group"
+        "members recent-activity"  
+        "message settings";
+            justify-content: center;
+    margin: auto;
+}
+
+
+// socila group bigger groups
+.social-group {
+    display: grid;
+    min-width: 300px;
+    grid-template-columns: 50px 50px 50px;
+    grid-template-rows: minmax(768px);
+    grid-template-areas:
+        "social-text social-text social-text";
+    justify-content: none;
+    margin: 0;
+}
+
+.social-text {
+    display: grid;
+    grid-area: social-text;
+}
+
+
+.social-text {
+    // display: grid;
+    min-width: 300px;
+//     grid-template-columns: 25px 25px  25px 25px 25px 25px;
+//     // grid-template-rows: minmax(100px) minmax(100px);
+//     grid-template-areas:
+//         "social-border-1 platform-1 social-border-2 platform-2 social-border-3 platform-3" 
+//         "social-border-1 stat-number-1 social-border-2 stat-number-2 social-border-3 stat-number-3";
+//     justify-content: none;
+}
+
+// .social-text {
+// width: 10%;
+// margin: 0;
+// }
+
+// ----------- Members grid
+
+.members-container {
+    display: grid;
+    min-width: 500px;
+    // grid-template-columns: 1fr 1fr 1fr 1fr;
+    // grid-template-rows: minmax(125px) minmax(125px) minmax(125px) minmax(125px) minmax(125px);
+    // grid-template-areas:
+    //     "profile-image profile-name . . ."
+    //     ". profile-email . profile-birth";        
+        // justify-content: center;
+        // margin: auto;
+}
+
+
+.recent-activity-group {
+    display: grid;
+    min-width: 500px;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(100px) minmax(100px);
+    grid-template-areas:
+    "recent-label "
+    "recent-activity-container";
+        // justify-content: center;
+}
+
+
+//Message functionality
+.form-field, .message-textarea, .button-primary {
+    width: 85%;
+    // height:60%;
+    // font-size: 25px;
+}
+
+// .message-label, .recent-label, .member-label {
+//     font-size: 25px;
+ 
+// }
+
+// .message-textarea {
+// height: 100%;
+// }
+
+
+//form area
+
+.widget-container {
+    display: grid;
+    min-width: 500px;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(100px) minmax(100px) minmax(100px) minmax(100px);
+    grid-template-areas:
+    "message-input"
+    "form-field "
+    "message-textarea"
+    "button-primary";
+    justify-content: center;
+}
+
+//Settings area
+
+.settings-container {
+    display: grid;
+    min-width: 490px;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(200px) minmax(200px) minmax(200px);
+    row-gap: 20px;
+
+    grid-template-areas:
+    "notifcation-settings"
+    "timezone-settings"
+    "settings-button";
+    justify-content: center;
+}
+
+.notifcation-settings {
+    display: grid;
+    min-width: 490px;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(100px) minmax(100px);
+    grid-template-areas:
+    "email-container"
+    "profile-container";
+    row-gap: 20px;
+    justify-content: center;
+}
+
+.email-container {
+    display: grid;
+    // max-width: 767px; // This is for the larger sizes
+    max-width: 490px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(100px) minmax(100px) minmax(100px);
+    grid-template-areas:
+    "strong-email input-email"
+    ". span-email";
+    justify-content: center;
+}
+
+.profile-container {
+    display: grid;
+    min-width: 490px; // This is for the larger sizes
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(100px) minmax(100px) minmax(100px);
+    grid-template-areas:
+    "strong-profile input-profile"
+    ". span-profile";
+    justify-content: center;
+}
+
+//email/profile variables
+
+.strong-email {
+    margin-top: 175px;
+}
+
+.strong-email, .strong-profile {
+    font-size: 25px;
+}
+// ==================================
+
+}
