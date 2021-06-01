@@ -3,7 +3,7 @@
 
 .grid {
     //Fill up the screen here
-    max-width: 320px;
+    min-width: 368px;
     // height: auto;
     display: grid;
     // background-color: red;
@@ -72,7 +72,7 @@ footer {
 .header-container {
     display: grid;
     // max-width: 767px; // This is for the larger sizes
-    max-width: 320px;
+    min-width: 368px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: minmax(200px);
     grid-template-areas:  
@@ -110,7 +110,7 @@ footer {
 //NAV CHILD GRID (TIER 2)
 .nav-container {
     display: grid;
-    max-width: 320px;
+    min-width: 368px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: minmax(200px);
     grid-template-areas:  
@@ -146,7 +146,7 @@ footer {
 .main-container {
     display: grid;
     // max-width: 767px; // This is for the larger sizes
-    max-width: 320px;
+    min-width: 368px;
     grid-template-columns: 1fr 1fr;
     // grid-template-rows: minmax(200px);
     grid-template-rows: min(50px) min(50px);
@@ -173,7 +173,7 @@ footer {
 
 .traffic {
     display: grid;
-    max-width: 320px;
+    min-width: 368px;
     grid-template-columns: 1fr 1fr;
     // grid-template-rows: minmax(200px) minmax(200px);
     grid-template-rows: min(100px) min(150px) min(150px) (200px);
@@ -225,7 +225,7 @@ footer {
 // TRAFFIC-HEADER GRAND CHILD GRID (TIER 3)
 .traffic-header {
     display: grid;
-    max-width: 320px;
+    min-width: 368px;
     grid-template-columns: 1fr 1fr;
     // grid-template-rows: minmax(200px) minmax(200px);
     grid-template-rows: min(50px) min(50px);
@@ -249,7 +249,7 @@ footer {
 // TRAFFIC-NAV GRAND GRAND CHILD GRID (TIER 4)
 .traffic-nav {
     display: grid;
-    max-width: 320px;
+    min-width: 368px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     // This could be the problem for row fitting 
     grid-template-rows: minmax(200px);
@@ -287,7 +287,7 @@ footer {
 .widget-container-full {
     display: grid;
     // max-width: 767px; // This is for the larger sizes
-    max-width: 320px;
+    min-width: 368px;
     grid-template-columns: 1fr;
     grid-template-rows: minmax(200px);
     // Need to make the divisions
@@ -308,7 +308,7 @@ widget-grid-item {
 .daily-container {
     display: grid;
     // max-width: 767px; // This is for the larger sizes
-    max-width: 320px;
+    min-width: 368px;
     grid-template-columns: 1fr;
     grid-template-rows: minmax(200px) minmax(200px);
     // Need to make the divisions
@@ -338,7 +338,7 @@ widget-grid-item {
 .widget-container-half-2 {
     display: grid;
     // max-width: 767px; // This is for the larger sizes
-    max-width: 320px;
+    min-width: 368px;
     grid-template-columns: 1fr;
     grid-template-rows: minmax(200px) minmax(200px);
     // Need to make the divisions
@@ -364,7 +364,7 @@ widget-grid-item {
 .social-container {
     display: grid;
     // max-width: 767px; // This is for the larger sizes
-    max-width: 320px;
+    min-width: 368px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: minmax(50px) minmax(200px) minmax(200px) minmax(200px) minmax(400px);
     grid-template-areas:
@@ -409,28 +409,61 @@ widget-grid-item {
 .social-text {
     display: grid;
     // max-width: 767px; // This is for the larger sizes
-    max-width: 320px;
+    min-width: 368px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: minmax(100px) minmax(100px);
     grid-template-areas:
-        "social-border platform"
-        "social-border stat-number";
+        "social-border-1 platform-1"
+        "social-border-1 stat-number-1"
+        "social-border-2 platform-2"
+        "social-border-2 stat-number-2"
+        "social-border-3 platform-3"
+        "social-border-3 stat-number-3";
     justify-content: center;
 }
 
-.social-border {
+.social-border-1 {
     display: grid;
-    grid-area: social-border;
+    grid-area: social-border-1;
 }
 
-.platform {
+.platform-1 {
     display: grid;
-    grid-area: platform;
+    grid-area: platform-1;
 }
 
-.stat-number {
+.stat-number-1 {
     display: grid;
-    grid-area: stat-number;
+    grid-area: stat-number-1;
+}
+
+.social-border-2 {
+    display: grid;
+    grid-area: social-border-2;
+}
+
+.platform-2 {
+    display: grid;
+    grid-area: platform-2;
+}
+
+.stat-number-2 {
+    display: grid;
+    grid-area: stat-number-2;
+}
+.social-border-3 {
+    display: grid;
+    grid-area: social-border-3;
+}
+
+.platform-3 {
+    display: grid;
+    grid-area: platform-3;
+}
+
+.stat-number-3 {
+    display: grid;
+    grid-area: stat-number-3;
 }
 
 // =========================================
@@ -440,7 +473,7 @@ widget-grid-item {
 .members-container {
     display: grid;
     // max-width: 767px; // This is for the larger sizes
-    max-width: 320px;
+    min-width: 368px;
     grid-template-columns: 1fr;
     grid-template-rows: minmax(125px) minmax(125px) minmax(125px) minmax(125px) minmax(125px);
     grid-template-areas:
@@ -485,7 +518,7 @@ widget-grid-item {
 .widget-container {
     display: grid;
     // max-width: 767px; // This is for the larger sizes
-    max-width: 320px;
+    min-width: 368px;
     grid-template-columns: 1fr;
     grid-template-rows: minmax(100px) minmax(100px) minmax(100px) minmax(100px);
     grid-template-areas:
@@ -521,7 +554,7 @@ widget-grid-item {
 .settings-container {
     display: grid;
     // max-width: 767px; // This is for the larger sizes
-    max-width: 320px;
+    min-width: 368px;
     grid-template-columns: 1fr;
     grid-template-rows: minmax(200px) minmax(200px) minmax(200px);
     row-gap: 20px;
@@ -547,14 +580,13 @@ widget-grid-item {
     grid-area: settings-button;
 }
 
-
 //=============================================================================//
 // Notfication Setting  Grand grand CHILD GRID (TIER 4)
 
 .notifcation-settings {
     display: grid;
     // max-width: 767px; // This is for the larger sizes
-    max-width: 320px;
+    min-width: 368px;
     grid-template-columns: 1fr;
     grid-template-rows: minmax(100px) minmax(100px);
     grid-template-areas:
@@ -580,7 +612,7 @@ widget-grid-item {
 .email-container {
     display: grid;
     // max-width: 767px; // This is for the larger sizes
-    max-width: 320px;
+    max-width: 368px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: minmax(100px) minmax(100px) minmax(100px);
     grid-template-areas:
@@ -610,7 +642,7 @@ widget-grid-item {
 
 .profile-container {
     display: grid;
-    // max-width: 767px; // This is for the larger sizes
+    min-width: 368px; // This is for the larger sizes
     grid-template-columns: 1fr 1fr;
     grid-template-rows: minmax(100px) minmax(100px) minmax(100px);
     grid-template-areas:
@@ -639,8 +671,7 @@ widget-grid-item {
 
 .timezone-settings {
     display: grid;
-    // max-width: 767px; // This is for the larger sizes
-    max-width: 320px;
+    max-width: 368px;
     grid-template-columns: 1fr;
     grid-template-rows: minmax(100px);
     grid-template-areas:
@@ -674,7 +705,7 @@ widget-grid-item {
 .timezone-settings {
     display: grid;
     // max-width: 767px; // This is for the larger sizes
-    max-width: 320px;
+    max-width: 368px;
     grid-template-columns: 1fr;
     grid-template-rows: minmax(100px) minmax(100px);
     grid-template-areas:
@@ -694,25 +725,6 @@ widget-grid-item {
 }
 
 //========================================================
-
-@media only screen and (min-width: 768px) {
-
-    .grid {
-        max-width: 768px;    
-        
-        // grid-template-columns: 2fr 1fr;
-        grid-template-columns: 2fr 1fr;
-
-        grid-template-rows: 200px minmax(200px, 1fr) minmax(200px, 1fr) 100px;
-    
-        // Going to comment out for now
-        // grid-template-areas:  
-        // "header header"
-        // "main nav"
-        // "aside aside"
-        // "footer footer";
-    }
-    
 
 //===============//
 // Main Flex Box //
@@ -803,7 +815,7 @@ widget-grid-item {
     
     
 
-}
+
 
 
 

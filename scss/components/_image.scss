@@ -28,7 +28,7 @@ header svg {
 }
 
 //need to make the images smaller
-nav img {
+nav img, nav svg {
     width: 50%;
     height: auto;
     //Got to double center it
@@ -40,14 +40,14 @@ nav a {
     margin: auto;
 }
 
-.social-image {
+.social-image-1, social-image-2, social-image-3 {
     height: 30px;
     width: 30px;
     margin-top: 12px;
     margin-left: 13px;
 }
 
-.social-border {
+.social-border-1, .social-border-2, .social-border-3 {
     margin: auto;
     border: solid 1px $main-purple;
     border-radius: 50px;
@@ -58,7 +58,7 @@ nav a {
     margin-bottom: 10px;
 }
 
-.profile-image {
+.profile-image-1, profile-image-2, profile-image-3 {
     margin: auto;
     border: solid 1px $defult-white;
     border-radius: 50%;
@@ -66,5 +66,27 @@ nav a {
     height: 55px;
     margin-bottom: 10px;
 }
+//------------------
+.bell-icon, nav svg {
+height: 50%;
+transition: .3s ease-out;
+width: 2rem;
+&:hover, &:focus {
+  animation: bellshake .5s cubic-bezier(.36,.07,.19,.97) both;
+  backface-visibility: hidden;
+  transform-origin: top right;
+}
+}
 
-
+  @keyframes bellshake {
+    0% { transform: rotate(0); }
+    15% { transform: rotate(5deg); }
+    30% { transform: rotate(-5deg); }
+    45% { transform: rotate(4deg); }
+    60% { transform: rotate(-4deg); }
+    75% { transform: rotate(2deg); }
+    85% { transform: rotate(-2deg); }
+    92% { transform: rotate(1deg); }
+    100% { transform: rotate(0); }
+  }
+  

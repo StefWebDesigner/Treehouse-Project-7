@@ -2,3 +2,298 @@
 /*              @Media Breakpoints                      */
 /* ============================================= */
 
+
+@media only screen and (min-width: 768px) {
+
+    .grid {
+        min-width: 768px;    
+        
+        // grid-template-columns: 2fr 1fr;
+        grid-template-columns: 50px 1fr;
+    //THIS CONTROLS THE SIZE OF THE ROWS HEIGHT of all the catries
+    //.USSE THISSSSS
+    grid-template-rows: minmax(50px) minmax(50px) minmax(300px) min(800px) min(1500px) min(200px);
+    grid-template-areas:  
+    "header header"
+    ". ."
+    "nav main"
+    "nav section"
+    "nav aside"
+    "nav footer";
+}
+
+//==========================
+
+//Top Header
+
+.header-container {
+    display: grid;
+    // max-width: 767px; // This is for the larger sizes
+    min-width: 768px;
+    grid-template-columns: 2fr minmax(10px) minmax(10px) minmax(10px);
+    column-gap: minmax(300px) minmax(10px) minmax(10px) minmax(10px);
+    grid-template-areas:  
+        "header-1 header-2 header-4 header-5";
+    justify-content: center;
+}
+
+//Get rid of the header 3
+
+// =========================
+
+//Dashboard & search input
+
+.main-header {
+    display: grid;
+    // max-width: 767px; // This is for the larger sizes
+    min-width: 768px;
+    grid-template-columns: 15px 175px;
+    // column-gap: 200px;
+    // grid-template-rows: minmax(200px);
+    grid-template-rows: min(200px);
+    grid-template-areas:  
+        "headline main-header-search";
+        justify-content: center;
+}
+
+.headline {
+    display: grid;
+    grid-area: headline;
+}
+
+//It requires javascript
+.main-header-search {
+    display: grid;
+    grid-area: main-header-search;
+}
+
+//--- main hearder variables
+
+.main-header {
+margin: 0;
+}
+
+.main-header-search {
+width: 60%;
+display: inline;
+    margin-left: 150px;
+
+
+}
+
+.headline {
+    font-size: 25px;
+    display: inline;
+    margin: 0;
+    // margin-left: 50px;
+}
+ 
+// ======================
+
+//The navigation side bar
+
+.nav-container {
+    display: grid;
+    min-width: 50px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(minmax(10px));
+    // row-gap: -5000px;
+    grid-template-areas:  
+        "nav-1"
+        "nav-2"
+        "nav-3" 
+        "nav-4";
+    justify-content: center;
+}
+
+//========================
+
+//Traffic label and 4 (hourly/daily...monthly stuff)
+
+.traffic-header {
+    display: grid;
+    min-width: 768px;
+    grid-template-columns: minmax(10px) minmax(75px);
+// column-gap: -10px;    
+    grid-template-areas:  //For some reason, its is double collumn!!!! BE AWARE YO!!!!!
+        "traffic-label traffic-nav ";
+}
+
+
+//-----Traffic variables -----------
+.traffic-label {
+font-size: 25px;
+}
+
+
+//============================
+//General Traffic Container 
+
+// Parent Traffic Grid Container 
+
+.traffic {
+    display: grid;
+    min-width: 768px;
+    grid-template-columns: 1fr 1fr;
+    // grid-template-rows: minmax(200px) minmax(200px);
+    grid-template-rows: minmax(25px) minmax(300px) minmax(300px);
+    // row-gap: 200px;
+
+    // Need to make the divisions
+    grid-template-areas:  //For some reason, its is double collumn!!!! BE AWARE YO!!!!!
+        "traffic-header traffic-header"
+        "widget-container-full widget-container-full"
+        "daily widget-container-half-2"; 
+    }
+
+    //General Traffic Grid Container
+
+.widget-container-full {
+    display: grid;
+    // max-width: 767px; // This is for the larger sizes
+    min-width: 768px;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(300px);
+    // Need to make the divisions
+    grid-template-areas:  
+        "widget-grid-item";
+    justify-content: center;
+}
+
+// Daily Traffic Chart Container
+
+.daily-container {
+    display: grid;
+    // max-width: 767px; // This is for the larger sizes
+    min-width: 320px;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(50px) minmax(200px);
+    // Need to make the divisions
+    grid-template-areas:  
+        "daily-label"
+        "widget-container-half";
+    justify-content: center;
+}
+
+// Circle Graph
+
+.widget-container-half-2 {
+    display: grid;
+    // max-width: 767px; // This is for the larger sizes
+    min-width: 320px;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(50px) minmax(200px);
+    // Need to make the divisions
+    grid-template-areas:  
+        "sm-user-label"
+        "chart3";
+    justify-content: center;
+}
+
+//---- variable -----
+
+canvas .widget-grid-item {
+    height: 15%;
+    width: 25%;
+}
+
+canvas .charts-3, canvas .chart2 {
+    height: 15%;
+    width: 15%;
+    // margin-top: 2222px;
+}
+
+canvas .charts-3 {
+        height: 5%;
+}
+
+//=================================
+
+// Parent Social Sections
+    
+//Start here
+.social-container {
+    display: grid;
+    // max-width: 767px; // This is for the larger sizes
+    min-width: 768px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(50px) minmax(200px) minmax(200px) minmax(200px) minmax(400px);
+    grid-template-areas:
+        "social-group social-group"
+        "members members"  
+        "recent-activity recent-activity"
+        "message message"
+        "settings settings";
+    justify-content: center;
+    margin: auto;
+}
+
+
+// socila group bigger groups
+.social-group {
+    display: grid;
+    // max-width: 767px; // This is for the larger sizes
+    min-width: 768px;
+    grid-template-columns: 50px 50px 50px;
+    grid-template-rows: minmax(768px);
+    grid-template-areas:
+        "social-text social-text social-text";
+    justify-content: none;
+    margin: 0;
+}
+
+.social-text {
+    display: grid;
+    grid-area: social-text;
+}
+
+
+.social-text {
+    display: grid;
+    // max-width: 767px; // This is for the larger sizes
+    min-width: 768px;
+    // grid-template-columns: 1fr 1fr;
+    grid-template-columns: 25px 25px  25px 25px 25px 25px;
+
+    // grid-template-rows: minmax(100px) minmax(100px);
+    grid-template-areas:
+        "social-border-1 platform-1 social-border-2 platform-2 social-border-3 platform-3" 
+        "social-border-1 stat-number-1 social-border-2 stat-number-2 social-border-3 stat-number-3";
+    justify-content: none;
+}
+
+
+.social-text {
+width: 10%;
+margin: 0;
+}
+
+// ----------- Members grid
+
+.members-container {
+    display: grid;
+    // max-width: 767px; // This is for the larger sizes
+    min-width: 768px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: minmax(125px) minmax(125px) minmax(125px) minmax(125px) minmax(125px);
+    grid-template-areas:
+        "profile-image profile-name . . ."
+        ". profile-email . profile-birth";        
+        // justify-content: center;
+        // margin: auto;
+}
+
+//Message functionality
+
+.form-field, .message-textarea, .button-primary {
+    width: 95%;
+    height:60%;
+}
+
+.message-textarea {
+height: 100%;
+
+}
+
+
+}
