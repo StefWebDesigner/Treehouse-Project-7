@@ -3,88 +3,98 @@
 // =============================================
   
 //=========//
-// Header //
+// HEADER IMAGES //
 //=========//
 
+//TARGETS ALL HEADER HEADER IMAGES
 header img {
     width: 37px;
     height: 37px;
     border: 1px solid $defult-white;
     border-radius: 100px;
-    margin-top: 3px;
-    justify-content: center;
-    // margin-right: 5px;
-}
-//Change accordingly to the nav img
-header svg {
-    // margin-top: 5px;
-    // margin-left: 10px;
-    width: 80%;
-    height: auto;
-    color: $defult-white;
-    margin: auto;
 }
 
-//need to make the images smaller
-nav img, nav svg {
-    width: 50%;
+.header-me {
+  border: solid 1px $defult-white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  align-items: center;
+  margin: auto;
+}
+
+.header-bell-icon {
     height: auto;
-    //Got to double center it
-    margin: auto;
+    color: $defult-white;
+}
+
+.bell-icon, nav svg {
+  height: 50%;
+  transition: .3s ease-out;
+  width: 2rem;
+  &:hover, &:focus {
+    animation: bellshake .5s cubic-bezier(.36,.07,.19,.97) both;
+    backface-visibility: hidden;
+    transform-origin: top right;
+  }
+}
+  
+    @keyframes bellshake {
+      0% { transform: rotate(0); }
+      15% { transform: rotate(5deg); }
+      30% { transform: rotate(-5deg); }
+      45% { transform: rotate(4deg); }
+      60% { transform: rotate(-4deg); }
+      75% { transform: rotate(2deg); }
+      85% { transform: rotate(-2deg); }
+      92% { transform: rotate(1deg); }
+      100% { transform: rotate(0); }
+    }
+
+//=========//
+// HOME NAVIGATIONS IMAGES //
+//=========//
+
+nav svg {
+    // width: 20%;
+    height: auto;
 }
 
 nav a {
-    //Got to double center it
     margin: auto;
 }
 
-.social-image-1, social-image-2, social-image-3 {
-    height: 30px;
-    width: 30px;
-    margin-top: 12px;
-    margin-left: 13px;
+//=========//
+// SM STATS IMAGES //
+//=========//
+
+
+.social-image {
+  height: 30px;
+  width: 30px;
+  margin-top: 12px;
+  margin-left: 13px;
+  margin: auto;
 }
 
-.social-border-1, .social-border-2, .social-border-3 {
-    margin: auto;
-    border: solid 1px $main-purple;
-    border-radius: 50px;
-    background-color: $main-purple;
-    width: 55px;
-    height: 55px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+.social-border {
+  margin: auto;
+  border: solid 1px $main-purple;
+  border-radius: 50px;
+  background-color: $main-purple;
+  width: 55px;
+  height: 55px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .profile-image {
-    margin: auto;
-    border: solid 1px $defult-white;
-    border-radius: 50%;
-    width: 55px;
-    height: 55px;
-    margin-bottom: 10px;
-}
-//------------------
-.bell-icon, nav svg {
-height: 50%;
-transition: .3s ease-out;
-width: 2rem;
-&:hover, &:focus {
-  animation: bellshake .5s cubic-bezier(.36,.07,.19,.97) both;
-  backface-visibility: hidden;
-  transform-origin: top right;
-}
+  border: solid 1px $defult-white;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin: auto;
 }
 
-  @keyframes bellshake {
-    0% { transform: rotate(0); }
-    15% { transform: rotate(5deg); }
-    30% { transform: rotate(-5deg); }
-    45% { transform: rotate(4deg); }
-    60% { transform: rotate(-4deg); }
-    75% { transform: rotate(2deg); }
-    85% { transform: rotate(-2deg); }
-    92% { transform: rotate(1deg); }
-    100% { transform: rotate(0); }
-  }
-  
+
+//------------------

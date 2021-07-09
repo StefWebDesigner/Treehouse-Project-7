@@ -1,736 +1,433 @@
 
+// ============================================================
+
 //MAIN GRID (TIER 1)
 //THE MAIN DIVISIONS
 
 .grid {
     min-width: 368px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: minmax(50px) minmax(50px) minmax(200px) minmax(800px) minmax(1500px) min(200px);
+    grid-template-rows: minmax(75px) minmax(50px) minmax(200px) minmax(800px) minmax(1500px) min(200px);
     grid-template-areas:  
-    "header header"
-    "nav nav"
-    "main main"
-    "section section"
-    "aside aside"
-    "footer footer";
+    "header"
+    "nav"
+    "main"
+    "section"
+    "aside"
+    "footer";
 }
 
 header {
     display: grid;
     background-color: $main-purple;
     grid-area: header;
-    text-align: center;
 }
 
 nav {
     display: grid;
     background-color: $secondary-purple;
     grid-area: nav;
-    text-align: center;
 }
 
 main {
     display: grid;
     background-color: $defult-white;
     grid-area: main;
-    text-align: center;
 }
 
 section {
     display: grid;
     background-color: $defult-white;
     grid-area: section;
-    text-align: center;
 }
 
 aside {
     display: grid;
     grid-area: aside;
-    text-align: center;
 }
 
 footer {
     display: grid;
     grid-area: footer;
-    text-align: center;
 }
 
 //========================//
-// HEADER GRID PROPERTIES //
+// HEADER (FLEX) PROPERTIES //
 //========================//
-
-//TOP HEADER CHILD GRID (TIER 2)
-//HEADER SECTIONS
 //(TITLE/BELL ICON/ BREAKLINE/ME)
 
 .header-container {
-    display: grid;
-    // max-width: 767px; // This is for the larger sizes
+    display: flex;
     min-width: 368px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: minmax(200px);
-    grid-template-areas:  
-        "header-app-title header-bell-icon header-breakline header-me header-profile-name";
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
-.header-app-title {
-    display: grid;
-    grid-area: header-app-title;
-}
+// ============================================================
 
-.header-bell-icon {
-    display: grid;
-    grid-area: header-bell-icon;
-}
+// HOME NAVIGATIONS FLEX
+// (NAV - HOME/BAR/MEMEBERS/SETTINGS)
 
-.header-breakline {
-    display: grid;
-    grid-area: header-breakline;
-}
-
-.header-me {
-    display: grid;
-    grid-area: header-me;
-}
-
-.header-profile-name {
-    display: grid;
-    grid-area: header-profile-name;
-}
-
-//------------------------------
-
-//NAV CHILD GRID (TIER 2)
-//NAVIGATION SECTIONS
-//(NAV - HOME/BAR/MEMEBERS/SETTINGS)
 .nav-container {
-    display: grid;
+    display: flex;
     min-width: 368px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: minmax(200px);
-    grid-template-areas:  
-        "nav-home nav-bar nav-members nav-settings";
-    justify-content: center;
+    height: 65px;
 }
 
-.nav-home {
-    display: grid;
-    grid-area: nav-home;
-}
+// ============================================================
 
-.nav-bar {
-    display: grid;
-    grid-area: nav-bar;
-}
+// MAIN (FLEX) PROPERTIES
 
-.nav-members {
-    display: grid;
-    grid-area: nav-members;
-}
-
-.nav-settings {
-    display: grid;
-    grid-area: nav-settings;
-}
-
-//--------------------------
-
-// MAIN GRID (TIER 2)
-//MAIN SECTION
+// SEARCH BAR/ALERT PART
 //(MAIN HEADER / ALERT)
 
 .main-container {
-    display: grid;
+    display: flex;
     min-width: 368px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: minmax(50px) minmax(50px);
-    grid-template-areas:  
-        "main-header main-header"
-        "alert alert";
-    justify-content: center;
+    flex-direction: column;
 }
 
 .main-header {
-    display: grid;
-    grid-area: main-header;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    // margin: auto;
 }
 
-.alert {
-    display: grid;
-    grid-area: alert;
+#search_it {
+    // width: 50%;
+    width: 97.5%;
+    background-color: #eee;
+    //use #777 for something
+    height: 50px;
+    margin-right: 10px;
+    margin-top: 10px;
 }
+
+#search_it:hover {
+background-color: $main-purple;
+cursor: pointer;
+}
+
 
 // ============================================================
-
-// TRAFFIC CHILD GRID (TIER 2)
-//SECTIONS SECTIONS
+// SECTION (FLEX) PROPERTIES
 //TRAFFIC-HEADER/CHART-1-CONTAINER-FULL/DAILY/SM-USER-LABEL/CHART-3-CONTAINER-FULL)
 
+
+//TRAFFIC NAVIGATION SECTIONS
+
 .traffic {
-    display: grid;
+    display: flex;
     min-width: 368px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: minmax(100px) minmax(150px) minmax(150px) minmax(200px);
-    grid-template-areas:
-        "traffic-header traffic-header"
-        "chart-1-container-full chart-1-container-full"
-        "daily daily"
-        "chart-3-container-full chart-3-container-full";
-    }
-
-.traffic-header {
-    display: grid;
-    grid-area: traffic-header;
-}
-
-.chart-1-container-full {
-    display: grid;
-    grid-area: chart-1-container-full;
-}
-
-.daily {
-    display: grid;
-    grid-area: daily;
-}
-
-.sm-user-label {
-    display: grid;
-    grid-area: sm-user-label;
-}
-
-.chart-3-container-full {
-    display: grid;
-    grid-area: chart-3-container-full;
-}
-
-// ============================================================
-
-// TRAFFIC-HEADER GRAND CHILD GRID (TIER 3)
-//SECTION SECTIONS
-//(TRAFFIC-LABEL/TRAFFIC-NAV)
-
-.traffic-header {
-    display: grid;
-    min-width: 368px;
-    grid-template-columns: 1fr 1fr;
-    // grid-template-rows: minmax(200px) minmax(200px);
-    grid-template-rows: minmax(50px) minmax(50px);
-    grid-template-areas:  //For some reason, its is double collumn!!!! BE AWARE YO!!!!!
-        "traffic-label"
-        "traffic-nav";
-}
-
-.traffic-label {
-    display: grid;
-    grid-area: traffic-label;
+    flex-direction: column;
 }
 
 .traffic-nav {
-    display: grid;
-    grid-area: traffic-nav;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-decoration: none;
+    list-style: none;
+    margin: auto;
 }
 
-// ==================================
+// ---------------------------------------------------------------
 
-// TRAFFIC-NAV GRAND GRAND CHILD GRID (TIER 4)
-//SECTIONS SECTIONS
-//(TRAFFIIC-NAV-HOURLY/DAILY/WEEKLY/MONTHLY)
-
-.traffic-nav {
-    display: grid;
-    min-width: 368px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: minmax(200px);
-    grid-column-gap: 20px;  
-    grid-template-areas:  
-        "traffic-nav-hourly traffic-nav-daily traffic-nav-weekly traffic-nav-monthly";
-    justify-content: center;
-}
-
-.traffic-nav-hourly {
-    display: grid;
-    grid-area: traffic-nav-hourly;
-}
-
-.traffic-nav-daily {
-    display: grid;
-    grid-area: traffic-nav-daily;
-}
-
-.traffic-nav-weekly {
-    display: grid;
-    grid-area: traffic-nav-weekly;
-}
-
-.traffic-nav-monthly {
-    display: grid;
-    grid-area: traffic-nav-monthly;
-}
-
-// =========================================
-
-// chart-1-container-full GRAND CHILD GRID (TIER 3)
-// SECTIONS SECTIONS 
+//CHART 1 SECTIONS
 //(CHARTS1)
-.chart-1-container-full {
-    display: grid;
+
+.chart-1-main {
+    display: flex;
     min-width: 368px;
-    grid-template-columns: 1fr;
-    grid-template-rows: minmax(200px);
-    grid-template-areas:  
-        "chart1";
     justify-content: center;
 }
 
-.chart1 {
-    display: grid;
-    grid-area: chart1;
-}
+// ---------------------------------------------------------------
 
-// =========================================
-
-// DAILY GRAND CHILD GRID (TIER 3)
-//SECTIONS SECTIONS
+//CHART 2 SECTIONS
 //(DAILY-LABEL/CHART-2-CONTAINER-FULL)
 
-.daily-container {
-    display: grid;
+//THIS IS USED TO CONTROL DIRECTION OF BOTH CHART 2 & 3
+.chart2-3-flow-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+}
+
+//UNABLE TO CENTER
+.chart2-container {
+    display: flex;
     min-width: 368px;
-    grid-template-columns: 1fr;
-    grid-template-rows: minmax(200px) minmax(200px);
-    grid-template-areas:  
-        "daily-label"
-        "chart-2-container-full";
-    justify-content: center;
+    flex-direction: column;
+    margin: auto;
 }
 
-.daily-label {
-    display: grid;
-    grid-area: daily-label;
-}
-
-.chart-2-container-full {
-    display: grid;
-    grid-area: chart-2-container-full;
-}
-
-// =========================================
-
-// chart-3-container-full GRAND CHILD GRID (TIER 3)
-//SECTION SECTIONS
+//CHART 2 SECTIONS
 //(SM-USER-LABEL/CHART3)
 
-.chart-3-container-full {
-    display: grid;
+//UNABLE TO CENTER
+.chart3-container {
+    display: flex;
     min-width: 368px;
-    grid-template-columns: 1fr;
-    grid-template-rows: minmax(200px) minmax(200px);
-    grid-template-areas:  
-        "sm-user-label"
-        "chart3";
+    flex-direction: column;
+
     justify-content: center;
+    margin: auto;
+
 }
 
-.sm-user-label {
-    display: grid;
-    grid-area: sm-user-label;
-}
 
-.chart3 {
-    display: grid;
-    grid-area: chart3;
-}
-
-// =========================================
-// SOCIAL CHILD GRID (TIER 2)
-//ASIDE SECTION
+// // =========================================
+// ASIDE (FLEX) PROPERTIES
+//SOCIAL FACT SECTIONS
 //(SOCIAL-GROUP/MEMBERS/RECENT-ACTIVITY/MESSAGE/SETTINGS)
 
-.social-container {
-    display: grid;
-    // max-width: 767px; // This is for the larger sizes
+.social-flex-parent {
+    display: flex;
     min-width: 368px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: minmax(50px) minmax(200px) minmax(200px) minmax(200px) minmax(400px);
-    grid-template-areas:
-        "social-group social-group"
-        "members members"  
-        "recent-activity recent-activity"
-        "message message"
-        "settings settings";
+    flex-direction: column;
+
+}
+
+.social-fact-container {
+    display: flex;
+    min-width: 368px;
     justify-content: center;
     margin: auto;
 }
 
-.social-group {
-    display: grid;
-    grid-area: social-group;
-}
-
-.members {
-    display: grid;
-    grid-area: members;
-}
-
-.recent-activity {
-    display: grid;
-    grid-area: recent-activity;
-}
-
-.message {
-    display: grid;
-    grid-area: message;
-}
-
-.settings {
-    display: grid;
-    grid-area: settings;
-}
-
-// =========================================
-// SOCIAL TEXT GRAND CHILD GRID (TIER 3)
-//ASIDE SECTIONS
-//(SOCIAL-BORDERS-1-3/PLATFORM-1-3/STATNUMBER-1-3)
-
 .social-text {
-    display: grid;
-    min-width: 368px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: minmax(100px) minmax(100px);
-    grid-template-areas:
-        "social-border-1 platform-1"
-        "social-border-1 stat-number-1"
-        "social-border-2 platform-2"
-        "social-border-2 stat-number-2"
-        "social-border-3 platform-3"
-        "social-border-3 stat-number-3";
-    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    //sm fact border styling
+    border: solid 1px grey;
+    border-radius: 10px;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+   background-color: $seconday-white;
 }
 
-.social-border-1 {
-    display: grid;
-    grid-area: social-border-1;
+.social-border {
+    display: flex;
+    flex-direction: column;
 }
 
-.platform-1 {
-    display: grid;
-    grid-area: platform-1;
+.social-stat {
+    display: flex;
+    flex-direction: column;
 }
 
-.stat-number-1 {
-    display: grid;
-    grid-area: stat-number-1;
-}
+// ---------------------------------------------------------------
 
-.social-border-2 {
-    display: grid;
-    grid-area: social-border-2;
-}
+// MEMBERS SECTIONS
+// //(PROFILE-IMAGE/MEMEBRS-TEXT/PROFILE-NAME/PROFILE-EMAIL-PROFILE-BIRTH)
 
-.platform-2 {
-    display: grid;
-    grid-area: platform-2;
+//not currently working well as the conductor
+.members-recent-flow-container {
+    display: flex;
+    flex-direction: column;
 }
-
-.stat-number-2 {
-    display: grid;
-    grid-area: stat-number-2;
-}
-.social-border-3 {
-    display: grid;
-    grid-area: social-border-3;
-}
-
-.platform-3 {
-    display: grid;
-    grid-area: platform-3;
-}
-
-.stat-number-3 {
-    display: grid;
-    grid-area: stat-number-3;
-}
-
-// =========================================
-// Members GRAND CHILD GRID (TIER 3)
-//ASIDE SECTIONS
-//(PROFILE-IMAGE/MEMEBRS-TEXT/PROFILE-NAME/PROFILE-EMAIL-PROFILE-BIRTH)
 
 .members-container {
-    display: grid;
+    display: flex;
     min-width: 368px;
-    grid-template-columns: 1fr;
-    grid-template-rows: minmax(125px) minmax(125px) minmax(125px) minmax(125px) minmax(125px);
-    grid-template-areas:
-        "profile-image"
-        "members-text"
-        "profile-name"
-        "profile-email"
-        "profile-birth";
-        justify-content: center;
-        margin: auto;
+    flex-direction: column;
+    //added but may need to delete
+    margin: auto;
 }
 
-.profile-image {
-    display: grid;
-    grid-area: profile-image;
+.member-group {
+    display: flex;
+    flex-direction: column;
 }
 
-.members-text {
-    display: grid;
-    grid-area: members-text;
+.name-email-group {
+    display: flex;
+    flex-direction: column;
 }
 
-.profile-name {
-    display: grid;
-    grid-area: profile-name;
+// ---------------------------------------------------------------
+// RECENT ACTIVITY SECTIONS
+
+.recent-flex-container {
+    display: flex;
+    min-width: 368px;
 }
-
-.profile-email {
-    display: grid;
-    grid-area: profile-email;
-}
-
-.profile-birth {
-    display: grid;
-    grid-area: profile-birth;
-}
-
-
-//=============================================================================//
-// RECENT ACTIVITY GRAND CHILD GRID (TIER 3)
-//ASIDE SECTIONS
-//RECENT ACTIVITY CONTENT
 
 .recent-activity-group {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+}
+
+// ---------------------------------------------------------------
+// MESSAGE SECTIONS
+
+.message-setting-flow-container {
+display: flex;
+flex-direction: column;
+}
+
+.message-container {
+    display: flex;
     min-width: 368px;
-    grid-template-columns: 1fr;
-    grid-template-rows: minmax(100px) minmax(100px);
-    grid-template-areas:
-    "recent-label "
-    "recent-activity-container";
-        // justify-content: center;
+    flex-direction: column;
 }
 
-.recent-label {
-    display: grid;
-    grid-area: recent-label;
+.message-group {
+    display: flex;
+    flex-direction: column;
 }
 
-.recent-activity-container {
-    display: grid;
-    grid-area: recent-activity-container;
-}
 
-//=============================================================================//
-// form GRAND CHILD GRID (TIER 3)
-//ASIDE SECTIONS
-//ALL FORM ELEMENTS
-
-.widget-container {
-    display: grid;
-    min-width: 368px;
-    grid-template-columns: 1fr;
-    grid-template-rows: minmax(100px) minmax(100px) minmax(100px) minmax(100px);
-    grid-template-areas:
-    "message-input"
-    "form-field "
-    "message-textarea"
-    "button-primary";
-    justify-content: center;
-}
-
-.message-input {
-    display: grid;
-    grid-area: message-input;
-}
-
-.form-field {
-    display: grid;
-    grid-area: form-field;
-}
-
-.message-textarea {
-    display: grid;
-    grid-area: message-textarea;
-}
-
-.button-primary {
-    display: grid;
-    grid-area: button-primary;
-}
-
-//=============================================================================//
-// Settings Container GRAND CHILD GRID (TIER 3)
-//ASIDE SECTIONS
-//NOTIFCATION-SETTIGNS/TIMEZONE-SETTINGS/SETTINGS-BUTTON ELEMENTS
+// ---------------------------------------------------------------
+// SETTINGS SECTIONS
+// //NOTIFCATION-SETTIGNS/TIMEZONE-SETTINGS/SETTINGS-BUTTON ELEMENTS
 
 .settings-container {
-    display: grid;
+    display: flex;
     min-width: 368px;
-    grid-template-columns: 1fr;
-    grid-template-rows: minmax(200px) minmax(200px) minmax(200px);
-    row-gap: 20px;
-
-    grid-template-areas:
-    "notifcation-settings"
-    "timezone-settings"
-    "settings-button";
     justify-content: center;
-}
-.notifcation-settings {
-    display: grid;
-    grid-area: notifcation-settings;
-}
-
-.timezone-settings {
-    display: grid;
-    grid-area: timezone-settings;
-}
-
-.settings-button {
-    display: grid;
-    grid-area: settings-button;
-}
-
-//=============================================================================//
-// Notfication Setting  Grand grand CHILD GRID (TIER 4)
-//ASIDE SECTIONS
-//NOTIFICATION ELEMENTS
-
-.notifcation-settings {
-    display: grid;
-    min-width: 368px;
-    grid-template-columns: 1fr;
-    grid-template-rows: minmax(100px) minmax(100px);
-    grid-template-areas:
-    "email-container"
-    "profile-container";
-    row-gap: 20px;
-    justify-content: center;
-}
-
-.email-container {
-    display: grid;
-    grid-area: email-container;
-}
-
-.profile-container {
-    display: grid;
-    grid-area: profile-container;
-}
-
-//=============================================================================//
-// Notfication Setting  Grand grand CHILD GRID (TIER 4)
-//ASIDE SECTIONS 
-//(EMAIL ELEMENTS)
-
-.email-container {
-    display: grid;
-    // max-width: 767px; // This is for the larger sizes
-    max-width: 368px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: minmax(100px) minmax(100px) minmax(100px);
-    grid-template-areas:
-    "strong-email input-email"
-    ". span-email";
-    justify-content: center;
-}
-
-.strong-email {
-    display: grid;
-    grid-area: strong-email;
-}
-
-.input-email {
-    display: grid;
-    grid-area: input-email;
-}
-
-.span-email {
-    display: grid;
-    grid-area: span-email;
+    flex-direction: column;
 }
 
 
-//=============================================================================//
-// Notfication Setting  Grand grand CHILD GRID (TIER 4)
-//ASIDE SECTIONS 
-//(PROFILE ELEMENTS)
+// //=============================================================================//
+// // Notfication Setting  Grand grand CHILD GRID (TIER 4)
+// //ASIDE SECTIONS
+// //NOTIFICATION ELEMENTS
 
-.profile-container {
-    display: grid;
-    min-width: 368px; // This is for the larger sizes
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: minmax(100px) minmax(100px) minmax(100px);
-    grid-template-areas:
-    "strong-email input-email"
-    ". span-email";
-    justify-content: center;
-}
+// .notifcation-settings {
+//     display: flex;
+//     min-width: 368px;
+//     grid-template-columns: 1fr;
+//     grid-template-rows: minmax(100px) minmax(100px);
+//     grid-template-areas:
+//     "email-container"
+//     "profile-container";
+//     row-gap: 20px;
+//     justify-content: center;
+// }
 
-.strong-email {
-    display: grid;
-    grid-area: strong;
-}
+// .email-container {
+//     display: flex;
+//     grid-area: email-container;
+// }
 
-.input-email {
-    display: grid;
-    grid-area: input;
-}
+// .profile-container {
+//     display: flex;
+//     grid-area: profile-container;
+// }
 
-.span-email {
-    display: grid;
-    grid-area: span;
-}
+// //=============================================================================//
+// // Notfication Setting  Grand grand CHILD GRID (TIER 4)
+// //ASIDE SECTIONS 
+// //(EMAIL ELEMENTS)
 
-//=============================================================================//
-// Time Setting  Grand grand CHILD GRID (TIER 4)
-//ASIDE SECTIONS 
-//(TIMEZONE ELEMENTS)
+// .email-container {
+//     display: flex;
+//     // max-width: 767px; // This is for the larger sizes
+//     max-width: 368px;
+//     grid-template-columns: 1fr 1fr;
+//     grid-template-rows: minmax(100px) minmax(100px) minmax(100px);
+//     grid-template-areas:
+//     "strong-email input-email"
+//     ". span-email";
+//     justify-content: center;
+// }
 
-.timezone-settings {
-    display: grid;
-    max-width: 368px;
-    grid-template-columns: 1fr;
-    grid-template-rows: minmax(100px);
-    grid-template-areas:
-    "fieldset";
-    justify-content: center;
-}
+// .strong-email {
+//     display: flex;
+//     grid-area: strong-email;
+// }
 
-.fieldset {
-    display: grid;
-    grid-area: fieldset;
-}
+// .input-email {
+//     display: flex;
+//     grid-area: input-email;
+// }
 
-//=============================================================================//
-// SETTING-BUTTON  Grand grand CHILD GRID (TIER 4)
-//ASIDE SECTIONS 
-//(TIME BUTTON ELEMENTS)
+// .span-email {
+//     display: flex;
+//     grid-area: span-email;
+// }
 
-.timezone-settings {
-    display: grid;
-    max-width: 368px;
-    grid-template-columns: 1fr;
-    grid-template-rows: minmax(100px) minmax(100px);
-    grid-template-areas:
-    "button-primary"
-    "button-disabled";
-    justify-content: center;
-}
 
-.button-primary {
-    display: grid;
-    grid-area: button-primary;
-}
+// //=============================================================================//
+// // Notfication Setting  Grand grand CHILD GRID (TIER 4)
+// //ASIDE SECTIONS 
+// //(PROFILE ELEMENTS)
 
-.button-disabled {
-    display: grid;
-    grid-area: button-disabled;
-}
+// .profile-container {
+//     display: flex;
+//     min-width: 368px; // This is for the larger sizes
+//     grid-template-columns: 1fr 1fr;
+//     grid-template-rows: minmax(100px) minmax(100px) minmax(100px);
+//     grid-template-areas:
+//     "strong-email input-email"
+//     ". span-email";
+//     justify-content: center;
+// }
 
-//========================================================
+// .strong-email {
+//     display: flex;
+//     grid-area: strong;
+// }
+
+// .input-email {
+//     display: flex;
+//     grid-area: input;
+// }
+
+// .span-email {
+//     display: flex;
+//     grid-area: span;
+// }
+
+// //=============================================================================//
+// // Time Setting  Grand grand CHILD GRID (TIER 4)
+// //ASIDE SECTIONS 
+// //(TIMEZONE ELEMENTS)
+
+// .timezone-settings {
+//     display: flex;
+//     max-width: 368px;
+//     grid-template-columns: 1fr;
+//     grid-template-rows: minmax(100px);
+//     grid-template-areas:
+//     "fieldset";
+//     justify-content: center;
+// }
+
+// .fieldset {
+//     display: flex;
+//     grid-area: fieldset;
+// }
+
+// //=============================================================================//
+// // SETTING-BUTTON  Grand grand CHILD GRID (TIER 4)
+// //ASIDE SECTIONS 
+// //(TIME BUTTON ELEMENTS)
+
+// .timezone-settings {
+//     display: flex;
+//     max-width: 368px;
+//     grid-template-columns: 1fr;
+//     grid-template-rows: minmax(100px) minmax(100px);
+//     grid-template-areas:
+//     "button-primary"
+//     "button-disabled";
+//     justify-content: center;s
+// }
+
+// .button-primary {
+//     display: flex;
+//     grid-area: button-primary;
+// }
+
+// .button-disabled {
+//     display: flex;
+//     grid-area: button-disabled;
+// }
+
+// //========================================================

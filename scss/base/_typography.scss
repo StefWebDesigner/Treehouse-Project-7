@@ -1,7 +1,8 @@
-// ============================================= 
-//                  Typography                      
-// =============================================
+// // ============================================= 
+// //                  Typography                      
+// // =============================================
 
+//UNIVERSAL
 
 * {
   font-family: 'Roboto', sans-serif;
@@ -11,67 +12,56 @@ h1, h3, p {
   color: $defult-white;
 }
 
-header h1, header h3 {
-  // font-size: 25px;
+//HEADER  FONTS
+
+.header-app-title {
+  font-size: 30px;
+  color: $defult-white;
+}
+
+.header-profile-name {
   font-size: 15px;
-  padding-left: 2px;
-  // text-align: center;
-  margin: auto;
-
+  color: $defult-white;
 }
 
-header h3 {
-  text-align: unset;
-  margin-bottom: 10px;
+//TRAFFIC FONTS
 
-}
-
-.headline {
-font-size: 12px;
-margin: 0;
-}
-
-//The font is going black
-.traffic-label, .daily-container .daily-label {
+//ALL SECTION TITLE STYLING
+.traffic-label, .sm-user-label, .daily-label, .member-label, .message-label, .recent-label, .settings-label {
   font-size: 15px;
-  text-align: center;
   color: black;
 }
 
-// Social Stats Grid Font Styles
 
-.platform-1, .platform-2, .platform-3 { 
+// // Social Stats Grid Font Styles
+
+.platform { 
 color: $main-purple;
 margin-top: 10px;
 margin-bottom: -25px;
 margin-right: 31px;
 }
 
-.stat-number-1, .stat-number-2, .stat-number-3 {
-font-size: 30px;
-color: grey;
-margin-top: 20px;
-margin-bottom: 10px;
-margin-right: 20px;
-}
+.stat-number {
+  font-size: 30px;
+  color: grey; 
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  }
 
-
-// Members/Recent Activities Font Styles
-
-.member-label, .message-label, .recent-label {
-text-align: left;
-color: black;
-margin-left: 15px;
-}
+// // Members/Recent Activities Font Styles
 
 .profile-email {
-text-decoration-style: none;
-color: $main-purple;
+  text-decoration-style: none;
+  color: $main-purple;
+  text-align: center;
 }
 
 .members-text, .profile-name, .profile-birth {
-color: black;
-margin-bottom: 20px;
+  color: black;
+  text-align: center;
+
 }
 
 
