@@ -60,7 +60,10 @@ footer {
     display: flex;
     min-width: 368px;
     justify-content: space-evenly;
+    flex-shrink: 2;
+    flex-basis: auto;
 }
+
 
 // ============================================================
 
@@ -280,7 +283,6 @@ flex-direction: column;
     flex-direction: column;
 }
 
-
 // ---------------------------------------------------------------
 // SETTINGS SECTIONS
 // //NOTIFCATION-SETTIGNS/TIMEZONE-SETTINGS/SETTINGS-BUTTON ELEMENTS
@@ -292,6 +294,18 @@ flex-direction: column;
     flex-direction: column;
 }
 
+////------ The email/profile --- toggle
+//is not working well
+.email_group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.email-notf-upper-part, .email-input-upper-part {
+    display: flex;
+    flex-direction: row;
+}
 
 // //=============================================================================//
 // // Notfication Setting  Grand grand CHILD GRID (TIER 4)

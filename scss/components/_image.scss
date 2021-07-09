@@ -23,15 +23,18 @@ header img {
   margin: auto;
 }
 
-.header-bell-icon {
-    height: auto;
-    color: $defult-white;
-}
+// .header-bell-icon {
+//     height: auto;
+//     color: $defult-white;
+// }
 
 .bell-icon, nav svg {
   height: 50%;
   transition: .3s ease-out;
   width: 2rem;
+  color: $defult-white;
+  margin: auto;
+
   &:hover, &:focus {
     animation: bellshake .5s cubic-bezier(.36,.07,.19,.97) both;
     backface-visibility: hidden;
@@ -58,6 +61,7 @@ header img {
 nav svg {
     // width: 20%;
     height: auto;
+    margin: auto;
 }
 
 nav a {
@@ -68,25 +72,29 @@ nav a {
 // SM STATS IMAGES //
 //=========//
 
-
 .social-image {
   height: 30px;
   width: 30px;
-  margin-top: 12px;
-  margin-left: 13px;
   margin: auto;
+  margin-top: 12px;
 }
 
 .social-border {
   margin: auto;
   border: solid 1px $main-purple;
-  border-radius: 50px;
+  // border-radius: 50px;
+  border-radius: 70px;
   background-color: $main-purple;
   width: 55px;
   height: 55px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
+
+//MEMBERS SECTIONS
 
 .profile-image {
   border: solid 1px $defult-white;
@@ -94,7 +102,10 @@ nav a {
   width: 80px;
   height: 80px;
   margin: auto;
+  //this seem to fix everthing with centering
+  display: flex;
+  border: 3px solid $main-purple;
+  border-radius: 100%;
 }
 
-
-//------------------
+//------------------------------------

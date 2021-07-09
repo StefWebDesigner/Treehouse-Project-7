@@ -7,13 +7,14 @@ h1, h3, p {
 }
 
 .header-app-title {
-  font-size: 30px;
+  font-size: 28px;
   color: white;
 }
 
 .header-profile-name {
   font-size: 15px;
   color: white;
+  text-align: center;
 }
 
 .traffic-label, .sm-user-label, .daily-label, .member-label, .message-label, .recent-label, .settings-label {
@@ -26,6 +27,7 @@ h1, h3, p {
   margin-top: 10px;
   margin-bottom: -25px;
   margin-right: 31px;
+  margin-left: 13px;
 }
 
 .stat-number {
@@ -34,6 +36,7 @@ h1, h3, p {
   margin-top: 20px;
   margin-bottom: 10px;
   margin-right: 20px;
+  margin-left: 10px;
 }
 
 .profile-email {
@@ -160,6 +163,10 @@ footer {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -ms-flex-negative: 2;
+      flex-shrink: 2;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
 }
 
 .nav-container {
@@ -443,6 +450,29 @@ footer {
           flex-direction: column;
 }
 
+.email_group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.email-notf-upper-part, .email-input-upper-part {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
 header img {
   width: 37px;
   height: 37px;
@@ -461,16 +491,13 @@ header img {
   margin: auto;
 }
 
-.header-bell-icon {
-  height: auto;
-  color: white;
-}
-
 .bell-icon, nav svg {
   height: 50%;
   -webkit-transition: .3s ease-out;
   transition: .3s ease-out;
   width: 2rem;
+  color: white;
+  margin: auto;
 }
 
 .bell-icon:hover, .bell-icon:focus, nav svg:hover, nav svg:focus {
@@ -562,6 +589,7 @@ header img {
 
 nav svg {
   height: auto;
+  margin: auto;
 }
 
 nav a {
@@ -571,20 +599,22 @@ nav a {
 .social-image {
   height: 30px;
   width: 30px;
-  margin-top: 12px;
-  margin-left: 13px;
   margin: auto;
+  margin-top: 12px;
 }
 
 .social-border {
   margin: auto;
   border: solid 1px #9d89f5;
-  border-radius: 50px;
+  border-radius: 70px;
   background-color: #9d89f5;
   width: 55px;
   height: 55px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .profile-image {
@@ -593,19 +623,32 @@ nav a {
   width: 80px;
   height: 80px;
   margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 3px solid #9d89f5;
+  border-radius: 100%;
 }
 
 .form-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: auto;
   text-align: center;
+  width: 97%;
   background-color: #e0e0eb;
   border: 1px solid #9d89f5;
   border-radius: 5px;
 }
 
 .message-textarea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: auto;
   margin-top: 5px;
+  width: 97%;
   text-align: center;
   background-color: #e0e0eb;
   border: 1px solid #9d89f5;
@@ -628,7 +671,7 @@ fieldset {
 }
 
 .chart2 {
-  width: 160px;
+  width: 140px;
 }
 
 .chart3 {
