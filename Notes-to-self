@@ -2,25 +2,17 @@
 /   things to do  /
 ===================
 
-Try using div.container tab shortcut
 
-#2
-With the dashboard, put in a div as advive from the program 
-<div class="main-header"> // row
-<h2 class="headline">Dashboard</h2>
-<div class="main-header-search">
-<input type="search" placeholder="Search..." />
-</div>
-</div>
+make a short api and make it have a search bar
+make an active class > when you press teh user message >> it holds it's color
+seach box for message
+make a a coll bell animation change
+colres inbetween sides
+add the button bounce animation
+When you click on the mesasge button 
+>> got back to the message section
 
-//Put the reference tags on the navigation
 
-Alert (add div becaue add an anctual alert)
-<div class="alert" id="alert" >
-<!-- JS will insert alert here -->
-</div>
-
-Add recent area activyt part
 
 
 ====================

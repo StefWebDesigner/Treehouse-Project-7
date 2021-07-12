@@ -6,6 +6,7 @@
 
 .grid {
     min-width: 368px;
+    
     display: grid;
     grid-template-rows: minmax(75px) minmax(50px) minmax(200px) minmax(800px) minmax(1500px) min(200px);
     grid-template-areas:  
@@ -56,12 +57,37 @@ footer {
 //========================//
 //(TITLE/BELL ICON/ BREAKLINE/ME)
 
+// .header-container {
+//     display: flex;
+//     min-width: 368px;
+//     justify-content: space-evenly;
+//     // flex-shrink: 2;
+//     // flex-basis: auto;
+//     flex-direction: row;
+// }
+
+header {
+    display: flex;
+    flex-direction: row;
+    height: 85px;
+    justify-content: space-evenly;
+    min-width: 368px;
+    margin: auto;
+}
+
 .header-container {
     display: flex;
     min-width: 368px;
     justify-content: space-evenly;
-    flex-shrink: 2;
-    flex-basis: auto;
+    // flex-shrink: 2;
+    // flex-basis: auto;
+    flex-direction: row;
+}
+
+.header-offset {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 
@@ -70,10 +96,18 @@ footer {
 // HOME NAVIGATIONS FLEX
 // (NAV - HOME/BAR/MEMEBERS/SETTINGS)
 
+nav {
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+
+}
+
 .nav-container {
     display: flex;
     min-width: 368px;
     height: 65px;
+    flex-direction: row;
 }
 
 // ============================================================
@@ -236,11 +270,12 @@ cursor: pointer;
 .members-container {
     display: flex;
     min-width: 368px;
-    flex-direction: column;
+    flex-direction: row;
     //added but may need to delete
     margin: auto;
 }
 
+//THIS SHOULD MAKE IT INTO A ROW
 .member-group {
     display: flex;
     flex-direction: column;

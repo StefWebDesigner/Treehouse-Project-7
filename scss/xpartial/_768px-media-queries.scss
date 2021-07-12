@@ -2,362 +2,217 @@
 /*              @Media Breakpoints                      */
 /* ============================================= */
 
+//This this as if it wasn't effect the 368px
+//I'll ssort that out later
 
-// @media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
 
-//     .grid {
-//         min-width: 768px;    
-//         grid-template-columns: 50px 1fr;
-//     grid-template-rows: minmax(50px) minmax(50px) minmax(300px) minmax(800px) minmax(1700px) minmax(200px);
-//     grid-template-areas:  
-//     "header header"
-//     ". ."
-//     "nav main"
-//     "nav section"
-//     "nav aside"
-//     "nav footer";
-// }
-
-//==========================
-
-//Top Header
-
-// .header-container {
-//     display: grid;
-//     min-width: 768px;
-//     grid-template-columns: 2fr minmax(10px) minmax(10px) minmax(10px);
-//     column-gap: minmax(300px) minmax(10px) minmax(10px) minmax(10px);
-//     grid-template-areas:  
-//         "header-app-title header-bell-icon header-me header-profile-name";
-//     justify-content: center;
-// }
-
-// =========================
-
-//Dashboard & search input
-
-// .main-header {
-//     display: grid;
-//     min-width: 768px;
-//     grid-template-columns: 15px 175px;
-//     grid-template-rows: minmax(200px);
-//     grid-template-areas:  
-//         "headline main-header-search";
-//         justify-content: center;
-// }
-
-// .headline {
-//     display: grid;
-//     grid-area: headline;
-// }
-
-// .main-header-search {
-//     display: grid;
-//     grid-area: main-header-search;
-// }
-
-//--- main hearder variables
-
-// .main-header {
-// margin: 0;
-// }
-
-// .main-header-search {
-// width: 60%;
-// display: inline;
-//     margin-left: 150px;
+.grid {
+    min-width: 768px;    
+    grid-template-columns: 50px 718px;
+    grid-template-rows: minmax(50px) minmax(50px) minmax(300px) minmax(800px) minmax(1700px); //minmax(200px);
+    grid-template-areas:  
+    "header header"
+    "nav main"
+    "nav section"
+    "nav aside"
+    "nav footer";
+}
 
 
-// }
+//========================//
+// HEADER (FLEX) PROPERTIES //
+//========================//
+//(TITLE/BELL ICON/ BREAKLINE/ME)
 
-// .headline {
-//     font-size: 25px;
-//     display: inline;
-//     margin: 0;
-// }
+header {
+    min-width: 768px;
+}
 
-// .daily-label {
-//     font-size: 25px;
+.header-container {
+    min-width: 718px;
+    justify-content: space-between;
+}
 
+.header-offset {
+    flex-grow: .1;
+}
 
-// }
- 
-// ======================
+// ============================================================
 
-//The navigation side bar
+// HOME NAVIGATIONS FLEX
+// (NAV - HOME/BAR/MEMEBERS/SETTINGS)
 
-// .nav-container {
-//     display: grid;
-//     min-width: 50px;
-//     grid-template-columns: 1fr;
-//     grid-template-rows: repeat(minmax(10px));
-//     // row-gap: -5000px;
-//     grid-template-areas:  
-//         "nav-home"
-//         "nav-bar"
-//         "nav-members" 
-//         "nav-settings";
-//     justify-content: center;
-// }
+nav {
+    flex-direction: column;
+    justify-content: start; 
+}
 
-//========================
-
-//Traffic label and 4 (hourly/daily...monthly stuff)
-
-// .traffic-header {
-//     display: grid;
-//     min-width: 768px;
-//     grid-template-columns: minmax(10px) minmax(75px);
-//     grid-template-areas: 
-//         "traffic-label traffic-nav ";
-// }
-
-//-----Traffic variables -----------
-// .traffic-label {
-// font-size: 25px;
-// }
-
-
-//============================
-//General Traffic Container 
-
-// Parent Traffic Grid Container 
-
-// .traffic {
-//     display: grid;
-//     min-width: 768px;
-//     grid-template-columns: 1fr 1fr;
-//     grid-template-rows: minmax(25px) minmax(300px) minmax(300px);
-//     // row-gap: 200px;
-
-//     grid-template-areas:  
-//         "traffic-header traffic-header"
-//         "chart-1-container-full chart-1-container-full"
-//         "daily chart-3-container-full"; 
-//     }
-
-    //General Traffic Grid Container
-
-// .chart-1-container-full {
-//     display: grid;
-//     min-width: 700px;
-//     grid-template-columns: 1fr;
-//     grid-template-rows: minmax(300px);
-//     grid-template-areas:  
-//         "chart1";
-//     justify-content: center;
-// }
-
-// Daily Traffic Chart Container
-
-// .daily-container {
-//     display: grid;
-//     min-width: 320px;
-//     grid-template-columns: 1fr;
-//     grid-template-rows: minmax(50px) minmax(200px);
-//     grid-template-areas:  
-//         "daily-label"
-//         "chart-2-container-full";
-//     justify-content: center;
-// }
-
-// Circle Graph
-
-// .chart-3-container-full {
-//     display: grid;
-//     min-width: 320px;
-//     grid-template-columns: 1fr;
-//     grid-template-rows: minmax(50px) minmax(200px);
-//     grid-template-areas:  
-//         "sm-user-label"
-//         "chart3";
-//     justify-content: center;
-// }
-
-//---- variable -----
-
-// canvas .chart1 {
-//     height: 15%;
-//     width: 25%;
-// }
-
-// canvas .chart3, canvas .chart2 {
-//     height: 15%;
-//     width: 15%;
-// }
-
-//=================================
-
-// Parent Social Sections
+.nav-container {
+    min-width: 50px;
+    flex-direction: column;
+    height: 100px;
     
-// .social-container {
-//     display: grid;
-//     min-width: 768px;
-//     grid-template-columns: 1fr 1fr;
-//     grid-template-rows: minmax(50px) minmax(200px) minmax(200px) minmax(200px) minmax(400px);
-//     // row-gap: 20px;
-//     grid-template-areas:
-//         "social-group social-group"
-//         "members members"  
-//         "recent-activity recent-activity"
-//         "message message"
-//         "settings settings";
-//     justify-content: center;
-//     margin: auto;
-// }
+}
+
+// ============================================================
+
+// MAIN (FLEX) PROPERTIES
+
+// SEARCH BAR/ALERT PART
+//(MAIN HEADER / ALERT)
+
+.main-container {
+    min-width: 768px;
+}
+
+.main-header {
+    justify-content: start;
+}
 
 
-// socila group bigger groups
-// .social-group {
-//     display: grid;
-//     min-width: 768px;
-//     grid-template-columns: 50px 50px 50px;
-//     grid-template-rows: minmax(768px);
-//     grid-template-areas:
-//         "social-text social-text social-text";
-//     justify-content: none;
-//     margin: 0;
-// }
-
-// .social-text {
-//     display: grid;
-//     grid-area: social-text;
-// }
-
-//Not showing the other variables >>> space is now not a problem!!!!
-// .social-text {
-//     display: grid;
-//     min-width: 220px;
-//     grid-template-columns: 25px 25px  25px 25px 25px 25px;
-//     grid-template-areas:
-//         "social-border-1 platform-1 social-border-2 platform-2 social-border-3 platform-3" 
-//         "social-border-1 stat-number-1 social-border-2 stat-number-2 social-border-3 stat-number-3";
-//     justify-content: none;
-// }
-
-// .social-text {
-// width: 10%;
-// margin: 0;
-// }
-
-// ----------- Members grid
-
-// .members-container {
-//     display: grid;
-//     min-width: 768px;
-//     grid-template-columns: 1fr 1fr 1fr 1fr;
-//     grid-template-rows: minmax(125px) minmax(125px) minmax(125px) minmax(125px) minmax(125px);
-//     grid-template-areas:
-//         "profile-image profile-name . . ."
-//         ". profile-email . profile-birth";        
-// }
+#search_it {
+    width: 275%;
+    margin-right: 10px;
+    // flex-grow: 2;
+    margin-left: 10px;
+    // flex-basis: 100%;
+    margin-top: 10px;
+}
 
 
-// .profile-email {
-//     text-decoration-style: none;
-//     color: $main-purple;
-//     font-size: 30px;
-//     }
-    
-// .members-text, .profile-name, .profile-birth {
-//     color: black;
-//     margin-bottom: 20px;
-//     font-size: 30px;
-//     }
+// ============================================================
+// SECTION (FLEX) PROPERTIES
+//TRAFFIC-HEADER/CHART-1-CONTAINER-FULL/DAILY/SM-USER-LABEL/CHART-3-CONTAINER-FULL)
 
+//***FOUND A BUG IN MOVING THE TRAFFIC NAV TO THE END***
 
-//Message functionality
-// .form-field, .message-textarea, .button-primary {
-//     width: 95%;
-//     height:60%;
-//     font-size: 25px;
-// }
+//TRAFFIC NAVIGATION SECTIONS
 
-// .message-label, .recent-label, .member-label {
-//     font-size: 25px;
+.traffic-header {
+    display: flex;
+    min-width: 768px;
+    flex-direction: row;
+}
+
+.traffic-label {
+    display: flex;
+    justify-content: start;
+}
+
+.traffic-nav {
+    display: flex;
+    justify-content: end;
+
+}
+
+// ---------------------------------------------------------------
+
+//CHART 1 SECTIONS
+//(CHARTS1)
+
+.chart-1-main {
+    min-width: 768px;
+    justify-content: center;
+}
+
+.chart1 {
+    width: 650px;
+    margin: auto;
+}
+
+// ---------------------------------------------------------------
+
+//CHART 2 SECTIONS
+//(DAILY-LABEL/CHART-2-CONTAINER-FULL)
+
+.chart2-3-flow-container {
+    flex-direction: row;
+    gap: 3px;
+
+}
+
+//***UNABLE TO CHANGE THE SIZE OF CHART 2***
+.chart2 {
+    margin: auto;
+    margin-top: 50px;
+    width: 350px;
+    height: 600px;
  
-// }
+}
 
-// .message-textarea {
-// height: 100%;
-// }
+.chart3 {
+    height: 300px;
+    width: 300px;
+}
+
+// // =========================================
+// ASIDE (FLEX) PROPERTIES
+//SOCIAL FACT SECTIONS
+//(SOCIAL-GROUP/MEMBERS/RECENT-ACTIVITY/MESSAGE/SETTINGS)
+
+.social-flex-parent {
+    min-width: 768px;
+    flex-direction: row;
+
+}
+
+.social-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 28px;
+
+}
+
+// ---------------------------------------------------------------
+
+// MEMBERS SECTIONS
+// //(PROFILE-IMAGE/MEMEBRS-TEXT/PROFILE-NAME/PROFILE-EMAIL-PROFILE-BIRTH)
+
+.members-container {
+    min-width: 768px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    //added but may need delete
+    // margin: left;
+}
+
+.member-group {
+    display: flex;
+    flex-direction: row;
+}
+
+.profile-birth {
+    display: flex;
+    flex-direction: row;
+    // justify-content: end;
+    // text-a
+    text-align: right;
+    //This doesn't work
+    text-align: none;
+    margin: none;
+
+}
+
+
+.profile-email {
+    text-align: none;
+}
+  
+  .members-text, .profile-name, .profile-birth {
+    text-align: none;
+  
+  }
+
+  .profile-image {
+      //here is the problem
+    margin: none;
+    //this seem to fix everthing with centering
+
+  }
+  
 
 
 
-//form area
-
-// .widget-container {
-//     display: grid;
-//     min-width: 700px;
-//     grid-template-columns: 1fr;
-//     grid-template-rows: minmax(100px) minmax(100px) minmax(100px) minmax(100px);
-//     grid-template-areas:
-//     "message-input"
-//     "form-field "
-//     "message-textarea"
-//     "button-primary";
-//     justify-content: center;
-// }
-
-//Settings area
-
-// .settings-container {
-//     display: grid;
-//     min-width: 700px;
-//     grid-template-columns: 1fr;
-//     grid-template-rows: minmax(200px) minmax(200px) minmax(200px);
-//     row-gap: 20px;
-
-//     grid-template-areas:
-//     "notifcation-settings"
-//     "timezone-settings"
-//     "settings-button";
-//     justify-content: center;
-// }
-
-// .notifcation-settings {
-//     display: grid;
-//     min-width: 768px;
-//     grid-template-columns: 1fr;
-//     grid-template-rows: minmax(100px) minmax(100px);
-//     grid-template-areas:
-//     "email-container"
-//     "profile-container";
-//     row-gap: 20px;
-//     justify-content: center;
-// }
-
-// .email-container {
-//     display: grid;
-//     max-width: 700px;
-//     grid-template-columns: 1fr 1fr;
-//     grid-template-rows: minmax(100px) minmax(100px) minmax(100px);
-//     grid-template-areas:
-//     "strong-email input-email"
-//     ". span-email";
-//     justify-content: center;
-// }
-
-// .profile-container {
-//     display: grid;
-//     min-width: 700px; // This is for the larger sizes
-//     grid-template-columns: 1fr 1fr;
-//     grid-template-rows: minmax(100px) minmax(100px) minmax(100px);
-//     grid-template-areas:
-//     "strong-profile input-profile"
-//     ". span-profile";
-//     justify-content: center;
-// }
-
-//email/profile variables
-
-// .strong-email {
-//     margin-top: 175px;
-// }
-
-// .strong-email, .strong-profile {
-//     font-size: 25px;
-// }
-// ==================================
-
-// }
+}
