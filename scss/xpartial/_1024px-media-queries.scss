@@ -2,9 +2,7 @@
 // /*              @Media Breakpoints               */
 // /* ============================================= */
 
-
 @media only screen and (min-width: 1024px) {
-
 
 //===============================================
 //Groups Font's
@@ -16,7 +14,6 @@
   
   .header-profile-name {
     font-size: 25px;
-
   }
 
   //It's not responding
@@ -30,21 +27,17 @@
 
   //===============================================
 
-
-
-
-    .grid {
-        min-width: 1024px;    
-        grid-template-columns: 50px 718px;
-        grid-template-rows: minmax(50px) minmax(50px) minmax(300px) minmax(800px) minmax(1700px); //minmax(200px);
-        grid-template-areas:  
-        "header header"
-        "nav main"
-        "nav section"
-        "nav aside"
-        "nav footer";
-
-    }
+.grid {
+    width: 1024px;    
+    grid-template-columns: 50px 718px;
+    grid-template-rows: minmax(50px) minmax(50px) minmax(300px) minmax(800px) minmax(1700px); //minmax(200px);
+     grid-template-areas:  
+    "header header"
+    "nav main"
+    "nav section"
+    "nav aside"
+    "nav footer";
+}
 
 //========================//
 // HEADER (FLEX) PROPERTIES //
@@ -52,7 +45,7 @@
 //(TITLE/BELL ICON/ BREAKLINE/ME)
 
 header {
-    min-width: 1024px;
+    width: 1024px;    
 }
 
 .header-container {
@@ -71,11 +64,11 @@ header {
 //(MAIN HEADER / ALERT)
 
 main {
-    min-width: 1024px;
+    width: 1024px;    
 }
 
 .main-container {
-    min-width: 1024px;
+    width: 1024px;    
 }
 
 #search_it {
@@ -87,7 +80,6 @@ main {
     margin-top: 10px;
 }
 
-
 // ============================================================
 // SECTION (FLEX) PROPERTIES
 //TRAFFIC-HEADER/CHART-1-CONTAINER-FULL/DAILY/SM-USER-LABEL/CHART-3-CONTAINER-FULL)
@@ -97,11 +89,11 @@ main {
 //TRAFFIC NAVIGATION SECTIONS
 
 section {
-min-width: 1024px;
+    width: 1024px;    
 }
 
 .traffic-header {
-    min-width: 1024px;
+    width: 1024px;    
 }
 
 .traffic-header .traffic-nav {
@@ -113,12 +105,12 @@ min-width: 1024px;
 //Charts
 
 .chart2-3-flow-container {
-    min-width: 1024px;
+    width: 1024px;    
     gap: 12px;
 }
 
 .chart-1-main {
-    min-width: 1024px;
+    width: 1024px;    
 }
 
 .chart-1 {
@@ -127,11 +119,9 @@ min-width: 1024px;
 }
 
 .chart2 {
-    // margin: auto;
     margin-top: 50px;
     width: 450px;
     height: 700px;
- 
 }
 
 .chart3 {
@@ -139,26 +129,21 @@ min-width: 1024px;
     width: 450px;
 }
 
-
 // // =========================================
 // ASIDE (FLEX) PROPERTIES
 //SOCIAL FACT SECTIONS
 //(SOCIAL-GROUP/MEMBERS/RECENT-ACTIVITY/MESSAGE/SETTINGS)
 
-
 aside {
-    min-width: 1024px;
-
+    width: 1024px;    
 }
 
-
 .social-flex-parent {
-    min-width: 1024px;
-
+    width: 1024px;    
 }
 
 .social-group {
-    min-width: 1024px;
+    width: 1024px;    
     gap: 30px;
     justify-content: space-around;
 }
@@ -167,100 +152,82 @@ aside {
     height: 60px;
     width: 60px;
     margin-top: 17px;
-  }
+}
   
-  .social-border {
+.social-border {
     width: 100px;
     height: 100px;
     margin-left: 5px;
-  }
+}
 
   .platform { 
     font-size: 25px;
-
-        margin-bottom: -25px;
-        margin-right: 25px;
-        margin-left: 5px;
+    margin-bottom: -25px;
+    margin-right: 25px;
+    margin-left: 5px;
         
-  }
+}
     
-    .stat-number {
-      font-size: 40px;
-
-      color: grey; 
-      margin-top: 20px;
-      margin-bottom: 10px;
-      margin-right: 20px;
-      margin-left: 5px;
-    }
+.stat-number {
+    font-size: 40px;
+    color: grey; 
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    margin-left: 5px;
+}
     
 // MEMBERS SECTIONS
 //(PROFILE-IMAGE/MEMEBRS-TEXT/PROFILE-NAME/PROFILE-EMAIL-PROFILE-BIRTH)
 
 .members-recent-flow-container {
-display: flex;
-flex-direction: row;
-min-width: 1024px;
-
+    display: flex;
+    flex-direction: row;
+    width: 1024px;    
 }
 
 .main-container {
-    min-width: 500px;
-
+    width: 500px;
 }
 
 .members-container {
-    min-width: 500px;
-
-
+    width: 500px;
 }
 
 .member-group {
-display: flex;
-flex-direction: row;
-justify-content: space-evenly;
-min-width: 450px;
-
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 500px;
 }
 
 .profile-birth {
     flex-direction: column;
     justify-content: end;
-    // text-align: right;
     margin: right;
-
 }
 
 
 .profile-email {
     text-align: left;
     margin: 0;
-
 }
   
-  .members-text, .profile-name, .profile-birth {
+.members-text, .profile-name, .profile-birth {
     text-align: left;
     margin: 0;
-  
-  }
+}
 
-  .profile-image {
+.profile-image {
     display: flex;
     flex-direction: column;
-    // margin: left;
     margin:0%;
-    //this seem to fix everthing with centering
-
-  }
-
-
+}
 
 // Recent Part
 
 .recent-flex-container {
-    min-width: 500px;
-
-
+    width: 500px;
 }
 
 //Message /Settigns 
@@ -269,33 +236,29 @@ min-width: 450px;
     display: flex;
     flex-direction: row;
     gap: 20px;
-
 }
 
 .message-container {
-    min-width: 500px;
+    width: 500px;
     justify-content: end;
 }
 
 //Setting
 
 .settings {
-    min-width: 500px;
-
-
+    width: 500px;
 }
 
 .settings-container {
-    min-width: 450px;
+    width: 500px;
 }
 
 .form-field, .message-textarea, .button-primary, .button-disabled, .email-container, .profile-container {
     font-size: 25px;
 }
 
-
 .form-field {
-height: 75px;
+    height: 75px;
 }
 
 .message-textarea {

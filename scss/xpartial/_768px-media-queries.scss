@@ -8,7 +8,7 @@
 @media only screen and (min-width: 768px) {
 
 .grid {
-    min-width: 768px;    
+    width: 768px;    
     grid-template-columns: 50px 718px;
     grid-template-rows: minmax(50px) minmax(50px) minmax(300px) minmax(800px) minmax(1700px); //minmax(200px);
     grid-template-areas:  
@@ -26,7 +26,7 @@
 //(TITLE/BELL ICON/ BREAKLINE/ME)
 
 header {
-    min-width: 768px;
+    width: 768px;    
 }
 
 .header-container {
@@ -49,7 +49,7 @@ nav {
 }
 
 .nav-container {
-    min-width: 50px;
+    width: 50px;
     flex-direction: column;
     height: 100px;
     
@@ -63,7 +63,7 @@ nav {
 //(MAIN HEADER / ALERT)
 
 .main-container {
-    min-width: 768px;
+    width: 768px;    
 }
 
 .main-header {
@@ -91,7 +91,7 @@ nav {
 
 .traffic-header {
     display: flex;
-    min-width: 768px;
+    width: 768px;    
     flex-direction: row;
 }
 
@@ -112,7 +112,7 @@ nav {
 //(CHARTS1)
 
 .chart-1-main {
-    min-width: 768px;
+    width: 768px;    
     justify-content: center;
 }
 
@@ -152,7 +152,7 @@ nav {
 //(SOCIAL-GROUP/MEMBERS/RECENT-ACTIVITY/MESSAGE/SETTINGS)
 
 .social-flex-parent {
-    min-width: 768px;
+    width: 768px;    
     flex-direction: row;
 
 }
@@ -171,7 +171,7 @@ nav {
 // //(PROFILE-IMAGE/MEMEBRS-TEXT/PROFILE-NAME/PROFILE-EMAIL-PROFILE-BIRTH)
 
 .members-container {
-    min-width: 768px;
+    width: 768px;    
     flex-direction: column;
     justify-content: space-evenly;
     //added but may need delete
