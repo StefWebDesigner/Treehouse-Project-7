@@ -15,14 +15,15 @@ h1, h3, p {
 //HEADER  FONTS
 
 .header-app-title {
-  font-size: 28px;
+  font-size: 25px;
   color: $defult-white;
 }
 
 .header-profile-name {
   font-size: 15px;
   color: $defult-white;
-  text-align: center;
+  // text-align: center;
+  margin: auto;
 }
 
 //TRAFFIC FONTS
@@ -31,6 +32,11 @@ h1, h3, p {
 .traffic-label, .sm-user-label, .daily-label, .member-label, .message-label, .recent-label, .settings-label {
   font-size: 15px;
   color: black;
+}
+
+.headline {
+  font-size: 23px;
+
 }
 
 

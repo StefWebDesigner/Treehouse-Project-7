@@ -2,8 +2,15 @@
 /*              @Media Breakpoints                      */
 /* ============================================= */
 
-//This this as if it wasn't effect the 368px
-//I'll ssort that out later
+// General Font Styles
+
+.traffic-label, .sm-user-label, .daily-label, .member-label, .message-label, .recent-label, .settings-label {
+    font-size: 22px;
+
+}
+
+// ============================
+
 
 @media only screen and (min-width: 768px) {
 
@@ -38,6 +45,7 @@ header {
     flex-grow: .1;
 }
 
+
 // ============================================================
 
 // HOME NAVIGATIONS FLEX
@@ -52,8 +60,16 @@ nav {
     width: 50px;
     flex-direction: column;
     height: 100px;
-    
+    gap: 20px;
 }
+
+nav svg {
+    height: 100px;
+    // height: auto;
+
+}
+
+
 
 // ============================================================
 
@@ -80,7 +96,6 @@ nav {
     margin-top: 10px;
 }
 
-
 // ============================================================
 // SECTION (FLEX) PROPERTIES
 //TRAFFIC-HEADER/CHART-1-CONTAINER-FULL/DAILY/SM-USER-LABEL/CHART-3-CONTAINER-FULL)
@@ -103,7 +118,6 @@ nav {
 .traffic-nav {
     display: flex;
     justify-content: end;
-
 }
 
 // ---------------------------------------------------------------
@@ -128,8 +142,6 @@ nav {
 
 .chart2-3-flow-container {
     flex-direction: row;
-    gap: 3px;
-
 }
 
 //***UNABLE TO CHANGE THE SIZE OF CHART 2***
@@ -138,12 +150,13 @@ nav {
     margin-top: 50px;
     width: 350px;
     height: 600px;
- 
+    margin-right: 10px;
 }
 
 .chart3 {
     height: 300px;
     width: 300px;
+gap: 30px;
 }
 
 // // =========================================
@@ -154,7 +167,6 @@ nav {
 .social-flex-parent {
     width: 768px;    
     flex-direction: row;
-
 }
 
 .social-group {
@@ -162,7 +174,6 @@ nav {
     flex-direction: row;
     justify-content: space-evenly;
     gap: 28px;
-
 }
 
 // ---------------------------------------------------------------
@@ -170,12 +181,14 @@ nav {
 // MEMBERS SECTIONS
 // //(PROFILE-IMAGE/MEMEBRS-TEXT/PROFILE-NAME/PROFILE-EMAIL-PROFILE-BIRTH)
 
+
+
+
+
 .members-container {
     width: 768px;    
     flex-direction: column;
     justify-content: space-evenly;
-    //added but may need delete
-    // margin: left;
 }
 
 .member-group {
@@ -186,33 +199,53 @@ nav {
 .profile-birth {
     display: flex;
     flex-direction: row;
-    // justify-content: end;
-    // text-a
     text-align: right;
-    //This doesn't work
     text-align: none;
     margin: none;
-
 }
-
 
 .profile-email {
     text-align: none;
 }
   
-  .members-text, .profile-name, .profile-birth {
+.members-text, .profile-name, .profile-birth {
     text-align: none;
-  
-  }
+}
 
-  .profile-image {
-      //here is the problem
+.profile-image {
     margin: none;
-    //this seem to fix everthing with centering
-
-  }
+}
   
 
+// Message 
+
+.message-container {
+    display: flex;
+    width: 768px;
+    flex-direction: column;
+}
+
+.form-field, .message-textarea, .button-primary, .button-disabled, .email-container, .profile-container {
+    font-size: 22px;
+}
+
+.form-field {
+    height: 75px;
+    width: 95%;
+}
+
+.message-textarea {
+    height: 149px;
+    text-align: center;
+    width: 95%;
+}
+
+
+.button-primary, .button-disabled, .alert-btn {
+    width: 95%;
+    margin: auto;
+}
+//Settings
 
 
 }

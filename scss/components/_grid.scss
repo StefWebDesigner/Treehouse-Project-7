@@ -5,7 +5,7 @@
 //THE MAIN DIVISIONS
 
 .grid {
-    width: 368px;
+    width: 320px;
     
     display: grid;
     grid-template-rows: minmax(75px) minmax(50px) minmax(200px) minmax(800px) minmax(1500px) min(200px);
@@ -57,27 +57,18 @@ footer {
 //========================//
 //(TITLE/BELL ICON/ BREAKLINE/ME)
 
-// .header-container {
-//     display: flex;
-//     min-width: 368px;
-//     justify-content: space-evenly;
-//     // flex-shrink: 2;
-//     // flex-basis: auto;
-//     flex-direction: row;
-// }
-
 header {
     display: flex;
     flex-direction: row;
-    height: 85px;
+    height: 70px;
     justify-content: space-evenly;
-    min-width: 368px;
+    width: 320px;
     margin: auto;
 }
 
 .header-container {
     display: flex;
-    width: 368px;
+    width: 320px;
     justify-content: space-evenly;
     // flex-shrink: 2;
     // flex-basis: auto;
@@ -88,6 +79,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    gap: 6px;
 }
 
 
@@ -105,7 +97,7 @@ justify-content: space-evenly;
 
 .nav-container {
     display: flex;
-    width: 368px;
+    width: 320px;
     height: 65px;
     flex-direction: row;
 }
@@ -119,7 +111,7 @@ justify-content: space-evenly;
 
 .main-container {
     display: flex;
-    width: 368px;
+    width: 320px;
     flex-direction: column;
 }
 
@@ -127,12 +119,13 @@ justify-content: space-evenly;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    gap: 7px;
     // margin: auto;
 }
 
 #search_it {
     // width: 50%;
-    width: 97.5%;
+    width: 85%;
     background-color: #eee;
     //use #777 for something
     height: 50px;
@@ -155,8 +148,9 @@ cursor: pointer;
 
 .traffic {
     display: flex;
-    width: 368px;
+    width: 320px;
     flex-direction: column;
+
 }
 
 .traffic-nav {
@@ -175,8 +169,9 @@ cursor: pointer;
 
 .chart-1-main {
     display: flex;
-    width: 368px;
+    width: 320px;
     justify-content: center;
+    
 }
 
 // ---------------------------------------------------------------
@@ -195,7 +190,7 @@ cursor: pointer;
 //UNABLE TO CENTER
 .chart2-container {
     display: flex;
-    min-width: 368px;
+    width: 320px;
     flex-direction: column;
     margin: auto;
 }
@@ -206,7 +201,7 @@ cursor: pointer;
 //UNABLE TO CENTER
 .chart3-container {
     display: flex;
-    width: 368px;
+    width: 320px;
     flex-direction: column;
 
     justify-content: center;
@@ -222,16 +217,20 @@ cursor: pointer;
 
 .social-flex-parent {
     display: flex;
-    width: 368px;
+    width: 320px;
     flex-direction: column;
 
 }
 
 .social-fact-container {
     display: flex;
-    min-width: 368px;
+    width: 320px;
     justify-content: center;
     margin: auto;
+}
+
+.social-group:last-child {
+    margin-bottom: 10px;
 }
 
 .social-text {
@@ -269,8 +268,8 @@ cursor: pointer;
 
 .members-container {
     display: flex;
-    width: 368px;
-    flex-direction: row;
+    width: 320px;
+    flex-direction: column;
     //added but may need to delete
     margin: auto;
 }
@@ -291,7 +290,7 @@ cursor: pointer;
 
 .recent-flex-container {
     display: flex;
-    width: 368px;
+    width: 320px;
 }
 
 .recent-activity-group {
@@ -309,7 +308,7 @@ flex-direction: column;
 
 .message-container {
     display: flex;
-    width: 368px;
+    width: 320px;
     flex-direction: column;
 }
 
@@ -324,17 +323,23 @@ flex-direction: column;
 
 .settings-container {
     display: flex;
-    width: 368px;
+    width: 320px;
     justify-content: center;
     flex-direction: column;
+}
+
+.email-container {
+display: flex;
+flex-direction: row;
+
 }
 
 ////------ The email/profile --- toggle
 //is not working well
 .email_group {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: row;
+    // justify-content: space-between;
 }
 
 .email-notf-upper-part, .email-input-upper-part {
@@ -342,141 +347,20 @@ flex-direction: column;
     flex-direction: row;
 }
 
-// //=============================================================================//
-// // Notfication Setting  Grand grand CHILD GRID (TIER 4)
-// //ASIDE SECTIONS
-// //NOTIFICATION ELEMENTS
+.profile-flex-point {
+    display: flex;
+    flex-direction: row;
 
-// .notifcation-settings {
-//     display: flex;
-//     min-width: 368px;
-//     grid-template-columns: 1fr;
-//     grid-template-rows: minmax(100px) minmax(100px);
-//     grid-template-areas:
-//     "email-container"
-//     "profile-container";
-//     row-gap: 20px;
-//     justify-content: center;
-// }
+}
 
-// .email-container {
-//     display: flex;
-//     grid-area: email-container;
-// }
+.profile-upper-flex, .email-upper-flex {
+    display: flex;
+    justify-content: start;
+}
 
-// .profile-container {
-//     display: flex;
-//     grid-area: profile-container;
-// }
-
-// //=============================================================================//
-// // Notfication Setting  Grand grand CHILD GRID (TIER 4)
-// //ASIDE SECTIONS 
-// //(EMAIL ELEMENTS)
-
-// .email-container {
-//     display: flex;
-//     // max-width: 767px; // This is for the larger sizes
-//     max-width: 368px;
-//     grid-template-columns: 1fr 1fr;
-//     grid-template-rows: minmax(100px) minmax(100px) minmax(100px);
-//     grid-template-areas:
-//     "strong-email input-email"
-//     ". span-email";
-//     justify-content: center;
-// }
-
-// .strong-email {
-//     display: flex;
-//     grid-area: strong-email;
-// }
-
-// .input-email {
-//     display: flex;
-//     grid-area: input-email;
-// }
-
-// .span-email {
-//     display: flex;
-//     grid-area: span-email;
-// }
+.profile-lower-flex, .email-lower-flex {
+    display: flex;
+    justify-content: end;
+}
 
 
-// //=============================================================================//
-// // Notfication Setting  Grand grand CHILD GRID (TIER 4)
-// //ASIDE SECTIONS 
-// //(PROFILE ELEMENTS)
-
-// .profile-container {
-//     display: flex;
-//     min-width: 368px; // This is for the larger sizes
-//     grid-template-columns: 1fr 1fr;
-//     grid-template-rows: minmax(100px) minmax(100px) minmax(100px);
-//     grid-template-areas:
-//     "strong-email input-email"
-//     ". span-email";
-//     justify-content: center;
-// }
-
-// .strong-email {
-//     display: flex;
-//     grid-area: strong;
-// }
-
-// .input-email {
-//     display: flex;
-//     grid-area: input;
-// }
-
-// .span-email {
-//     display: flex;
-//     grid-area: span;
-// }
-
-// //=============================================================================//
-// // Time Setting  Grand grand CHILD GRID (TIER 4)
-// //ASIDE SECTIONS 
-// //(TIMEZONE ELEMENTS)
-
-// .timezone-settings {
-//     display: flex;
-//     max-width: 368px;
-//     grid-template-columns: 1fr;
-//     grid-template-rows: minmax(100px);
-//     grid-template-areas:
-//     "fieldset";
-//     justify-content: center;
-// }
-
-// .fieldset {
-//     display: flex;
-//     grid-area: fieldset;
-// }
-
-// //=============================================================================//
-// // SETTING-BUTTON  Grand grand CHILD GRID (TIER 4)
-// //ASIDE SECTIONS 
-// //(TIME BUTTON ELEMENTS)
-
-// .timezone-settings {
-//     display: flex;
-//     max-width: 368px;
-//     grid-template-columns: 1fr;
-//     grid-template-rows: minmax(100px) minmax(100px);
-//     grid-template-areas:
-//     "button-primary"
-//     "button-disabled";
-//     justify-content: center;s
-// }
-
-// .button-primary {
-//     display: flex;
-//     grid-area: button-primary;
-// }
-
-// .button-disabled {
-//     display: flex;
-//     grid-area: button-disabled;
-// }
-
-// //========================================================

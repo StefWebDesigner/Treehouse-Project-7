@@ -7,19 +7,23 @@ h1, h3, p {
 }
 
 .header-app-title {
-  font-size: 28px;
+  font-size: 25px;
   color: white;
 }
 
 .header-profile-name {
   font-size: 15px;
   color: white;
-  text-align: center;
+  margin: auto;
 }
 
 .traffic-label, .sm-user-label, .daily-label, .member-label, .message-label, .recent-label, .settings-label {
   font-size: 15px;
   color: black;
+}
+
+.headline {
+  font-size: 23px;
 }
 
 .platform {
@@ -60,6 +64,11 @@ body, main, nav, header {
   background-color: #eee;
 }
 
+.divider {
+  border-bottom: #d9d9d9 solid 1px;
+  margin-top: 10px;
+}
+
 .alert-btn, .button-primary {
   color: white;
   width: 70%;
@@ -73,13 +82,15 @@ body, main, nav, header {
 .button-primary {
   margin: auto;
   margin-top: 5px;
-  width: 98%;
+  width: 89%;
+  margin-bottom: 10px;
 }
 
 .button-disabled {
   margin: auto;
   margin-top: 5px;
-  width: 98%;
+  width: 89%;
+  margin-bottom: 10px;
 }
 
 .settings-button {
@@ -87,7 +98,7 @@ body, main, nav, header {
 }
 
 .alert {
-  width: 95%;
+  width: 89%;
   background-color: #9d89f5;
   margin: auto;
 }
@@ -101,7 +112,7 @@ body, main, nav, header {
 }
 
 .grid {
-  min-width: 368px;
+  width: 320px;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: minmax(75px) minmax(50px) minmax(200px) minmax(800px) minmax(1500px) 200px;
@@ -169,11 +180,11 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  height: 85px;
+  height: 70px;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  min-width: 368px;
+  width: 320px;
   margin: auto;
 }
 
@@ -181,7 +192,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-width: 368px;
+  width: 320px;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -202,6 +213,7 @@ header {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  gap: 6px;
 }
 
 nav {
@@ -221,7 +233,7 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-width: 368px;
+  width: 320px;
   height: 65px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -233,7 +245,7 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-width: 368px;
+  width: 320px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -250,10 +262,11 @@ nav {
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  gap: 7px;
 }
 
 #search_it {
-  width: 97.5%;
+  width: 85%;
   background-color: #eee;
   height: 50px;
   margin-right: 10px;
@@ -269,7 +282,7 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-width: 368px;
+  width: 320px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -296,7 +309,7 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-width: 368px;
+  width: 320px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -317,7 +330,7 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-width: 368px;
+  width: 320px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -329,7 +342,7 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-width: 368px;
+  width: 320px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -344,7 +357,7 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-width: 368px;
+  width: 320px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -355,11 +368,15 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-width: 368px;
+  width: 320px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin: auto;
+}
+
+.social-group:last-child {
+  margin-bottom: 10px;
 }
 
 .social-text {
@@ -412,11 +429,11 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-width: 368px;
-  -webkit-box-orient: horizontal;
+  width: 320px;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: auto;
 }
 
@@ -444,7 +461,7 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-width: 368px;
+  width: 320px;
 }
 
 .recent-activity-group {
@@ -471,7 +488,7 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-width: 368px;
+  width: 320px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -492,7 +509,7 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-width: 368px;
+  width: 320px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -502,17 +519,24 @@ nav {
           flex-direction: column;
 }
 
+.email-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
 .email_group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .email-notf-upper-part, .email-input-upper-part {
@@ -525,6 +549,34 @@ nav {
           flex-direction: row;
 }
 
+.profile-flex-point {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.profile-upper-flex, .email-upper-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.profile-lower-flex, .email-lower-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
 header img {
   width: 37px;
   height: 37px;
@@ -535,16 +587,19 @@ header img {
 .header-me {
   border: solid 1px white;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 50px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   margin: auto;
 }
 
+.bell-icon {
+  height: 40%;
+}
+
 .bell-icon, nav svg {
-  height: 50%;
   -webkit-transition: .3s ease-out;
   transition: .3s ease-out;
   width: 2rem;
@@ -640,6 +695,7 @@ header img {
 }
 
 nav svg {
+  height: 50%;
   height: auto;
   margin: auto;
 }
@@ -688,7 +744,7 @@ nav a {
   display: flex;
   margin: auto;
   text-align: center;
-  width: 97%;
+  width: 89%;
   background-color: #e0e0eb;
   border: 1px solid #9d89f5;
   border-radius: 5px;
@@ -700,7 +756,7 @@ nav a {
   display: flex;
   margin: auto;
   margin-top: 5px;
-  width: 97%;
+  width: 89%;
   text-align: center;
   background-color: #e0e0eb;
   border: 1px solid #9d89f5;
@@ -711,6 +767,7 @@ select {
   width: 100%;
   padding-top: 15px;
   padding-bottom: 15px;
+  width: 89%;
 }
 
 fieldset {
@@ -719,25 +776,32 @@ fieldset {
 }
 
 .chart1 {
-  width: 350px;
+  width: 300px;
+  margin-bottom: 10px;
 }
 
 .chart2 {
   width: 140px;
+  margin-bottom: 10px;
 }
 
 .chart3 {
   height: 300px;
   width: 300px;
   margin: auto;
+  margin-bottom: 10px;
 }
 
 /* ============================================= */
 /*              @Media Breakpoints                      */
 /* ============================================= */
+.traffic-label, .sm-user-label, .daily-label, .member-label, .message-label, .recent-label, .settings-label {
+  font-size: 22px;
+}
+
 @media only screen and (min-width: 768px) {
   .grid {
-    min-width: 768px;
+    width: 768px;
     -ms-grid-columns: 50px 718px;
         grid-template-columns: 50px 718px;
     -ms-grid-rows: minmax(50px) minmax(50px) minmax(300px) minmax(800px) minmax(1700px);
@@ -745,7 +809,7 @@ fieldset {
         grid-template-areas: "header header" "nav main" "nav section" "nav aside" "nav footer";
   }
   header {
-    min-width: 768px;
+    width: 768px;
   }
   .header-container {
     min-width: 718px;
@@ -768,15 +832,19 @@ fieldset {
             justify-content: start;
   }
   .nav-container {
-    min-width: 50px;
+    width: 50px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     height: 100px;
+    gap: 20px;
+  }
+  nav svg {
+    height: 100px;
   }
   .main-container {
-    min-width: 768px;
+    width: 768px;
   }
   .main-header {
     -webkit-box-pack: start;
@@ -793,7 +861,7 @@ fieldset {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    min-width: 768px;
+    width: 768px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -816,7 +884,7 @@ fieldset {
             justify-content: end;
   }
   .chart-1-main {
-    min-width: 768px;
+    width: 768px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -830,20 +898,21 @@ fieldset {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    gap: 3px;
   }
   .chart2 {
     margin: auto;
     margin-top: 50px;
     width: 350px;
     height: 600px;
+    margin-right: 10px;
   }
   .chart3 {
     height: 300px;
     width: 300px;
+    gap: 30px;
   }
   .social-flex-parent {
-    min-width: 768px;
+    width: 768px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -863,7 +932,7 @@ fieldset {
     gap: 28px;
   }
   .members-container {
-    min-width: 768px;
+    width: 768px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -902,6 +971,32 @@ fieldset {
   .profile-image {
     margin: none;
   }
+  .message-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 768px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .form-field, .message-textarea, .button-primary, .button-disabled, .email-container, .profile-container {
+    font-size: 22px;
+  }
+  .form-field {
+    height: 75px;
+    width: 95%;
+  }
+  .message-textarea {
+    height: 149px;
+    text-align: center;
+    width: 95%;
+  }
+  .button-primary, .button-disabled, .alert-btn {
+    width: 95%;
+    margin: auto;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -919,7 +1014,7 @@ fieldset {
     font-style: 25px;
   }
   .grid {
-    min-width: 1024px;
+    width: 1024px;
     -ms-grid-columns: 50px 718px;
         grid-template-columns: 50px 718px;
     -ms-grid-rows: minmax(50px) minmax(50px) minmax(300px) minmax(800px) minmax(1700px);
@@ -927,7 +1022,7 @@ fieldset {
         grid-template-areas: "header header" "nav main" "nav section" "nav aside" "nav footer";
   }
   header {
-    min-width: 1024px;
+    width: 1024px;
   }
   .header-container {
     -webkit-box-flex: .9;
@@ -940,10 +1035,10 @@ fieldset {
             flex-grow: .1;
   }
   main {
-    min-width: 1024px;
+    width: 1024px;
   }
   .main-container {
-    min-width: 1024px;
+    width: 1024px;
   }
   #search_it {
     width: 390%;
@@ -952,20 +1047,20 @@ fieldset {
     margin-top: 10px;
   }
   section {
-    min-width: 1024px;
+    width: 1024px;
   }
   .traffic-header {
-    min-width: 1024px;
+    width: 1024px;
   }
   .traffic-header .traffic-nav {
     gap: .5;
   }
   .chart2-3-flow-container {
-    min-width: 1024px;
+    width: 1024px;
     gap: 12px;
   }
   .chart-1-main {
-    min-width: 1024px;
+    width: 1024px;
   }
   .chart-1 {
     width: 55px;
@@ -981,13 +1076,13 @@ fieldset {
     width: 450px;
   }
   aside {
-    min-width: 1024px;
+    width: 1024px;
   }
   .social-flex-parent {
-    min-width: 1024px;
+    width: 1024px;
   }
   .social-group {
-    min-width: 1024px;
+    width: 1024px;
     gap: 30px;
     -ms-flex-pack: distribute;
         justify-content: space-around;
@@ -1024,13 +1119,13 @@ fieldset {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    min-width: 1024px;
+    width: 1024px;
   }
   .main-container {
-    min-width: 500px;
+    width: 500px;
   }
   .members-container {
-    min-width: 500px;
+    width: 500px;
   }
   .member-group {
     display: -webkit-box;
@@ -1043,7 +1138,7 @@ fieldset {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    min-width: 450px;
+    width: 500px;
   }
   .profile-birth {
     -webkit-box-orient: vertical;
@@ -1074,7 +1169,7 @@ fieldset {
     margin: 0%;
   }
   .recent-flex-container {
-    min-width: 500px;
+    width: 500px;
   }
   .message-setting-flow-container {
     display: -webkit-box;
@@ -1087,16 +1182,16 @@ fieldset {
     gap: 20px;
   }
   .message-container {
-    min-width: 500px;
+    width: 500px;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: end;
   }
   .settings {
-    min-width: 500px;
+    width: 500px;
   }
   .settings-container {
-    min-width: 450px;
+    width: 500px;
   }
   .form-field, .message-textarea, .button-primary, .button-disabled, .email-container, .profile-container {
     font-size: 25px;

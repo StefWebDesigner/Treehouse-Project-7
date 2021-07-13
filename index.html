@@ -82,7 +82,7 @@
 	</div>	
 				
 <!-- TRAFFIC CHART 1 (NO NAME REQUIRED)-->
-	<div class="chart-1-main">
+	<div class="chart-1-main divider">
 		<div class="chart-1-container-full">
 				<canvas class="chart1" id="chart1"></canvas>
 		</div>
@@ -119,7 +119,7 @@
 
 <!-- TRAFFIC CHART 2-->
 <div class="chart2-3-flow-container">
-	<div class="chart-2-main">
+	<div class="chart-2-main divider">
 		<div class="chart2-container"> 
 			<h3 class="daily-label">Daily Traffic</h3>
 			<div class="chart-2-container-full">
@@ -154,7 +154,7 @@
 	</div>
 
 <!-- TRAFFIC CHART 3-->
-	<div class="chart-3-main">
+	<div class="chart-3-main divider">
 		<div class="chart3-container">
 				<h3 class="sm-user-label">Social Media Users</h3>
 				<div class="chart-3-container-full">
@@ -188,7 +188,7 @@ div together**** -->
 <aside> 
 <div class="social-flex-parent">
 	<!-- Social status> -->
-	<div class="social-fact-container">
+	<div class="social-fact-container divider">
 			<div class="social-group"> 
 					<div class="social-text">
 						<div class="social-border">
@@ -225,10 +225,10 @@ div together**** -->
 <!-- 768 >> row up -->
 <div class="members-recent-flow-container">
 	<!-- New memeber widgets -->
-	<div class="members-container" id="members-link">
+	<div class="members-container divider" id="members-link">
 		<h3 class="member-label">New Members</h3>
 			<!-- #1 columm #2 row -->
-			<div class="members-group">
+			<div class="members-group divider">
 						<!-- #1 column #2 row-->
 					<img class="profile-image" src="images/member-1.jpg">
 						<!-- #1 column #2 column-->
@@ -239,7 +239,7 @@ div together**** -->
 					<!-- #1 column #row -->
 					<p class="profile-birth">10/15/15</p>
 			</div>
-			<div class="members-group">
+			<div class="members-group divider">
 				<!-- <div class="profile-group"> -->
 					<img class="profile-image" src="images/member-2.jpg">
 				<!-- </div> -->
@@ -252,7 +252,7 @@ div together**** -->
 				<!-- </div> -->
 					
 			</div>
-			<div class="members-group">
+			<div class="members-group divider">
 				<img class="profile-image" src="images/member-3.jpg">
 				<div class="name-email-group">
 					<p class="profile-name">Dawn Wood</p>
@@ -260,7 +260,7 @@ div together**** -->
 				</div>
 					<p class="profile-birth">10/15/15</p>
 			</div>
-			<div class="members-group">
+			<div class="members-group divider">
 				<img class="profile-image" src="images/member-4.jpg">
 				<div class="name-email-group">
 					<p class="profile-name">Dan Oliver</p>
@@ -272,7 +272,7 @@ div together**** -->
 	<!-- </div> -->
 
 <!-- RECENT ACTIVTY SECTIONS -->
-	<div class="recent-flex-container">
+	<div class="recent-flex-container divider">
 		<!-- both lables/actvity container > column -->
 		<div class="recent-activity-group">
 			<h3 class="recent-label">Recent Activity</h3>
@@ -291,7 +291,7 @@ div together**** -->
 	<!-- Messaging support widgets -->
 	<div class="message-setting-flow-container">
 
-		<div class="message-container">
+		<div class="message-container divider">
 			<h3 class="message-label">Message User</h3>
 			<form class="widget-container">
 				<div class="message-group">
@@ -309,38 +309,47 @@ div together**** -->
 		<div class="setting-container">
 			<h3 class="settings-label">Settings</h3>
 			<div class="notifcation-settings">
-				<!-- Add a banner annountment for the change -->
 				<div class="email-container">
 					<label id="email_group" class="switch-light switch-material" onclick="">
-						<div class="email-notf-upper-part">
-							<input class="input-email" id="email-checkbox" type="checkbox">
-							<strong class="strong-email">
-								Send Email Notifications
-							</strong>
-						</div>
-						<div class="email-input-upper-part">
-							<span class="span-email">
-								<span class="email-active-on">Off</span>
-								<span class="email-active-off">On</span>
-							<!-- COULD i USE THESE LINKS TO CONNECT TO A FUNCTION???!!!!!
-							i NEED TO TRY IT -->
-								<a id="toggle-interacation-email"></a>
-							</span>
-						</div>
+						<div class="email-flex-point">
+								<div class="email-upper-flex">
+									<strong class="strong-email">
+											Send Email Notifications
+									</strong>
+								</div>
+								<div class="email-lower-flex">
+									<input class="input-email" id="email-checkbox" type="checkbox">
+									<span class="span-email">
+										<span class="email-active-on">Off</span>
+										<span class="email-active-off">On</span>
+									<!-- COULD i USE THESE LINKS TO CONNECT TO A FUNCTION???!!!!!
+									i NEED TO TRY IT -->
+										<a id="toggle-interacation-email"></a>
+									</span>
+								</div>
+							</div>
 					</label>
 				</div>
 				<!-- Add a banner annountment for the change -->
 				<div class="profile-container">
 				  <label id="profile_group" class="switch-light switch-material" onclick="">
-					<input id="profile-checkbox" type="checkbox">
-					<strong class="strong-profile">
-					  Set Profile to public
-					</strong>
-					<span>
-					  <span>Off</span>
-					  <span>On</span>
-					  <a id="toggle-interacation-profile"></a>
-					</span>
+					<div class="profile-flex-point">
+						<div class="profile-upper-flex">
+							<strong class="strong-profile">
+								Set Profile to public
+								</strong>
+								<!-- <input id="profile-checkbox" type="checkbox"> -->
+						</div>
+						<div class="profile-lower-flex">
+							<input id="profile-checkbox" type="checkbox">
+							<span>
+							<span>Off</span>
+							<span>On</span>
+							<a id="toggle-interacation-profile"></a>
+							</span>
+						</div>
+					<!-- DIV END FOR PROFILE FLEXPOINT -->
+					</div>
 				  </label>
 				</div>
 			</div>

@@ -7,7 +7,7 @@
     display: flex;
     margin: auto;
     text-align: center;
-    width: 97%;
+    width: 89%;
     background-color: $seconday-white;
     @include main-border-style;
 }
@@ -16,7 +16,7 @@
     display: flex;
     margin: auto;
     margin-top: 5px;
-    width: 97%;
+    width: 89%;
     text-align: center; 
     background-color: $seconday-white;
     @include main-border-style;
@@ -26,6 +26,8 @@ select {
     width: 100%;
     padding-top: 15px;
     padding-bottom: 15px;
+    width: 89%;
+
 }
 
 fieldset {

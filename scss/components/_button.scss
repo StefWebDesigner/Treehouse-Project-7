@@ -14,13 +14,16 @@ margin-top: 10px;
 .button-primary {
 margin: auto;
 margin-top: 5px;
-width: 98%;
+width: 89%;
+margin-bottom: 10px;
 }
 
 .button-disabled {
     margin: auto;
     margin-top: 5px;
-    width: 98%;
+    width: 89%;
+    margin-bottom: 10px;
+
 
 }
 
@@ -29,7 +32,7 @@ width: 98%;
 }
 
 .alert {
-    width: 95%;
+    width: 89%;
     background-color: $main-purple;
     margin: auto;
     // margin-bottom: -10px;
@@ -40,3 +43,32 @@ width: 98%;
     cursor: pointer;
     @include hover-border-style;
 }
+
+//TRANSITISON
+
+
+// $bounce-color: #8DE7E6;
+// $image-size: 100px;
+
+
+// 	button.user {
+// 				height: $image-size;
+// 				width: $image-size;
+// 				background-color: $bounce-color ;
+// 				box-shadow: 0 0 0 5px $bounce-color ;
+// 				border-radius: 50%;
+//     }
+    
+// 	button:hover {
+// 		cursor: pointer; 
+// 		animation:bounceOut .4s linear;
+// 	}
+		
+
+// @keyframes bounceOut {
+//         0%{ box-shadow: 0 0 0 4px $bounce-color; opacity:1;}
+//         25%{ box-shadow: 0 0 0 1px $bounce-color; opacity:1;}
+//         50%{ box-shadow: 0 0 0 7px $bounce-color; opacity:1; }
+//         75%{ box-shadow: 0 0 0 4px $bounce-color; opacity:1;}
+//         100%{ box-shadow: 0 0 0 5px $bounce-color; opacity:1;}
+// }

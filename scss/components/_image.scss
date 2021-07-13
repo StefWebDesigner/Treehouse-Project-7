@@ -17,24 +17,23 @@ header img {
 .header-me {
   border: solid 1px $defult-white;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 50px;
   align-items: center;
   margin: auto;
 }
 
-// .header-bell-icon {
-//     height: auto;
-//     color: $defult-white;
-// }
+.bell-icon {
+  height: 40%;
+}
 
+//**** DON'T TOUCH ANY OF THESE CURLY BRACES****
+//**** IT JUST WORKS ****
 .bell-icon, nav svg {
-  height: 50%;
   transition: .3s ease-out;
   width: 2rem;
   color: $defult-white;
   margin: auto;
-
   &:hover, &:focus {
     animation: bellshake .5s cubic-bezier(.36,.07,.19,.97) both;
     backface-visibility: hidden;
@@ -60,9 +59,10 @@ header img {
 //=========//
 
 nav svg {
-    // width: 20%;
+    height: 50%;
     height: auto;
     margin: auto;
+
 }
 
 nav a {
