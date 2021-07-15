@@ -6,11 +6,9 @@
 
 .traffic-label, .sm-user-label, .daily-label, .member-label, .message-label, .recent-label, .settings-label {
     font-size: 22px;
-
 }
 
 // ============================
-
 
 @media only screen and (min-width: 768px) {
 
@@ -25,7 +23,6 @@
     "nav aside"
     "nav footer";
 }
-
 
 //========================//
 // HEADER (FLEX) PROPERTIES //
@@ -44,7 +41,6 @@ header {
 .header-offset {
     flex-grow: .1;
 }
-
 
 // ============================================================
 
@@ -67,9 +63,6 @@ nav svg {
     height: 100px;
     // height: auto;
 }
-
-
-
 
 // ============================================================
 
@@ -131,7 +124,7 @@ nav svg {
 }
 
 .chart1 {
-    width: 650px;
+    width: 680px;
     margin: auto;
 }
 
@@ -142,6 +135,13 @@ nav svg {
 
 .chart2-3-flow-container {
     flex-direction: row;
+}
+
+
+.chart-2-main {
+    width: 350px;
+    justify-content: center;
+    
 }
 
 //***UNABLE TO CHANGE THE SIZE OF CHART 2***
@@ -156,7 +156,7 @@ nav svg {
 .chart3 {
     height: 300px;
     width: 300px;
-gap: 30px;
+// gap: 30px;
 }
 
 // // =========================================
@@ -181,42 +181,50 @@ gap: 30px;
 // MEMBERS SECTIONS
 // //(PROFILE-IMAGE/MEMEBRS-TEXT/PROFILE-NAME/PROFILE-EMAIL-PROFILE-BIRTH)
 
-
-
-
-
 .members-container {
     width: 768px;    
     flex-direction: column;
     justify-content: space-evenly;
 }
-
-.member-group {
+//this is to make it into a row
+.members-group {
     display: flex;
+    width: 768px;    
     flex-direction: row;
+    gap: 25px;
+
 }
 
-.profile-birth {
-    display: flex;
-    flex-direction: row;
-    text-align: right;
-    text-align: none;
-    margin: none;
-}
-
-.profile-email {
-    text-align: none;
-}
-  
-.members-text, .profile-name, .profile-birth {
-    text-align: none;
-}
-
+//This needs to jc start
 .profile-image {
-    margin: none;
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    //this seem to fix everthing with centering
+    display: flex;
+    margin-left: 5px;
+    // justify-content: start;
+  }
+
+// .name-email-group {
+//     display: flex;
+//     flex-direction: column;
+// }
+
+//This need to jc end
+.profile-birth {
+    margin: 0;
+    justify-content: end;
 }
+ 
+a.profile-email, .profile-birth, .profile-name {
+    font-size: 25px;
+    margin: auto;
+
+}
+
   
-// Message 
+//============================ Message 
 
 .message-container {
     display: flex;

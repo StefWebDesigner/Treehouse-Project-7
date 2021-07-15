@@ -2,146 +2,49 @@
 /   things to do  /
 ===================
 
+Problems that Need sorting out: 
 
+(320px)
+***CSS***
+- Chart 2 is not responsive to change
+- Email/profile toggle is partial functional with flex, suppose to stretch out to the end. 
+    + I can make start shaping it but I can't make it into separate rows
+***JS***
+- NAVHIGHLIGHT IS NOT WORKING
+- Banner alert won't disappear 
+- search bar functality not working
+    > I may need to add a card class to the variable
+- TIME NOTIFCATION NOT WORKING PROPERLY
+- HAVE THE SETTINGS SAVE TO AN API (localStorage.CODE)
+
+(768px)
+- Chart 2 is not responsive to change
+- Unable to change the icon sizes of the the nav bar icons
+- unable to add a gap in between chart 2 & 3 (gaps/margin not responsive)
+- Need to center the save/cancel button
+
+(1024px)
+- chart 2 is not responsive
+- unable to change the size up my nav icons
+
+====================
+/   Extras:   /
+===================
+
+Extras:
 make a short api and make it have a search bar
 make an active class > when you press teh user message >> it holds it's color
 seach box for message
-make a a coll bell animation change
-colres inbetween sides
+make the white change to a different color on the bell animation degree movements 
+    when hoving over it
 add the button bounce animation
 When you click on the mesasge button 
 >> got back to the message section
+- Add the animsiton fade in thing form my client website
 
-
-
-
-====================
-/   QUESTIONS:   /
-===================
-
-The filter: (Ask for help)
-- The dashsearch is having an issue with search_string.lengh and matching it with 
-the other members complete datasets
-
-Traffic Nav Highlighting (Ask for help):
-- When interacting(clicking on) the traffic navgation section, it registers the
-engagment with a dot instead of applying the class that is suppose to change it.
-- Also, if you touch slighly outide the title, it complete reformats to something
-different
-
-Settings: (Asked for help)
-- The toggling on of the email notification properly gives the on alert.
-However, if you toggle it off, it still keeps the older alert message.
-- Also, for the timezone, I added an alert when you click on the pacific time zone
-to confirm to the user what they chose. However, the alter is not working. 
-___
-
-
-----------
-EXTRA: 
-SETTINGS:
-- Have it distinguish between active on and off and show that in the alert
-
-Another day (Extra Icon Animation)
-- change the color/line of the icons
-
-
-===========================
-/   Checklist  /
-===========================
-
-- Media query (320, 758, 1024)
-- USe header/sidebar/nav/main-content
-- Include an alter/bell(animation)/(sound for extra)
-- Social Stat widgets
-- Create a massesage user widget functionality
-- Setting widgets for accesibiltiy and stuff
-
-=====================
-/   Completed Task  /
-=====================
-
-Day 1:
-- set at leat main objectives
-- thorrowly look at guidelines
-- get grid working
-- get the proper section labelled correctly
-- got the header elements on
-
-Day 2: (optimizing)
-- have the bell close to the bar
-- reduce the total size of the header section 
-(navigation)
-- insted the nav images
-- change the color
-
-Day 3: 
-- made and polished the button
-- centered the input & fixed the dashboard
-
-Troubleshooting (fixed):
-- traffic header grid formation is inconsistant with their positions
-- Weekly Monthly is the reason why it is scewd - traffic-nav
-- gradchild sytantis issues with widget containers
-
-Day 4:
-- made the grid simple
-- set all the grid working
-- the traffic and daily heading showing
-- add twitter text parts
-
---------------
-
-Day 5:
-- Reorganized the colors into variables
-- fixed the social-text, now registering both collumns
-- make a border around pictures (make it centered)
-- make a border around stat peices
-- made the social media stats/formated correctly/color scheemed
-- add members
-- make the new grid & make it functional
--------
-
-Day 6:
-- Download install chart.js
-- add two of the charts
-- Add the ciricle & add it to the traffic container
-
-Day 7: 
-- fix spacing between hour/month traffic header
-- make it highlight green when clicked on with javascript
-
-
-============================
-Day 8:
-Settings: 
-- Got the toggle working
-- Added listners and put it into an array
-- make sure the lister is targeting different inputs
-- add set Email Notification wwith toggle
-- add set profile to public toggle
-
-Day 9:
-- - save the progress
-- add javascript for email/profile settings notifcation
-- Change up the= time zone section (mack the mock ups)
-- Get it polished up
-- make the input better looking
-
-Day 10
-- Polished & made the javascript legible
-- replaced the older array with classes type system
-- fixed the chart 3 problem
-- changed the colors of the grid & charts
-- save
 
 
 ===========================
 /   Notes  /
 ===========================
 
-mouse events (MouseEvent): mousedown, mouseup, click, dblclick, mousemove, mouseover, mousewheel, mouseout, contextmenu
-touch events (TouchEvent): touchstart, touchmove, touchend, touchcancel
-keyboard events (KeyboardEvent): keydown, keypress, keyup
-form events: focus, blur, change, submit
-window events: scroll, resize, hashchange, load, unload

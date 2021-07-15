@@ -69,6 +69,29 @@ body, main, nav, header {
   margin-top: 10px;
 }
 
+.alert-banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.alert-banner-close {
+  cursor: pointer;
+}
+
+.active {
+  background-color: green;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+}
+
 .alert-btn, .button-primary {
   color: white;
   width: 70%;
@@ -111,6 +134,7 @@ body, main, nav, header {
   color: white;
 }
 
+/* The switch - the box around the slider */
 .grid {
   width: 320px;
   display: -ms-grid;
@@ -437,7 +461,7 @@ nav {
   margin: auto;
 }
 
-.member-group {
+.members-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -519,7 +543,7 @@ nav {
           flex-direction: column;
 }
 
-.email-container {
+.notifcation-settings {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -529,7 +553,17 @@ nav {
           flex-direction: row;
 }
 
-.email_group {
+.email-container, .profile-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+label#email-group, label#profile-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -537,44 +571,6 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-}
-
-.email-notf-upper-part, .email-input-upper-part {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.profile-flex-point {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.profile-upper-flex, .email-upper-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-}
-
-.profile-lower-flex, .email-lower-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
 }
 
 header img {
@@ -775,13 +771,17 @@ fieldset {
   margin-bottom: 10px;
 }
 
+canvas {
+  max-width: 100%;
+}
+
 .chart1 {
   width: 300px;
   margin-bottom: 10px;
 }
 
 .chart2 {
-  width: 140px;
+  width: 4564456px;
   margin-bottom: 10px;
 }
 
@@ -890,7 +890,7 @@ fieldset {
             justify-content: center;
   }
   .chart1 {
-    width: 650px;
+    width: 680px;
     margin: auto;
   }
   .chart2-3-flow-container {
@@ -898,6 +898,12 @@ fieldset {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+  .chart-2-main {
+    width: 350px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .chart2 {
     margin: auto;
@@ -909,7 +915,6 @@ fieldset {
   .chart3 {
     height: 300px;
     width: 300px;
-    gap: 30px;
   }
   .social-flex-parent {
     width: 768px;
@@ -941,35 +946,35 @@ fieldset {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
-  .member-group {
+  .members-group {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 768px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-  }
-  .profile-birth {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    text-align: right;
-    text-align: none;
-    margin: none;
-  }
-  .profile-email {
-    text-align: none;
-  }
-  .members-text, .profile-name, .profile-birth {
-    text-align: none;
+    gap: 25px;
   }
   .profile-image {
-    margin: none;
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 5px;
+  }
+  .profile-birth {
+    margin: 0;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+  a.profile-email, .profile-birth, .profile-name {
+    font-size: 25px;
+    margin: auto;
   }
   .message-container {
     display: -webkit-box;
@@ -1089,9 +1094,9 @@ fieldset {
   .chart-1-main {
     width: 1024px;
   }
-  .chart-1 {
-    width: 130px;
-    height: 75px;
+  .chart1 {
+    width: 710px;
+    height: auto;
   }
   .chart2 {
     margin-top: 50px;
@@ -1154,7 +1159,7 @@ fieldset {
   .members-container {
     width: 500px;
   }
-  .member-group {
+  .members-group {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1166,34 +1171,28 @@ fieldset {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
     width: 500px;
+    gap: 22px;
+  }
+  .profile-image {
+    width: 80px;
+    height: 80px;
+    margin: 0;
+    margin-left: 5px;
   }
   .profile-birth {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    margin: 0;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: end;
-    margin: right;
   }
-  .profile-email {
-    text-align: left;
-    margin: 0;
+  a.profile-email, .profile-birth, .profile-name {
+    font-size: 25px;
   }
-  .members-text, .profile-name, .profile-birth {
-    text-align: left;
-    margin: 0;
+  a.profile-email {
+    font-size: 20px;
   }
-  .profile-image {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin: 0%;
+  .profile-birth {
+    font-size: 20px;
   }
   .recent-flex-container {
     width: 500px;

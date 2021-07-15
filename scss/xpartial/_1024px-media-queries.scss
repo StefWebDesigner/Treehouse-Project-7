@@ -90,13 +90,6 @@ nav svg {
 
 }
 
-
-
-
-
-
-
-
 // ============================================================
 
 // MAIN (FLEX) PROPERTIES
@@ -151,12 +144,13 @@ section {
 }
 
 .chart-1-main {
-    width: 1024px;    
+    width: 1024px;
+    // height: 100px;    
 }
 
-.chart-1 {
-    width: 130px;
-    height: 75px;
+.chart1 {
+    width: 710px;
+    height: auto;
 }
 
 .chart2 {
@@ -235,35 +229,42 @@ aside {
     width: 500px;
 }
 
-.member-group {
+.members-group {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     width: 500px;
+    gap: 22px;
+
+}
+  
+// ========
+
+.profile-image {
+    width: 80px;
+    height: 80px;
+    margin: 0;
+    margin-left: 5px;
+  }
+
+.profile-birth {
+    margin: 0;
+    justify-content: end;
+}
+ 
+a.profile-email, .profile-birth, .profile-name {
+    font-size: 25px;
+}
+
+a.profile-email {
+    font-size: 20px;
 }
 
 .profile-birth {
-    flex-direction: column;
-    justify-content: end;
-    margin: right;
+    font-size: 20px;
 }
 
-
-.profile-email {
-    text-align: left;
-    margin: 0;
-}
-  
-.members-text, .profile-name, .profile-birth {
-    text-align: left;
-    margin: 0;
-}
-
-.profile-image {
-    display: flex;
-    flex-direction: column;
-    margin:0%;
-}
+// ========
 
 // Recent Part
 
@@ -283,6 +284,7 @@ aside {
     width: 500px;
     justify-content: end;
 }
+
 
 //Setting
 

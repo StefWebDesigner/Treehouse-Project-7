@@ -50,7 +50,7 @@
       line-height: 2em; }
     .switch-light input:focus ~ span a,
     .switch-light input:focus + label {
-      outline-width: 2px;
+      outline-width: 10px;
       outline-style: solid;
       outline-color: Highlight;
       /* Chrome/Opera gets its native focus styles.

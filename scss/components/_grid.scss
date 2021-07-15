@@ -275,7 +275,7 @@ cursor: pointer;
 }
 
 //THIS SHOULD MAKE IT INTO A ROW
-.member-group {
+.members-group {
     display: flex;
     flex-direction: column;
 }
@@ -328,39 +328,22 @@ flex-direction: column;
     flex-direction: column;
 }
 
-.email-container {
-display: flex;
-flex-direction: row;
-
-}
-
-////------ The email/profile --- toggle
-//is not working well
-.email_group {
-    display: flex;
-    flex-direction: row;
-    // justify-content: space-between;
-}
-
-.email-notf-upper-part, .email-input-upper-part {
+.notifcation-settings {
     display: flex;
     flex-direction: row;
 }
 
-.profile-flex-point {
+.email-container, .profile-container {
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-evenly;
+}
+
+label#email-group, label#profile-group {
     display: flex;
     flex-direction: row;
-
 }
 
-.profile-upper-flex, .email-upper-flex {
-    display: flex;
-    justify-content: start;
-}
 
-.profile-lower-flex, .email-lower-flex {
-    display: flex;
-    justify-content: end;
-}
 
 

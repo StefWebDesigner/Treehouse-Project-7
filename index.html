@@ -59,7 +59,7 @@
 		<div class="main-header">
 			<h2 class="headline">Dashboard</h2>
 			<div class="main-header-search">
-				<input id="search_it" type="search" placeholder="Search..." />
+				<input id="search_it" type="search" placeholder="Search For Users" />
 			</div>
 		</div>
 
@@ -74,10 +74,10 @@
 	<div class="traffic-header" id="trafficSection">
 			<h3 class="traffic-label">Traffic</h3> 
 			<ul id="traffic_nav" class="traffic-nav">
-				<li id="hourly" class="traffic-nav-hourly">Hourly</li>
-				<li id="daily" class="traffic-nav-daily">Daily</li> 
-				<li id="weekly" class="traffic-nav-weekly">Weekly</li>
-				<li id="monthly" class="traffic-nav-monthly">Monthly</li>
+				<li id="traffic-nav-hourly" class="traffic-nav-options">Hourly</li>
+				<li id="traffic-nav-daily" class="traffic-nav-options">Daily</li> 
+				<li id="traffic-nav-weekly" class="traffic-nav-options">Weekly</li>
+				<li id="traffic-nav-monthly" class="traffic-nav-options">Monthly</li>
 			</ul>
 	</div>	
 				
@@ -233,8 +233,8 @@ div together**** -->
 					<img class="profile-image" src="images/member-1.jpg">
 						<!-- #1 column #2 column-->
 					<div class="name-email-group">
-						<p class="profile-name">Victoria Chambers</p>
-						<a class="profile-email" href="#">victoria.chambers80@example.com</a>
+						<p class="profile-name">Victoria Charle</p>
+						<a class="profile-email" href="#">victoria.charle80@example.com</a>
 					</div>
 					<!-- #1 column #row -->
 					<p class="profile-birth">10/15/15</p>
@@ -308,51 +308,91 @@ div together**** -->
 	<div class="settings" id="settings-link">
 		<div class="setting-container">
 			<h3 class="settings-label">Settings</h3>
+			
+			
+			<!-- =========================== -->
 			<div class="notifcation-settings">
+								<!-- columm -->
+				<div class="email-container">
+								<!-- rows -->
+					<label id="email_group" class="switch-light switch-material" onclick="">
+							  <strong class="strong-email">
+								  Set email notifications
+								  </strong>
+							  <input id="email-checkbox" type="checkbox">
+							  <span>
+								<span id="email-span-off">Off</span>
+								<span id="email-span-on">On</span>
+							  	<a id="toggle-interacation-email"></a>
+							  </span>
+					</label>
+				  </div>
+				<!-- columm -->
+				<div class="profile-container">
+					<!-- rows -->
+				  <label id="profile_group" class="switch-light switch-material" onclick="">
+						<strong class="strong-profile">
+							Set Profile to public
+						</strong>
+						<input id="profile-checkbox" type="checkbox">
+						<span>
+							<span class="profile-span-off">Off</span>
+							<span class="profile-span-on">On</span>
+							<a id="toggle-interacation-profile"></a>
+						</span>
+				  </label>
+				</div>
+			</div>
+			<!-- ============================= -->
+
+
+			<!-- =========================== -->
+			<!-- <div class="notifcation-settings">
 				<div class="email-container">
 					<label id="email_group" class="switch-light switch-material" onclick="">
-						<div class="email-flex-point">
-								<div class="email-upper-flex">
-									<strong class="strong-email">
-											Send Email Notifications
-									</strong>
-								</div>
-								<div class="email-lower-flex">
-									<input class="input-email" id="email-checkbox" type="checkbox">
-									<span class="span-email">
-										<span class="email-active-on">Off</span>
-										<span class="email-active-off">On</span>
-									<!-- COULD i USE THESE LINKS TO CONNECT TO A FUNCTION???!!!!!
-									i NEED TO TRY IT -->
-										<a id="toggle-interacation-email"></a>
-									</span>
-								</div>
-							</div>
+					  <div class="email-flex-point">
+						  <div class="email-upper-flex">
+							  <strong class="strong-email">
+								  Set email notifications
+								  </strong>
+								  <input id="profile-checkbox" type="checkbox"> -->
+						  <!-- </div>
+						  <div class="email-lower-flex">
+							  <input id="email-checkbox" type="checkbox">
+							  <span class="email-span">
+								<span>Off</span>
+								<span>On</span>
+							  	<a id="toggle-interacation-email"></a>
+							  </span>
+						  </div> -->
+					  <!-- DIV END FOR PROFILE FLEXPOINT -->
+					  <!-- </div>
 					</label>
-				</div>
+				  </div> -->
 				<!-- Add a banner annountment for the change -->
-				<div class="profile-container">
+				<!-- <div class="profile-container">
 				  <label id="profile_group" class="switch-light switch-material" onclick="">
 					<div class="profile-flex-point">
 						<div class="profile-upper-flex">
 							<strong class="strong-profile">
 								Set Profile to public
-								</strong>
+								</strong> -->
 								<!-- <input id="profile-checkbox" type="checkbox"> -->
-						</div>
+						<!-- </div>
 						<div class="profile-lower-flex">
 							<input id="profile-checkbox" type="checkbox">
-							<span>
-							<span>Off</span>
-							<span>On</span>
+							<span class="email-span">
+								<span class="email-off-span">Off</span>
+								<span class="email-on-span">On</span>
 							<a id="toggle-interacation-profile"></a>
 							</span>
-						</div>
+						</div> -->
 					<!-- DIV END FOR PROFILE FLEXPOINT -->
-					</div>
+					<!-- </div>
 				  </label>
 				</div>
-			</div>
+			</div>  -->
+			<!-- ============================= -->
 			<div class="timezone-settings">
 				<fieldset class="switch-toggle switch-candy-blue">
 					<legend></legend>
@@ -382,8 +422,9 @@ div together**** -->
 </div> 
 
 	</aside>
-
+	<script src="javascript/search.js"></script>
 	<script src="javascript/app.js"> </script>
+	
 
 
 <!-- <footer>  -->

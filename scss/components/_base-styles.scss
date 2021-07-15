@@ -21,3 +21,29 @@ margin-top: 10px;
 }
 
 
+
+.alert-banner {
+        display: flex;
+        flex-direction: row;
+        padding-left: 10px;
+        padding-right: 10px;
+
+}
+
+.alert-banner-close {
+//        display: none; 
+       cursor: pointer;
+}
+
+
+// .traffic-nav-hourly, .traffic-nav-daily, .traffic-nav-weekly, .traffic-nav-monthly {
+//         color: green;
+
+// }
+
+.active {
+        background-color: green;
+        border-radius: 5px;
+        color: white;
+        padding: 5px;
+    }
