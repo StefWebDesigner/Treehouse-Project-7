@@ -2,7 +2,8 @@
 
 // GLOBAL VARIABLES
 const alertBanner = document.querySelector("#alert");
-const traffic = document.querySelector('ul#traffic_nav');
+const traffic = document.querySelector('ul');
+//I only need ul because the target e will target what I'm clicking
 const settings = document.querySelector('select#timezone');
 const optional_responses = document.querySelector('option#timezone_options');
 
@@ -20,6 +21,7 @@ to complete</p>
 `
 
 alertBanner.addEventListener('click', e => {
+	//
 	const element = e.target;
 	if (element.classList.contains("alert-banner-close")) {
 	alert.style.display = "none"
@@ -30,40 +32,67 @@ alertBanner.addEventListener('click', e => {
 //==========================================================================
 
 //TRAFFIC NAVIGATION FUNCTIONALITY
-const traffic_nav_hourly = document.querySelector('#traffic_nav_hourly');
-const traffic_nav_daily = document.querySelector('#region traffic_nav_daily');
-const traffic_nav_weekly = document.querySelector('#traffic_nav_weekly');
-const traffic_nav_monthly = document.querySelector('#traffic_nav_monthly');
+const traffic_nav_hourly = document.querySelector('#traffic-nav-hourly');
+const traffic_nav_daily = document.querySelector('#traffic-nav-daily');
+const traffic_nav_weekly = document.querySelector('#traffic-nav-weekly');
+const traffic_nav_monthly = document.querySelector('#traffic-nav-monthly');
 
 
 //IT'S NOT READING!!!!!!! WHY!!!!!!
-function navHighlight(traffic_menu) {
-	traffic_menu.addEventListener('click', () => {
-
-console.log('Im all ears');
-
-	// const traffic_option_selected = e.target;
-	let traffic_chosen = document.querySelector('.traffic-nav-options');
-
-		for (i = 0; i < traffic_chosen.length; i++) {
-			traffic_chosen[i].classList.remove('active');
-			console.log('Im looping around');
+function navHighlight() {
+	traffic.addEventListener('click', (e) => {
+		if (e.target.classList.contains('hourly')) {
+			navHighlight(traffic_nav_hourly);
+			e.target.classList.add('active');
+		
 		}
-		traffic_menu.classList.add('active');
-		})
+		if (e.target.classList.contains('daily')) {
+			navHighlight(traffic_nav_daily);
+			e.target.classList.add('active');
 
-		console.log('I made it to the end');
-};
+		}
+		if (e.target.classList.contains('weekly')) {
+			navHighlight(traffic_nav_weekly);
+			e.target.classList.add('active');
 
-navHighlight(traffic_nav_hourly);
-navHighlight(traffic_nav_daily);
-navHighlight(traffic_nav_weekly);
-navHighlight(traffic_nav_monthly);
+		}
+		if (e.target.classList.contains('monthly')) {
+			navHighlight(traffic_nav_monthly);
+			e.target.classList.add('active');
+
+		}
+
+	});
+
+// ===================
+
+// 	traffic_menu.addEventListener('click', () => {
+
+// console.log('Im all ears');
+
+// 	// const traffic_option_selected = e.target;
+// 	let traffic_chosen = document.querySelectorAll('.traffic-nav-options');
+
+// 		for (i = 0; i < traffic_chosen.length; i++) {
+// 			traffic_chosen[i].classList.remove('active');
+// 			console.log('Im looping around');
+// 		}
+// 		traffic_menu.classList.add('active');
+// 		})
+
+// 		console.log('I made it to the end');
+// };
+
+// //hav this in if statements
+// navHighlight(traffic_nav_hourly);
+// navHighlight(traffic_nav_daily);
+// navHighlight(traffic_nav_weekly);
+// navHighlight(traffic_nav_monthly);
 
 //==========================================================================
 
 //EXPERIMENT
-//EMAIL FUNCTIONALITYY
+//EMAIL FUNCTIONALITY
 
 const email_preference_toggle = event => {
 	console.log('Are you working email preferences????');
@@ -178,6 +207,34 @@ send.addEventListener('click', () => {
 
 //==========================================================================
 
+//LOCAL STORAGE FUNCTIONALITY >> start of with the email/profile
+
+// AN EXAMPLE OF HOW TO PULL OF THIS STUFF >> NEED THE BUTTON WORKING FIRST THOUGH
+//GO TO APPLICATIONS AND STORAGE TO SEE WHAT IS STORED!!!
+
+const storageInput = document.querySelector('.storage');
+const storage_button = document.querySelector('#save');
+// const storedInput = localStorage.getItem('to the button or something >>> work on this');
+
+if(storageInput) {
+	text.textContent = storedInput;
+}
+
+storageInput.addEventListener('input', letter => {
+	text.textContent = letter.target.value;
+
+
+});
+
+const savetoLocalStorage = () => {
+	localStorage.setItem('textinput', text, text.textContent);
+
+}
+
+button.addEventListener('click', savetoLocalStorage);
+
+//==========================================================================
+
 
 
 // TIME BANNER NOTIFCATIONS FUNCTION
@@ -189,8 +246,7 @@ settings.addEventListener('click', (event) => {
 		console.log('Im in the time function function');
 //LISTEN FOR INPUT
 		selected_input_time = event.target;
-		// let input_memory = [];
-		// input_memory.push(sSelected_input_time);
+		// let input_sSelected_input_time);
 		if (selected_input_time === optional_responses) {
 			console.log("I'm in the timezone if statement");
 			 if (optional_responses.value = "est-zone") {
@@ -217,7 +273,7 @@ settings.addEventListener('click', (event) => {
 
 		}
 
-	});
+});
 
 	// SAVE SETTINGS FUNCTIONALITY
 

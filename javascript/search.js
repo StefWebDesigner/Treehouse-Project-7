@@ -1,24 +1,24 @@
 
-// const search = document.querySelector('input#search-it');
+// const search = document.querySelector('input#search_it');;
 
 
 
 
-// CREATE A DATABASE WITH ARRAYS
-const total_members = [
-	{name:"Victoria Charle", 
-	email:"victoria.charles80@example.com", 
-	birthDate:"10/15/15"}, 
-	{name:"Dale Byrd", 
-	email:"dale.byrd52@example.com", 
-	birthDate:"10/15/15"},
-	{name:"Dawn Wood", 
-	email:"dawn.wood16@example.com", 
-	birthDate:"10/15/15"},
-	{name:"Dan Oliver", 
-	email:"dan.oliver82@example.com", 
-	birthDate:"10/15/15"},
-];
+// // CREATE A DATABASE WITH ARRAYS
+// const total_members = [
+// 	{name:"Victoria Charle", 
+// 	email:"victoria.charles80@example.com", 
+// 	birthDate:"10/15/15"}, 
+// 	{name:"Dale Byrd", 
+// 	email:"dale.byrd52@example.com", 
+// 	birthDate:"10/15/15"},
+// 	{name:"Dawn Wood", 
+// 	email:"dawn.wood16@example.com", 
+// 	birthDate:"10/15/15"},
+// 	{name:"Dan Oliver", 
+// 	email:"dan.oliver82@example.com", 
+// 	birthDate:"10/15/15"},
+// ];
 
 
 
