@@ -55,13 +55,20 @@
 
 <main>
 	<div class="main-container">
-	<!-- SEACH BAR-->
-		<div class="main-header">
+	<!-- SEArCH BAR-->
+	<form autocomplete="off">
+		<div class="main-header autocomplete">
 			<h2 class="headline">Dashboard</h2>
-			<div class="main-header-search">
-				<input id="search_it" type="search" placeholder="Search For Users" />
+			<div class="main-header-search autocomplete">
+				<input id="myInput" type="text" name="myInput" placeholder="Search For Users">
 			</div>
+			<input type="submit">
 		</div>
+	</form>
+
+	<script>
+		autocomplete(document.getElementById("myInput"), myInput);
+		</script>
 
 <!-- ALERT-->
 		<div class="alert" id="alert">

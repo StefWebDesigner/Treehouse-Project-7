@@ -36,7 +36,7 @@ const traffic_nav_daily = document.querySelector('#traffic-nav-daily');
 const traffic_nav_weekly = document.querySelector('#traffic-nav-weekly');
 const traffic_nav_monthly = document.querySelector('#traffic-nav-monthly');
 
-function navHighlight() {
+function navHighlight(e) {
 	//it continues downward
 
 //CHART 1 (HOURLY)
@@ -72,22 +72,22 @@ const dailyData = new Chart(chart2, {
 		data: {
 		labels: ['S', 'M', 'sT', 'W', 'T', 'F', 'S'],
 		datasets: [{
-		label: "Traffic",
-		type: "bar",
-		data: [75,125,175,125, 225, 200, 100],
-		backgroundColor: "#765af2",
-		backgroundColorHover: "#3e95cd",
-		}]
+			label: "Traffic",
+			type: "bar",
+			data: [75,125,175,125, 225, 200, 100],
+			backgroundColor: "#765af2",
+			backgroundColorHover: "#3e95cd",
+			}]
 		},
 		options: {
-		legend: { display: false },
-		elements: {
-        line: {
-        tension: .45
-		}
+			legend: { display: false },
+			elements: {
+        		line: {
+        	tension: .45
+			}
 		},											
-		}
-	});
+	}
+});
 
 //CHART 4(WEEKLY)
 
@@ -104,17 +104,17 @@ const weeklyData = new Chart(chart4, {
 			backgroundColor: "#826AEE",
 			backgroundColorHover: "#3e95cd",
 			fill: false,
-			}]
+		}]
 			},
 			options: {
-			legend: { display: false },
-			elements: {
-        	line: {
-            tension: .45
+				legend: { display: false },
+				elements: {
+				line: {
+				tension: .45
 			}
 		},											
-		}
-	});
+	}
+});
 
 //==========================================================================
 //CHART 5(MONTHLY)
@@ -176,48 +176,63 @@ const monthlyData = new Chart(chart5, {
 	// const updatePoint = document.querySelector();
 //DO I NEED A LISTER TO LISTEN FOR THE TYPE OF BUTTON PRESSED????
 
-		function update(chartData) {
-			if (chartData.contains(hourlyData)) {
-				update(hourlyData);
-			} if (chartData.contains(dailyData)) {
-				update(dailyData);
-			} if (chartData.contains(weeklyData)) {
-				update(weeklyData);
-			} if (chartData.contains(monthlyData)) {
-				update(monthlyData);
-			}
-		}
-	
 
-		//make it it display
-		
+
+
+
+
+//*******************
+// add display code (HEREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE)
+//*******************
+
+	function update(chartData) {
+			console.log('Entered the update function');
+			
+			if (chartData.contains(hourlyData)) {
+				update(hourlyData).document.querySelector('canvas#chart1').innerHTML;
+				console.log('update function: hourlyData processed');
+			} if (chartData.contains(dailyData)) {
+				update(dailyData).document.querySelector('canvas#chart1').innerHTML;
+				console.log('update function: dailyData processed');
+			} if (chartData.contains(weeklyData)) {
+				update(weeklyData).document.querySelector('canvas#chart1').innerHTML;
+				console.log('update function: weeklyData processed');
+			} if (chartData.contains(monthlyData)) {
+				update(monthlyData).document.querySelector('canvas#chart1').innerHTML;
+				console.log('update function: monthlyData processed');
+		}
+}
+			
 		if (e.target.classList.contains('hourly')) {
 		  e.target.classList.add('active');
 		  update(hourlyData);
 		  navHighlight(traffic-nav-hourly);
+		  console.log('Traffic nav: hourlyData active now');
+
 		}
 		if (e.target.classList.contains('daily')) {
 		  e.target.classList.add('active');
 		  update(dailyData);
 		  navHighlight(traffic-nav-daily);
+		  console.log('Traffic nav: dailyData active now');
 
 		}
 		if (e.target.classList.contains('weekly')) {
 		   e.target.classList.add('active');
 		   update(weeklyData);
 		   navHighlight(traffic-nav-weekly);
+		   console.log('Traffic nav: weeklyData active now');
 
 		}
 		if (e.target.classList.contains('monthly')) {
 		   e.target.classList.add('active');
 		   update(monthlyData);
 		   navHighlight(traffic-nav-monthly);
+		   console.log('Traffic nav: monthlyData active now');
 
 		}
-	  });
+	  }
 
-
-	  navHighlight
 // ===================
 
 // 	traffic_menu.addEventListener('click', () => {
