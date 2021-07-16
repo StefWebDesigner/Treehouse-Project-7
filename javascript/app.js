@@ -26,10 +26,9 @@ alertBanner.addEventListener('click', e => {
 	if (element.classList.contains("alert-banner-close")) {
 	alert.style.display = "none"
 	}
-		
 });
 
-//==========================================================================
+// =====================================================
 
 //TRAFFIC NAVIGATION FUNCTIONALITY
 const traffic_nav_hourly = document.querySelector('#traffic-nav-hourly');
@@ -37,33 +36,188 @@ const traffic_nav_daily = document.querySelector('#traffic-nav-daily');
 const traffic_nav_weekly = document.querySelector('#traffic-nav-weekly');
 const traffic_nav_monthly = document.querySelector('#traffic-nav-monthly');
 
-
-//IT'S NOT READING!!!!!!! WHY!!!!!!
 function navHighlight() {
-	traffic.addEventListener('click', (e) => {
-		if (e.target.classList.contains('hourly')) {
-			navHighlight(traffic_nav_hourly);
-			e.target.classList.add('active');
+	//it continues downward
+
+//CHART 1 (HOURLY)
+const hourlyData = new Chart(chart1, {
+			type: 'line',  
+			data: {
+			labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
+			datasets: [{
+			label: "Traffic",
+			type: "line",
+		fillColor: "#826AEE",
+			borderColor: "#8e5ea2",
+			data: [550,1250,1000,2000, 1500, 1750, 1250, 1750, 2250, 1500, 2500],
+			backgroundColor: "#826AEE",
+			backgroundColorHover: "#3e95cd",
+			fill: false,
+			}]
+			},
+			options: {
+			legend: { display: false },
+			elements: {
+        	line: {
+            tension: .45
+		}
+			},											
+		}
+	});
+
+//CHART 2(DAILY)
+
+const dailyData = new Chart(chart2, {
+		type: 'line',  
+		data: {
+		labels: ['S', 'M', 'sT', 'W', 'T', 'F', 'S'],
+		datasets: [{
+		label: "Traffic",
+		type: "bar",
+		data: [75,125,175,125, 225, 200, 100],
+		backgroundColor: "#765af2",
+		backgroundColorHover: "#3e95cd",
+		}]
+		},
+		options: {
+		legend: { display: false },
+		elements: {
+        line: {
+        tension: .45
+		}
+		},											
+		}
+	});
+
+//CHART 4(WEEKLY)
+
+const weeklyData = new Chart(chart4, {
+			type: 'line',  
+		data: {
+			labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
+		datasets: [{
+			label: "Traffic",
+			type: "line",
+			fillColor: "#826AEE",
+			borderColor: "#8e5ea2",
+			data: [550,1250,1000,2000, 1500, 1750, 1250, 1750, 2250, 1500, 2500],
+			backgroundColor: "#826AEE",
+			backgroundColorHover: "#3e95cd",
+			fill: false,
+			}]
+			},
+			options: {
+			legend: { display: false },
+			elements: {
+        	line: {
+            tension: .45
+			}
+		},											
+		}
+	});
+
+//==========================================================================
+//CHART 5(MONTHLY)
+
+const monthlyData = new Chart(chart5, {
+		type: 'line',  
+		data: {
+		labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
+		datasets: [{
+		label: "Traffic",
+		type: "line",
+		fillColor: "#826AEE",
+		borderColor: "#8e5ea2",
+		data: [2500,1001,1750,1500, 1500, 1500, 1500, 2250, 2250, 1500, 2250],
+	backgroundColor: "#826AEE",
+		backgroundColorHover: "#3e95cd",
+		fill: false,
+		}]
+		},
+		options: {
+		legend: { display: false },
+		elements: {
+        line: {
+        tension: .45
+		}
+		},											
+		}
+	});
+
+//	UPDATE FUNCTION
+	// function update(chartData) {
+	// 	chart.data.labels.push(label);
+	// 	chart.data.datasets.forEach((dataset) => {
+	// 		dataset.data.push(data);
+	// 	});
+	// 	chart.update();
+	// }
+
+	// function addData(chart, label, data) {
+	// 	chart.data.labels.push(label);
+	// 	chart.data.datasets.forEach((dataset) => {
+	// 		dataset.data.push(data);
+	// 	});
+	// 	chart.update();
+	// }
+	
+	// function removeData(chart) {
+	// 	chart.data.labels.pop();
+	// 	chart.data.datasets.forEach((dataset) => {
+	// 		dataset.data.pop();
+	// 	});
+	// 	chart.update();
+	// }
+
+
+
+
+//DO i NEED A REFERENCE POINT?????
+	// const updatePoint = document.querySelector();
+//DO I NEED A LISTER TO LISTEN FOR THE TYPE OF BUTTON PRESSED????
+
+		function update(chartData) {
+			if (chartData.contains(hourlyData)) {
+				update(hourlyData);
+			} if (chartData.contains(dailyData)) {
+				update(dailyData);
+			} if (chartData.contains(weeklyData)) {
+				update(weeklyData);
+			} if (chartData.contains(monthlyData)) {
+				update(monthlyData);
+			}
+		}
+	
+
+		//make it it display
 		
+		if (e.target.classList.contains('hourly')) {
+		  e.target.classList.add('active');
+		  update(hourlyData);
+		  navHighlight(traffic-nav-hourly);
 		}
 		if (e.target.classList.contains('daily')) {
-			navHighlight(traffic_nav_daily);
-			e.target.classList.add('active');
+		  e.target.classList.add('active');
+		  update(dailyData);
+		  navHighlight(traffic-nav-daily);
 
 		}
 		if (e.target.classList.contains('weekly')) {
-			navHighlight(traffic_nav_weekly);
-			e.target.classList.add('active');
+		   e.target.classList.add('active');
+		   update(weeklyData);
+		   navHighlight(traffic-nav-weekly);
 
 		}
 		if (e.target.classList.contains('monthly')) {
-			navHighlight(traffic_nav_monthly);
-			e.target.classList.add('active');
+		   e.target.classList.add('active');
+		   update(monthlyData);
+		   navHighlight(traffic-nav-monthly);
 
 		}
+	  });
 
-	});
 
+	  navHighlight
 // ===================
 
 // 	traffic_menu.addEventListener('click', () => {
@@ -136,7 +290,7 @@ const profile_preference_toggle = event => {
 	}
 
 };
- 
+
 
 search.addEventListener('click', profile_preference_toggle);
 console.log('Listerner activated');
