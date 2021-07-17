@@ -36,10 +36,12 @@ const traffic_nav_daily = document.querySelector('#traffic-nav-daily');
 const traffic_nav_weekly = document.querySelector('#traffic-nav-weekly');
 const traffic_nav_monthly = document.querySelector('#traffic-nav-monthly');
 
-function navHighlight(e) {
+function navHighlight() {
 	//it continues downward
 
+
 //CHART 1 (HOURLY)
+//VARIABLES FOR EACH CHART >>> TO BE CALLED ON
 const hourlyData = new Chart(chart1, {
 			type: 'line',  
 			data: {
@@ -66,7 +68,7 @@ const hourlyData = new Chart(chart1, {
 	});
 
 //CHART 2(DAILY)
-
+//VARIABLES FOR EACH CHART >>> TO BE CALLED ON
 const dailyData = new Chart(chart2, {
 		type: 'line',  
 		data: {
@@ -90,7 +92,7 @@ const dailyData = new Chart(chart2, {
 });
 
 //CHART 4(WEEKLY)
-
+//VARIABLES FOR EACH CHART >>> TO BE CALLED ON
 const weeklyData = new Chart(chart4, {
 			type: 'line',  
 		data: {
@@ -118,7 +120,7 @@ const weeklyData = new Chart(chart4, {
 
 //==========================================================================
 //CHART 5(MONTHLY)
-
+//VARIABLES FOR EACH CHART >>> TO BE CALLED ON
 const monthlyData = new Chart(chart5, {
 		type: 'line',  
 		data: {
@@ -144,51 +146,18 @@ const monthlyData = new Chart(chart5, {
 		}
 	});
 
-//	UPDATE FUNCTION
-	// function update(chartData) {
-	// 	chart.data.labels.push(label);
-	// 	chart.data.datasets.forEach((dataset) => {
-	// 		dataset.data.push(data);
-	// 	});
-	// 	chart.update();
-	// }
-
-	// function addData(chart, label, data) {
-	// 	chart.data.labels.push(label);
-	// 	chart.data.datasets.forEach((dataset) => {
-	// 		dataset.data.push(data);
-	// 	});
-	// 	chart.update();
-	// }
-	
-	// function removeData(chart) {
-	// 	chart.data.labels.pop();
-	// 	chart.data.datasets.forEach((dataset) => {
-	// 		dataset.data.pop();
-	// 	});
-	// 	chart.update();
-	// }
-
-
 
 
 //DO i NEED A REFERENCE POINT?????
 	// const updatePoint = document.querySelector();
-//DO I NEED A LISTER TO LISTEN FOR THE TYPE OF BUTTON PRESSED????
+//DO I NEED A LISTER TO LISTEN FOR THE TYPE OF BUTTON PRESSED???
 
-
-
-
-
-
-//*******************
-// add display code (HEREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE)
-//*******************
-
+//FUNCTION TO HAVE THE CHART DATA READY FOR THE FINAL TRAFFIC CALL
 	function update(chartData) {
 			console.log('Entered the update function');
 			
 			if (chartData.contains(hourlyData)) {
+				//CALLING THE FUNCTION & DISPLAY
 				update(hourlyData).document.querySelector('canvas#chart1').innerHTML;
 				console.log('update function: hourlyData processed');
 			} if (chartData.contains(dailyData)) {
@@ -205,7 +174,9 @@ const monthlyData = new Chart(chart5, {
 			
 		if (e.target.classList.contains('hourly')) {
 		  e.target.classList.add('active');
+		  //CALLING THE SPECIFIC DATA CHART
 		  update(hourlyData);
+		  //CALLING THE FUNCTION
 		  navHighlight(traffic-nav-hourly);
 		  console.log('Traffic nav: hourlyData active now');
 
@@ -263,7 +234,7 @@ const monthlyData = new Chart(chart5, {
 //EXPERIMENT
 //EMAIL FUNCTIONALITY
 
-const email_preference_toggle = event => {
+const email_preference_toggle = () => {
 	console.log('Are you working email preferences????');
 
 	const email_input = document.querySelector('input#email-checkbox');
