@@ -362,8 +362,6 @@ if(storageInput) {
 
 storageInput.addEventListener('input', letter => {
 	text.textContent = letter.target.value;
-
-
 });
 
 const savetoLocalStorage = () => {
@@ -374,7 +372,6 @@ const savetoLocalStorage = () => {
 button.addEventListener('click', savetoLocalStorage);
 
 //==========================================================================
-
 
 
 // TIME BANNER NOTIFCATIONS FUNCTION
