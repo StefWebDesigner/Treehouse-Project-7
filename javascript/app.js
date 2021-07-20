@@ -31,14 +31,18 @@ alertBanner.addEventListener('click', e => {
 // =====================================================
 
 //TRAFFIC NAVIGATION FUNCTIONALITY
+
+
+// Global traffic values
 const traffic_nav_hourly = document.querySelector('#traffic-nav-hourly');
 const traffic_nav_daily = document.querySelector('#traffic-nav-daily');
 const traffic_nav_weekly = document.querySelector('#traffic-nav-weekly');
 const traffic_nav_monthly = document.querySelector('#traffic-nav-monthly');
 
+
+//*** MAYBE NEED A PARAMETER...BUT WTF WHAT!!!! */
 function navHighlight() {
 	//it continues downward
-
 
 //CHART 1 (HOURLY)
 //VARIABLES FOR EACH CHART >>> TO BE CALLED ON
@@ -146,15 +150,11 @@ const monthlyData = new Chart(chart5, {
 		}
 	});
 
-
-
-//DO i NEED A REFERENCE POINT?????
-	// const updatePoint = document.querySelector();
-//DO I NEED A LISTER TO LISTEN FOR THE TYPE OF BUTTON PRESSED???
+}
 
 //FUNCTION TO HAVE THE CHART DATA READY FOR THE FINAL TRAFFIC CALL
 	function update(chartData) {
-			console.log('Entered the update function');
+			console.log('update function working');
 			
 			if (chartData.contains(hourlyData)) {
 				//CALLING THE FUNCTION & DISPLAY
@@ -171,10 +171,20 @@ const monthlyData = new Chart(chart5, {
 				console.log('update function: monthlyData processed');
 		}
 }
+
+traffic.addEventListener('click', (e) => {
+
+	//test
+	console.log('traffic listening');
 			
+//its not entering 
 		if (e.target.classList.contains('hourly')) {
+
+			console.log('if condition working?');
+
 		  e.target.classList.add('active');
 		  //CALLING THE SPECIFIC DATA CHART
+
 		  update(hourlyData);
 		  //CALLING THE FUNCTION
 		  navHighlight(traffic-nav-hourly);
@@ -200,11 +210,11 @@ const monthlyData = new Chart(chart5, {
 		   update(monthlyData);
 		   navHighlight(traffic-nav-monthly);
 		   console.log('Traffic nav: monthlyData active now');
-
 		}
-	  }
-
-// ===================
+	  
+	});
+// // ===================
+//************************HOLD OFF ON THIS**********************************
 
 // 	traffic_menu.addEventListener('click', () => {
 
@@ -230,56 +240,57 @@ const monthlyData = new Chart(chart5, {
 // navHighlight(traffic_nav_monthly);
 
 //==========================================================================
+//************************HOLD OFF ON THIS**********************************
 
 //EXPERIMENT
 //EMAIL FUNCTIONALITY
 
-const email_preference_toggle = () => {
-	console.log('Are you working email preferences????');
+// const email_preference_toggle = () => {
+// 	console.log('Are you working email preferences????');
 
-	const email_input = document.querySelector('input#email-checkbox');
+// 	const email_input = document.querySelector('input#email-checkbox');
 
-	if (email_input.tagName.contains('email-span-on')) {
-		alert('You email notifications have been turned on on');
-	} if (email_input.tagName.contains('email-span-off')) {
-		alert('You email notifications have been turned on off');
-	} else {
-		alert('Unable to change email preferences. Please Try again.');
-	}
+// 	if (email_input.tagName.contains('email-span-on')) {
+// 		alert('You email notifications have been turned on on');
+// 	} if (email_input.tagName.contains('email-span-off')) {
+// 		alert('You email notifications have been turned on off');
+// 	} else {
+// 		alert('Unable to change email preferences. Please Try again.');
+// 	}
 
-};
+// };
  
 
-email_input.addEventListener('click', email_preference_toggle);
-console.log('Listerner activated');
+// email_input.addEventListener('click', email_preference_toggle);
+// console.log('Listerner activated');
 
 //==========================================================================
+//************************HOLD OFF ON THIS**********************************
+// //EXPERIMENT
+// //EMAIL FUNCTIONALITYY
 
-//EXPERIMENT
-//EMAIL FUNCTIONALITYY
+// // const email_settings = document.querySelector('label#email_group');
 
-// const email_settings = document.querySelector('label#email_group');
+// const profile_preference_toggle = event => {
+// 	console.log('Are you working profile preferences????');
 
-const profile_preference_toggle = event => {
-	console.log('Are you working profile preferences????');
+// 	const profile_input = document.querySelector('input#email-checkbox');
+// 	// const email_span_on = document.querySelector('#email-span-on');
+// 	// const email_span_off = document.querySelector('#email-span-off');
 
-	const profile_input = document.querySelector('input#email-checkbox');
-	// const email_span_on = document.querySelector('#email-span-on');
-	// const email_span_off = document.querySelector('#email-span-off');
+// 	if (profile_input.tagName.contains('profile-span-on')) {
+// 		alert('You email notifications have been turned on on');
+// 	} if (profile_input.tagName.contains('profile-span-on')) {
+// 		alert('You email notifications have been turned on off');
+// 	} else {
+// 		alert('Unable to change email preferences. Please Try again.');
+// 	}
 
-	if (profile_input.tagName.contains('profile-span-on')) {
-		alert('You email notifications have been turned on on');
-	} if (profile_input.tagName.contains('profile-span-on')) {
-		alert('You email notifications have been turned on off');
-	} else {
-		alert('Unable to change email preferences. Please Try again.');
-	}
-
-};
+// };
 
 
-profile_input.addEventListener('click', profile_preference_toggle);
-console.log('Listerner activated');
+// profile_input.addEventListener('click', profile_preference_toggle);
+// console.log('Listerner activated');
 
 //==========================================================================
 
@@ -326,153 +337,93 @@ console.log('Listerner activated');
 // });
 
 //==========================================================================
+//************************HOLD OFF ON THIS**********************************
 
-// MESSAGING FUNCTIONALITY
-const user = document.getElementById("userField");
-const message = document.getElementById("messageField");
-const send = document.getElementById("send");
+// // MESSAGING FUNCTIONALITY
+// const user = document.getElementById("userField");
+// const message = document.getElementById("messageField");
+// const send = document.getElementById("send");
 
-send.addEventListener('click', () => {
-	// ensure user and message fields are filled out
-	if (user.value === "" && message.value === "") {
-	alert("Please fill out user and message fields before sending");
-	} else if (user.value === "" ) {
-	alert("Please fill out user field before sending");
-	} else if (message.value === "" ) {
-	alert("Please fill out message field before sending");
-	} else {
-	alert(`Message successfully sent to: ${user.value}`);
-	}
-});
+// send.addEventListener('click', () => {
+// 	// ensure user and message fields are filled out
+// 	if (user.value === "" && message.value === "") {
+// 	alert("Please fill out user and message fields before sending");
+// 	} else if (user.value === "" ) {
+// 	alert("Please fill out user field before sending");
+// 	} else if (message.value === "" ) {
+// 	alert("Please fill out message field before sending");
+// 	} else {
+// 	alert(`Message successfully sent to: ${user.value}`);
+// 	}
+// });
 
 //==========================================================================
 
+//************************HOLD OFF ON THIS**********************************
 //LOCAL STORAGE FUNCTIONALITY >> start of with the email/profile
 
 // AN EXAMPLE OF HOW TO PULL OF THIS STUFF >> NEED THE BUTTON WORKING FIRST THOUGH
 //GO TO APPLICATIONS AND STORAGE TO SEE WHAT IS STORED!!!
 
-const storageInput = document.querySelector('.storage');
-const storage_button = document.querySelector('#save');
-// const storedInput = localStorage.getItem('to the button or something >>> work on this');
+// const storageInput = document.querySelector('.storage');
+// const storage_button = document.querySelector('#save');
+// // const storedInput = localStorage.getItem('to the button or something >>> work on this');
 
-if(storageInput) {
-	text.textContent = storedInput;
-}
+// if(storageInput) {
+// 	text.textContent = storedInput;
+// }
 
-storageInput.addEventListener('input', letter => {
-	text.textContent = letter.target.value;
-});
+// storageInput.addEventListener('input', letter => {
+// 	text.textContent = letter.target.value;
+// });
 
-const savetoLocalStorage = () => {
-	localStorage.setItem('textinput', text, text.textContent);
+// const savetoLocalStorage = () => {
+// 	localStorage.setItem('textinput', text, text.textContent);
 
-}
+// }
 
-button.addEventListener('click', savetoLocalStorage);
+// button.addEventListener('click', savetoLocalStorage);
 
 //==========================================================================
 
 
-
+//************************HOLD OFF ON THIS**********************************
 // TIME BANNER NOTIFCATIONS FUNCTION
 // const settings = document.querySelector('select#timezone');
 // const optional_responses = document.querySelector('option#timezone_options');
 
-//Listening Event
-settings.addEventListener('click', (event) => {
-		console.log('Im in the time function function');
-//LISTEN FOR INPUT
-		selected_input_time = event.target;
-		// let input_sSelected_input_time);
-		if (selected_input_time === optional_responses) {
-			console.log("I'm in the timezone if statement");
-			 if (optional_responses.value = "est-zone") {
-				console.log('green light on Eastern');
-				alert('Time zone has been updated to Eastern zone');
-			} else if (optional_responses.value = "pac-zone") {
-				console.log('green light on Pacific');
-				alert('Time zone has been updated to Pacific zone');
-			} else if (optional_responses.value = "gm-zone") {
-				console.log('green light on GM');
-				alert('Time zone has been updated to GM Central zone');
-			} else if (optional_responses.value = "java-zone") {
-				console.log('green light on java');
-				alert('Time zone has been updated to Javascript Time zone zone');
-			} else if (optional_responses.value = "code-zone") {
-				console.log('green light on code');
-				alert('Time zone has been updated to Coding Time zone zone');
-			} else if (optional_responses.value = "jedi-zone") {
-				console.log('green light on Jedi');
-				alert('Young padawan, time is only the force within you - Jedi Force Time zone zone');
-			} else {
-				alert('Unable the update time zone');
-			}
+// //Listening Event
+// settings.addEventListener('click', (event) => {
+// 		console.log('Im in the time function function');
+// //LISTEN FOR INPUT
+// 		selected_input_time = event.target;
+// 		// let input_sSelected_input_time);
+// 		if (selected_input_time === optional_responses) {
+// 			console.log("I'm in the timezone if statement");
+// 			 if (optional_responses.value = "est-zone") {
+// 				console.log('green light on Eastern');
+// 				alert('Time zone has been updated to Eastern zone');
+// 			} else if (optional_responses.value = "pac-zone") {
+// 				console.log('green light on Pacific');
+// 				alert('Time zone has been updated to Pacific zone');
+// 			} else if (optional_responses.value = "gm-zone") {
+// 				console.log('green light on GM');
+// 				alert('Time zone has been updated to GM Central zone');
+// 			} else if (optional_responses.value = "java-zone") {
+// 				console.log('green light on java');
+// 				alert('Time zone has been updated to Javascript Time zone zone');
+// 			} else if (optional_responses.value = "code-zone") {
+// 				console.log('green light on code');
+// 				alert('Time zone has been updated to Coding Time zone zone');
+// 			} else if (optional_responses.value = "jedi-zone") {
+// 				console.log('green light on Jedi');
+// 				alert('Young padawan, time is only the force within you - Jedi Force Time zone zone');
+// 			} else {
+// 				alert('Unable the update time zone');
+// 			}
 
-		}
+// 		}
 
-});
+// });
 
 	// SAVE SETTINGS FUNCTIONALITY
-
-
-// ================================================================
-
-//=======================================
-//         ARCHIVES WORKING
-//=======================================
-
-// CREATE A DATABASE WITH ARRAYS
-// const total_members = [
-// 	{name:"Victoria Chambers", 
-// 	email:"victoria.chambers80@example.com", 
-// 	birthDate:"10/15/15"}, 
-// 	{name:"Dale Byrd", 
-// 	email:"dale.byrd52@example.com", 
-// 	birthDate:"10/15/15"},
-// 	{name:"Dawn Wood", 
-// 	email:"dawn.wood16@example.com", 
-// 	birthDate:"10/15/15"},
-// 	{name:"Dan Oliver", 
-// 	email:"dan.oliver82@example.com", 
-// 	birthDate:"10/15/15"},
-// ];
-
-
-
-		// if (selected_input_time === optional_responses) {
-		// 	console.log("I'm in the timezone if statement");
-		// 	if (selected_input_time === option.className = "est-zone") {
-		// 		console.log('green light on Eastern');
-		// 		alert('Time zone has been updated to Eastern zone');
-		// 	} if (optional_responses.className = "pac-zone") {
-		// 		console.log('green light on Pacific');
-		// 		alert('Time zone has been updated to Pacific zone');
-		// 	} if (selected_input_time === option.className = "gm-zone") {
-		// 		console.log('green light on GM');
-		// 		alert('Time zone has been updated to GM Central zone');
-		// 	} if (selected_input_time === option.className = "java-zone") {
-		// 		console.log('green light on java');
-		// 		alert('Time zone has been updated to Javascript Time zone zone');
-		// 	} if (selected_input_time === option.className = "code-zone") {
-		// 		console.log('green light on code');
-		// 		alert('Time zone has been updated to Coding Time zone zone');
-		// 	} if (selected_input_time === option.className = "jedi-zone") {
-		// 		console.log('green light on Jedi');
-		// 		alert('Yong padawan, time is only the force within you - Jedi Force Time zone zone');
-		// 	} else {
-		// 		alert('Unable the update time zone');
-		// 	}
-
-		// }
-
-// console.log(input_memory.length);
-// TEST
-// console.log(selected_input_time);	
-// REMOVE THE LAST ITEM AND KEEP THE NEW ONE
-
-//HAVE A MESSAGE THAT INDICATES THAT ____ TIME ZONE BEEN SAVED
-		//IF STATEMENT OF IF THE EVENT TARGET CHOSE ___ TIME XONE
-		// alert('You has saved your time zone settings!')
-	//why not add a visual clock too!!!!!!!!
-// });
