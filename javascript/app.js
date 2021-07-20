@@ -42,11 +42,15 @@ const traffic_nav_monthly = document.querySelector('#traffic-nav-monthly');
 
 //*** MAYBE NEED A PARAMETER...BUT WTF WHAT!!!! */
 function navHighlight() {
-	//it continues downward
+//-------------------- chart variables not working ------------------
+//--------------------- where do I enter this bs---------------------
+// //   var myChart = new Chart(
+//     document.getElementById('myChart'),
+//     config
+//   );
 
 //CHART 1 (HOURLY)
-//VARIABLES FOR EACH CHART >>> TO BE CALLED ON
-const hourlyData = new Chart(chart1, {
+const hourlyData = {
 			type: 'line',  
 			data: {
 			labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
@@ -69,11 +73,36 @@ const hourlyData = new Chart(chart1, {
 		}
 			},											
 		}
-	});
+	};
+
+// const hourlyData = new Chart(chart1, {
+// 			type: 'line',  
+// 			data: {
+// 			labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
+// 			datasets: [{
+// 			label: "Traffic",
+// 			type: "line",
+// 		fillColor: "#826AEE",
+// 			borderColor: "#8e5ea2",
+// 			data: [550,1250,1000,2000, 1500, 1750, 1250, 1750, 2250, 1500, 2500],
+// 			backgroundColor: "#826AEE",
+// 			backgroundColorHover: "#3e95cd",
+// 			fill: false,
+// 			}]
+// 			},
+// 			options: {
+// 			legend: { display: false },
+// 			elements: {
+//         	line: {
+//             tension: .45
+// 		}
+// 			},											
+// 		}
+// 	});
 
 //CHART 2(DAILY)
 //VARIABLES FOR EACH CHART >>> TO BE CALLED ON
-const dailyData = new Chart(chart2, {
+const dailyData = {
 		type: 'line',  
 		data: {
 		labels: ['S', 'M', 'sT', 'W', 'T', 'F', 'S'],
@@ -93,11 +122,11 @@ const dailyData = new Chart(chart2, {
 			}
 		},											
 	}
-});
+};
 
 //CHART 4(WEEKLY)
 //VARIABLES FOR EACH CHART >>> TO BE CALLED ON
-const weeklyData = new Chart(chart4, {
+const weeklyData = {
 			type: 'line',  
 		data: {
 			labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
@@ -120,12 +149,12 @@ const weeklyData = new Chart(chart4, {
 			}
 		},											
 	}
-});
+};
 
 //==========================================================================
 //CHART 5(MONTHLY)
 //VARIABLES FOR EACH CHART >>> TO BE CALLED ON
-const monthlyData = new Chart(chart5, {
+const monthlyData = {
 		type: 'line',  
 		data: {
 		labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
@@ -148,7 +177,8 @@ const monthlyData = new Chart(chart5, {
 		}
 		},											
 		}
-	});
+	};
+
 
 }
 
@@ -173,7 +203,8 @@ const monthlyData = new Chart(chart5, {
 }
 
 traffic.addEventListener('click', (e) => {
-
+	//+++++++++++++++the traffic nav if condition is working +++++++++++++++
+	//+++++++++++++++ the highlighting is fucking working too++++++++++
 	//test
 	console.log('traffic listening');
 			
