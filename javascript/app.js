@@ -102,7 +102,7 @@ const weeklyData = new Chart(chart4, {
 			type: "line",
 			fillColor: "#826AEE",
 			borderColor: "#8e5ea2",
-			data: [550,1250,1000,2000, 1500, 1750, 1250, 1750, 2250, 1500, 2500],
+			data: [550, 1250, 1000,2000, 1500, 1750, 1250, 1750, 2250, 1500, 2500],
 			backgroundColor: "#826AEE",
 			backgroundColorHover: "#3e95cd",
 			fill: false,
@@ -250,7 +250,7 @@ const email_preference_toggle = () => {
 };
  
 
-search.addEventListener('click', email_preference_toggle);
+email_input.addEventListener('click', email_preference_toggle);
 console.log('Listerner activated');
 
 //==========================================================================
@@ -278,7 +278,7 @@ const profile_preference_toggle = event => {
 };
 
 
-search.addEventListener('click', profile_preference_toggle);
+profile_input.addEventListener('click', profile_preference_toggle);
 console.log('Listerner activated');
 
 //==========================================================================
