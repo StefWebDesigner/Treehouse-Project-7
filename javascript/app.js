@@ -73,6 +73,8 @@ const hourlyData = {
 		}
 			},											
 		}
+		// hourlyData.render();
+
 	};
 
 // const hourlyData = new Chart(chart1, {
@@ -122,6 +124,8 @@ const dailyData = {
 			}
 		},											
 	}
+	// dailyData.render();
+
 };
 
 //CHART 4(WEEKLY)
@@ -149,6 +153,8 @@ const weeklyData = {
 			}
 		},											
 	}
+	// weeklyData.render();
+
 };
 
 //==========================================================================
@@ -179,25 +185,36 @@ const monthlyData = {
 		}
 	};
 
-
 }
 
 //FUNCTION TO HAVE THE CHART DATA READY FOR THE FINAL TRAFFIC CALL
 	function update(chartData) {
 			console.log('update function working');
+
+			//---------declaring it still DOESN'T WORK!!!! -----------------------------------
+		//============ added the full chart tag indicated by the website...no f*** luck!
+				//============ rendering doesn't work!!! 
+		
 			
 			if (chartData.contains(hourlyData)) {
-				//CALLING THE FUNCTION & DISPLAY
+				hourlyData = new Chart(document.querySelector('canvas#chart1', hourlyData)).inner;
 				update(hourlyData).document.querySelector('canvas#chart1').innerHTML;
+				hourlyData.render();
 				console.log('update function: hourlyData processed');
 			} if (chartData.contains(dailyData)) {
+				dailyData = new Chart(document.querySelector('canvas#chart1', dailyData)).inner;
 				update(dailyData).document.querySelector('canvas#chart1').innerHTML;
+				dailyData.render();
 				console.log('update function: dailyData processed');
 			} if (chartData.contains(weeklyData)) {
+				weeklyData = new Chart(document.querySelector('canvas#chart1', weeklyData)).inner;
 				update(weeklyData).document.querySelector('canvas#chart1').innerHTML;
+				weeklyData.render();
 				console.log('update function: weeklyData processed');
 			} if (chartData.contains(monthlyData)) {
+				monthlyData = new Chart(document.querySelector('canvas#chart1', monthlyData)).inner;
 				update(monthlyData).document.querySelector('canvas#chart1').innerHTML;
+				monthlyData.render();
 				console.log('update function: monthlyData processed');
 		}
 }
@@ -207,15 +224,13 @@ traffic.addEventListener('click', (e) => {
 	//+++++++++++++++ the highlighting is fucking working too++++++++++
 	//test
 	console.log('traffic listening');
-			
-//its not entering 
-		if (e.target.classList.contains('hourly')) {
 
+	//----------------- find out how to break the add event------------
+
+	if (e.target.classList.contains('hourly')) {
 			console.log('if condition working?');
-
 		  e.target.classList.add('active');
 		  //CALLING THE SPECIFIC DATA CHART
-
 		  update(hourlyData);
 		  //CALLING THE FUNCTION
 		  navHighlight(traffic-nav-hourly);
@@ -241,7 +256,12 @@ traffic.addEventListener('click', (e) => {
 		   update(monthlyData);
 		   navHighlight(traffic-nav-monthly);
 		   console.log('Traffic nav: monthlyData active now');
-		}
+		} 
+		// false {
+			//I want to reload it....how though!!!!!!!!!!!!
+		// 	// break();
+
+		// }
 	  
 	});
 // // ===================
