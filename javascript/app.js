@@ -32,14 +32,12 @@ alertBanner.addEventListener('click', e => {
 
 //TRAFFIC NAVIGATION FUNCTIONALITY
 
-
 // Global traffic values *** this has a issue if included anywhere
 const traffic_nav_hourly = document.querySelector('#traffic-nav-hourly');
 const traffic_nav_daily = document.querySelector('#traffic-nav-daily');
 const traffic_nav_weekly = document.querySelector('#traffic-nav-weekly');
 const traffic_nav_monthly = document.querySelector('#traffic-nav-monthly');
 
-// function navHighlight(trafficData) {
 
 //CHART 1 (HOURLY) *** This has an issue if not connected with the update function
 const hourlyData = {
@@ -65,8 +63,6 @@ const hourlyData = {
 		}
 			},											
 		}
-		// hourlyData.render();
-
 	};
 
 //CHART 2(DAILY)
@@ -90,12 +86,9 @@ const dailyData = {
 			}
 		},											
 	}
-	// dailyData.render();
-
 };
 
 //CHART 4(WEEKLY)
-//VARIABLES FOR EACH CHART >>> TO BE CALLED ON
 const weeklyData = {
 			type: 'line',  
 		data: {
@@ -119,13 +112,10 @@ const weeklyData = {
 			}
 		},											
 	}
-	// weeklyData.render();
-
 };
 
 //==========================================================================
 //CHART 5(MONTHLY)
-//VARIABLES FOR EACH CHART >>> TO BE CALLED ON
 const monthlyData = {
 		type: 'line',  
 		data: {
@@ -151,7 +141,6 @@ const monthlyData = {
 		}
 	};
 
-
 // Just reference to the root DOM points
 // const traffic_nav_hourly = document.querySelector('#traffic-nav-hourly');
 // const traffic_nav_daily = document.querySelector('#traffic-nav-daily');
@@ -164,25 +153,59 @@ const monthlyData = {
 			console.log('update function working');
 		
 			if (chartData.contains(hourlyData)) {
-				hourlyData = new Chart(document.querySelector('traffic_nav_hourly', hourlyData)).innerHTML;
-				// hourlyData = new Chart(document.querySelector('canvas#chart1', hourlyData)).innerHTML;
+				hourlyData = new Chart(hourlyData);
+				hourlyData.innerHTML = `
+				<div> 
+				<canvas class="chart 1"></canvas>
+				</div>
+				`
 				console.log('update function: hourlyData processed');
-				return update(hourlyData).document.querySelector('canvas#chart1').innerHTML;
+				return update(hourlyData).document.querySelector('traffic_nav_hourly');
 			} if (chartData.contains(dailyData)) {
-				dailyData = new Chart(document.querySelector('canvas#chart1', dailyData)).innerHTML;
+				dailyData = new Chart(dailyData);
+				// dailyData = new Chart(document.querySelector('traffic_nav_daily', dailyData)).innerHTML;
 				console.log('update function: dailyData processed');
-				return update(dailyData).document.querySelector('canvas#chart1').innerHTML;
+				return update(dailyData).document.querySelector('traffic_nav_daily').innerHTML;
 			} if (chartData.contains(weeklyData)) {
-				weeklyData = new Chart(document.querySelector('canvas#chart1', weeklyData)).innerHTML;
+				weeklyData = new Chart(weeklyData);
+				// weeklyData = new Chart(document.querySelector('traffic_nav_weekly', weeklyData)).innerHTML;
 				console.log('update function: weeklyData processed');
-				return update(weeklyData).document.querySelector('canvas#chart1').innerHTML;
+				return update(weeklyData).document.querySelector('traffic_nav_weekly').innerHTML;
 			} if (chartData.contains(monthlyData)) {
-				monthlyData = new Chart(document.querySelector('canvas#chart1', monthlyData)).innerHTML;
+				monthlyData = new Chart(monthlyData);
+				// monthlyData = new Chart(document.querySelector('traffic_nav_monthly', monthlyData)).innerHTML;
 				console.log('update function: monthlyData processed');
-				return update(monthlyData).document.querySelector('canvas#chart1').innerHTML;
+				return update(monthlyData).document.querySelector('traffic_nav_monthly').innerHTML;
 			}
-//temporarly delted: end update tags			
-}
+} //END TAG FOR UPDATE FUNCTION
+
+//======== **** INCLASE ALL GOES TO CRAP *** =============
+
+// function update(chartData) {
+// 	console.log('update function working');
+
+// 	if (chartData.contains(hourlyData)) {
+// 		hourlyData = new Chart(document.querySelector('canvas#chart1', hourlyData)).innerHTML;
+// 		// hourlyData = new Chart(document.querySelector('canvas#chart1', hourlyData)).innerHTML;
+// 		console.log('update function: hourlyData processed');
+// 		return update(hourlyData).document.querySelector('canvas#chart1').innerHTML;
+// 	} if (chartData.contains(dailyData)) {
+// 		dailyData = new Chart(document.querySelector('canvas#chart1', dailyData)).innerHTML;
+// 		console.log('update function: dailyData processed');
+// 		return update(dailyData).document.querySelector('canvas#chart1').innerHTML;
+// 	} if (chartData.contains(weeklyData)) {
+// 		weeklyData = new Chart(document.querySelector('canvas#chart1', weeklyData)).innerHTML;
+// 		console.log('update function: weeklyData processed');
+// 		return update(weeklyData).document.querySelector('canvas#chart1').innerHTML;
+// 	} if (chartData.contains(monthlyData)) {
+// 		monthlyData = new Chart(document.querySelector('canvas#chart1', monthlyData)).innerHTML;
+// 		console.log('update function: monthlyData processed');
+// 		return update(monthlyData).document.querySelector('canvas#chart1').innerHTML;
+// 	}
+// } //END TAG FOR UPDATE FUNCTION
+
+//======== **** END INCLASE ALL GOES TO CRAP *** =============
+
 
 // It needs several things::: 1) to find the stupd root point, 2) which update chart, 3) which to highligh
 //maybe it requires two perameters
@@ -224,119 +247,6 @@ traffic.addEventListener('click', (e) => {
 	});
 
 
-
-// This the experimental part
-
-
-//FUNCTION TO HAVE THE CHART DATA READY FOR THE FINAL TRAFFIC CALL
-// function update(chartData) {
-// 	console.log('update function working');
-
-// 	if (chartData.contains(hourlyData)) {
-// 		hourlyData = new Chart(document.querySelector('canvas#chart1', hourlyData)).innerHTML;
-// 		hourlyData.render();
-// 		console.log('update function: hourlyData processed');
-// 		return update(hourlyData).document.querySelector('canvas#chart1').innerHTML;
-// 	} if (chartData.contains(dailyData)) {
-// 		dailyData = new Chart(document.querySelector('canvas#chart1', dailyData)).innerHTML;
-// 		dailyData.render();
-// 		console.log('update function: dailyData processed');
-// 		return update(dailyData).document.querySelector('canvas#chart1').innerHTML;
-// 	} if (chartData.contains(weeklyData)) {
-// 		weeklyData = new Chart(document.querySelector('canvas#chart1', weeklyData)).innerHTML;
-// 		weeklyData.render();
-// 		console.log('update function: weeklyData processed');
-// 		return update(weeklyData).document.querySelector('canvas#chart1').innerHTML;
-// 	} if (chartData.contains(monthlyData)) {
-// 		monthlyData = new Chart(document.querySelector('canvas#chart1', monthlyData)).innerHTML;
-// 		monthlyData.render();
-// 		console.log('update function: monthlyData processed');
-// 		return update(monthlyData).document.querySelector('canvas#chart1').innerHTML;
-// 	}
-//temporarly delted: end update tags			
-// }
-
-
-// traffic.addEventListener('click', (e) => {
-
-// function navHighlight(trafficData) {
-
-
-//+++++++++++++++the traffic nav if condition is working +++++++++++++++
-//+++++++++++++++ the highlighting is fucking working too++++++++++
-//test
-// console.log('traffic listening');
-
-//----------------- find out how to break the add event------------
-
-// if (e.target.classList.contains('hourly')) {
-// 	console.log('if condition working?');
-//   e.target.classList.add('active');
-//   //CALLING THE SPECIFIC DATA CHART
-//   update(hourlyData);
-//   //CALLING THE FUNCTION
-//   navHighlight(traffic-nav-hourly);
-//   console.log('Traffic nav: hourlyData active now');
-
-// }
-// if (e.target.classList.contains('daily')) {
-//   e.target.classList.add('active');
-//   update(dailyData);
-//   navHighlight(traffic-nav-daily);
-//   console.log('Traffic nav: dailyData active now');
-
-// }
-// if (e.target.classList.contains('weekly')) {
-//    e.target.classList.add('active');
-//    update(weeklyData);
-//    navHighlight(traffic-nav-weekly);
-//    console.log('Traffic nav: weeklyData active now');
-
-// }
-// if (e.target.classList.contains('monthly')) {
-//    e.target.classList.add('active');
-//    update(monthlyData);
-//    navHighlight(traffic-nav-monthly);
-//    console.log('Traffic nav: monthlyData active now');
-// } 
-// // false {
-// 	//I want to reload it....how though!!!!!!!!!!!!
-// // 	// break();
-
-// }
-
-// });
-
-
-
-
-
-
-// // ===================
-//************************HOLD OFF ON THIS**********************************
-
-// 	traffic_menu.addEventListener('click', () => {
-
-// console.log('Im all ears');
-
-// 	// const traffic_option_selected = e.target;
-// 	let traffic_chosen = document.querySelectorAll('.traffic-nav-options');
-
-// 		for (i = 0; i < traffic_chosen.length; i++) {
-// 			traffic_chosen[i].classList.remove('active');
-// 			console.log('Im looping around');
-// 		}
-// 		traffic_menu.classList.add('active');
-// 		})
-
-// 		console.log('I made it to the end');
-// };
-
-// //hav this in if statements
-// navHighlight(traffic_nav_hourly);
-// navHighlight(traffic_nav_daily);
-// navHighlight(traffic_nav_weekly);
-// navHighlight(traffic_nav_monthly);
 
 //==========================================================================
 //************************HOLD OFF ON THIS**********************************

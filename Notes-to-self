@@ -2,6 +2,21 @@
 /   things to do  /
 ===================
 
+
+Issue #1:
+the if condition is not breaking
+the charts aren't defined
+    - do I need to refer it to traffic_nav_hourly...??
+    - do they need to take two paremters????
+
+Which is the function/ the update/regular conditionn
+its being called with if statement
+
+
+
+
+
+
 Problems that Need sorting out: 
 
 (320px)
@@ -12,8 +27,14 @@ Problems that Need sorting out:
 ***JS***
 - NAVHIGHLIGHT IS NOT WORKING
 - Banner alert won't disappear 
-- search bar functality not working
-    > I may need to add a card class to the variable
+
+
+- search bar functality not working (I have been doing it wrong)
+https://www.w3schools.com/howto/howto_js_autocomplete.asp
+https://www.w3schools.com/tags/tag_datalist.asp
+
+???? where am I suppose to but the datalist tags for the autocomplete part ????
+
 - TIME NOTIFCATION NOT WORKING PROPERLY
 - HAVE THE SETTINGS SAVE TO AN API (localStorage.CODE)
 
