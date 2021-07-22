@@ -207,18 +207,42 @@ const monthlyData = {
 
 //======== **** END INCLASE ALL GOES TO CRAP *** =============
 
+// Global traffic values *** this has a issue if included anywhere
+// const traffic_nav_hourly = document.querySelector('#traffic-nav-hourly');
+// const traffic_nav_daily = document.querySelector('#traffic-nav-daily');
+// const traffic_nav_weekly = document.querySelector('#traffic-nav-weekly');
+// const traffic_nav_monthly = document.querySelector('#traffic-nav-monthly');
+
 
 // It needs several things::: 1) to find the stupd root point, 2) which update chart, 3) which to highligh
 //maybe it requires two perameters
 
 traffic.addEventListener('click', (e) => {
 	console.log('traffic listening');
+	// const allTrafficNavOpt = [traffic_nav_hourly, traffic_nav_daily, traffic_nav_weekly, traffic_nav_monthly];
+	// 	let minusActiveOption = [];
 
 	//----------------- find out how to break the add event------------
 
 	if (e.target.classList.contains('hourly')) {
 			console.log('if condition working?');
 		  e.target.classList.add('active');
+		  //ATTEMPTING TO REMOVE ACTIVE CLASS
+		//   if (e.target.classList.add('active')) {
+			// console.log('Traffic nav: REMOVING/ADDING ACTIVE CLASSS');
+			// allTrafficNavOpt.forEach(allTrafficNavOpt_var => {
+			// 	if (e.target.classList.add('active')) { 
+			// 		minusActiveOption.push(allTrafficNavOpt_var);
+				
+
+			// });
+
+
+
+			// minusActiveOption.push(e.target);
+			// allTrafficNavOpt.filter(e.target).classList.remove('active');
+		//   }
+
 		  console.log('Traffic nav: hourlyData active now');
 		  return update(hourlyData);
 		}
@@ -233,17 +257,15 @@ traffic.addEventListener('click', (e) => {
 		   return update(weeklyData);
 
 		}
-		if (e.target.classList.contains('monthly')) {
+		if  (e.target.classList.contains('monthly')) {
 		   e.target.classList.add('active');
 		   console.log('Traffic nav: monthlyData active now');
 		   return update(monthlyData);
-
 		} 
 		// false {
 			//I want to reload it....how though!!!!!!!!!!!!
 		// 	// break();
-
-		
+	
 	  
 	});
 
