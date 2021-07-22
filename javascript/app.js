@@ -132,33 +132,33 @@ const monthlyData = {
 //*** I need to add some referenceh to somethign */
 	function update(chartData) {
 			console.log('update function working');
-		
-
+	
 			if (chartData.contains(hourlyData)) {
-				trafficChart.data = hourlyData;
-				trafficChart.update();
+				hourlyData = new Chart(hourlyData);
 				//Using this an an example if it works for the others
-
-			// if (chartData.contains(hourlyData)) {
-			// 	hourlyData = new Chart(hourlyData);
-			// 	//Using this an an example if it works for the others
-			// 	hourlyData.innerHTML = `
-			// 	<div> 
-			// 		<canvas class="chart 1"></canvas>
-			// 	</div>
-			// 	`
-			// 	console.log('update function: hourlyData processed');
-			// 	return update(hourlyData).document.querySelector('traffic_nav_hourly');
+				hourlyData.innerHTML = `
+				<div> 
+					<canvas class="chart 1"></canvas>
+				</div>
+				`
+				console.log('update function: hourlyData processed');
+				return update(hourlyData).document.querySelector('traffic_nav_hourly');
 
 			} if (chartData.contains(dailyData)) {
-				trafficChart.data = dailyData;
-				trafficChart.update();
+				dailyData = new Chart(dailyData);
+				// dailyData = new Chart(document.querySelector('traffic_nav_daily', dailyData)).innerHTML;
+				console.log('update function: dailyData processed');
+				return update(dailyData).document.querySelector('traffic_nav_daily').innerHTML;
 			} if (chartData.contains(weeklyData)) {
-				trafficChart.data = weeklyData;
-				trafficChart.update();
+				weeklyData = new Chart(weeklyData);
+				// weeklyData = new Chart(document.querySelector('traffic_nav_weekly', weeklyData)).innerHTML;
+				console.log('update function: weeklyData processed');
+				return update(weeklyData).document.querySelector('traffic_nav_weekly').innerHTML;
 			} if (chartData.contains(monthlyData)) {
-				trafficChart.data = monthlyData;
-				trafficChart.update();
+				monthlyData = new Chart(monthlyData);
+				// monthlyData = new Chart(document.querySelector('traffic_nav_monthly', monthlyData)).innerHTML;
+				console.log('update function: monthlyData processed');
+				return update(monthlyData).document.querySelector('traffic_nav_monthly').innerHTML;
 			}
 } //END TAG FOR UPDATE FUNCTION
 
@@ -208,6 +208,8 @@ traffic.addEventListener('click', (e) => {
 
 	if (e.target.classList.contains('hourly')) {
 			console.log('if condition working?');
+			trafficChart.data = hourlyData;
+			trafficChart.update();
 		  e.target.classList.add('active');
 		  //ATTEMPTING TO REMOVE ACTIVE CLASS
 		//   if (e.target.classList.add('active')) {
@@ -230,17 +232,23 @@ traffic.addEventListener('click', (e) => {
 		}
 		if (e.target.classList.contains('daily')) {
 		  e.target.classList.add('active');
+		  trafficChart.data = dailyData;
+			trafficChart.update();
 		  console.log('Traffic nav: dailyData active now');
 		  return update(dailyData);
 		}
 		if (e.target.classList.contains('weekly')) {
 		   e.target.classList.add('active');
+		   trafficChart.data = weeklyData;
+			trafficChart.update();
 		   console.log('Traffic nav: weeklyData active now');
 		   return update(weeklyData);
 
 		}
 		if  (e.target.classList.contains('monthly')) {
 		   e.target.classList.add('active');
+		   trafficChart.data = monthlyData;
+			trafficChart.update();
 		   console.log('Traffic nav: monthlyData active now');
 		   return update(monthlyData);
 		} 
