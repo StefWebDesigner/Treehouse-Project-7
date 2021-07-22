@@ -40,30 +40,62 @@ const traffic_nav_monthly = document.querySelector('#traffic-nav-monthly');
 
 
 //CHART 1 (HOURLY) *** This has an issue if not connected with the update function
-const hourlyData = {
-			type: 'line',  
-			data: {
-			labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
-			datasets: [{
-			label: "Traffic",
-			type: "line",
-		fillColor: "#826AEE",
-			borderColor: "#8e5ea2",
-			data: [550,1250,1000,2000, 1500, 1750, 1250, 1750, 2250, 1500, 2500],
-			backgroundColor: "#826AEE",
-			backgroundColorHover: "#3e95cd",
-			fill: false,
-			}]
-			},
-			options: {
-			legend: { display: false },
-			elements: {
-        	line: {
-            tension: .45
-		}
-			},											
-		}
-	};
+// 
+
+let chart1 = document.getElementById('chart1').getContext('2d');
+			let trafficChart = new Chart(chart1, {
+				type: 'line',  
+				data: {
+					labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
+					datasets: [{
+						label: "Traffic",
+						type: "line",
+						fillColor: "#826AEE",
+						borderColor: "#8e5ea2",
+						data: [550,1250,1000,2000, 1500, 1750, 1250, 1750, 2250, 1500, 2500],
+						backgroundColor: "#826AEE",
+						// strokeColor: "rgba(220,220,220,1)",
+						// pointColor: "rgba(220,220,220,1)",
+					backgroundColorHover: "#3e95cd",
+						fill: false,
+							}]
+						},
+						options: {
+							legend: { display: false },
+							elements: {
+        						line: {
+            					tension: .45
+							}
+						},											
+					}
+			});
+
+
+
+//const hourlyData = {
+// 			type: 'line',  
+// 			data: {
+// 			labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
+// 			datasets: [{
+// 			label: "Traffic",
+// 			type: "line",
+// 		fillColor: "#826AEE",
+// 			borderColor: "#8e5ea2",
+// 			data: [550,1250,1000,2000, 1500, 1750, 1250, 1750, 2250, 1500, 2500],
+// 			backgroundColor: "#826AEE",
+// 			backgroundColorHover: "#3e95cd",
+// 			fill: false,
+// 			}]
+// 			},
+// 			options: {
+// 			legend: { display: false },
+// 			elements: {
+//         	line: {
+//             tension: .45
+// 		}
+// 			},											
+// 		}
+// 	};
 
 //CHART 2(DAILY)
 const dailyData = {
