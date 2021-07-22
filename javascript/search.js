@@ -1,15 +1,17 @@
 
-// const search = document.querySelector('input#search_it');
+// const messageSearch = document.querySelector('input#userField');
 
 // // // CREATE A DATABASE WITH ARRAYS
-// const total_members = [
-// 	{name:"Victoria Charle"},
-// 	{name:"Dale Byrd"},
-// 	{name:"Dawn Wood"},
-// 	{name:"Dan Oliver"},
-// ];
 
-// //I may have to target this function with detail tags
+// //I may need to add reference points
+// // const total_members = [
+// // 	{name:"Victoria Charle"},
+// // 	{name:"Dale Byrd"},
+// // 	{name:"Dawn Wood"},
+// // 	{name:"Dan Oliver"},
+// // ];
+
+// // //I may have to target this function with detail tags
 
 // function autocomplete(inp, arr) {
 //     /*the autocomplete function takes two arguments,

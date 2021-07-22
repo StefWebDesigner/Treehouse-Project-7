@@ -154,9 +154,10 @@ const monthlyData = {
 		
 			if (chartData.contains(hourlyData)) {
 				hourlyData = new Chart(hourlyData);
+				//Using this an an example if it works for the others
 				hourlyData.innerHTML = `
 				<div> 
-				<canvas class="chart 1"></canvas>
+					<canvas class="chart 1"></canvas>
 				</div>
 				`
 				console.log('update function: hourlyData processed');
@@ -348,7 +349,7 @@ traffic.addEventListener('click', (e) => {
 //==========================================================================
 //************************HOLD OFF ON THIS**********************************
 
-// // MESSAGING FUNCTIONALITY
+// MESSAGING FUNCTIONALITY
 // const user = document.getElementById("userField");
 // const message = document.getElementById("messageField");
 // const send = document.getElementById("send");

@@ -299,13 +299,14 @@ div together**** -->
 
 		<div class="message-container divider">
 			<h3 class="message-label">Message User</h3>
-			<form class="widget-container">
-				<div class="message-group">
-					<input type="text" placeholder="Search for user" class="form-field" id="userField">
+			<form class="widget-container" autocomplete="off">
+				<div class="message-group autocomplete">
+					<input class="form-field" id="userField" type="text" placeholder="Search for user">
+				</div>
 					<!-- This has two classes -->
 					<textarea class="message-textarea form-area" placeholder="Message for user" id="messageField"></textarea>
-					<button class="button-primary" id="send" >Send</button>
-				</div>
+				<input class="button-primary" type="submit" >
+				<!-- </div> -->
 			</form>
 		</div>
 
