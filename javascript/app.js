@@ -122,69 +122,6 @@ const monthlyData = {
 			}]
 };
 
-// Just reference to the root DOM points
-// const traffic_nav_hourly = document.querySelector('#traffic-nav-hourly');
-// const traffic_nav_daily = document.querySelector('#traffic-nav-daily');
-// const traffic_nav_weekly = document.querySelector('#traffic-nav-weekly');
-// const traffic_nav_monthly = document.querySelector('#traffic-nav-monthly');
-
-//FUNCTION TO HAVE THE CHART DATA READY FOR THE FINAL TRAFFIC CALL
-//*** I need to add some referenceh to somethign */
-// 	function update(chartData) {
-// 			console.log('update function working');
-	
-// 			if (chartData.contains(hourlyData)) {
-// 				hourlyData = new Chart(hourlyData);
-// 				console.log('update function: hourlyData processed');
-// 				return update(hourlyData).document.querySelector('traffic_nav_hourly');
-
-// 			} if (chartData.contains(dailyData)) {
-// 				dailyData = new Chart(dailyData);
-// 				console.log('update function: dailyData processed');
-// 				return update(dailyData).document.querySelector('traffic_nav_daily').innerHTML;
-// 			} if (chartData.contains(weeklyData)) {
-// 				weeklyData = new Chart(weeklyData);
-// 				console.log('update function: weeklyData processed');
-// 				return update(weeklyData).document.querySelector('traffic_nav_weekly').innerHTML;
-// 			} if (chartData.contains(monthlyData)) {
-// 				monthlyData = new Chart(monthlyData);
-// 				console.log('update function: monthlyData processed');
-// 				return update(monthlyData).document.querySelector('traffic_nav_monthly').innerHTML;
-// 			}
-// } //END TAG FOR UPDATE FUNCTION
-
-//======== **** INCLASE ALL GOES TO CRAP *** =============
-
-// function update(chartData) {
-// 	console.log('update function working');
-
-// 	if (chartData.contains(hourlyData)) {
-// 		hourlyData = new Chart(document.querySelector('canvas#chart1', hourlyData)).innerHTML;
-// 		// hourlyData = new Chart(document.querySelector('canvas#chart1', hourlyData)).innerHTML;
-// 		console.log('update function: hourlyData processed');
-// 		return update(hourlyData).document.querySelector('canvas#chart1').innerHTML;
-// 	} if (chartData.contains(dailyData)) {
-// 		dailyData = new Chart(document.querySelector('canvas#chart1', dailyData)).innerHTML;
-// 		console.log('update function: dailyData processed');
-// 		return update(dailyData).document.querySelector('canvas#chart1').innerHTML;
-// 	} if (chartData.contains(weeklyData)) {
-// 		weeklyData = new Chart(document.querySelector('canvas#chart1', weeklyData)).innerHTML;
-// 		console.log('update function: weeklyData processed');
-// 		return update(weeklyData).document.querySelector('canvas#chart1').innerHTML;
-// 	} if (chartData.contains(monthlyData)) {
-// 		monthlyData = new Chart(document.querySelector('canvas#chart1', monthlyData)).innerHTML;
-// 		console.log('update function: monthlyData processed');
-// 		return update(monthlyData).document.querySelector('canvas#chart1').innerHTML;
-// 	}
-// } //END TAG FOR UPDATE FUNCTION
-
-//======== **** END INCLASE ALL GOES TO CRAP *** =============
-
-
-//( So keep the final if condition one)
-
-
-
 traffic.addEventListener('click', (e) => {
 	console.log('traffic listening');
 	// const allTrafficNavOpt = [traffic_nav_hourly, traffic_nav_daily, traffic_nav_weekly, traffic_nav_monthly];
@@ -214,33 +151,32 @@ traffic.addEventListener('click', (e) => {
 		//   }
 
 		  console.log('Traffic nav: hourlyData active now');
-		  return update(hourlyData);
 		}
 		if (e.target.classList.contains('daily')) {
 		  e.target.classList.add('active');
 		  trafficChart.data = dailyData;
 			trafficChart.update();
 		  console.log('Traffic nav: dailyData active now');
-		  return update(dailyData);
 		}
 		if (e.target.classList.contains('weekly')) {
 		   e.target.classList.add('active');
 		   trafficChart.data = weeklyData;
 			trafficChart.update();
 		   console.log('Traffic nav: weeklyData active now');
-		   return update(weeklyData);
-
 		}
 		if  (e.target.classList.contains('monthly')) {
 		   e.target.classList.add('active');
 		   trafficChart.data = monthlyData;
 			trafficChart.update();
 		   console.log('Traffic nav: monthlyData active now');
-		   return update(monthlyData);
-		} 
-		// false {
-			//I want to reload it....how though!!!!!!!!!!!!
-		// 	// break();
+		} //else (e.target != e.target.classList.add('active') {
+
+
+		// }
+		// 	//ad the the non targeting code and have it remove the status
+		//is their code to not target an an target
+
+			
 	});
 
 
