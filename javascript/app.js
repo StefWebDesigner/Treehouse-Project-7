@@ -85,29 +85,29 @@ let chart1 = document.getElementById('chart1').getContext('2d');
 
 //CHART 2(DAILY)
 
-let chart2 = document.getElementById('chart2').getContext('2d');
-let dailyChart = new Chart(chart2, {
-	type: 'line',  
-	data: {
-		labels: ['S', 'M', 'sT', 'W', 'T', 'F', 'S'],
-		datasets: [{
-			label: "Traffic",
-			type: "bar",
-			data: [75,125,175,125, 225, 200, 100],
-			backgroundColor: "#765af2",
-		backgroundColorHover: "#3e95cd",
-	// fill: false,
-		}]
-	},
-	options: {
-		legend: { display: false },
-		elements: {
-			line: {
-			tension: .45
-		}
-	},											
-}
-});
+// let chart2 = document.getElementById('chart2').getContext('2d');
+// let dailyChart = new Chart(chart2, {
+// 	type: 'line',  
+// 	data: {
+// 		labels: ['S', 'M', 'sT', 'W', 'T', 'F', 'S'],
+// 		datasets: [{
+// 			label: "Traffic",
+// 			type: "bar",
+// 			data: [75,125,175,125, 225, 200, 100],
+// 			backgroundColor: "#765af2",
+// 		backgroundColorHover: "#3e95cd",
+// 	// fill: false,
+// 		}]
+// 	},
+// 	options: {
+// 		legend: { display: false },
+// 		elements: {
+// 			line: {
+// 			tension: .45
+// 		}
+// 	},											
+// }
+// });
 
 const dailyData = {
 		data: {
@@ -122,38 +122,38 @@ const dailyData = {
 		},
 };
 
-let chart4 = document.getElementById('chart4').getContext('2d');
-			let weeklyChart = new Chart(chart4, {
-				type: 'line',  
-				data: {
-					labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
-					datasets: [{
-						label: "Traffic",
-						type: "line",
-						fillColor: "#826AEE",
-						borderColor: "#8e5ea2",
-						data: [550,1250,1000,2000, 1500, 1750, 1250, 1750, 2250, 1500, 2500],
-						backgroundColor: "#826AEE",
-						// strokeColor: "rgba(220,220,220,1)",
-						// pointColor: "rgba(220,220,220,1)",
-					backgroundColorHover: "#3e95cd",
-						fill: false,
-							}]
-						},
-						options: {
-							legend: { display: false },
-							elements: {
-        						line: {
-            					tension: .45
-							}
-						},											
-					}
-			});
-
-
-
-
 //CHART 4(WEEKLY)
+
+
+// let chart4 = document.getElementById('chart4').getContext('2d');
+// 			let weeklyChart = new Chart(chart4, {
+// 				type: 'line',  
+// 				data: {
+// 					labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
+// 					datasets: [{
+// 						label: "Traffic",
+// 						type: "line",
+// 						fillColor: "#826AEE",
+// 						borderColor: "#8e5ea2",
+// 						data: [550,1250,1000,2000, 1500, 1750, 1250, 1750, 2250, 1500, 2500],
+// 						backgroundColor: "#826AEE",
+// 						// strokeColor: "rgba(220,220,220,1)",
+// 						// pointColor: "rgba(220,220,220,1)",
+// 					backgroundColorHover: "#3e95cd",
+// 						fill: false,
+// 							}]
+// 						},
+// 						options: {
+// 							legend: { display: false },
+// 							elements: {
+//         						line: {
+//             					tension: .45
+// 							}
+// 						},											
+// 					}
+// 			});
+
+
 const weeklyData = {
 	labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
 				datasets: [{
@@ -169,29 +169,29 @@ const weeklyData = {
 //==========================================================================
 //CHART 5(MONTHLY)
 
-let chart5 = document.getElementById('chart5').getContext('2d');
-let monthlyChart = new Chart(chart5, {
-	type: 'line',  
-	data: {
-		labels: ['S', 'M', 'sT', 'W', 'T', 'F', 'S'],
-		datasets: [{
-			label: "Traffic",
-			type: "bar",
-			data: [75,125,175,125, 225, 200, 100],
-			backgroundColor: "#765af2",
-		backgroundColorHover: "#3e95cd",
-	// fill: false,
-		}]
-	},
-	options: {
-		legend: { display: false },
-		elements: {
-			line: {
-			tension: .45
-		}
-	},											
-}
-});
+// let chart5 = document.getElementById('chart5').getContext('2d');
+// let monthlyChart = new Chart(chart5, {
+// 	type: 'line',  
+// 	data: {
+// 		labels: ['S', 'M', 'sT', 'W', 'T', 'F', 'S'],
+// 		datasets: [{
+// 			label: "Traffic",
+// 			type: "bar",
+// 			data: [75,125,175,125, 225, 200, 100],
+// 			backgroundColor: "#765af2",
+// 		backgroundColorHover: "#3e95cd",
+// 	// fill: false,
+// 		}]
+// 	},
+// 	options: {
+// 		legend: { display: false },
+// 		elements: {
+// 			line: {
+// 			tension: .45
+// 		}
+// 	},											
+// }
+// });
 
 
 const monthlyData = {
