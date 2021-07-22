@@ -151,20 +151,14 @@ const monthlyData = {
 			// 	return update(hourlyData).document.querySelector('traffic_nav_hourly');
 
 			} if (chartData.contains(dailyData)) {
-				dailyData = new Chart(dailyData);
-				// dailyData = new Chart(document.querySelector('traffic_nav_daily', dailyData)).innerHTML;
-				console.log('update function: dailyData processed');
-				return update(dailyData).document.querySelector('traffic_nav_daily').innerHTML;
+				trafficChart.data = dailyData;
+				trafficChart.update();
 			} if (chartData.contains(weeklyData)) {
-				weeklyData = new Chart(weeklyData);
-				// weeklyData = new Chart(document.querySelector('traffic_nav_weekly', weeklyData)).innerHTML;
-				console.log('update function: weeklyData processed');
-				return update(weeklyData).document.querySelector('traffic_nav_weekly').innerHTML;
+				trafficChart.data = weeklyData;
+				trafficChart.update();
 			} if (chartData.contains(monthlyData)) {
-				monthlyData = new Chart(monthlyData);
-				// monthlyData = new Chart(document.querySelector('traffic_nav_monthly', monthlyData)).innerHTML;
-				console.log('update function: monthlyData processed');
-				return update(monthlyData).document.querySelector('traffic_nav_monthly').innerHTML;
+				trafficChart.data = monthlyData;
+				trafficChart.update();
 			}
 } //END TAG FOR UPDATE FUNCTION
 
