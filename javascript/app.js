@@ -87,7 +87,7 @@ const dailyData = {
 		labels: ['S', 'M', 'sT', 'W', 'T', 'F', 'S'],
 		datasets: [{
 			label: "Traffic",
-			type: "bar",
+			type: "line",
 			data: [75,125,175,125, 225, 200, 100],
 			backgroundColor: "#765af2",
 			backgroundColorHover: "#3e95cd",
@@ -115,7 +115,7 @@ const monthlyData = {
 		labels: ['S', 'M', 'sT', 'W', 'T', 'F', 'S'],
 		datasets: [{
 			label: "Traffic",
-			type: "bar",
+			type: "line",
 			data: [75,125,175,125, 225, 200, 100],
 			backgroundColor: "#765af2",
 			backgroundColorHover: "#3e95cd",
@@ -130,37 +130,28 @@ const monthlyData = {
 
 //FUNCTION TO HAVE THE CHART DATA READY FOR THE FINAL TRAFFIC CALL
 //*** I need to add some referenceh to somethign */
-	function update(chartData) {
-			console.log('update function working');
+// 	function update(chartData) {
+// 			console.log('update function working');
 	
-			if (chartData.contains(hourlyData)) {
-				hourlyData = new Chart(hourlyData);
-				//Using this an an example if it works for the others
-				hourlyData.innerHTML = `
-				<div> 
-					<canvas class="chart 1"></canvas>
-				</div>
-				`
-				console.log('update function: hourlyData processed');
-				return update(hourlyData).document.querySelector('traffic_nav_hourly');
+// 			if (chartData.contains(hourlyData)) {
+// 				hourlyData = new Chart(hourlyData);
+// 				console.log('update function: hourlyData processed');
+// 				return update(hourlyData).document.querySelector('traffic_nav_hourly');
 
-			} if (chartData.contains(dailyData)) {
-				dailyData = new Chart(dailyData);
-				// dailyData = new Chart(document.querySelector('traffic_nav_daily', dailyData)).innerHTML;
-				console.log('update function: dailyData processed');
-				return update(dailyData).document.querySelector('traffic_nav_daily').innerHTML;
-			} if (chartData.contains(weeklyData)) {
-				weeklyData = new Chart(weeklyData);
-				// weeklyData = new Chart(document.querySelector('traffic_nav_weekly', weeklyData)).innerHTML;
-				console.log('update function: weeklyData processed');
-				return update(weeklyData).document.querySelector('traffic_nav_weekly').innerHTML;
-			} if (chartData.contains(monthlyData)) {
-				monthlyData = new Chart(monthlyData);
-				// monthlyData = new Chart(document.querySelector('traffic_nav_monthly', monthlyData)).innerHTML;
-				console.log('update function: monthlyData processed');
-				return update(monthlyData).document.querySelector('traffic_nav_monthly').innerHTML;
-			}
-} //END TAG FOR UPDATE FUNCTION
+// 			} if (chartData.contains(dailyData)) {
+// 				dailyData = new Chart(dailyData);
+// 				console.log('update function: dailyData processed');
+// 				return update(dailyData).document.querySelector('traffic_nav_daily').innerHTML;
+// 			} if (chartData.contains(weeklyData)) {
+// 				weeklyData = new Chart(weeklyData);
+// 				console.log('update function: weeklyData processed');
+// 				return update(weeklyData).document.querySelector('traffic_nav_weekly').innerHTML;
+// 			} if (chartData.contains(monthlyData)) {
+// 				monthlyData = new Chart(monthlyData);
+// 				console.log('update function: monthlyData processed');
+// 				return update(monthlyData).document.querySelector('traffic_nav_monthly').innerHTML;
+// 			}
+// } //END TAG FOR UPDATE FUNCTION
 
 //======== **** INCLASE ALL GOES TO CRAP *** =============
 
@@ -189,15 +180,10 @@ const monthlyData = {
 
 //======== **** END INCLASE ALL GOES TO CRAP *** =============
 
-// Global traffic values *** this has a issue if included anywhere
-// const traffic_nav_hourly = document.querySelector('#traffic-nav-hourly');
-// const traffic_nav_daily = document.querySelector('#traffic-nav-daily');
-// const traffic_nav_weekly = document.querySelector('#traffic-nav-weekly');
-// const traffic_nav_monthly = document.querySelector('#traffic-nav-monthly');
+
+//( So keep the final if condition one)
 
 
-// It needs several things::: 1) to find the stupd root point, 2) which update chart, 3) which to highligh
-//maybe it requires two perameters
 
 traffic.addEventListener('click', (e) => {
 	console.log('traffic listening');
@@ -255,8 +241,6 @@ traffic.addEventListener('click', (e) => {
 		// false {
 			//I want to reload it....how though!!!!!!!!!!!!
 		// 	// break();
-	
-	  
 	});
 
 
