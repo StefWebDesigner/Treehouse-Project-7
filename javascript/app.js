@@ -43,7 +43,7 @@ const traffic_nav_monthly = document.querySelector('#traffic-nav-monthly');
 // 
 
 let chart1 = document.getElementById('chart1').getContext('2d');
-			let trafficChart = new Chart(chart1, {
+			let hourlyChart = new Chart(chart1, {
 				type: 'line',  
 				data: {
 					labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
@@ -84,8 +84,32 @@ let chart1 = document.getElementById('chart1').getContext('2d');
 			  };
 
 //CHART 2(DAILY)
+
+let chart2 = document.getElementById('chart2').getContext('2d');
+let dailyChart = new Chart(chart2, {
+	type: 'line',  
+	data: {
+		labels: ['S', 'M', 'sT', 'W', 'T', 'F', 'S'],
+		datasets: [{
+			label: "Traffic",
+			type: "bar",
+			data: [75,125,175,125, 225, 200, 100],
+			backgroundColor: "#765af2",
+		backgroundColorHover: "#3e95cd",
+	// fill: false,
+		}]
+	},
+	options: {
+		legend: { display: false },
+		elements: {
+			line: {
+			tension: .45
+		}
+	},											
+}
+});
+
 const dailyData = {
-		type: 'line',  
 		data: {
 		labels: ['S', 'M', 'sT', 'W', 'T', 'F', 'S'],
 		datasets: [{
@@ -96,68 +120,92 @@ const dailyData = {
 			backgroundColorHover: "#3e95cd",
 			}]
 		},
-		options: {
-			legend: { display: false },
-			elements: {
-        		line: {
-        	tension: .45
-			}
-		},											
-	}
 };
+
+let chart4 = document.getElementById('chart4').getContext('2d');
+			let weeklyChart = new Chart(chart4, {
+				type: 'line',  
+				data: {
+					labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
+					datasets: [{
+						label: "Traffic",
+						type: "line",
+						fillColor: "#826AEE",
+						borderColor: "#8e5ea2",
+						data: [550,1250,1000,2000, 1500, 1750, 1250, 1750, 2250, 1500, 2500],
+						backgroundColor: "#826AEE",
+						// strokeColor: "rgba(220,220,220,1)",
+						// pointColor: "rgba(220,220,220,1)",
+					backgroundColorHover: "#3e95cd",
+						fill: false,
+							}]
+						},
+						options: {
+							legend: { display: false },
+							elements: {
+        						line: {
+            					tension: .45
+							}
+						},											
+					}
+			});
+
+
+
 
 //CHART 4(WEEKLY)
 const weeklyData = {
-			type: 'line',  
-		data: {
-			labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
-		datasets: [{
-			label: "Traffic",
-			type: "line",
-			fillColor: "#826AEE",
-			borderColor: "#8e5ea2",
-			data: [550, 1250, 1000,2000, 1500, 1750, 1250, 1750, 2250, 1500, 2500],
-			backgroundColor: "#826AEE",
-			backgroundColorHover: "#3e95cd",
-			fill: false,
-		}]
-			},
-			options: {
-				legend: { display: false },
-				elements: {
-				line: {
-				tension: .45
-			}
-		},											
-	}
-};
+	labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
+				datasets: [{
+				  data: [550,1250,1000,2000, 1500, 1750, 1250, 1750, 2250, 1500, 2500],
+				  fillColor: "#826AEE",
+				  borderColor: "#8e5ea2",
+				  backgroundColor: "#826AEE",
+				  backgroundColorHover: "#3e95cd",
+				  fill: false,
+				}]
+			  };
 
 //==========================================================================
 //CHART 5(MONTHLY)
-const monthlyData = {
-		type: 'line',  
-		data: {
-		labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
+
+let chart5 = document.getElementById('chart5').getContext('2d');
+let monthlyChart = new Chart(chart5, {
+	type: 'line',  
+	data: {
+		labels: ['S', 'M', 'sT', 'W', 'T', 'F', 'S'],
 		datasets: [{
-		label: "Traffic",
-		type: "line",
-		fillColor: "#826AEE",
-		borderColor: "#8e5ea2",
-		data: [2500,1001,1750,1500, 1500, 1500, 1500, 2250, 2250, 1500, 2250],
-	backgroundColor: "#826AEE",
+			label: "Traffic",
+			type: "bar",
+			data: [75,125,175,125, 225, 200, 100],
+			backgroundColor: "#765af2",
 		backgroundColorHover: "#3e95cd",
-		fill: false,
+	// fill: false,
 		}]
-		},
-		options: {
+	},
+	options: {
 		legend: { display: false },
 		elements: {
-        line: {
-        tension: .45
+			line: {
+			tension: .45
 		}
-		},											
-		}
-	};
+	},											
+}
+});
+
+
+const monthlyData = {
+	data: {
+		labels: ['S', 'M', 'sT', 'W', 'T', 'F', 'S'],
+		datasets: [{
+			label: "Traffic",
+			type: "bar",
+			data: [75,125,175,125, 225, 200, 100],
+			backgroundColor: "#765af2",
+			backgroundColorHover: "#3e95cd",
+			}]
+		},
+};
 
 // Just reference to the root DOM points
 // const traffic_nav_hourly = document.querySelector('#traffic-nav-hourly');
