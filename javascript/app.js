@@ -42,7 +42,7 @@ const traffic_nav_monthly = document.querySelector('#traffic-nav-monthly');
 //CHART 1 (HOURLY) *** Keep one chart & swap out the data
 
 let chart1 = document.getElementById('chart1').getContext('2d');
-			let hourlyChart = new Chart(chart1, {
+			let trafficChart = new Chart(chart1, {
 				type: 'line',  
 				data: {
 					labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
@@ -133,16 +133,23 @@ const monthlyData = {
 	function update(chartData) {
 			console.log('update function working');
 		
+
 			if (chartData.contains(hourlyData)) {
-				hourlyData = new Chart(hourlyData);
+				trafficChart.data = hourlyData;
+				trafficChart.update();
 				//Using this an an example if it works for the others
-				hourlyData.innerHTML = `
-				<div> 
-					<canvas class="chart 1"></canvas>
-				</div>
-				`
-				console.log('update function: hourlyData processed');
-				return update(hourlyData).document.querySelector('traffic_nav_hourly');
+
+			// if (chartData.contains(hourlyData)) {
+			// 	hourlyData = new Chart(hourlyData);
+			// 	//Using this an an example if it works for the others
+			// 	hourlyData.innerHTML = `
+			// 	<div> 
+			// 		<canvas class="chart 1"></canvas>
+			// 	</div>
+			// 	`
+			// 	console.log('update function: hourlyData processed');
+			// 	return update(hourlyData).document.querySelector('traffic_nav_hourly');
+
 			} if (chartData.contains(dailyData)) {
 				dailyData = new Chart(dailyData);
 				// dailyData = new Chart(document.querySelector('traffic_nav_daily', dailyData)).innerHTML;
