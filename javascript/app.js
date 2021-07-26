@@ -116,7 +116,7 @@ const monthlyData = {
 		datasets: [{
 			label: "Traffic",
 			type: "line",
-			data: [75,125,175,125, 225, 200, 100],
+			data: [75,125,125,125, 75, 75, 75],
 			backgroundColor: "#765af2",
 			backgroundColorHover: "#3e95cd",
 			}]

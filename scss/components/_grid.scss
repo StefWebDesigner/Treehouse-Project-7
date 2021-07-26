@@ -8,7 +8,7 @@
     width: 320px;
     
     display: grid;
-    grid-template-rows: minmax(75px) minmax(50px) minmax(200px) minmax(800px) minmax(1500px) min(200px);
+    grid-template-rows: minmax(75px) minmax(50px) minmax(200px) minmax(800px) minmax(1800px) min(200px);
     grid-template-areas:  
     "header"
     "nav"
@@ -44,11 +44,14 @@ section {
 
 aside {
     display: grid;
+    background-color: $defult-white;
     grid-area: aside;
 }
 
 footer {
     display: grid;
+    background-color: $defult-white;
+
     grid-area: footer;
 }
 
@@ -70,8 +73,6 @@ header {
     display: flex;
     width: 320px;
     justify-content: space-evenly;
-    // flex-shrink: 2;
-    // flex-basis: auto;
     flex-direction: row;
 }
 
@@ -150,7 +151,6 @@ cursor: pointer;
     display: flex;
     width: 320px;
     flex-direction: column;
-
 }
 
 .traffic-nav {
@@ -171,31 +171,11 @@ cursor: pointer;
     display: flex;
     width: 320px;
     justify-content: center;
-    
 }
 
 // ---------------------------------------------------------------
 
-//CHART 2 SECTIONS
-//(DAILY-LABEL/CHART-2-CONTAINER-FULL)
-
-//THIS IS USED TO CONTROL DIRECTION OF BOTH CHART 2 & 3
-.chart2-3-flow-container {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-
-}
-
-//UNABLE TO CENTER
-.chart2-container {
-    display: flex;
-    width: 320px;
-    flex-direction: column;
-    margin: auto;
-}
-
-//CHART 2 SECTIONS
+//CHART 3 SECTIONS
 //(SM-USER-LABEL/CHART3)
 
 //UNABLE TO CENTER
@@ -208,7 +188,6 @@ cursor: pointer;
     margin: auto;
 
 }
-
 
 // // =========================================
 // ASIDE (FLEX) PROPERTIES
@@ -236,13 +215,12 @@ cursor: pointer;
 .social-text {
     display: flex;
     flex-direction: row;
-    //sm fact border styling
     border: solid 1px grey;
     border-radius: 10px;
     width: 90%;
     margin: auto;
     margin-top: 20px;
-   background-color: $seconday-white;
+   background-color: $secondary-white;
 }
 
 .social-border {
@@ -343,7 +321,3 @@ label#email-group, label#profile-group {
     display: flex;
     flex-direction: row;
 }
-
-
-
-

@@ -24,6 +24,10 @@
     "nav footer";
 }
 
+.divider {
+    width: 768px;
+}
+
 //========================//
 // HEADER (FLEX) PROPERTIES //
 //========================//
@@ -79,14 +83,13 @@ nav svg {
     justify-content: start;
 }
 
+.alert {
+    display: flex;
+    width: 89%;
+}
 
-#search_it {
-    width: 275%;
-    margin-right: 10px;
-    // flex-grow: 2;
-    margin-left: 10px;
-    // flex-basis: 100%;
-    margin-top: 10px;
+.alert-banner {
+    width: 89%;
 }
 
 // ============================================================
@@ -111,7 +114,13 @@ nav svg {
 .traffic-nav {
     display: flex;
     justify-content: end;
+    gap: 50px;
+    
 }
+
+// ul#traffic-nav {
+// // font-size: 5656px;
+// }
 
 // ---------------------------------------------------------------
 
@@ -133,30 +142,15 @@ nav svg {
 //CHART 2 SECTIONS
 //(DAILY-LABEL/CHART-2-CONTAINER-FULL)
 
-.chart2-3-flow-container {
-    flex-direction: row;
-}
-
-
-.chart-2-main {
-    width: 350px;
-    justify-content: center;
-    
-}
-
-//***UNABLE TO CHANGE THE SIZE OF CHART 2***
-.chart2 {
-    margin: auto;
-    margin-top: 50px;
-    width: 350px;
-    height: 600px;
-    margin-right: 10px;
-}
-
 .chart3 {
-    height: 300px;
-    width: 300px;
-// gap: 30px;
+    height: 500px;
+    width: 500px;
+}
+
+.chart3-container {
+    width: 768px;
+    flex-direction: column;
+    margin: left;
 }
 
 // // =========================================
@@ -192,26 +186,16 @@ nav svg {
     width: 768px;    
     flex-direction: row;
     gap: 25px;
-
 }
 
-//This needs to jc start
 .profile-image {
     width: 100px;
     height: 100px;
     margin: 0;
-    //this seem to fix everthing with centering
     display: flex;
     margin-left: 5px;
-    // justify-content: start;
   }
 
-// .name-email-group {
-//     display: flex;
-//     flex-direction: column;
-// }
-
-//This need to jc end
 .profile-birth {
     margin: 0;
     justify-content: end;
@@ -220,10 +204,8 @@ nav svg {
 a.profile-email, .profile-birth, .profile-name {
     font-size: 25px;
     margin: auto;
-
 }
 
-  
 //============================ Message 
 
 .message-container {
@@ -236,23 +218,45 @@ a.profile-email, .profile-birth, .profile-name {
     font-size: 22px;
 }
 
-.form-field {
+input#userField {
+    width: 85%;
+    margin: auto;
     height: 75px;
-    width: 95%;
 }
 
 .message-textarea {
     height: 149px;
     text-align: center;
-    width: 95%;
+    width: 85%;
 }
 
-
 .button-primary, .button-disabled, .alert-btn {
-    width: 95%;
-    margin: auto;
+    width: 85%;
 }
 //Settings
 
+.settings {
+    width: 768px;
+}
+
+.settings-container {
+    width: 768px;
+}
+
+.notifcation-settings {
+    width: 768px;
+}
+
+.timezone-settings {
+    display: flex;
+    width: 768px;
+    flex-direction: column;
+}
+
+select#timezone, option {
+    width: 89%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
 
 }

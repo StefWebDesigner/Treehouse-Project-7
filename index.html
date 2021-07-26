@@ -54,21 +54,13 @@
 </nav>
 
 <main>
-	<div class="main-container">
+	<div class="main-container divider">
 	<!-- SEArCH BAR-->
-	<form autocomplete="off">
+	<form>
 		<div class="main-header">
 			<h2 class="headline">Dashboard</h2>
-			<!-- <div class="main-header-search autocomplete">
-				<input id="myInput" type="text" name="myInput" placeholder="Search For Users">
-			</div> -->
-			<!-- <input type="submit"> -->
 		</div>
 	</form>
-
-	<script>
-		// autocomplete(document.getElementById("myInput"), myInput);
-		</script>
 
 <!-- ALERT-->
 		<div class="alert" id="alert">
@@ -92,18 +84,6 @@
 	<div class="chart-1-main divider">
 		<div class="chart-1-container-full">
 				<canvas class="chart1" id="chart1"></canvas>
-		</div>
-	</div>
-
-
-<!-- TRAFFIC CHART 2-->
-<div class="chart2-3-flow-container">
-	<div class="chart-2-main divider">
-		<div class="chart2-container"> 
-			<h3 class="daily-label">Daily Traffic</h3>
-			<div class="chart-2-container-full">
-				<canvas class="chart2" id="chart2"></canvas>
-			</div>
 		</div>
 	</div>
 
@@ -135,8 +115,7 @@
 </div>
 </section>
 
-<!-- ***Do the recent stuff first and merget all together with meber and recent
-div together**** -->
+
 <!--  SOCIAL FACTS-->
 <aside> 
 <div class="social-flex-parent">
@@ -246,25 +225,21 @@ div together**** -->
 
 		<div class="message-container divider">
 			<h3 class="message-label">Message User</h3>
-			<form class="widget-container" autocomplete="off">
-				<div class="message-group autocomplete">
+			<form class="widget-container">
+				<div class="message-group">
 					<input class="form-field" id="userField" type="text" placeholder="Search for user">
 				</div>
-					<!-- This has two classes -->
-					<textarea class="message-textarea form-area" placeholder="Message for user" id="messageField"></textarea>
-				<input class="button-primary" type="submit" >
+					<textarea class="message-textarea" placeholder="Message for user" id="messageField"></textarea>
+				<button class="button-primary">Enter </button>
 				<!-- </div> -->
 			</form>
 		</div>
-
 
 	<!-- local settings widget -->
 	<div class="settings" id="settings-link">
 		<div class="setting-container">
 			<h3 class="settings-label">Settings</h3>
-			
-			
-			<!-- =========================== -->
+		
 			<div class="notifcation-settings">
 								<!-- columm -->
 				<div class="email-container">
@@ -297,61 +272,13 @@ div together**** -->
 				  </label>
 				</div>
 			</div>
-			<!-- ============================= -->
 
-
-			<!-- =========================== -->
-			<!-- <div class="notifcation-settings">
-				<div class="email-container">
-					<label id="email_group" class="switch-light switch-material" onclick="">
-					  <div class="email-flex-point">
-						  <div class="email-upper-flex">
-							  <strong class="strong-email">
-								  Set email notifications
-								  </strong>
-								  <input id="profile-checkbox" type="checkbox"> -->
-						  <!-- </div>
-						  <div class="email-lower-flex">
-							  <input id="email-checkbox" type="checkbox">
-							  <span class="email-span">
-								<span>Off</span>
-								<span>On</span>
-							  	<a id="toggle-interacation-email"></a>
-							  </span>
-						  </div> -->
-					  <!-- DIV END FOR PROFILE FLEXPOINT -->
-					  <!-- </div>
-					</label>
-				  </div> -->
-				<!-- Add a banner annountment for the change -->
-				<!-- <div class="profile-container">
-				  <label id="profile_group" class="switch-light switch-material" onclick="">
-					<div class="profile-flex-point">
-						<div class="profile-upper-flex">
-							<strong class="strong-profile">
-								Set Profile to public
-								</strong> -->
-								<!-- <input id="profile-checkbox" type="checkbox"> -->
-						<!-- </div>
-						<div class="profile-lower-flex">
-							<input id="profile-checkbox" type="checkbox">
-							<span class="email-span">
-								<span class="email-off-span">Off</span>
-								<span class="email-on-span">On</span>
-							<a id="toggle-interacation-profile"></a>
-							</span>
-						</div> -->
-					<!-- DIV END FOR PROFILE FLEXPOINT -->
-					<!-- </div>
-				  </label>
-				</div>
-			</div>  -->
 			<!-- ============================= -->
 			<div class="timezone-settings">
 				<fieldset class="switch-toggle switch-candy-blue">
 					<legend></legend>
 					<select class="form-field" id="timezone">
-						<!-- HAVE VISUAL CLOCKS SHOW UP WHEN SELECTING EACH OPTION -->
+					  <!-- HAVE VISUAL CLOCKS SHOW UP WHEN SELECTING EACH OPTIOn -->
 						<option disabled selected class="option-disabled">Select a Timezone</option>
 						<option id="timezone_options" value="est-zone" class="est-zone">Eastern</option>
 						<option id="timezone_options" value="pac-zone" class="pac-zone">Pacific</option>
@@ -364,7 +291,6 @@ div together**** -->
 			</div>
 
 			<div class="settings-button" >
-				<!-- WHY ISN'T IT SHOWING -->
 				<button class="button-primary" id="save">Save</button>
 				<button class="button-disabled" id="cancel">Cancel</button>
 			</div>
@@ -379,12 +305,6 @@ div together**** -->
 	<script src="javascript/search.js"></script>
 	<script src="javascript/app.js"> </script>
 	
-
-
-<!-- <footer>  -->
-<!-- </footer> -->
-
-
 
 </body>
 

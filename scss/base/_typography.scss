@@ -17,14 +17,11 @@ h1, h3, p {
 .header-app-title {
   font-size: 25px;
   color: $defult-white;
-  // margin: auto;
-
 }
 
 .header-profile-name {
   font-size: 15px;
   color: $defult-white;
-  // text-align: center;
   margin: auto;
 }
 
@@ -38,31 +35,28 @@ h1, h3, p {
 
 .headline {
   font-size: 23px;
-
 }
 
-
-// // Social Stats Grid Font Styles
+// Social Stats Grid Font Styles
 
 .platform { 
-color: $main-purple;
-margin-top: 10px;
-margin-bottom: -25px;
-margin-right: 31px;
-margin-left: 13px;
-
+  color: $main-purple;
+  margin-top: 10px;
+  margin-bottom: -25px;
+  margin-right: 31px;
+  margin-left: 13px;
 }
 
 .stat-number {
-  font-size: 30px;
-  color: grey; 
-  margin-top: 20px;
-  margin-bottom: 10px;
-  margin-right: 20px;
-  margin-left: 10px;
+    font-size: 30px;
+    color: grey; 
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    margin-left: 10px;
   }
 
-// // Members/Recent Activities Font Styles
+// Members/Recent Activities Font Styles
 
 .profile-email {
   text-decoration-style: none;
@@ -73,8 +67,4 @@ margin-left: 13px;
 .members-text, .profile-name, .profile-birth {
   color: black;
   text-align: center;
-
 }
-
-
-

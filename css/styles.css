@@ -67,6 +67,11 @@ body, main, nav, header {
 .divider {
   border-bottom: #d9d9d9 solid 1px;
   margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.alert {
+  width: 320px;
 }
 
 .alert-banner {
@@ -92,6 +97,17 @@ body, main, nav, header {
   padding: 5px;
 }
 
+.button-primary, .button-disabled, .alert-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 85%;
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .alert-btn, .button-primary {
   color: white;
   width: 70%;
@@ -102,7 +118,7 @@ body, main, nav, header {
   border-radius: 5px;
 }
 
-.button-primary {
+button.button-primary {
   margin: auto;
   margin-top: 5px;
   width: 89%;
@@ -139,8 +155,8 @@ body, main, nav, header {
   width: 320px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: minmax(75px) minmax(50px) minmax(200px) minmax(800px) minmax(1500px) 200px;
-      grid-template-rows: minmax(75px) minmax(50px) minmax(200px) minmax(800px) minmax(1500px) 200px;
+  -ms-grid-rows: minmax(75px) minmax(50px) minmax(200px) minmax(800px) minmax(1800px) 200px;
+      grid-template-rows: minmax(75px) minmax(50px) minmax(200px) minmax(800px) minmax(1800px) 200px;
       grid-template-areas: "header" "nav" "main" "section" "aside" "footer";
 }
 
@@ -183,6 +199,7 @@ section {
 aside {
   display: -ms-grid;
   display: grid;
+  background-color: white;
   -ms-grid-row: 5;
   -ms-grid-column: 1;
   grid-area: aside;
@@ -191,6 +208,7 @@ aside {
 footer {
   display: -ms-grid;
   display: grid;
+  background-color: white;
   -ms-grid-row: 6;
   -ms-grid-column: 1;
   grid-area: footer;
@@ -337,29 +355,6 @@ nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.chart2-3-flow-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 50px;
-}
-
-.chart2-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 320px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: auto;
 }
 
 .chart3-container {
@@ -759,8 +754,8 @@ nav a {
   border-radius: 5px;
 }
 
-select {
-  width: 100%;
+select#timezone, option {
+  width: 89%;
   padding-top: 15px;
   padding-bottom: 15px;
   width: 89%;
@@ -769,59 +764,6 @@ select {
 fieldset {
   margin-top: 10px;
   margin-bottom: 10px;
-}
-
-.autocomplete {
-  /*the container must be positioned relative:*/
-  position: relative;
-  display: inline-block;
-}
-
-input {
-  border: 1px solid transparent;
-  background-color: #f1f1f1;
-  padding: 10px;
-  font-size: 16px;
-}
-
-input[type=text] {
-  background-color: #f1f1f1;
-  width: 100%;
-}
-
-input[type=submit] {
-  background-color: DodgerBlue;
-  color: #fff;
-}
-
-.autocomplete-items {
-  position: absolute;
-  border: 1px solid #d4d4d4;
-  border-bottom: none;
-  border-top: none;
-  z-index: 99;
-  /*position the autocomplete items to be the same width as the container:*/
-  top: 100%;
-  left: 0;
-  right: 0;
-}
-
-.autocomplete-items div {
-  padding: 10px;
-  cursor: pointer;
-  background-color: #fff;
-  border-bottom: 1px solid #d4d4d4;
-}
-
-.autocomplete-items div:hover {
-  /*when hovering an item:*/
-  background-color: #e9e9e9;
-}
-
-.autocomplete-active {
-  /*when navigating through the items using the arrow keys:*/
-  background-color: DodgerBlue !important;
-  color: #ffffff;
 }
 
 canvas {
@@ -860,6 +802,9 @@ canvas {
     -ms-grid-rows: minmax(50px) minmax(50px) minmax(300px) minmax(800px) minmax(1700px);
         grid-template-rows: minmax(50px) minmax(50px) minmax(300px) minmax(800px) minmax(1700px);
         grid-template-areas: "header header" "nav main" "nav section" "nav aside" "nav footer";
+  }
+  .divider {
+    width: 768px;
   }
   header {
     width: 768px;
@@ -904,11 +849,14 @@ canvas {
         -ms-flex-pack: start;
             justify-content: start;
   }
-  #search_it {
-    width: 275%;
-    margin-right: 10px;
-    margin-left: 10px;
-    margin-top: 10px;
+  .alert {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 89%;
+  }
+  .alert-banner {
+    width: 89%;
   }
   .traffic-header {
     display: -webkit-box;
@@ -935,6 +883,7 @@ canvas {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: end;
+    gap: 50px;
   }
   .chart-1-main {
     width: 768px;
@@ -946,28 +895,17 @@ canvas {
     width: 680px;
     margin: auto;
   }
-  .chart2-3-flow-container {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .chart-2-main {
-    width: 350px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .chart2 {
-    margin: auto;
-    margin-top: 50px;
-    width: 350px;
-    height: 600px;
-    margin-right: 10px;
-  }
   .chart3 {
-    height: 300px;
-    width: 300px;
+    height: 500px;
+    width: 500px;
+  }
+  .chart3-container {
+    width: 768px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: left;
   }
   .social-flex-parent {
     width: 768px;
@@ -1042,34 +980,58 @@ canvas {
   .form-field, .message-textarea, .button-primary, .button-disabled, .email-container, .profile-container {
     font-size: 22px;
   }
-  .form-field {
+  input#userField {
+    width: 85%;
+    margin: auto;
     height: 75px;
-    width: 95%;
   }
   .message-textarea {
     height: 149px;
     text-align: center;
-    width: 95%;
+    width: 85%;
   }
   .button-primary, .button-disabled, .alert-btn {
-    width: 95%;
-    margin: auto;
+    width: 85%;
+  }
+  .settings {
+    width: 768px;
+  }
+  .settings-container {
+    width: 768px;
+  }
+  .notifcation-settings {
+    width: 768px;
+  }
+  .timezone-settings {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 768px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  select#timezone, option {
+    width: 89%;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  .traffic-label, .sm-user-label, .daily-label, .member-label, .message-label, .recent-label, .settings-label {
-    font-size: 25px;
+  .traffic-label, .sm-user-label, .daily-label, .member-label, .message-label, .recent-label, .settings-label, .headline {
+    font-size: 40px;
     color: black;
   }
   .header-profile-name {
-    font-size: 25px;
+    font-size: 35px;
+  }
+  p.alert_banner {
+    font-size: 35px;
   }
   .members-text, .profile-name, .profile-birth {
-    font-style: 25px;
-  }
-  .traffic-label, .traffic-nav {
-    font-style: 25px;
+    font-style: 35px;
   }
   .grid {
     width: 1024px;
@@ -1125,11 +1087,8 @@ canvas {
   .main-container {
     width: 1024px;
   }
-  #search_it {
-    width: 390%;
-    margin-right: 10px;
-    margin-left: 10px;
-    margin-top: 10px;
+  .alert-banner, .alert, .main-container.alert-banner {
+    width: 90%;
   }
   section {
     width: 1024px;
@@ -1140,25 +1099,24 @@ canvas {
   .traffic-header .traffic-nav {
     gap: .5;
   }
-  .chart2-3-flow-container {
-    width: 1024px;
-    gap: 12px;
+  .traffic-nav {
+    gap: 50px;
+    font-size: 35px;
   }
   .chart-1-main {
     width: 1024px;
   }
   .chart1 {
-    width: 710px;
+    width: 850px;
     height: auto;
   }
-  .chart2 {
-    margin-top: 50px;
-    width: 600px;
-    height: 700px;
-  }
   .chart3 {
-    height: 290px;
-    width: 450px;
+    height: 675px;
+    width: 675px;
+    margin: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   aside {
     width: 1024px;

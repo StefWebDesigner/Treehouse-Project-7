@@ -7,22 +7,23 @@
 //===============================================
 //Groups Font's
 
-.traffic-label, .sm-user-label, .daily-label, .member-label, .message-label, .recent-label, .settings-label {
-    font-size: 25px;
+.traffic-label, .sm-user-label, .daily-label, .member-label, .message-label, .recent-label, .settings-label, .headline {
+    font-size: 40px;
     color: black;
   }
   
   .header-profile-name {
-    font-size: 25px;
+    font-size: 35px;
+  }
+
+//Not responsive
+  p.alert_banner {
+    font-size: 35px;
   }
 
   //It's not responding
   .members-text, .profile-name, .profile-birth {
-    font-style: 25px;
-  }
-
-  .traffic-label, .traffic-nav {
-    font-style: 25px;
+    font-style: 35px;
   }
 
   //===============================================
@@ -86,8 +87,6 @@ header {
 
 nav svg {
     height: 150px;
-    // height: auto;
-
 }
 
 // ============================================================
@@ -105,13 +104,8 @@ main {
     width: 1024px;    
 }
 
-#search_it {
-    width: 390%;
-    margin-right: 10px;
-    // flex-grow: 2;
-    margin-left: 10px;
-    // flex-basis: 100%;
-    margin-top: 10px;
+.alert-banner, .alert, .main-container.alert-banner {
+    width: 90%;
 }
 
 // ============================================================
@@ -134,14 +128,15 @@ section {
     gap:.5;
 }
 
+
+.traffic-nav {
+    gap: 50px;
+    font-size: 35px; 
+}
+
 // ============================================================
 // SECTION (FLEX) PROPERTIES
 //Charts
-
-.chart2-3-flow-container {
-    width: 1024px;    
-    gap: 12px;
-}
 
 .chart-1-main {
     width: 1024px;
@@ -149,19 +144,15 @@ section {
 }
 
 .chart1 {
-    width: 710px;
+    width: 850px;
     height: auto;
 }
 
-.chart2 {
-    margin-top: 50px;
-    width: 600px;
-    height: 700px;
-}
-
 .chart3 {
-    height: 290px;
-    width: 450px;
+    height: 675px;
+    width: 675px;
+    margin: auto;
+    justify-content: center;
 }
 
 // // =========================================
@@ -199,8 +190,7 @@ aside {
     font-size: 25px;
     margin-bottom: -25px;
     margin-right: 25px;
-    margin-left: 5px;
-        
+    margin-left: 5px;   
 }
     
 .stat-number {
@@ -235,7 +225,6 @@ aside {
     justify-content: space-evenly;
     width: 500px;
     gap: 22px;
-
 }
   
 // ========
@@ -285,7 +274,6 @@ a.profile-email {
     justify-content: end;
 }
 
-
 //Setting
 
 .settings {
@@ -308,20 +296,12 @@ a.profile-email {
     height: 149px;
 }
 
-
 .email-container {
     margin-bottom: 40px;
 }
 
 .profile-container {
     margin-bottom: 20px;
-
 }
-
-
-
-
-
-
 
 }

@@ -40,7 +40,7 @@ header img {
     transform-origin: top right;
   }
 }
-  
+
     @keyframes bellshake {
       0% { transform: rotate(0);}
       15% { transform: rotate(5deg); }
@@ -62,7 +62,6 @@ nav svg {
     height: 50%;
     height: auto;
     margin: auto;
-
 }
 
 nav a {
@@ -83,7 +82,6 @@ nav a {
 .social-border {
   margin: auto;
   border: solid 1px $main-purple;
-  // border-radius: 50px;
   border-radius: 70px;
   background-color: $main-purple;
   width: 55px;
@@ -103,10 +101,7 @@ nav a {
   width: 80px;
   height: 80px;
   margin: auto;
-  //this seem to fix everthing with centering
   display: flex;
   border: 3px solid $main-purple;
   border-radius: 100%;
 }
-
-//------------------------------------
