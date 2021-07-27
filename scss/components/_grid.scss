@@ -220,7 +220,7 @@ cursor: pointer;
     width: 90%;
     margin: auto;
     margin-top: 20px;
-   background-color: $secondary-white;
+   background-color: $seconday-white;
 }
 
 .social-border {
@@ -304,17 +304,27 @@ flex-direction: column;
     width: 320px;
     justify-content: center;
     flex-direction: column;
+
 }
 
 .notifcation-settings {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+
 }
 
 .email-container, .profile-container {
     display: flex;
     flex-direction: column;
     // justify-content: space-evenly;
+}
+
+.email-group {
+    // margin-right: 11000px;
+    gap: 10px;
+
+
 }
 
 label#email-group, label#profile-group {

@@ -46,6 +46,11 @@ header {
     flex-grow: .1;
 }
 
+.bell-icon {
+    height: 70%;
+
+}
+
 // ============================================================
 
 // HOME NAVIGATIONS FLEX
@@ -85,11 +90,12 @@ nav svg {
 
 .alert {
     display: flex;
-    width: 89%;
+    width: 80%;
+    margin: auto;
 }
 
 .alert-banner {
-    width: 89%;
+    display: flex;
 }
 
 // ============================================================
@@ -233,7 +239,7 @@ input#userField {
 .button-primary, .button-disabled, .alert-btn {
     width: 85%;
 }
-//Settings
+//====================== Settings
 
 .settings {
     width: 768px;
@@ -247,6 +253,14 @@ input#userField {
     width: 768px;
 }
 
+//CHANGES AND OPERATES THE TIME OPTIONS
+.switch-toggle {
+    width: 85%;
+    margin: auto;
+    margin-top: 20px;
+
+}
+
 .timezone-settings {
     display: flex;
     width: 768px;
@@ -254,7 +268,7 @@ input#userField {
 }
 
 select#timezone, option {
-    width: 89%;
+    width: 80%;
     padding-top: 15px;
     padding-bottom: 15px;
 }

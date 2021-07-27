@@ -68,8 +68,9 @@ header {
 
   //Not responsive!!!!!!!! WHYYY??????
   .bell-icon {
-    height: 60%;
-  }
+    height: 90%;
+}
+
 
   .header-me {
     border: solid 1px $defult-white;
@@ -104,8 +105,12 @@ main {
     width: 1024px;    
 }
 
-.alert-banner, .alert, .main-container.alert-banner {
-    width: 90%;
+.alert {
+    width: 150%;
+    margin: auto;
+    justify-content: center;
+    margin-left: 120px;
+    font-size: 25px;
 }
 
 // ============================================================
@@ -282,6 +287,18 @@ a.profile-email {
 
 .settings-container {
     width: 500px;
+}
+
+.switch-toggle {
+    width: 50%;
+    margin: 0;
+    margin-left: 50px;
+    margin-top: 0px;
+}
+
+.notifcation-settings {
+    justify-content: stretch;
+    gap: 30px;
 }
 
 .form-field, .message-textarea, .button-primary, .button-disabled, .email-container, .profile-container {
