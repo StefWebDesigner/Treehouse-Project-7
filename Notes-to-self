@@ -2,51 +2,30 @@
 /   things to do  /
 ===================
 
-
-Issue #1:
-the if condition is not breaking
-the charts aren't defined
-    - do I need to refer it to traffic_nav_hourly...??
-    - do they need to take two paremters????
-
-Which is the function/ the update/regular conditionn
-its being called with if statement
-
-
-
-
-
-
 Problems that Need sorting out: 
 
 (320px)
-***CSS***
-- Chart 2 is not responsive to change
-- Email/profile toggle is partial functional with flex, suppose to stretch out to the end. 
-    + I can make start shaping it but I can't make it into separate rows
+
+(768px)
+    
+(1024px) 
+- The bell icon isn't responsive
+- marginal overflow issue (can't find where) (must be somewhere in the settings)
+- the chart needs to be centered
+
 ***JS***
-- NAVHIGHLIGHT IS NOT WORKING
 - Banner alert won't disappear 
+- Search bar just not working
 
 
+___________________________________
 - search bar functality not working (I have been doing it wrong)
 https://www.w3schools.com/howto/howto_js_autocomplete.asp
 https://www.w3schools.com/tags/tag_datalist.asp
-
-???? where am I suppose to but the datalist tags for the autocomplete part ????
+__________________________________
 
 - TIME NOTIFCATION NOT WORKING PROPERLY
 - HAVE THE SETTINGS SAVE TO AN API (localStorage.CODE)
-
-(768px)
-- Chart 2 is not responsive to change
-- Unable to change the icon sizes of the the nav bar icons
-- unable to add a gap in between chart 2 & 3 (gaps/margin not responsive)
-- Need to center the save/cancel button
-
-(1024px)
-- chart 2 is not responsive
-- unable to change the size up my nav icons
 
 ====================
 /   Extras:   /

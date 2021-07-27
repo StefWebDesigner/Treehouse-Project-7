@@ -150,7 +150,6 @@ button.button-primary {
   color: white;
 }
 
-/* The switch - the box around the slider */
 .grid {
   width: 320px;
   display: -ms-grid;
@@ -546,6 +545,9 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .email-container, .profile-container {
@@ -556,6 +558,10 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.email-group {
+  gap: 10px;
 }
 
 label#email-group, label#profile-group {
@@ -775,11 +781,6 @@ canvas {
   margin-bottom: 10px;
 }
 
-.chart2 {
-  width: 4564456px;
-  margin-bottom: 10px;
-}
-
 .chart3 {
   height: 300px;
   width: 300px;
@@ -820,6 +821,9 @@ canvas {
         -ms-flex-positive: .1;
             flex-grow: .1;
   }
+  .bell-icon {
+    height: 70%;
+  }
   nav {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -853,10 +857,13 @@ canvas {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 89%;
+    width: 80%;
+    margin: auto;
   }
   .alert-banner {
-    width: 89%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .traffic-header {
     display: -webkit-box;
@@ -1002,6 +1009,11 @@ canvas {
   .notifcation-settings {
     width: 768px;
   }
+  .switch-toggle {
+    width: 85%;
+    margin: auto;
+    margin-top: 20px;
+  }
   .timezone-settings {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1013,7 +1025,7 @@ canvas {
             flex-direction: column;
   }
   select#timezone, option {
-    width: 89%;
+    width: 80%;
     padding-top: 15px;
     padding-bottom: 15px;
   }
@@ -1062,7 +1074,7 @@ canvas {
     font-size: 30px;
   }
   .bell-icon {
-    height: 60%;
+    height: 90%;
   }
   .header-me {
     border: solid 1px white;
@@ -1087,8 +1099,14 @@ canvas {
   .main-container {
     width: 1024px;
   }
-  .alert-banner, .alert, .main-container.alert-banner {
-    width: 90%;
+  .alert {
+    width: 150%;
+    margin: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: 120px;
+    font-size: 25px;
   }
   section {
     width: 1024px;
@@ -1229,6 +1247,18 @@ canvas {
   }
   .settings-container {
     width: 500px;
+  }
+  .switch-toggle {
+    width: 50%;
+    margin: 0;
+    margin-left: 50px;
+    margin-top: 0px;
+  }
+  .notifcation-settings {
+    -webkit-box-pack: stretch;
+        -ms-flex-pack: stretch;
+            justify-content: stretch;
+    gap: 30px;
   }
   .form-field, .message-textarea, .button-primary, .button-disabled, .email-container, .profile-container {
     font-size: 25px;
