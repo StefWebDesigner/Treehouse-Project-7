@@ -93,7 +93,6 @@ nav {
 display: flex;
 flex-direction: row;
 justify-content: space-evenly;
-
 }
 
 .nav-container {
@@ -173,7 +172,23 @@ cursor: pointer;
     justify-content: center;
 }
 
-// ---------------------------------------------------------------
+
+//CHART 2 SECTIONS
+//(SM-USER-LABEL/CHART3)
+
+.chart2-3-flow-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+//UNABLE TO CENTER
+.chart2-container {
+    display: flex;
+    width: 320px;
+    flex-direction: column;
+    margin: auto;
+}
 
 //CHART 3 SECTIONS
 //(SM-USER-LABEL/CHART3)
@@ -269,12 +284,27 @@ cursor: pointer;
 .recent-flex-container {
     display: flex;
     width: 320px;
+    flex-direction: column;
 }
 
-.recent-activity-group {
+.recent-activity-container {
     display: flex;
     flex-direction: column;
 }
+
+div.recent--comment-date-group {
+    display: flex;
+    flex-direction: column;
+    gap: -25px;
+}
+
+.recent--tracker-comment, .recent--tracker-date {
+    display: flex;
+    margin: auto;
+}
+
+
+
 
 // ---------------------------------------------------------------
 // MESSAGE SECTIONS

@@ -23,8 +23,17 @@ header img {
   margin: auto;
 }
 
-.bell-icon {
-  height: 40%;
+.svg--SMicon-white {
+fill: white;
+
+}
+
+a .bell-icon {
+  display: flex;
+  height: 55%;
+  position:relative;
+  top: 18px;
+
 }
 
 //**** DON'T TOUCH ANY OF THESE CURLY BRACES****

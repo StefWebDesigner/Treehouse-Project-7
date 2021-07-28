@@ -3,9 +3,10 @@
 // GLOBAL VARIABLES
 const alertBanner = document.querySelector("#alert");
 const traffic = document.querySelector('ul');
-//I only need ul because the target e will target what I'm clicking
-const settings = document.querySelector('select#timezone');
-const optional_responses = document.querySelector('option#timezone_options');
+const emailInput = document.querySelector('input[name=email-checkbox]');
+const profileInput = document.querySelector('#profile-checkbox');
+const timeSettings = document.querySelector('#timezone');
+// const optional_responses = document.querySelector('option#timezone_options');
 
 //==========================================================================
 
@@ -179,125 +180,83 @@ traffic.addEventListener('click', (e) => {
 			
 	});
 
-
-
 //==========================================================================
 //************************HOLD OFF ON THIS**********************************
 
-//EXPERIMENT
-//EMAIL FUNCTIONALITY
+//MESSAGING FUNCTIONALITY
+const user = document.getElementById("userField");
+const message = document.getElementById("messageField");
+const send = document.getElementById("send");
 
-// const email_preference_toggle = () => {
-// 	console.log('Are you working email preferences????');
+send.addEventListener('click', () => {
+	// ensure user and message fields are filled out
+	if (user.value === "" && message.value === "") {
+	alert("Please fill out user and message fields before sending");
+	} else if (user.value === "" ) {
+	alert("Please fill out user field before sending");
+	} else if (message.value === "" ) {
+	alert("Please fill out message field before sending");
+	} else {
+	alert(`Message successfully sent to: ${user.value}`);
+	}
+});
 
-// 	const email_input = document.querySelector('input#email-checkbox');
-
-// 	if (email_input.tagName.contains('email-span-on')) {
-// 		alert('You email notifications have been turned on on');
-// 	} if (email_input.tagName.contains('email-span-off')) {
-// 		alert('You email notifications have been turned on off');
-// 	} else {
-// 		alert('Unable to change email preferences. Please Try again.');
-// 	}
-
-// };
- 
-
-// email_input.addEventListener('click', email_preference_toggle);
-// console.log('Listerner activated');
 
 //==========================================================================
-//************************HOLD OFF ON THIS**********************************
-// //EXPERIMENT
-// //EMAIL FUNCTIONALITYY
+//************************WORK IN PROGRESS *********************************
+//************************EXPERIMENTAL**************************************
 
-// // const email_settings = document.querySelector('label#email_group');
+// EMAIL/PROFILE NOTIFICATION FUNCTION
 
-// const profile_preference_toggle = event => {
-// 	console.log('Are you working profile preferences????');
+//EXAMPLE
+// var checkbox = document.querySelector("input[name=checkbox]");
 
-// 	const profile_input = document.querySelector('input#email-checkbox');
-// 	// const email_span_on = document.querySelector('#email-span-on');
-// 	// const email_span_off = document.querySelector('#email-span-off');
-
-// 	if (profile_input.tagName.contains('profile-span-on')) {
-// 		alert('You email notifications have been turned on on');
-// 	} if (profile_input.tagName.contains('profile-span-on')) {
-// 		alert('You email notifications have been turned on off');
-// 	} else {
-// 		alert('Unable to change email preferences. Please Try again.');
-// 	}
-
-// };
-
-
-// profile_input.addEventListener('click', profile_preference_toggle);
-// console.log('Listerner activated');
-
-//==========================================================================
-
-
-//OLD EMAIL NOTIFICATION
-
-//EMAIL NOTIFICATION SETTINGS FUNCTION
-// const email_settings = document.querySelector('label#email_group');
-
-// email_settings.addEventListener('click', (event) => {
-// 		let email_notify = event.target;
-// 		const email_input = document.querySelector('input#email-checkbox');
-// //TRIED TO MAKE IT SAY SOMETHIGN DIFFERENT IF IT WAS ON OR OFF
-// 		// const email_input_on = document.querySelector('input#email-checkbox') + document.querySelector('span.email-active-on');
-// 		// const email_input_off = document.querySelector('input#email-checkbox') + document.querySelector('span.email-active-off');
-// 		// const active_on = document.querySelector('span.email-active-on');
-// 		// const active_off = document.querySelector('span.email-active-off');
-// 		if (email_notify = email_input) {
-// 			alert('You email notifications have been turned on on');
-// 		}
-// 		// else if (email_notify === email_input_off) {
-// 		// 	alert('You email notifications have been turned on off');
-// 		// }
-	
+// checkbox.addEventListener('change', function() {
+//   if (this.checked) {
+//     console.log("Checkbox is checked..");
+//   } else {
+//     console.log("Checkbox is not checked..");
+//   }
 // });
+// <input type="checkbox" name="checkbox" />
 
-// //Profile Notifcations SETTINGS FUNCTION
-// const profile_settings = document.querySelector('label#profile_group');
+emailInput.addEventListener('change', (e) => {
+	//ENTER FUNCTION TEST
+	console.log('Are you working email preferences????');
 
-// profile_settings.addEventListener('click', (event) => {
-// 		let profile_notify = event.target;
-// 		const profile_input = document.querySelector('input#profile-checkbox');
-// //TRIED TO MAKE IT SAY SOMETHIGN DIFFERENT IF IT WAS ON OR OFF
-// 		// const email_input_on = document.querySelector('input#email-checkbox') + document.querySelector('span.email-active-on');
-// 		// const email_input_off = document.querySelector('input#email-checkbox') + document.querySelector('span.email-active-off');
-// 		// const active_on = document.querySelector('span.email-active-on');
-// 		// const active_off = document.querySelector('span.email-active-off');
-// 		if (profile_notify === profile_input) {
-// 			alert('You email notifications have been turned on on');
-// 		}
-// 		// else if (email_notify === email_input_off) {
-// 		// 	alert('You email notifications have been turned on off');
-// 		// }
-// });
+			if (emailInput.checked === true) {
+			//ENTER FUNCTION TEST
+			console.log('Entered the Email Function');
+			emailInput.checked === false;
+		    console.log("Email Notifications On");
+			alert("Email Notifications On");
+			} else if (emailInput.checked === false) {
+				emailInput.checked === true;
+				console.log("Email Notifications Off");
+				alert("Email Notifications Off");
+			}	else {
+			  console.log('Email Notification Unsuccessful')
+		  }
+		
+});
 
-//==========================================================================
-//************************HOLD OFF ON THIS**********************************
+profileInput.addEventListener('change', (e) => {
 
-// MESSAGING FUNCTIONALITY
-// const user = document.getElementById("userField");
-// const message = document.getElementById("messageField");
-// const send = document.getElementById("send");
+	if (profileInput.checked === true) {
+			//ENTER FUNCTION TEST
+			console.log('Entered the Profile Function');
+			profileInput.checked === false;
+			console.log("Profile Notifications On");
+			alert("Profile Notifications On");
+	} else if (profileInput.checked === false) {
+			profileInput.checked === true;
+			console.log("Profile Notifications Off");
+			alert("Profile Notifications Off");
+	}	else {
+			console.log('Profile Notification Unsuccessful')
+	  }
 
-// send.addEventListener('click', () => {
-// 	// ensure user and message fields are filled out
-// 	if (user.value === "" && message.value === "") {
-// 	alert("Please fill out user and message fields before sending");
-// 	} else if (user.value === "" ) {
-// 	alert("Please fill out user field before sending");
-// 	} else if (message.value === "" ) {
-// 	alert("Please fill out message field before sending");
-// 	} else {
-// 	alert(`Message successfully sent to: ${user.value}`);
-// 	}
-// });
+});
 
 //==========================================================================
 
@@ -330,42 +289,76 @@ traffic.addEventListener('click', (e) => {
 
 
 //************************HOLD OFF ON THIS**********************************
-// TIME BANNER NOTIFCATIONS FUNCTION
-// const settings = document.querySelector('select#timezone');
-// const optional_responses = document.querySelector('option#timezone_options');
+// TIME BANNER NOTIFICATION FUNCTION
 
-// //Listening Event
-// settings.addEventListener('click', (event) => {
-// 		console.log('Im in the time function function');
-// //LISTEN FOR INPUT
-// 		selected_input_time = event.target;
-// 		// let input_sSelected_input_time);
-// 		if (selected_input_time === optional_responses) {
-// 			console.log("I'm in the timezone if statement");
-// 			 if (optional_responses.value = "est-zone") {
-// 				console.log('green light on Eastern');
-// 				alert('Time zone has been updated to Eastern zone');
-// 			} else if (optional_responses.value = "pac-zone") {
-// 				console.log('green light on Pacific');
-// 				alert('Time zone has been updated to Pacific zone');
-// 			} else if (optional_responses.value = "gm-zone") {
-// 				console.log('green light on GM');
-// 				alert('Time zone has been updated to GM Central zone');
-// 			} else if (optional_responses.value = "java-zone") {
-// 				console.log('green light on java');
-// 				alert('Time zone has been updated to Javascript Time zone zone');
-// 			} else if (optional_responses.value = "code-zone") {
-// 				console.log('green light on code');
-// 				alert('Time zone has been updated to Coding Time zone zone');
-// 			} else if (optional_responses.value = "jedi-zone") {
-// 				console.log('green light on Jedi');
-// 				alert('Young padawan, time is only the force within you - Jedi Force Time zone zone');
-// 			} else {
-// 				alert('Unable the update time zone');
-// 			}
+const timeMenu = document.querySelector('option#timezone_options');
 
-// 		}
+timeSettings.addEventListener('click', (event) => {
+		console.log('ENTERED THE SELECT TIME LISTENER');
 
-// });
+	const estZone = document.querySelector('option.est-zone');
+	const pacZone = document.querySelector('option.pac-zone');
+
+
+
+if (event.target === timeMenu) {
+	//ENTER FUNCTION TEST
+	console.log("ENTERED THE SELECT TIME FUNCTION IF STATEMENT");
+
+		if (event.target === estZone) {
+			console.log('SELECTED EST ZONE');
+			alert('Time zone has been updated to Eastern zone');
+		// } else if (event.target === pacZone) {
+		} else if (event.target.classList.contains('pac-zone')) {
+			console.log('SELECTED EST ZONE PAC ZONE');
+				alert('Time zone has been updated to Pacific zone');
+			// } else if (optional_responses.value = "gm-zone") {
+			// 	console.log('green light on GM');
+			// 	alert('Time zone has been updated to GM Central zone');
+			// } else if (optional_responses.value = "java-zone") {
+			// 	console.log('green light on java');
+			// 	alert('Time zone has been updated to Javascript Time zone zone');
+			// } else if (optional_responses.value = "code-zone") {
+			// 	console.log('green light on code');
+			// 	alert('Time zone has been updated to Coding Time zone zone');
+			// } else if (optional_responses.value = "jedi-zone") {
+			// 	console.log('green light on Jedi');
+			// 	alert('Young padawan, time is only the force within you - Jedi Force Time zone zone');
+			} else {
+				alert('Unable the update time zone');
+			}
+		}
+
+		
+
+
+		// let input_sSelected_input_time);
+		// if (inputTime === optional_responses) {
+		// 	console.log("I'm in the timezone if statement");
+		// 	 if (optional_responses.value = "est-zone") {
+		// 		console.log('green light on Eastern');
+		// 		alert('Time zone has been updated to Eastern zone');
+		// 	} else if (optional_responses.value = "pac-zone") {
+		// 		console.log('green light on Pacific');
+		// 		alert('Time zone has been updated to Pacific zone');
+		// 	} else if (optional_responses.value = "gm-zone") {
+		// 		console.log('green light on GM');
+		// 		alert('Time zone has been updated to GM Central zone');
+		// 	} else if (optional_responses.value = "java-zone") {
+		// 		console.log('green light on java');
+		// 		alert('Time zone has been updated to Javascript Time zone zone');
+		// 	} else if (optional_responses.value = "code-zone") {
+		// 		console.log('green light on code');
+		// 		alert('Time zone has been updated to Coding Time zone zone');
+		// 	} else if (optional_responses.value = "jedi-zone") {
+		// 		console.log('green light on Jedi');
+		// 		alert('Young padawan, time is only the force within you - Jedi Force Time zone zone');
+		// 	} else {
+		// 		alert('Unable the update time zone');
+		// 	}
+
+		// }
+
+});
 
 	// SAVE SETTINGS FUNCTIONALITY

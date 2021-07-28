@@ -4,8 +4,13 @@
 
 // General Font Styles
 
-.traffic-label, .sm-user-label, .daily-label, .member-label, .message-label, .recent-label, .settings-label {
+.traffic-label, .headline, .sm-user-label, .daily-label, .member-label, .message-label, .recent-label, .settings-label {
     font-size: 22px;
+    margin-left: 10px;
+}
+
+.members-text, .profile-name, .profile-birth, .recent--tracker-comment, .recent--tracker-date {
+    font-size: 20px;
 }
 
 // ============================
@@ -46,10 +51,18 @@ header {
     flex-grow: .1;
 }
 
-.bell-icon {
-    height: 70%;
+// .bell-icon {
+//     height: 70%;
 
-}
+// }
+
+a .bell-icon {
+    // display: flex;
+    height: 70%;
+    position:relative;
+    top: 15px;
+  
+  }
 
 // ============================================================
 
@@ -65,12 +78,14 @@ nav {
     width: 50px;
     flex-direction: column;
     height: 100px;
-    gap: 20px;
+
+    gap: -30px;
+    // justify-content: start;
+    // flex-shrink: -1;
 }
 
 nav svg {
-    height: 100px;
-    // height: auto;
+    height: 50px;
 }
 
 // ============================================================
@@ -148,15 +163,45 @@ nav svg {
 //CHART 2 SECTIONS
 //(DAILY-LABEL/CHART-2-CONTAINER-FULL)
 
+.chart2-3-flow-container {
+    flex-direction: row;
+}
+
+.chart-2-main, .chart-3-main {
+    width: 350px;
+    justify-content: center;
+    
+}
+
+.chart2 {
+    margin: auto;
+    margin-top: 50px;
+    width: 350px;
+    height: 600px;
+    // margin-right: 10px;
+}
+
+// .chart-3-main {
+//     margin: auto;
+//     margin-right: 100px;   
+
+// }
+
 .chart3 {
-    height: 500px;
-    width: 500px;
+    height: 300px;
+    width: 300px;
+// gap: 30px;
 }
 
 .chart3-container {
-    width: 768px;
+    width: 350px;
+
+    // width: 768px;
     flex-direction: column;
     margin: left;
+    justify-content: center;
+
+
 }
 
 // // =========================================
@@ -211,6 +256,39 @@ a.profile-email, .profile-birth, .profile-name {
     font-size: 25px;
     margin: auto;
 }
+
+
+
+// ---------------------------------------------------------------
+// RECENT ACTIVITY SECTIONS
+
+.recent-flex-container {
+    width: 768px;
+}
+
+.recent-activity-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.recent-activity-group {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.recent--comment-date-group {
+    // gap: -30px;
+    margin: auto;
+}
+
+
+.recent--tracker-comment, .recent--tracker-date {
+    text-align: left;
+    margin: auto;
+}
+
+
 
 //============================ Message 
 

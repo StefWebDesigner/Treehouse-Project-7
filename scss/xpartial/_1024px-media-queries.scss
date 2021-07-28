@@ -11,6 +11,12 @@
     font-size: 40px;
     color: black;
   }
+
+  .sm-user-label, .daily-label {
+    text-align: left;
+    margin: left;
+
+  }
   
   .header-profile-name {
     font-size: 35px;
@@ -66,10 +72,12 @@ header {
     font-size: 30px;
   }
 
-  //Not responsive!!!!!!!! WHYYY??????
-  .bell-icon {
-    height: 90%;
-}
+  a .bell-icon {
+    // display: flex;
+    height: 70%;
+    top: 15px;
+  
+  }
 
 
   .header-me {
@@ -81,13 +89,8 @@ header {
     margin: auto;
   }
 
-  .nav-container {
-    width: 50px;
-    gap: 20px;
-}
-
 nav svg {
-    height: 150px;
+    height: 50px;
 }
 
 // ============================================================
@@ -160,6 +163,14 @@ section {
     justify-content: center;
 }
 
+.chart-2-main, .chart-3-main {
+    width: 465px;
+    justify-content: center;
+    
+}
+
+
+
 // // =========================================
 // ASIDE (FLEX) PROPERTIES
 //SOCIAL FACT SECTIONS
@@ -231,6 +242,34 @@ aside {
     width: 500px;
     gap: 22px;
 }
+
+//============== RECENT ==============
+
+.recent-flex-container {
+    width: 500px;
+}
+
+.recent-activity-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.recent-activity-group {
+    display: flex;
+    flex-direction: row;
+    // gap: 45px;
+}
+
+.recent-activity-group {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.recent--tracker-comment, .recent--tracker-date {
+    flex-wrap: wrap;
+}
+
   
 // ========
 
