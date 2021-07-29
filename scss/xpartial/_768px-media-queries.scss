@@ -104,7 +104,7 @@ nav svg {
 //(MAIN HEADER / ALERT)
 
 .main-container {
-    width: 768px;    
+    width: 718px;    
 }
 
 .main-header {
@@ -131,7 +131,7 @@ nav svg {
 
 .traffic-header {
     display: flex;
-    width: 768px;    
+    width: 718px;    
     flex-direction: row;
 }
 
@@ -157,7 +157,7 @@ nav svg {
 //(CHARTS1)
 
 .chart-1-main {
-    width: 768px;    
+    width: 718px;    
     justify-content: center;
 }
 
@@ -218,7 +218,7 @@ nav svg {
 //(SOCIAL-GROUP/MEMBERS/RECENT-ACTIVITY/MESSAGE/SETTINGS)
 
 .social-flex-parent {
-    width: 768px;    
+    width: 718px;    
     flex-direction: row;
 }
 
@@ -235,14 +235,14 @@ nav svg {
 // //(PROFILE-IMAGE/MEMEBRS-TEXT/PROFILE-NAME/PROFILE-EMAIL-PROFILE-BIRTH)
 
 .members-container {
-    width: 768px;    
+    width: 718px;    
     flex-direction: column;
     justify-content: space-evenly;
 }
 //this is to make it into a row
 .members-group {
     display: flex;
-    width: 768px;    
+    width: 718px;    
     flex-direction: row;
     gap: 25px;
 }
@@ -271,7 +271,7 @@ a.profile-email, .profile-birth, .profile-name {
 // RECENT ACTIVITY SECTIONS
 
 .recent-flex-container {
-    width: 768px;
+    width: 718px;
 }
 
 .recent-activity-container {
@@ -302,7 +302,7 @@ a.profile-email, .profile-birth, .profile-name {
 
 .message-container {
     display: flex;
-    width: 768px;
+    width: 718px;
     flex-direction: column;
 }
 
@@ -328,15 +328,15 @@ input#userField {
 //====================== Settings
 
 .settings {
-    width: 768px;
+    width: 718px;
 }
 
 .settings-container {
-    width: 768px;
+    width: 718px;
 }
 
 .notifcation-settings {
-    width: 768px;
+    width: 718px;
 }
 
 //CHANGES AND OPERATES THE TIME OPTIONS
@@ -349,7 +349,7 @@ input#userField {
 
 .timezone-settings {
     display: flex;
-    width: 768px;
+    width: 718px;
     flex-direction: column;
 }
 
