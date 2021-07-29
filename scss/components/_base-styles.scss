@@ -55,6 +55,9 @@ body, main, nav, header {
         flex-direction: row;
         padding-left: 10px;
         padding-right: 10px;
+        justify-content: space-between;
+        flex-basis: 100%;
+      
 }
 
 .alert-banner-close {
