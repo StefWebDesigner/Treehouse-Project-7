@@ -50,7 +50,7 @@ h1, h3, p {
   text-align: center;
 }
 
-.members-text, .profile-name, .profile-birth {
+.members-text, .profile-name, .profile-birth, .recent--tracker-comment, .recent--tracker-date {
   color: black;
   text-align: center;
 }
@@ -65,13 +65,31 @@ body, main, nav, header {
 }
 
 .divider {
-  border-bottom: #d9d9d9 solid 1px;
+  border-bottom: #b3b3b3 solid 1px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
+.notification {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
+.notification .badge {
+  position: absolute;
+  top: 5px;
+  right: -18px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background: green;
+  color: white;
+}
+
 .alert {
   width: 320px;
+  border-radius: 8px;
 }
 
 .alert-banner {
@@ -84,6 +102,11 @@ body, main, nav, header {
           flex-direction: row;
   padding-left: 10px;
   padding-right: 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
 .alert-banner-close {
@@ -356,6 +379,29 @@ nav {
           justify-content: center;
 }
 
+.chart2-3-flow-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 50px;
+}
+
+.chart2-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 320px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+}
+
 .chart3-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -480,9 +526,13 @@ nav {
   display: -ms-flexbox;
   display: flex;
   width: 320px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.recent-activity-group {
+.recent-activity-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -490,6 +540,24 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+div.recent--comment-date-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: -25px;
+}
+
+.recent--tracker-comment, .recent--tracker-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
 }
 
 .message-setting-flow-container {
@@ -592,8 +660,17 @@ header img {
   margin: auto;
 }
 
-.bell-icon {
-  height: 40%;
+.svg--SMicon-white {
+  fill: white;
+}
+
+a .bell-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 55%;
+  position: relative;
+  top: 18px;
 }
 
 .bell-icon, nav svg {
@@ -781,6 +858,10 @@ canvas {
   margin-bottom: 10px;
 }
 
+.chart2 {
+  margin-bottom: 10px;
+}
+
 .chart3 {
   height: 300px;
   width: 300px;
@@ -791,8 +872,13 @@ canvas {
 /* ============================================= */
 /*              @Media Breakpoints                      */
 /* ============================================= */
-.traffic-label, .sm-user-label, .daily-label, .member-label, .message-label, .recent-label, .settings-label {
+.traffic-label, .headline, .sm-user-label, .daily-label, .member-label, .message-label, .recent-label, .settings-label {
   font-size: 22px;
+  margin-left: 10px;
+}
+
+.members-text, .profile-name, .profile-birth, .recent--tracker-comment, .recent--tracker-date {
+  font-size: 20px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -804,8 +890,10 @@ canvas {
         grid-template-rows: minmax(50px) minmax(50px) minmax(300px) minmax(800px) minmax(1700px);
         grid-template-areas: "header header" "nav main" "nav section" "nav aside" "nav footer";
   }
-  .divider {
-    width: 768px;
+  .divider-gap {
+    border-left: #b3b3b3 solid 1px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   header {
     width: 768px;
@@ -821,8 +909,10 @@ canvas {
         -ms-flex-positive: .1;
             flex-grow: .1;
   }
-  .bell-icon {
+  a .bell-icon {
     height: 70%;
+    position: relative;
+    top: 15px;
   }
   nav {
     -webkit-box-orient: vertical;
@@ -840,13 +930,13 @@ canvas {
         -ms-flex-direction: column;
             flex-direction: column;
     height: 100px;
-    gap: 20px;
+    gap: -30px;
   }
   nav svg {
-    height: 100px;
+    height: 50px;
   }
   .main-container {
-    width: 768px;
+    width: 718px;
   }
   .main-header {
     -webkit-box-pack: start;
@@ -869,7 +959,7 @@ canvas {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 768px;
+    width: 718px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -893,7 +983,7 @@ canvas {
     gap: 50px;
   }
   .chart-1-main {
-    width: 768px;
+    width: 718px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -902,20 +992,41 @@ canvas {
     width: 680px;
     margin: auto;
   }
+  .chart2-3-flow-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .chart-2-main, .chart-3-main {
+    width: 350px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .chart2 {
+    margin: auto;
+    margin-top: 50px;
+    width: 350px;
+    height: 600px;
+  }
   .chart3 {
-    height: 500px;
-    width: 500px;
+    height: 300px;
+    width: 300px;
   }
   .chart3-container {
-    width: 768px;
+    width: 350px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     margin: left;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .social-flex-parent {
-    width: 768px;
+    width: 718px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -935,7 +1046,7 @@ canvas {
     gap: 28px;
   }
   .members-container {
-    width: 768px;
+    width: 718px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -948,7 +1059,7 @@ canvas {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 768px;
+    width: 718px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -974,11 +1085,40 @@ canvas {
     font-size: 25px;
     margin: auto;
   }
+  .recent-flex-container {
+    width: 718px;
+  }
+  .recent-activity-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .recent-activity-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 10px;
+  }
+  .recent--comment-date-group {
+    margin: auto;
+  }
+  .recent--tracker-comment, .recent--tracker-date {
+    text-align: left;
+    margin: auto;
+  }
   .message-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 768px;
+    width: 718px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1001,13 +1141,13 @@ canvas {
     width: 85%;
   }
   .settings {
-    width: 768px;
+    width: 718px;
   }
   .settings-container {
-    width: 768px;
+    width: 718px;
   }
   .notifcation-settings {
-    width: 768px;
+    width: 718px;
   }
   .switch-toggle {
     width: 85%;
@@ -1018,7 +1158,7 @@ canvas {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 768px;
+    width: 718px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1036,6 +1176,10 @@ canvas {
     font-size: 40px;
     color: black;
   }
+  .sm-user-label, .daily-label {
+    text-align: left;
+    margin: left;
+  }
   .header-profile-name {
     font-size: 35px;
   }
@@ -1044,6 +1188,11 @@ canvas {
   }
   .members-text, .profile-name, .profile-birth {
     font-style: 35px;
+  }
+  .divider-gap-recent {
+    border-left: #b3b3b3 solid 1px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   .grid {
     width: 1024px;
@@ -1073,8 +1222,9 @@ canvas {
   .header-profile-name {
     font-size: 30px;
   }
-  .bell-icon {
-    height: 90%;
+  a .bell-icon {
+    height: 70%;
+    top: 15px;
   }
   .header-me {
     border: solid 1px white;
@@ -1086,12 +1236,8 @@ canvas {
             align-items: center;
     margin: auto;
   }
-  .nav-container {
-    width: 50px;
-    gap: 20px;
-  }
   nav svg {
-    height: 150px;
+    height: 50px;
   }
   main {
     width: 1024px;
@@ -1100,7 +1246,7 @@ canvas {
     width: 1024px;
   }
   .alert {
-    width: 150%;
+    width: 100%;
     margin: auto;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -1132,6 +1278,12 @@ canvas {
     height: 675px;
     width: 675px;
     margin: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .chart-2-main, .chart-3-main {
+    width: 465px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1201,6 +1353,41 @@ canvas {
             justify-content: space-evenly;
     width: 500px;
     gap: 22px;
+  }
+  .recent-flex-container {
+    width: 500px;
+  }
+  .recent-activity-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .recent-activity-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .recent-activity-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 20px;
+  }
+  .recent--tracker-comment, .recent--tracker-date {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .profile-image {
     width: 80px;
