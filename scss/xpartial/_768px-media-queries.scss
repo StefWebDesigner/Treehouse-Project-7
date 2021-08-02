@@ -1,362 +1,362 @@
-/* ============================================= */
-/*              @Media Breakpoints                      */
-/* ============================================= */
+// /* ============================================= */
+// /*              @Media Breakpoints                      */
+// /* ============================================= */
 
-// General Font Styles
+// // General Font Styles
 
-.traffic-label, .headline, .sm-user-label, .daily-label, .member-label, .message-label, .recent-label, .settings-label {
-    font-size: 22px;
-    margin-left: 10px;
-}
-
-.members-text, .profile-name, .profile-birth, .recent--tracker-comment, .recent--tracker-date {
-    font-size: 20px;
-}
-
-// ============================
-
-@media only screen and (min-width: 768px) {
-
-.grid {
-    width: 768px;    
-    grid-template-columns: 50px 718px;
-    grid-template-rows: minmax(50px) minmax(50px) minmax(300px) minmax(800px) minmax(1700px); //minmax(200px);
-    grid-template-areas:  
-    "header header"
-    "nav main"
-    "nav section"
-    "nav aside"
-    "nav footer";
-}
-
-// .divider {
-//     width: 768px;
+// .traffic-label, .headline, .sm-user-label, .daily-label, .member-label, .message-label, .recent-label, .settings-label {
+//     font-size: 22px;
+//     margin-left: 10px;
 // }
 
-.divider-gap {
-    // width: 768px;
-    // d9d9d9
-    border-left: #b3b3b3 solid 1px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
+// .members-text, .profile-name, .profile-birth, .recent--tracker-comment, .recent--tracker-date {
+//     font-size: 20px;
+// }
 
-//========================//
-// HEADER (FLEX) PROPERTIES //
-//========================//
-//(TITLE/BELL ICON/ BREAKLINE/ME)
+// // ============================
 
-header {
-    width: 768px;    
-}
+// @media only screen and (min-width: 768px) {
 
-.header-container {
-    min-width: 718px;
-    justify-content: space-between;
-}
+// .grid {
+//     width: 768px;    
+//     grid-template-columns: 50px 718px;
+//     grid-template-rows: minmax(50px) minmax(50px) minmax(300px) minmax(800px) minmax(1700px); //minmax(200px);
+//     grid-template-areas:  
+//     "header header"
+//     "nav main"
+//     "nav section"
+//     "nav aside"
+//     "nav footer";
+// }
 
-.header-offset {
-    flex-grow: .1;
-}
+// // .divider {
+// //     width: 768px;
+// // }
 
-// .bell-icon {
+// .divider-gap {
+//     // width: 768px;
+//     // d9d9d9
+//     border-left: #b3b3b3 solid 1px;
+//     margin-top: 10px;
+//     margin-bottom: 10px;
+// }
+
+// //========================//
+// // HEADER (FLEX) PROPERTIES //
+// //========================//
+// //(TITLE/BELL ICON/ BREAKLINE/ME)
+
+// header {
+//     width: 768px;    
+// }
+
+// .header-container {
+//     min-width: 718px;
+//     justify-content: space-between;
+// }
+
+// .header-offset {
+//     flex-grow: .1;
+// }
+
+// // .bell-icon {
+// //     height: 70%;
+
+// // }
+
+// a .bell-icon {
+//     // display: flex;
 //     height: 70%;
-
-// }
-
-a .bell-icon {
-    // display: flex;
-    height: 70%;
-    position:relative;
-    top: 15px;
+//     position:relative;
+//     top: 15px;
   
-  }
+//   }
 
-// ============================================================
+// // ============================================================
 
-// HOME NAVIGATIONS FLEX
-// (NAV - HOME/BAR/MEMEBERS/SETTINGS)
+// // HOME NAVIGATIONS FLEX
+// // (NAV - HOME/BAR/MEMEBERS/SETTINGS)
 
-nav {
-    flex-direction: column;
-    justify-content: start; 
-}
-
-.nav-container {
-    width: 50px;
-    flex-direction: column;
-    height: 100px;
-
-    gap: -30px;
-    // justify-content: start;
-    // flex-shrink: -1;
-}
-
-nav svg {
-    height: 50px;
-}
-
-// ============================================================
-
-// MAIN (FLEX) PROPERTIES
-
-// SEARCH BAR/ALERT PART
-//(MAIN HEADER / ALERT)
-
-.main-container {
-    width: 718px;    
-}
-
-.main-header {
-    justify-content: start;
-}
-
-.alert {
-    display: flex;
-    width: 80%;
-    margin: auto;
-}
-
-.alert-banner {
-    display: flex;
-}
-
-// ============================================================
-// SECTION (FLEX) PROPERTIES
-//TRAFFIC-HEADER/CHART-1-CONTAINER-FULL/DAILY/SM-USER-LABEL/CHART-3-CONTAINER-FULL)
-
-//***FOUND A BUG IN MOVING THE TRAFFIC NAV TO THE END***
-
-//TRAFFIC NAVIGATION SECTIONS
-
-.traffic-header {
-    display: flex;
-    width: 718px;    
-    flex-direction: row;
-}
-
-.traffic-label {
-    display: flex;
-    justify-content: start;
-}
-
-.traffic-nav {
-    display: flex;
-    justify-content: end;
-    gap: 50px;
-    
-}
-
-// ul#traffic-nav {
-// // font-size: 5656px;
+// nav {
+//     flex-direction: column;
+//     justify-content: start; 
 // }
 
-// ---------------------------------------------------------------
+// .nav-container {
+//     width: 50px;
+//     flex-direction: column;
+//     height: 100px;
 
-//CHART 1 SECTIONS
-//(CHARTS1)
+//     gap: -30px;
+//     // justify-content: start;
+//     // flex-shrink: -1;
+// }
 
-.chart-1-main {
-    width: 718px;    
-    justify-content: center;
-}
+// nav svg {
+//     height: 50px;
+// }
 
-.chart1 {
-    width: 680px;
-    margin: auto;
-}
+// // ============================================================
 
-// ---------------------------------------------------------------
+// // MAIN (FLEX) PROPERTIES
 
-//CHART 2 SECTIONS
-//(DAILY-LABEL/CHART-2-CONTAINER-FULL)
+// // SEARCH BAR/ALERT PART
+// //(MAIN HEADER / ALERT)
 
-.chart2-3-flow-container {
-    flex-direction: row;
-}
+// .main-container {
+//     width: 718px;    
+// }
 
-.chart-2-main, .chart-3-main {
-    width: 350px;
-    justify-content: center;
-    
-}
+// .main-header {
+//     justify-content: start;
+// }
 
-.chart2 {
-    margin: auto;
-    margin-top: 50px;
-    width: 350px;
-    height: 600px;
-    // margin-right: 10px;
-}
-
-// .chart-3-main {
+// .alert {
+//     display: flex;
+//     width: 80%;
 //     margin: auto;
-//     margin-right: 100px;   
+// }
+
+// .alert-banner {
+//     display: flex;
+// }
+
+// // ============================================================
+// // SECTION (FLEX) PROPERTIES
+// //TRAFFIC-HEADER/CHART-1-CONTAINER-FULL/DAILY/SM-USER-LABEL/CHART-3-CONTAINER-FULL)
+
+// //***FOUND A BUG IN MOVING THE TRAFFIC NAV TO THE END***
+
+// //TRAFFIC NAVIGATION SECTIONS
+
+// .traffic-header {
+//     display: flex;
+//     width: 718px;    
+//     flex-direction: row;
+// }
+
+// .traffic-label {
+//     display: flex;
+//     justify-content: start;
+// }
+
+// .traffic-nav {
+//     display: flex;
+//     justify-content: end;
+//     gap: 50px;
+    
+// }
+
+// // ul#traffic-nav {
+// // // font-size: 5656px;
+// // }
+
+// // ---------------------------------------------------------------
+
+// //CHART 1 SECTIONS
+// //(CHARTS1)
+
+// .chart-1-main {
+//     width: 718px;    
+//     justify-content: center;
+// }
+
+// .chart1 {
+//     width: 680px;
+//     margin: auto;
+// }
+
+// // ---------------------------------------------------------------
+
+// //CHART 2 SECTIONS
+// //(DAILY-LABEL/CHART-2-CONTAINER-FULL)
+
+// .chart2-3-flow-container {
+//     flex-direction: row;
+// }
+
+// .chart-2-main, .chart-3-main {
+//     width: 350px;
+//     justify-content: center;
+    
+// }
+
+// .chart2 {
+//     margin: auto;
+//     margin-top: 50px;
+//     width: 350px;
+//     height: 600px;
+//     // margin-right: 10px;
+// }
+
+// // .chart-3-main {
+// //     margin: auto;
+// //     margin-right: 100px;   
+
+// // }
+
+// .chart3 {
+//     height: 300px;
+//     width: 300px;
+// // gap: 30px;
+// }
+
+// .chart3-container {
+//     width: 350px;
+
+//     // width: 768px;
+//     flex-direction: column;
+//     margin: left;
+//     justify-content: center;
+
 
 // }
 
-.chart3 {
-    height: 300px;
-    width: 300px;
-// gap: 30px;
-}
+// // // =========================================
+// // ASIDE (FLEX) PROPERTIES
+// //SOCIAL FACT SECTIONS
+// //(SOCIAL-GROUP/MEMBERS/RECENT-ACTIVITY/MESSAGE/SETTINGS)
 
-.chart3-container {
-    width: 350px;
+// .social-flex-parent {
+//     width: 718px;    
+//     flex-direction: row;
+// }
 
-    // width: 768px;
-    flex-direction: column;
-    margin: left;
-    justify-content: center;
+// .social-group {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-evenly;
+//     gap: 28px;
+// }
 
+// // ---------------------------------------------------------------
 
-}
+// // MEMBERS SECTIONS
+// // //(PROFILE-IMAGE/MEMEBRS-TEXT/PROFILE-NAME/PROFILE-EMAIL-PROFILE-BIRTH)
 
-// // =========================================
-// ASIDE (FLEX) PROPERTIES
-//SOCIAL FACT SECTIONS
-//(SOCIAL-GROUP/MEMBERS/RECENT-ACTIVITY/MESSAGE/SETTINGS)
+// .members-container {
+//     width: 718px;    
+//     flex-direction: column;
+//     justify-content: space-evenly;
+// }
+// //this is to make it into a row
+// .members-group {
+//     display: flex;
+//     width: 718px;    
+//     flex-direction: row;
+//     gap: 25px;
+// }
 
-.social-flex-parent {
-    width: 718px;    
-    flex-direction: row;
-}
+// .profile-image {
+//     width: 100px;
+//     height: 100px;
+//     margin: 0;
+//     display: flex;
+//     margin-left: 5px;
+//   }
 
-.social-group {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    gap: 28px;
-}
-
-// ---------------------------------------------------------------
-
-// MEMBERS SECTIONS
-// //(PROFILE-IMAGE/MEMEBRS-TEXT/PROFILE-NAME/PROFILE-EMAIL-PROFILE-BIRTH)
-
-.members-container {
-    width: 718px;    
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-//this is to make it into a row
-.members-group {
-    display: flex;
-    width: 718px;    
-    flex-direction: row;
-    gap: 25px;
-}
-
-.profile-image {
-    width: 100px;
-    height: 100px;
-    margin: 0;
-    display: flex;
-    margin-left: 5px;
-  }
-
-.profile-birth {
-    margin: 0;
-    justify-content: end;
-}
+// .profile-birth {
+//     margin: 0;
+//     justify-content: end;
+// }
  
-a.profile-email, .profile-birth, .profile-name {
-    font-size: 25px;
-    margin: auto;
-}
+// a.profile-email, .profile-birth, .profile-name {
+//     font-size: 25px;
+//     margin: auto;
+// }
 
 
 
-// ---------------------------------------------------------------
-// RECENT ACTIVITY SECTIONS
+// // ---------------------------------------------------------------
+// // RECENT ACTIVITY SECTIONS
 
-.recent-flex-container {
-    width: 718px;
-}
+// .recent-flex-container {
+//     width: 718px;
+// }
 
-.recent-activity-container {
-    display: flex;
-    flex-direction: column;
-}
+// .recent-activity-container {
+//     display: flex;
+//     flex-direction: column;
+// }
 
-.recent-activity-group {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-}
+// .recent-activity-group {
+//     display: flex;
+//     flex-direction: row;
+//     gap: 10px;
+// }
 
-.recent--comment-date-group {
-    // gap: -30px;
-    margin: auto;
-}
-
-
-.recent--tracker-comment, .recent--tracker-date {
-    text-align: left;
-    margin: auto;
-}
+// .recent--comment-date-group {
+//     // gap: -30px;
+//     margin: auto;
+// }
 
 
+// .recent--tracker-comment, .recent--tracker-date {
+//     text-align: left;
+//     margin: auto;
+// }
 
-//============================ Message 
 
-.message-container {
-    display: flex;
-    width: 718px;
-    flex-direction: column;
-}
 
-.form-field, .message-textarea, .button-primary, .button-disabled, .email-container, .profile-container {
-    font-size: 22px;
-}
+// //============================ Message 
 
-input#userField {
-    width: 85%;
-    margin: auto;
-    height: 75px;
-}
+// .message-container {
+//     display: flex;
+//     width: 718px;
+//     flex-direction: column;
+// }
 
-.message-textarea {
-    height: 149px;
-    text-align: center;
-    width: 85%;
-}
+// .form-field, .message-textarea, .button-primary, .button-disabled, .email-container, .profile-container {
+//     font-size: 22px;
+// }
 
-.button-primary, .button-disabled, .alert-btn {
-    width: 85%;
-}
-//====================== Settings
+// input#userField {
+//     width: 85%;
+//     margin: auto;
+//     height: 75px;
+// }
 
-.settings {
-    width: 718px;
-}
+// .message-textarea {
+//     height: 149px;
+//     text-align: center;
+//     width: 85%;
+// }
 
-.settings-container {
-    width: 718px;
-}
+// .button-primary, .button-disabled, .alert-btn {
+//     width: 85%;
+// }
+// //====================== Settings
 
-.notifcation-settings {
-    width: 718px;
-}
+// .settings {
+//     width: 718px;
+// }
 
-//CHANGES AND OPERATES THE TIME OPTIONS
-.switch-toggle {
-    width: 85%;
-    margin: auto;
-    margin-top: 20px;
+// .settings-container {
+//     width: 718px;
+// }
 
-}
+// .notifcation-settings {
+//     width: 718px;
+// }
 
-.timezone-settings {
-    display: flex;
-    width: 718px;
-    flex-direction: column;
-}
+// //CHANGES AND OPERATES THE TIME OPTIONS
+// .switch-toggle {
+//     width: 85%;
+//     margin: auto;
+//     margin-top: 20px;
 
-select#timezone, option {
-    width: 80%;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
+// }
 
-}
+// .timezone-settings {
+//     display: flex;
+//     width: 718px;
+//     flex-direction: column;
+// }
+
+// select#timezone, option {
+//     width: 80%;
+//     padding-top: 15px;
+//     padding-bottom: 15px;
+// }
+
+// }
