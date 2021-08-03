@@ -5,8 +5,10 @@
 //THE MAIN DIVISIONS
 
 .grid {
+    height: 100%;
     display: grid;
-    grid-template-rows: minmax(75px) minmax(50px) minmax(1800px);
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 55px 1fr;
     grid-template-areas:  
     "header"
     "nav"

@@ -1,3 +1,6 @@
+
+the grid is found in the 320 viewport/// not 768 px;
+
 ====================
 /   things to do  /
 ===================
@@ -7,15 +10,20 @@ Problems that Need sorting out:
 (320px)
 
 (768px)
+divider-gap & divider-gap-recent are not showing next to recent/settings
+have the x tiled to the right on the alert banner
     
 (1024px) 
 - The bell icon isn't responsive
 - marginal overflow issue (can't find where) (must be somewhere in the settings)
-- the chart needs to be centered
 
 ***JS***
+-  use a switch if function for the traffic nav
+https://www.w3schools.com/jsref/jsref_switch.asp
+
 - Banner alert won't disappear 
 - Search bar just not working
+- Time function won't work
 
 
 ___________________________________
