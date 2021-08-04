@@ -27,17 +27,11 @@
     font-size: 35px;
   }
 
-// //   //It's not responding
-//   .members-text, .profile-name, .profile-birth {
-//     font-style: 35px;
-//   }
+  .column-divider {
+    border-right: #b3b3b3 solid 1px;
+    width: 768px;
 
-//   .divider-gap-recent {
-//         border-left: #b3b3b3 solid 1px;
-//         margin-top: 10px;
-//         margin-bottom: 10px;
-//     }
-
+}
 
 //   //===============================================
 
@@ -160,7 +154,7 @@ main {
 }
 
 .chart-2-main, .chart-3-main {
-    // width: 465px;
+    width: 465px;
     justify-content: center;
     
 }
