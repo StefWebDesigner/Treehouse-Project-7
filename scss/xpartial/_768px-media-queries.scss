@@ -18,7 +18,6 @@
 @media only screen and (min-width: 768px) {
 
 .grid {
-    // min-width: 768px;    
     grid-template-rows: 70px 1fr;
     grid-template-columns: 70px 1fr;
     grid-template-areas:
@@ -49,7 +48,6 @@ main {
 
 
 .header-container {
-    // min-width: 718px;
     justify-content: space-between;
     gap: 300px;
 }
@@ -57,7 +55,6 @@ main {
 .header-offset {
     gap: 60px;
 }
-
 
 .header-offset {
     flex-grow: .1;
@@ -67,20 +64,16 @@ a .bell-icon {
     height: 70%;
     position:relative;
     top: 15px;
-  }
+}
 
-  .header-profile-name {
+.header-profile-name {
     font-size: 25px;
-
-  }
-
-
-
+}
 
 // // ============================================================
 
-// // HOME NAVIGATIONS FLEX
-// // (NAV - HOME/BAR/MEMEBERS/SETTINGS)
+// HOME NAVIGATIONS FLEX
+// (NAV - HOME/BAR/MEMEBERS/SETTINGS)
 
 nav {
     flex-direction: column;
@@ -92,8 +85,6 @@ nav {
     flex-direction: column;
     height: 100px;
     gap: -30px;
-    // justify-content: start;
-    // flex-shrink: -1;
 }
 
 nav svg {
@@ -107,10 +98,6 @@ nav svg {
 // // SEARCH BAR/ALERT PART
 // //(MAIN HEADER / ALERT)
 
-// .main-container {
-//     width: 718px;    
-// }
-
 .main-header {
     justify-content: start;
 }
@@ -118,11 +105,13 @@ nav svg {
 .alert {
     display: flex;
     width: 80%;
-    // margin: auto;
 }
 
 .alert-banner {
     display: flex;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
 }
 
 // // ============================================================
@@ -156,7 +145,6 @@ nav svg {
 // //(CHARTS1)
 
 .chart-1-main {
-    // width: 718px;    
     justify-content: center;
 }
 
@@ -176,7 +164,8 @@ nav svg {
 
 .chart-2-main, .chart-3-main {
     width: 350px;
-    justify-content: center;   
+    justify-content: center;
+    margin: auto; 
 }
 
 .chart2 {
