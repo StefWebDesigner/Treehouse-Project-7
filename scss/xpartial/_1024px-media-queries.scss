@@ -111,8 +111,6 @@ main {
 
 .alert {
     width: 100%;
-    margin: auto;
-    justify-content: center;
     font-size: 25px;
 }
 
@@ -120,16 +118,11 @@ main {
 // // SECTION (FLEX) PROPERTIES
 // //TRAFFIC-HEADER/CHART-1-CONTAINER-FULL/DAILY/SM-USER-LABEL/CHART-3-CONTAINER-FULL)
 
-// //***FOUND A BUG IN MOVING THE TRAFFIC NAV TO THE END***
-
 // //TRAFFIC NAVIGATION SECTIONS
-
-
 
 .traffic-header .traffic-nav {
     gap:.5;
 }
-
 
 .traffic-nav {
     gap: 50px;
@@ -139,7 +132,6 @@ main {
 // // ============================================================
 // // SECTION (FLEX) PROPERTIES
 // //Charts
-
 
 .chart1 {
     width: 850px;
@@ -159,13 +151,10 @@ main {
     
 }
 
-
-
 // // // =========================================
 // // ASIDE (FLEX) PROPERTIES
 // //SOCIAL FACT SECTIONS
 // //(SOCIAL-GROUP/MEMBERS/RECENT-ACTIVITY/MESSAGE/SETTINGS)
-
 
 .social-group {
     gap: 30px;
@@ -238,7 +227,6 @@ main {
 .recent-activity-group {
     display: flex;
     flex-direction: row;
-    // gap: 45px;
 }
 
 .recent-activity-group {
@@ -250,7 +238,6 @@ main {
 .recent--tracker-comment, .recent--tracker-date {
     flex-wrap: wrap;
 }
-
   
 // // ========
 

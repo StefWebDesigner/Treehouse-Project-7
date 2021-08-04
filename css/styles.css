@@ -9,6 +9,7 @@ h1, h3, p {
 .header-app-title {
   font-size: 25px;
   color: white;
+  margin: auto;
 }
 
 .header-profile-name {
@@ -20,6 +21,8 @@ h1, h3, p {
 .traffic-label, .sm-user-label, .daily-label, .member-label, .message-label, .recent-label, .settings-label {
   font-size: 15px;
   color: black;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .headline {
@@ -66,8 +69,7 @@ body, main, nav, header {
   background-color: #eee;
 }
 
-.divider {
-  border-bottom: #b3b3b3 solid 1px;
+hr {
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -249,11 +251,20 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  gap: 25px;
 }
 
 .alert {
   width: 89%;
   background-color: #9d89f5;
+  text-align: center;
+  margin: auto;
+}
+
+.alert-banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .main-container {
@@ -772,6 +783,7 @@ nav a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: auto;
   text-align: center;
   width: 89%;
   background-color: #e0e0eb;
@@ -801,7 +813,6 @@ canvas {
 
 @media only screen and (min-width: 768px) {
   .grid {
-    min-width: 768px;
     -ms-grid-rows: 70px 1fr;
         grid-template-rows: 70px 1fr;
     -ms-grid-columns: 70px 1fr;
@@ -885,6 +896,8 @@ canvas {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
   .traffic-header {
     display: -webkit-box;
@@ -931,6 +944,7 @@ canvas {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin: auto;
   }
   .chart2 {
     margin-top: 50px;
@@ -979,6 +993,7 @@ canvas {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+    gap: 10px;
   }
   .members-group {
     display: -webkit-box;
@@ -1017,6 +1032,7 @@ canvas {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    gap: 10px;
   }
   .recent-activity-group {
     display: -webkit-box;
@@ -1026,13 +1042,13 @@ canvas {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    gap: 10px;
+    gap: 40px;
   }
   .recent--comment-date-group {
     margin: auto;
   }
   .recent--tracker-comment, .recent--tracker-date {
-    text-align: left;
+    text-align: center;
     margin: auto;
   }
   .message-container {
@@ -1076,6 +1092,274 @@ canvas {
     width: 80%;
     padding-top: 15px;
     padding-bottom: 15px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .traffic-label, .sm-user-label, .daily-label, .member-label, .message-label, .recent-label, .settings-label, .headline {
+    font-size: 40px;
+    color: black;
+  }
+  .sm-user-label, .daily-label {
+    text-align: left;
+    margin: left;
+  }
+  .header-profile-name {
+    font-size: 35px;
+  }
+  p.alert_banner {
+    font-size: 35px;
+  }
+  .column-divider {
+    border-right: #b3b3b3 solid 1px;
+    width: 768px;
+  }
+  .grid {
+    -ms-grid-rows: 70px 1fr;
+        grid-template-rows: 70px 1fr;
+    -ms-grid-columns: 70px 1fr;
+        grid-template-columns: 70px 1fr;
+        grid-template-areas: "header header" "nav main";
+  }
+  header {
+    background-color: #9d89f5;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: header;
+  }
+  nav {
+    background-color: #765af2;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: nav;
+  }
+  main {
+    background-color: white;
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: main;
+  }
+  .header-container {
+    gap: -15px;
+  }
+  .header-offset {
+    gap: -10px;
+  }
+  .header-app-title {
+    font-size: 40px;
+  }
+  .header-profile-name {
+    font-size: 30px;
+  }
+  a .bell-icon {
+    height: 70%;
+    top: 15px;
+  }
+  .header-me {
+    border: solid 1px white;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: auto;
+  }
+  .alert {
+    width: 100%;
+    font-size: 25px;
+  }
+  .traffic-header .traffic-nav {
+    gap: .5;
+  }
+  .traffic-nav {
+    gap: 50px;
+    font-size: 35px;
+  }
+  .chart1 {
+    width: 850px;
+    height: auto;
+  }
+  .chart3 {
+    height: 675px;
+    width: 675px;
+    margin: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .chart-2-main, .chart-3-main {
+    width: 465px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .social-group {
+    gap: 30px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .social-image {
+    height: 60px;
+    width: 60px;
+    margin-top: 17px;
+  }
+  .social-border {
+    width: 100px;
+    height: 100px;
+    margin-left: 5px;
+  }
+  .platform {
+    font-size: 25px;
+    margin-bottom: -25px;
+    margin-right: 25px;
+    margin-left: 5px;
+  }
+  .stat-number {
+    font-size: 40px;
+    color: grey;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    margin-left: 5px;
+  }
+  .members-recent-flow-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .main-container {
+    width: 500px;
+  }
+  .members-container {
+    width: 500px;
+  }
+  .members-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    width: 500px;
+    gap: 22px;
+  }
+  .recent-flex-container {
+    width: 500px;
+  }
+  .recent-activity-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .recent-activity-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .recent-activity-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 20px;
+  }
+  .recent--tracker-comment, .recent--tracker-date {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .profile-image {
+    width: 80px;
+    height: 80px;
+    margin: 0;
+    margin-left: 5px;
+  }
+  .profile-birth {
+    margin: 0;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+  a.profile-email, .profile-birth, .profile-name {
+    font-size: 25px;
+  }
+  a.profile-email {
+    font-size: 20px;
+  }
+  .profile-birth {
+    font-size: 20px;
+  }
+  .recent-flex-container {
+    width: 500px;
+  }
+  .message-setting-flow-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 20px;
+  }
+  .message-container {
+    width: 500px;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+  .settings {
+    width: 500px;
+  }
+  .settings-container {
+    width: 500px;
+  }
+  .switch-toggle {
+    width: 50%;
+    margin: 0;
+    margin-left: 50px;
+    margin-top: 0px;
+  }
+  .notifcation-settings {
+    -webkit-box-pack: stretch;
+        -ms-flex-pack: stretch;
+            justify-content: stretch;
+    gap: 30px;
+  }
+  .form-field, .message-textarea, .button-primary, .button-disabled, .email-container, .profile-container {
+    font-size: 25px;
+  }
+  .form-field {
+    height: 75px;
+  }
+  .message-textarea {
+    height: 149px;
+  }
+  .email-container {
+    margin-bottom: 40px;
+  }
+  .profile-container {
+    margin-bottom: 20px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

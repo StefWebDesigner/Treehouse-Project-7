@@ -1,5 +1,29 @@
 
+
+Things got work on: 
+- fix chart 1 (768)
+
+
+
+My initla suspsiouns:
+
+768 overflow issue winner! >>>> 
+
+<div class="chart-3-main divider divider-gap">
+- seem slike lot of padding/margins
+
+320 overflow issue >>>
+the teramesasge issue
+
+
+*** moving margin: auto made my header fluid
+
+1024 is buggy and a cause for overflowing
+
+
 the grid is found in the 320 viewport/// not 768 px;
+----JUST ADD FUCKING GRID AREAS TO THE 768 PAGE!!!!!
+---- THIS IS BULLSHIT!!!!!!!!!!!!!
 
 ====================
 /   things to do  /
