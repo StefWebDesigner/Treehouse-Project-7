@@ -22,12 +22,12 @@
 //     font-size: 35px;
 //   }
 
-// //Not responsive
+// // //Not responsive
 //   p.alert_banner {
 //     font-size: 35px;
 //   }
 
-//   //It's not responding
+// //   //It's not responding
 //   .members-text, .profile-name, .profile-birth {
 //     font-style: 35px;
 //   }
@@ -42,16 +42,29 @@
 //   //===============================================
 
 // .grid {
-//     width: 1024px;    
-//     grid-template-columns: 50px 718px;
-//     grid-template-rows: minmax(50px) minmax(50px) minmax(300px) minmax(800px) minmax(1700px); //minmax(200px);
-//      grid-template-areas:  
-//     "header header"
-//     "nav main"
-//     "nav section"
-//     "nav aside"
-//     "nav footer";
+//     min-width: 1024px;    
+//     grid-template-rows: 70px 1fr;
+//     grid-template-columns: 70px 1fr;
+//     grid-template-areas:
+//         "header header"
+//          "nav main";
 // }
+
+// header {
+//     background-color: $main-purple;
+//     grid-area: header;
+// }
+
+// nav {
+//     background-color: $secondary-purple;
+//     grid-area: nav;
+// }
+
+// main {
+//     background-color: $defult-white;
+//     grid-area: main;
+// }
+
 
 // //========================//
 // // HEADER (FLEX) PROPERTIES //
@@ -106,14 +119,6 @@
 
 // // SEARCH BAR/ALERT PART
 // //(MAIN HEADER / ALERT)
-
-// main {
-//     width: 1024px;    
-// }
-
-// .main-container {
-//     width: 1024px;    
-// }
 
 // .alert {
 //     // width: 150%;

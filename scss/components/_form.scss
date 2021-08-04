@@ -3,37 +3,29 @@
 
 // Message Support 
 
-.form-field {
+#userField:hover, #messageField:hover {
+    background-color: $main-purple;
+    cursor: pointer;
+    @include hover-border-style;
+}
+
+.form-field, .message-textarea  {
     display: flex;
-    margin: auto;
+    // margin: auto;
     text-align: center;
     width: 89%;
     background-color: $seconday-white;
     @include main-border-style;
 }
 
-.message-textarea {
-    display: flex;
-    margin: auto;
-    margin-top: 5px;
-    width: 89%;
-    text-align: center; 
-    background-color: $seconday-white;
-    @include main-border-style;
-}
-
 select#timezone, option {
-    width: 89%;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    width: 89%;
-
+    width: 86%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: auto;
 }
 
-fieldset {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
+
 
 //===================================
 

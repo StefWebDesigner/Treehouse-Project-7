@@ -20,7 +20,7 @@ margin-top: 10px;
 
 
 button.button-primary {
-margin: auto;
+// margin: auto;
 margin-top: 5px;
 width: 89%;
 margin-bottom: 10px;
@@ -28,24 +28,8 @@ margin-bottom: 10px;
 
 
 .button-disabled {
-    margin: auto;
+    // margin: auto;
     margin-top: 5px;
     width: 89%;
     margin-bottom: 10px;
-}
-
-.settings-button {
-    margin: auto;
-}
-
-.alert {
-    width: 89%;
-    background-color: $main-purple;
-    margin: auto;
-}
-
-#userField:hover, #messageField:hover {
-    background-color: $main-purple;
-    cursor: pointer;
-    @include hover-border-style;
 }

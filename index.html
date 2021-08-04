@@ -15,11 +15,10 @@
 <!-- Body Sections -->
 <body class="grid">
 
-<!-- MAIN HEADER-->
+<!-- HEADER-->
 <header>
 	<div class="header-container">	
 		<h1 class="header-app-title"> Webapp </h1>
-		<!-- <div class="header-bell-icon"> -->
 		<div class="header-offset">
 		<a href="#" class="notification">
 			<svg class="bell-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 117.033 122.88">
@@ -27,8 +26,6 @@
 			</svg>
 			<span class="badge">3</span>
 		</a>
-		<!--
-		 <h1 class="header-breakline"> | </h1> -->
 			<img class="header-me" src="images/stefan.jpg" alt="a picture of me">
 			<h3 class="header-profile-name"> Stefan Riley </h3>
 		</div>
@@ -311,9 +308,9 @@
 			<form class="widget-container">
 				<div class="message-group">
 					<input class="form-field" id="userField" type="text" placeholder="Search for user">
-				</div>
 					<textarea class="message-textarea" placeholder="Message for user" id="messageField"></textarea>
-				<button id="send" class="button-primary">Enter </button>
+				</div>
+					<button id="send" class="button-primary">Enter </button>
 				<!-- </div> -->
 			</form>
 		</div>
@@ -358,7 +355,8 @@
 
 			<!-- ============================= -->
 			<div class="timezone-settings">
-				<fieldset class="switch-toggle switch-candy-blue">
+				<!-- <fieldset class="switch-toggle switch-candy-blue"> -->
+				<fieldset>
 					<legend></legend>
 					<select class="form-field" id="timezone">
 						<option disabled selected class="option-disabled">Select a Timezone</option>
@@ -369,15 +367,6 @@
 						<option id="timezone_options" value="code-zone" class="code-zone">Coding Time zone</option>
 						<option id="timezone_options" value="jedi-zone" class="jedi-zone">Jedi Force Time zone (my favorite)</option>
 					</select>
-					<!-- <select class="form-field" id="timezone">
-						  <option disabled selected class="option-disabled">Select a Timezone</option>
-						  <option id="timezone_options" value="est-zone" class="est-zone">Eastern</option>
-						  <option id="timezone_options" value="pac-zone" class="pac-zone">Pacific</option>
-						  <option id="timezone_options" value="gm-zone" class="gm-zone">GM Central</option>
-						  <option id="timezone_options" value="java-zone" class="java-zone" >Javascript Time zone</option>
-						  <option id="timezone_options" value="code-zone" class="code-zone">Coding Time zone</option>
-						  <option id="timezone_options" value="jedi-zone" class="jedi-zone">Jedi Force Time zone (my favorite)</option>
-					  </select> -->
 				</fieldset>	
 			</div>
 

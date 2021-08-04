@@ -31,71 +31,54 @@ main {
     grid-area: main;
 }
 
-// section {
-//     display: grid;
-//     background-color: $defult-white;
-//     grid-area: section;
-// }
-
-// aside {
-//     display: grid;
-//     background-color: $defult-white;
-//     grid-area: aside;
-// }
-
-// footer {
-//     display: grid;
-//     background-color: $defult-white;
-
-//     grid-area: footer;
-// }
-
 // //========================//
 // // HEADER (FLEX) PROPERTIES //
 // //========================//
 // //(TITLE/BELL ICON/ BREAKLINE/ME)
 
-// header {
-//     display: flex;
-//     flex-direction: row;
-//     height: 70px;
-//     justify-content: space-evenly;
-//     width: 320px;
-//     margin: auto;
-// }
+header {
+    display: flex;
+    flex-direction: row;
+    // height: 70px;
+    justify-content: space-evenly;
+    // margin: auto;
+}
 
-// .header-container {
-//     display: flex;
-//     width: 320px;
-//     justify-content: space-evenly;
-//     flex-direction: row;
-// }
+.header-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    gap: 50px;
+}
 
-// .header-offset {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-evenly;
-//     gap: 6px;
-// }
-
+.header-offset {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 30px;
+}
 
 // // ============================================================
 
 // // HOME NAVIGATIONS FLEX
 // // (NAV - HOME/BAR/MEMEBERS/SETTINGS)
 
-// nav {
-// display: flex;
-// flex-direction: row;
-// justify-content: space-evenly;
-// }
+nav {
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+}
 
-// .nav-container {
-//     display: flex;
-//     width: 320px;
-//     height: 65px;
-//     flex-direction: row;
-// }
+.nav-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.alert {
+    width: 89%;
+    background-color: $main-purple;
+    // margin: auto;
+}
 
 // // ============================================================
 
@@ -104,35 +87,17 @@ main {
 // // SEARCH BAR/ALERT PART
 // //(MAIN HEADER / ALERT)
 
-// .main-container {
-//     display: flex;
-//     width: 320px;
-//     flex-direction: column;
-// }
+.main-container {
+    display: flex;
+    flex-direction: column;
+}
 
-// .main-header {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-around;
-//     gap: 7px;
-//     // margin: auto;
-// }
-
-// #search_it {
-//     // width: 50%;
-//     width: 85%;
-//     background-color: #eee;
-//     //use #777 for something
-//     height: 50px;
-//     margin-right: 10px;
-//     margin-top: 10px;
-// }
-
-// #search_it:hover {
-// background-color: $main-purple;
-// cursor: pointer;
-// }
-
+.main-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 7px;
+}
 
 // // ============================================================
 // // SECTION (FLEX) PROPERTIES
@@ -141,107 +106,119 @@ main {
 
 // //TRAFFIC NAVIGATION SECTIONS
 
-// .traffic {
-//     display: flex;
-//     width: 320px;
-//     flex-direction: column;
-// }
+.traffic {
+    display: flex;
+    flex-direction: column;
+}
 
-// .traffic-nav {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-evenly;
-//     text-decoration: none;
-//     list-style: none;
-//     margin: auto;
-// }
+.traffic-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-decoration: none;
+    list-style: none;
+    margin: auto;
+}
 
 // // ---------------------------------------------------------------
 
 // //CHART 1 SECTIONS
 // //(CHARTS1)
 
-// .chart-1-main {
-//     display: flex;
-//     width: 320px;
-//     justify-content: center;
-// }
+.chart-1-main {
+    display: flex;
+    justify-content: center;
+}
 
+.chart1 {
+    width: 300px;
+    margin-bottom: 10px;
+}
 
-// //CHART 2 SECTIONS
-// //(SM-USER-LABEL/CHART3)
+// // //CHART 2 SECTIONS
+// // //(SM-USER-LABEL/CHART3)
 
-// .chart2-3-flow-container {
-//     display: flex;
-//     flex-direction: column;
-//     gap: 50px;
-// }
+.chart2-3-flow-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
 
-// //UNABLE TO CENTER
-// .chart2-container {
-//     display: flex;
-//     width: 320px;
-//     flex-direction: column;
-//     margin: auto;
-// }
+// // //UNABLE TO CENTER
+.chart2-container {
+    display: flex;
+    flex-direction: column;
+    // margin: auto;
+}
 
-// //CHART 3 SECTIONS
-// //(SM-USER-LABEL/CHART3)
+.chart2 {
+    margin-bottom: 10px;
 
-// //UNABLE TO CENTER
-// .chart3-container {
-//     display: flex;
-//     width: 320px;
-//     flex-direction: column;
+}
 
-//     justify-content: center;
-//     margin: auto;
+// // //CHART 3 SECTIONS
+// // //(SM-USER-LABEL/CHART3)
 
-// }
+// // //UNABLE TO CENTER
+.chart3-container {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    // margin: auto;
 
-// // // =========================================
-// // ASIDE (FLEX) PROPERTIES
-// //SOCIAL FACT SECTIONS
-// //(SOCIAL-GROUP/MEMBERS/RECENT-ACTIVITY/MESSAGE/SETTINGS)
+}
 
-// .social-flex-parent {
-//     display: flex;
-//     width: 320px;
-//     flex-direction: column;
+.chart3 {
+    height: 300px;
+    width: 300px;
+    // margin: auto;
+    margin-bottom: 10px;
+}
 
-// }
+// // // // =========================================
+// // // ASIDE (FLEX) PROPERTIES
+// // //SOCIAL FACT SECTIONS
+// // //(SOCIAL-GROUP/MEMBERS/RECENT-ACTIVITY/MESSAGE/SETTINGS)
 
-// .social-fact-container {
-//     display: flex;
-//     width: 320px;
-//     justify-content: center;
-//     margin: auto;
-// }
+.social-flex-parent {
+    display: flex;
+    flex-direction: column;
+}
 
-// .social-group:last-child {
-//     margin-bottom: 10px;
-// }
+.social-fact-container {
+    display: flex;
+    // width: 320px;
+    justify-content: center;
+    margin: auto;
+}
 
-// .social-text {
-//     display: flex;
-//     flex-direction: row;
-//     border: solid 1px grey;
-//     border-radius: 10px;
-//     width: 90%;
-//     margin: auto;
-//     margin-top: 20px;
-//    background-color: $seconday-white;
-// }
+.social-group:last-child {
+    margin-top: 10px;
+}
 
-// .social-border {
-//     display: flex;
-//     flex-direction: column;
-// }
+.social-group:last-child {
+    margin-bottom: 10px;
+}
 
-// .social-stat {
-//     display: flex;
-//     flex-direction: column;
-// }
+.social-text {
+    display: flex;
+    flex-direction: row;
+    border: solid 1px grey;
+    border-radius: 10px;
+    width: 90%;
+    // margin: auto;
+   background-color: $seconday-white;
+}
+
+.social-border {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-stat {
+    display: flex;
+    flex-direction: column;
+}
 
 // // ---------------------------------------------------------------
 
@@ -249,110 +226,107 @@ main {
 // // //(PROFILE-IMAGE/MEMEBRS-TEXT/PROFILE-NAME/PROFILE-EMAIL-PROFILE-BIRTH)
 
 // //not currently working well as the conductor
-// .members-recent-flow-container {
-//     display: flex;
-//     flex-direction: column;
-// }
+.members-recent-flow-container {
+    display: flex;
+    flex-direction: column;
+}
 
-// .members-container {
-//     display: flex;
-//     width: 320px;
-//     flex-direction: column;
-//     //added but may need to delete
-//     margin: auto;
-// }
+.members-container {
+    display: flex;
+    flex-direction: column;
+    // margin: auto;
+}
 
-// //THIS SHOULD MAKE IT INTO A ROW
-// .members-group {
-//     display: flex;
-//     flex-direction: column;
-// }
+// // //THIS SHOULD MAKE IT INTO A ROW
+.members-group {
+    display: flex;
+    flex-direction: column;
+}
 
-// .name-email-group {
-//     display: flex;
-//     flex-direction: column;
-// }
+.name-email-group {
+    display: flex;
+    flex-direction: column;
+}
 
 // // ---------------------------------------------------------------
 // // RECENT ACTIVITY SECTIONS
 
-// .recent-flex-container {
-//     display: flex;
-//     width: 320px;
-//     flex-direction: column;
-// }
+.recent-flex-container {
+    display: flex;
+    flex-direction: column;
+}
 
-// .recent-activity-container {
-//     display: flex;
-//     flex-direction: column;
-// }
+.recent-activity-container {
+    display: flex;
+    flex-direction: column;
+}
 
-// div.recent--comment-date-group {
-//     display: flex;
-//     flex-direction: column;
-//     gap: -25px;
-// }
+div.recent--comment-date-group {
+    display: flex;
+    flex-direction: column;
+    gap: -25px;
+}
 
-// .recent--tracker-comment, .recent--tracker-date {
-//     display: flex;
-//     margin: auto;
-// }
-
-
-
+.recent--tracker-comment, .recent--tracker-date {
+    display: flex;
+    margin: auto;
+}
 
 // // ---------------------------------------------------------------
 // // MESSAGE SECTIONS
 
-// .message-setting-flow-container {
-// display: flex;
-// flex-direction: column;
-// }
+.message-setting-flow-container {
+display: flex;
+flex-direction: column;
+}
 
-// .message-container {
-//     display: flex;
-//     width: 320px;
-//     flex-direction: column;
-// }
+.message-container {
+    display: flex;
+    flex-direction: column;
+}
 
-// .message-group {
-//     display: flex;
-//     flex-direction: column;
-// }
+.message-group {
+    display: flex;
+    flex-direction: column;
+}
 
 // // ---------------------------------------------------------------
 // // SETTINGS SECTIONS
 // // //NOTIFCATION-SETTIGNS/TIMEZONE-SETTINGS/SETTINGS-BUTTON ELEMENTS
 
-// .settings-container {
-//     display: flex;
-//     width: 320px;
-//     justify-content: center;
-//     flex-direction: column;
 
+.settings-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+// .settings-button {
+//     // margin: auto;
 // }
 
-// .notifcation-settings {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-evenly;
+.timezone-settings {
+    display: flex;
+    // justify-content: center;
+    flex-direction: column;
+}
 
-// }
+.notifcation-settings {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
 
-// .email-container, .profile-container {
-//     display: flex;
-//     flex-direction: column;
-//     // justify-content: space-evenly;
-// }
+.email-container, .profile-container {
+    display: flex;
+    flex-direction: column;
+}
 
-// .email-group {
-//     // margin-right: 11000px;
-//     gap: 10px;
+.email-group {
+    gap: 10px;
+}
 
-
-// }
-
-// label#email-group, label#profile-group {
-//     display: flex;
-//     flex-direction: row;
-// }
+label#email-group, label#profile-group {
+    display: flex;
+    flex-direction: row;
+}
