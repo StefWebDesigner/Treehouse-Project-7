@@ -36,10 +36,11 @@ main {
 // //(TITLE/BELL ICON/ BREAKLINE/ME)
 
 header {
+    margin: 0;
     display: flex;
     flex-direction: row;
-    // height: 70px;
     justify-content: space-evenly;
+    //THIS CAN NEVER BE CENTERED WITH THE CONTAINER
     // margin: auto;
 }
 
@@ -47,14 +48,14 @@ header {
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
-    gap: 50px;
+    gap: 20px;
 }
 
 .header-offset {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    gap: 30px;
+    gap: 20px;
 }
 
 // // ============================================================
@@ -63,6 +64,8 @@ header {
 // // (NAV - HOME/BAR/MEMEBERS/SETTINGS)
 
 nav {
+    margin: 0;
+
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -71,7 +74,7 @@ nav {
 .nav-container {
     display: flex;
     flex-direction: row;
-    gap: 25px;
+    // gap: 25px;
 
 }
 
@@ -149,6 +152,11 @@ nav {
     gap: 50px;
 }
 
+.chart-2-main {
+    display: flex;
+    justify-content: center;
+}
+
 // // //UNABLE TO CENTER
 .chart2-container {
     display: flex;
@@ -157,12 +165,20 @@ nav {
 }
 
 .chart2 {
+    display: flex;
+    width: 300px;
     margin-bottom: 10px;
 
 }
 
 // // //CHART 3 SECTIONS
 // // //(SM-USER-LABEL/CHART3)
+
+.chart-3-main {
+    display: flex;
+    flex-direction: column; 
+}
+
 
 .chart3-container {
     display: flex;
@@ -264,6 +280,7 @@ div.recent--comment-date-group {
 
 .recent--tracker-comment, .recent--tracker-date {
     display: flex;
+
     margin: auto;
 }
 

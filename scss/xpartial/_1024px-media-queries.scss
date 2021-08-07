@@ -66,37 +66,38 @@ main {
 // //(TITLE/BELL ICON/ BREAKLINE/ME)
 
 .header-container {
-    gap: -15px;
+    gap: 560px;
 }
 
-.header-offset {
-    gap: -10px;
-}
+// .header-offset {
+//     // gap: -10px;
+// }
 
 .header-app-title {
     font-size: 40px;
-  }
+}
   
-  .header-profile-name {
+.header-profile-name {
     font-size: 30px;
-  }
+}
 
-  a .bell-icon {
-    // display: flex;
-    height: 70%;
-    top: 15px;
-  
-  }
+.bell-icon {
+    width: 100px;
+    margin: auto;
+}
 
+.notification .badge {
+    right: 10px;
+}
 
-  .header-me {
+.header-me {
     border: solid 1px $defult-white;
     border-radius: 50%;
     width: 70px;
     height: 70px;
     align-items: center;
     margin: auto;
-  }
+}
 
 // nav svg {
 //     height: 50px;
@@ -105,14 +106,22 @@ main {
 // // ============================================================
 
 // // MAIN (FLEX) PROPERTIES
-
 // // SEARCH BAR/ALERT PART
 // //(MAIN HEADER / ALERT)
 
+
 .alert {
-    width: 100%;
-    font-size: 25px;
+    display: flex;
+    width: 80%;
+    flex-basis: 100%;
+    justify-content: space-between;
 }
+
+.alert-banner {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
 
 // // ============================================================
 // // SECTION (FLEX) PROPERTIES
@@ -120,14 +129,30 @@ main {
 
 // //TRAFFIC NAVIGATION SECTIONS
 
-.traffic-header .traffic-nav {
-    gap:.5;
+.traffic-header {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    justify-content: space-between;
+    gap: 500px;
 }
 
+
 .traffic-nav {
-    gap: 50px;
-    font-size: 35px; 
+    gap: 20px;
+    font-size: 28px; 
+
+    
 }
+
+// .traffic-header .traffic-nav {
+//     gap:.5;
+// }
+
+// .traffic-nav {
+//     gap: 50px;
+//     font-size: 35px; 
+// }
 
 // // ============================================================
 // // SECTION (FLEX) PROPERTIES

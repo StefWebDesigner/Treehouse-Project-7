@@ -24,8 +24,7 @@ header img {
 }
 
 .svg--SMicon-white {
-fill: white;
-
+  fill: white;
 }
 
 a .bell-icon {
@@ -38,6 +37,7 @@ a .bell-icon {
 
 //**** DON'T TOUCH ANY OF THESE CURLY BRACES****
 //**** IT JUST WORKS ****
+// .bell-icon, nav svg {
 .bell-icon, nav svg {
   transition: .3s ease-out;
   width: 2rem;
@@ -74,8 +74,7 @@ nav svg {
 }
 
 nav a {
-    margin: auto;
-    
+  margin: auto;
 }
 
 //=========//

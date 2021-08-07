@@ -9,17 +9,21 @@
     margin-left: 10px;
 }
 
-.members-text, .profile-name, .profile-birth, .recent--tracker-comment, .recent--tracker-date {
-    font-size: 20px;
-}
-
 // // ============================
 
 @media only screen and (min-width: 768px) {
 
+// .grid {
+//     grid-template-rows: 70px 1fr;
+//     grid-template-columns: 70px 1fr;
+//     grid-template-areas:
+//         "header header"
+//          "nav main";
+// }
+
 .grid {
-    grid-template-rows: 70px 1fr;
-    grid-template-columns: 70px 1fr;
+    grid-template-rows: 50px 1fr;
+    grid-template-columns: 50px 1fr;
     grid-template-areas:
         "header header"
          "nav main";
@@ -48,12 +52,12 @@ main {
 
 .header-container {
     justify-content: space-between;
-    gap: 300px;
+    gap: 450px;
 }
 
-.header-offset {
-    gap: 60px;
-}
+// .header-offset {
+//     // gap: 60px;
+// }
 
 .header-offset {
     flex-grow: .1;
@@ -102,8 +106,9 @@ nav svg {
 
 .alert {
     display: flex;
-    width: 80%;
+    width: 90%;
 }
+
 .alert-banner {
     display: flex;
     padding-top: 5px;
@@ -119,6 +124,9 @@ nav svg {
 .traffic-header {
     display: flex;
     flex-direction: row;
+    flex-basis: 100%;
+    justify-content: space-between;
+    gap: 390px;
 }
 
 .traffic-label {
@@ -129,7 +137,7 @@ nav svg {
 .traffic-nav {
     display: flex;
     justify-content: end;
-    gap: 50px;
+    gap: 20px;
     
 }
 // // ---------------------------------------------------------------
@@ -157,7 +165,7 @@ nav svg {
 .chart-2-main, .chart-3-main {
     width: 350px;
     justify-content: center;
-    margin: auto; 
+    // margin: auto; 
 }
 
 .chart2 {
@@ -199,16 +207,50 @@ nav svg {
 // // MEMBERS SECTIONS
 // // //(PROFILE-IMAGE/MEMEBRS-TEXT/PROFILE-NAME/PROFILE-EMAIL-PROFILE-BIRTH)
 
-.members-container {
+.members-text, .profile-name, .profile-birth {
+    font-size: 15px;
+}
+
+.members-flex-container {
     flex-direction: column;
     justify-content: space-evenly;
-    gap: 10px;
 }
+
+.members-container {
+    display: flex;
+    flex-direction: column;
+    // gap: 10px;
+}
+
 
 .members-group {
     display: flex;
     flex-direction: row;
-    gap: 25px;
+    justify-content: start;
+    //THIS IS WHAT PISHES OUT THE DATE OF BIRTH
+    gap: 50px;     
+
+}
+
+.members--profile-email-group {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.name-email-group {
+    margin: left;
+    justify-content: center;
+}
+
+.profile-name, .profile-email {
+    text-align: left;
+    margin: 0;    
+}
+
+.members--birth-group {
+    display: flex;
+    justify-content: center;
 }
 
 .profile-image {
@@ -216,42 +258,73 @@ nav svg {
     height: 100px;
     margin: 0;
     display: flex;
-    margin-left: 5px;
   }
 
 .profile-birth {
-    margin: 0;
-    justify-content: end;
+display: flex;
 }
  
 a.profile-email, .profile-birth, .profile-name {
     font-size: 25px;
-    margin: auto;
 }
 
 // // ---------------------------------------------------------------
 // // RECENT ACTIVITY SECTIONS
 
-.recent-activity-container {
+
+.recent--tracker-comment, .recent--tracker-date {
+    font-size: 15px;
+}
+
+.recent-flex-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+}
+
+.recent-activity-container {
+    display: flex;
+    flex-direction: column;
 }
 
 .recent-activity-group {
     display: flex;
     flex-direction: row;
-    gap: 40px;
+    justify-content: start;
+    // THIS WILL MAKE THE OTHER HALF AND ARROW MVOE OUT
+    // gap: 150px;     
+    gap: 50px;     
+ 
 }
 
+.recent--profile-comment-group {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+
+
 .recent--comment-date-group {
-    margin: auto;
+    margin: left;
+    justify-content: center;
 }
 
 .recent--tracker-comment, .recent--tracker-date {
-    // text-align: left;
-    text-align: center;
-    margin: auto;
+    text-align: left;
+    margin: 0;    
+}
+
+.recent--arrow-group {
+    display: flex;
+    justify-content: center;
+    // margin: auto;    
+
+}
+
+.recent-arrow {
+    display: flex;
 }
 
 // //============================ Message 
@@ -299,5 +372,10 @@ select#timezone, option {
     padding-top: 15px;
     padding-bottom: 15px;
 }
+
+.strong-email, .strong-profile {
+    font-size: 25px;
+  
+  }
 
 }
