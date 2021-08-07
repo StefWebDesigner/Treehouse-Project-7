@@ -306,9 +306,15 @@ flex-direction: column;
 // // SETTINGS SECTIONS
 // // //NOTIFCATION-SETTIGNS/TIMEZONE-SETTINGS/SETTINGS-BUTTON ELEMENTS
 
+.settings {
+    display: flex;
+    flex-direction: column;
+
+}
+
 .settings-container {
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     flex-direction: column;
 }
 
@@ -317,22 +323,38 @@ flex-direction: column;
     flex-direction: column;
 }
 
+//THI MAKES IS THE NOTIFICATIONS POVITIAL POINT
 .notifcation-settings {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: space-between;
+
 }
 
 .email-container, .profile-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 60px;
 }
 
-.email-group {
-    gap: 10px;
+.email-span, .profile-span {
+// margin-left: 50px;
+margin-left: 230px;
+//THIS INGENIOUSLY WORKS AT PUTTING THEM ON THE SAME LINE
+margin-top: -17px;
+
 }
+
+.strong-email, .strong-profile {
+    margin-bottom: 10px;
+
+}
+  
 
 label#email-group, label#profile-group {
     display: flex;
     flex-direction: row;
+        // gap: 1456px;
+
 }

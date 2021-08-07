@@ -87,7 +87,7 @@
 
 	<!-- TRAFFIC CHART 2-->
 <div class="chart2-3-flow-container">
-	<div class="chart-2-main column-divider">
+	<div class="chart-2-main column-divider-chart-2">
 		<div class="chart2-container"> 
 			<h3 class="daily-label">Daily Traffic</h3>
 			<div class="chart-2-container-full">
@@ -215,8 +215,7 @@
 				<div class="members--birth-group">
 					<p class="profile-birth">10/15/15</p>
 				</div>
-	
-			</div>
+			</div> 
 			
 			<hr>
 
@@ -259,7 +258,12 @@
 				<div class="members--birth-group">
 					<p class="profile-birth">10/15/15</p>
 				</div>
-		</div> 
+			</div> 
+
+		<!-- MEBERS OTHER SOMETHING END TAG -->
+		</div>
+		<!-- MEBERS FLEX CONTAINER END TAG -->
+		</div>
 		<hr>
 
 <!-- RECENT ACTIVTY SECTIONS -->
@@ -332,11 +336,12 @@
 						<p class="recent-arrow"> > </p>
 					</div>
 				</div>
-
+			<!-- recent-activity-container END TAG -->
 			</div> 
-	</div>
-
-	</div>
+			<!-- recent-flex-container -->
+			</div>
+		<!-- MEMBERS-RECENT-FLOW-CONTAINER -->
+		</div>
 	<hr>
 	
 	<!-- </aside> -->
@@ -354,7 +359,6 @@
 					<button id="send" class="button-primary">Enter </button>
 			</form>
 		</div>
-		<hr>
 
 	<!-- local settings widget -->
 	<div class="settings" id="settings-link">
@@ -364,15 +368,19 @@
 			<div class="notifcation-settings">
 				<div class="email-container">
 					<label id="email_group" class="switch-light switch-material" onclick="">
+							<!-- <div class="email-top-part"> -->
 							  <strong class="strong-email">
 								  Send email notifications
 								  </strong>
+							<!-- </div> -->
+							<!-- <div class="email-bottom-part"> -->
 							  <input name="email-checkbox" id="email-checkbox" type="checkbox">
-							  <span>
+							  <span class="email-span">
 								<span id="email-span-off">Off</span>
 								<span id="email-span-on">On</span>
 							  	<a id="toggle-interacation-email"></a>
 							  </span>
+							<!-- </div> -->
 					</label>
 				  </div>
 				<div class="profile-container">
@@ -381,7 +389,7 @@
 							Set Profile to public
 						</strong>
 						<input name="profile-checkbox" id="profile-checkbox" type="checkbox">
-						<span>
+						<span class="profile-span">
 							<span class="profile-span-off">Off</span>
 							<span class="profile-span-on">On</span>
 							<a id="toggle-interacation-profile"></a>
