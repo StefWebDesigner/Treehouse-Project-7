@@ -4,10 +4,7 @@
 
 // // General Font Styles
 
-.traffic-label, .headline, .sm-user-label, .daily-label, .member-label, .message-label, .recent-label, .settings-label {
-    font-size: 22px;
-    margin-left: 10px;
-}
+
 
 
 
@@ -15,10 +12,17 @@
 
 @media only screen and (min-width: 768px) {
 
+// // General Font Styles
+    .traffic-label, .headline, .sm-user-label, .daily-label, .member-label, .message-label, .recent-label, .settings-label {
+        font-size: 22px;
+        margin-left: 10px;
+    }
+    
+// GENERAL STUFF
+
     .column-divider-chart-2 {
         border-right: #b3b3b3 solid 1px;
         width: 768px;
-    
     }
 
 .grid {
@@ -163,31 +167,47 @@ nav svg {
 
 .chart2-3-flow-container {
     flex-direction: row;
+    justify-content: space-evenly;
+    // margin: auto;
 }
 
 .chart-2-main, .chart-3-main {
-    width: 290px;
+    width: 320px;
     justify-content: center;
     // margin: auto; 
 }
 
-.chart2 {
-    margin-top: 50px;
-    width: 350px;
-    height: 600px;
-}
-
-.chart3 {
-    height: 300px;
+.chart2-container {
     width: 300px;
+    flex-direction: column;
+    // margin: left;
+    gap: 60px;
+    //JUSTIFIF CONTENT WORKS---JUST NOT PARTICULAR HELPFUL HERE
+    // justify-content: center;
+
 }
 
 .chart3-container {
-    width: 350px;
+    width: 300px;
     flex-direction: column;
-    margin: left;
+    // margin: left;
     justify-content: center;
 }
+
+.chart2 {
+    margin-right: 20px;
+}
+
+// .chart2 {
+//     // margin-top: 50px;
+//     width: 300px;
+//     height: 600px;
+// }
+
+// .chart3 {
+//     height: 300px;
+//     width: 300px;
+// }
 
 // // // =========================================
 // // ASIDE (FLEX) PROPERTIES

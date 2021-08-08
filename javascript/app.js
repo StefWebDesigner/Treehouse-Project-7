@@ -79,7 +79,13 @@ let chart1 = document.getElementById('chart1').getContext('2d');
 				  backgroundColorHover: "#3e95cd",
 				  fill: false,
 				}]
-			  };
+			  }
+			  //TO HAVE IT AUTOMATICALLY SELECTED
+			  trafficChart.data = hourlyData;
+			  trafficChart.update();
+			  traffic_nav_hourly.classList.add('active');
+			console.log('Traffic nav: hourlyData active now'); 	 
+			;
 
 //CHART 2(DAILY)
 
@@ -123,6 +129,8 @@ const monthlyData = {
 			}]
 };
 
+
+
 traffic.addEventListener('click', (e) => {
 	console.log('traffic listening');
 	// const allTrafficNavOpt = [traffic_nav_hourly, traffic_nav_daily, traffic_nav_weekly, traffic_nav_monthly];
@@ -153,6 +161,7 @@ traffic.addEventListener('click', (e) => {
 
 		  console.log('Traffic nav: hourlyData active now');
 		}
+
 		if (e.target.classList.contains('daily')) {
 		  e.target.classList.add('active');
 		  trafficChart.data = dailyData;

@@ -158,26 +158,41 @@ main {
 // // SECTION (FLEX) PROPERTIES
 // //Charts
 
-.chart-1-main {
-    justify-content: center;
-}
-
 .chart1 {
     width: 850px;
-    height: auto;
-}
-
-.chart3 {
-    height: 675px;
-    width: 675px;
-    margin: auto;
-    justify-content: center;
 }
 
 .chart-2-main, .chart-3-main {
-    width: 400px;
+    width: 350px;
+    justify-content: center;
+    // margin: auto; 
+}
+
+.chart2-container {
+    width: 350px;
+    // margin: left;
+    gap: 60px;
+    //JUSTIFIF CONTENT WORKS---JUST NOT PARTICULAR HELPFUL HERE
+    // justify-content: center;
+
+}
+
+.chart3-container {
+    width: 350px;
+    // margin: left;
     justify-content: center;
 }
+
+.chart2 {
+    margin-right: 30px;
+}
+// // .chart3 {
+// //     height: 675px;
+// //     width: 675px;
+// //     margin: auto;
+// //     justify-content: center;
+// // }
+
 
 // // // =========================================
 // // ASIDE (FLEX) PROPERTIES
