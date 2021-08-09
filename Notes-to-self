@@ -1,4 +1,52 @@
 
+NOTES OF RANDOM:
+- if the 768 port reverst to the mobile format, it has to do with the added
+status active code on the bottom of hourdata
+- (768) my chart 1 changes from a small szie to bigger size if I click a navigation button 
+
+NOTES OF GOOD NEWS: 
+- 320 overflow issue was rooted to the font of the stupid email and profile labels in the setting
+&*^& this
+- (1024) Fxed stubborn the alert bar with a unnessary restricting width value
+- (768) .traffic-header's gaps was the source of the overflow!!!!
+- (768).chart-2-main, .chart-3-main are the source of the overflow 
+
+NOTE OF BAD NEWS: 
+- THE OVERFLWO ON THE 768/1024 ROOT FROM THE MESSEAGE/RECENT OR CHARTS
+
+QUESTION:
+
+768(its fine but looks terrible)/1024(its just overflowing like crazy): 
+- Trying to push out the arrow to the far right without making the margins overflow
+
+RECENT WORK:
+- added a inate active status to hourly
+
+==========================
+
+MARGIAL OVERFLOW ISSUES
+-  1024 ISSUES because of the arrows/date in the message/recent sections
+Recent
+- (768/1024) arrow on the right side
+- (1024) dates need to be vericialy centered with the other text
+
+CHARTS
+- all - it is not removing the active status
+
+
+SETTINGS
+- have the on & off text
+
+
+have this stupid project reviews
+https://treehouse-fewd-102.slack.com/?redir=%2Farchives%2FCAVKWURB2
+
+
+
+
+
+
+
 
 Things got work on: 
 - fix chart 1 (768)

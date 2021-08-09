@@ -242,19 +242,25 @@ main {
     flex-direction: row;
 }
 
-.members-flex-container {
-    width: 450px;
-}
-
 .members-group {
     gap: 10px;     
 
 }
 
+a.profile-email {
+    font-size: 15px;
+}
 
-// .members-container {
-//     width: 500px;
-// }
+.profile-birth {
+    font-size: 15px;
+
+
+}
+
+
+.members-container {
+    width: 500px;
+}
 
 // .members-group {
 //     display: flex;
@@ -273,82 +279,18 @@ main {
 .recent-activity-group {
     display: flex;
     flex-direction: row;
-    justify-content: start;
-    // THIS WILL MAKE THE OTHER HALF AND ARROW MVOE OUT
-    // gap: 150px;     
+    justify-content: space-between;
+     
     gap: 10px;     
  
 }
 
-// .recent-activity-container {
-//     display: flex;
-//     flex-direction: column;
-// }
-
-// .recent-activity-group {
-//     display: flex;
-//     flex-direction: row;
-// }
-
-// .recent-activity-group {
-//     display: flex;
-//     flex-direction: row;
-//     gap: 20px;
-// }
+.recent-arrow {
+    padding-right: 5px;
+}
 
 
 
-
-
-
-
-// .members-recent-flow-container {
-//     display: flex;
-//     flex-direction: row;
-// }
-
-// .main-container {
-//     width: 500px;
-// }
-
-// .members-container {
-//     width: 500px;
-// }
-
-// .members-group {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-evenly;
-//     width: 500px;
-//     gap: 22px;
-// }
-
-// // //============== RECENT ==============
-
-// .recent-flex-container {
-//     width: 500px;
-// }
-
-// .recent-activity-container {
-//     display: flex;
-//     flex-direction: column;
-// }
-
-// .recent-activity-group {
-//     display: flex;
-//     flex-direction: row;
-// }
-
-// .recent-activity-group {
-//     display: flex;
-//     flex-direction: row;
-//     gap: 20px;
-// }
-
-// .recent--tracker-comment, .recent--tracker-date {
-//     flex-wrap: wrap;
-// }
-  
 // // ========
 
 .profile-image {

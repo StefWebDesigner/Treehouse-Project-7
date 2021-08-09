@@ -267,6 +267,7 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  gap: 25px;
 }
 
 .alert {
@@ -1073,9 +1074,9 @@ canvas {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     gap: 50px;
   }
   .members--profile-email-group {
@@ -1105,6 +1106,9 @@ canvas {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .profile-image {
     width: 100px;
@@ -1121,6 +1125,9 @@ canvas {
   }
   a.profile-email, .profile-birth, .profile-name {
     font-size: 25px;
+  }
+  .profile-birth {
+    padding-right: 30px;
   }
   .recent--tracker-comment, .recent--tracker-date {
     font-size: 15px;
@@ -1152,10 +1159,10 @@ canvas {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-    gap: 50px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 60px;
   }
   .recent--profile-comment-group {
     display: -webkit-box;
@@ -1184,11 +1191,15 @@ canvas {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .recent-arrow {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    padding-right: 20px;
   }
   .message-container {
     display: -webkit-box;
@@ -1409,11 +1420,17 @@ canvas {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .members-flex-container {
-    width: 450px;
-  }
   .members-group {
     gap: 10px;
+  }
+  a.profile-email {
+    font-size: 15px;
+  }
+  .profile-birth {
+    font-size: 15px;
+  }
+  .members-container {
+    width: 500px;
   }
   .recent-flex-container {
     width: 450px;
@@ -1426,10 +1443,13 @@ canvas {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     gap: 10px;
+  }
+  .recent-arrow {
+    padding-right: 5px;
   }
   .profile-image {
     width: 80px;

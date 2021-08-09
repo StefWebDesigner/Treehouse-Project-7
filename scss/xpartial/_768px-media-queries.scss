@@ -249,7 +249,7 @@ nav svg {
 .members-group {
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: space-between;
     //THIS IS WHAT PISHES OUT THE DATE OF BIRTH
     gap: 50px;     
 
@@ -274,6 +274,7 @@ nav svg {
 .members--birth-group {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .profile-image {
@@ -289,6 +290,11 @@ display: flex;
  
 a.profile-email, .profile-birth, .profile-name {
     font-size: 25px;
+}
+
+.profile-birth {
+    padding-right: 30px;
+
 }
 
 // // ---------------------------------------------------------------
@@ -314,10 +320,8 @@ a.profile-email, .profile-birth, .profile-name {
 .recent-activity-group {
     display: flex;
     flex-direction: row;
-    justify-content: start;
-    // THIS WILL MAKE THE OTHER HALF AND ARROW MVOE OUT
-    // gap: 150px;     
-    gap: 50px;     
+    justify-content: space-between; 
+    gap: 60px;     
  
 }
 
@@ -342,12 +346,14 @@ a.profile-email, .profile-birth, .profile-name {
 .recent--arrow-group {
     display: flex;
     justify-content: center;
+    align-items: center;
     // margin: auto;    
 
 }
 
 .recent-arrow {
     display: flex;
+    padding-right: 20px;
 }
 
 // //============================ Message 
