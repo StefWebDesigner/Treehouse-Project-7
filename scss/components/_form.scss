@@ -12,10 +12,18 @@
 .form-field, .message-textarea  {
     display: flex;
     margin: auto;
+    height: 50px;
     text-align: center;
     width: 89%;
     background-color: $seconday-white;
     @include main-border-style;
+    margin-top: 10px;
+}
+
+.message-textarea {
+    display: flex;
+    height: 130px;
+    text-align: center;
 }
 
 select#timezone, option {

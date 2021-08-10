@@ -149,7 +149,7 @@ hr {
   padding: 5px;
 }
 
-.button-primary, .button-disabled, .alert-btn {
+.button-disabled, .alert-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -171,9 +171,17 @@ hr {
 }
 
 button.button-primary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-top: 5px;
   width: 89%;
   margin-bottom: 10px;
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10px;
 }
 
 .button-disabled {
@@ -852,11 +860,21 @@ nav a {
   display: -ms-flexbox;
   display: flex;
   margin: auto;
+  height: 50px;
   text-align: center;
   width: 89%;
   background-color: #e0e0eb;
   border: 1px solid #9d89f5;
   border-radius: 5px;
+  margin-top: 10px;
+}
+
+.message-textarea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 130px;
+  text-align: center;
 }
 
 select#timezone, option {

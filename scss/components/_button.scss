@@ -2,7 +2,7 @@
 //                   Button - Styles                  
 // =============================================
   
-.button-primary, .button-disabled, .alert-btn {
+.button-disabled, .alert-btn {
     display: flex;
     width: 85%;
     margin: auto;
@@ -19,9 +19,13 @@ margin-top: 10px;
 }
 
 button.button-primary {
-margin-top: 5px;
-width: 89%;
-margin-bottom: 10px;
+    display: flex;
+    margin-top: 5px;
+    width: 89%;
+    margin-bottom: 10px;
+    margin: auto;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 .button-disabled {
