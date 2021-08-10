@@ -111,6 +111,7 @@
 							}]
 						},
 						options: {
+							plugins: { 
 							legend: { display: false },
 							elements: {
         						line: {
@@ -118,13 +119,14 @@
 							}
 						},											
 					}
+				}
 				});
 				</script>
 
 		</div>
 	</div>
 
-<!-- TRAFFIC CHART 3-->
+<!-- TRAFFIC CHART 3 --->
 	<div class="chart-3-main">
 		<div class="chart3-container">
 				<h3 class="sm-user-label">Social Media Users</h3>
@@ -369,7 +371,7 @@
 		
 			<div class="notifcation-settings">
 				<div class="email-container">
-					<label id="email_group" class="switch-light switch-material" onclick="">
+					<label id="email_group" class="switch-light switch-material switch-ios" onclick="">
 							<!-- <div class="email-top-part"> -->
 							  <strong class="strong-email">
 								  Send email notifications
@@ -380,21 +382,20 @@
 							  <span class="email-span">
 								<span id="email-span-off">Off</span>
 								<span id="email-span-on">On</span>
-								<!-- ADD THE ON/OFF LABEL -->
 							  	<a id="toggle-interacation-email"></a>
 							  </span>
 							<!-- </div> -->
 					</label>
 				  </div>
 				<div class="profile-container">
-				  <label id="profile_group" class="switch-light switch-material" onclick="">
+				  <label id="profile_group" class="switch-light switch-material switch-ios" onclick="">
 						<strong class="strong-profile">
 							Set Profile to public
 						</strong>
 						<input name="profile-checkbox" id="profile-checkbox" type="checkbox">
 						<span class="profile-span">
-							<span class="profile-span-off">Off</span>
-							<span class="profile-span-on">On</span>
+							<span id="profile-span-off">Off</span>
+							<span id="profile-span-on">On</span>
 							<a id="toggle-interacation-profile"></a>
 						</span>
 				  </label>
@@ -405,7 +406,7 @@
 			<div class="timezone-settings">
 				<!-- <fieldset class="switch-toggle switch-candy-blue"> -->
 				<fieldset>
-					<legend></legend>
+
 					<select class="form-field" id="timezone">
 						<option disabled selected class="option-disabled">Select a Timezone</option>
 						<option id="timezone_options" value="est-zone" class="est-zone">Eastern</option>
@@ -419,7 +420,7 @@
 			</div>
 
 			<div class="settings-button" >
-				<button class="button-primary" id="save">Save</button>
+				<button class="button-primary-save" id="save">Save</button>
 				<button class="button-disabled" id="cancel">Cancel</button>
 			</div>
 		</div>

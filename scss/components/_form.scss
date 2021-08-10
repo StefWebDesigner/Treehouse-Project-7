@@ -26,6 +26,12 @@
     text-align: center;
 }
 
+fieldset {
+    border:0px;
+    outline:0px;
+}
+
+
 select#timezone, option {
     width: 86%;
     padding-top: 10px;

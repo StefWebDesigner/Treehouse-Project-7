@@ -366,7 +366,7 @@ a.profile-email {
 
 }
 
-.form-field, .message-textarea, .button-primary, .button-disabled, .email-container, .profile-container {
+.form-field, .message-textarea, .button-primary, .button-primary-save, .button-disabled, .email-container, .profile-container {
     font-size: 25px;
 }
 
@@ -392,6 +392,15 @@ margin: auto;
 justify-content: center;
 align-items: center;
 }
+
+.button-primary-save, .button-disabled {
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    width: 45%;
+}
+
+
 
 
 }

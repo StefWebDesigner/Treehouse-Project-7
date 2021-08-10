@@ -2,7 +2,7 @@
 //                   Button - Styles                  
 // =============================================
   
-.button-disabled, .alert-btn {
+ .alert-btn {
     display: flex;
     width: 85%;
     margin: auto;
@@ -10,12 +10,12 @@
 }
 
 .alert-btn, .button-primary  {
-color: $defult-white; 
-width: 70%;
-background-color: $main-purple;
-margin: auto;
-margin-top: 10px;
-@include main-border-style;
+    color: $defult-white; 
+    width: 70%;
+    background-color: $main-purple;
+    margin: auto;
+    margin-top: 10px;
+    @include main-border-style;
 }
 
 button.button-primary {
@@ -26,10 +26,30 @@ button.button-primary {
     margin: auto;
     justify-content: center;
     margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.button-primary-save, .button-disabled {
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    width: 45%;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.button-primary-save {
+    @include main-border-style;
+    background-color: $main-purple;
+    color: $defult-white;
 }
 
 .button-disabled {
-    margin-top: 5px;
-    width: 89%;
-    margin-bottom: 10px;
+    @include main-border-style;
+    background-color: grey;
+    color: $defult-white;
 }
+

@@ -137,8 +137,14 @@ nav {
 
 .chart-1-main {
     display: flex;
-    justify-content: center;
+    flex-direction: column; 
 }
+
+.chart-1-container-full {
+    display: flex;
+    flex-direction: column;
+}
+
 
 .chart1 {
     width: 300px;
@@ -156,7 +162,7 @@ nav {
 
 .chart-2-main {
     display: flex;
-    justify-content: center;
+    flex-direction: column; 
 }
 
 // // //UNABLE TO CENTER
@@ -167,7 +173,7 @@ nav {
 }
 
 .chart2 {
-    display: flex;
+    // display: flex;
     width: 300px;
     margin-bottom: 10px;
 
@@ -188,7 +194,7 @@ nav {
 }
 
 .chart3 {
-    height: 300px;
+    // height: 300px;
     width: 300px;
     margin-bottom: 10px;
 }
@@ -329,8 +335,7 @@ flex-direction: column;
 .notifcation-settings {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-
+    // justify-content: space-between;
 }
 
 .email-container, .profile-container {
@@ -352,13 +357,18 @@ margin-bottom: 10px;
 .strong-email, .strong-profile {
     margin-bottom: 10px;
     margin-left: 10px;
-
 }
-  
 
 label#email-group, label#profile-group {
     display: flex;
     flex-direction: row;
         // gap: 1456px;
+}
+
+.settings-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:27px;
 
 }
