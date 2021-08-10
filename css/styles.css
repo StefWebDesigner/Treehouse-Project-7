@@ -19,10 +19,17 @@ h1, h3, p {
 }
 
 .traffic-label, .sm-user-label, .daily-label, .member-label, .message-label, .recent-label, .settings-label {
-  font-size: 15px;
+  font-size: 20px;
   color: black;
   margin-top: 10px;
   margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.daily-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .headline {
@@ -62,6 +69,10 @@ h1, h3, p {
   color: black;
   text-align: center;
   display: none;
+}
+
+a .toggle-interacation-email, .toggle-interacation-profile {
+  color: #9d89f5;
 }
 
 .strong-email, .strong-profile {
@@ -640,10 +651,12 @@ div.recent--comment-date-group {
 .email-span, .profile-span {
   margin-left: 230px;
   margin-top: -17px;
+  margin-bottom: 10px;
 }
 
 .strong-email, .strong-profile {
   margin-bottom: 10px;
+  margin-left: 10px;
 }
 
 label#email-group, label#profile-group {
@@ -860,7 +873,6 @@ canvas {
 @media only screen and (min-width: 768px) {
   .traffic-label, .headline, .sm-user-label, .daily-label, .member-label, .message-label, .recent-label, .settings-label {
     font-size: 22px;
-    margin-left: 10px;
   }
   .column-divider-chart-2 {
     border-right: #b3b3b3 solid 1px;
@@ -1000,10 +1012,7 @@ canvas {
             justify-content: space-evenly;
   }
   .chart-2-main, .chart-3-main {
-    width: 320px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    width: 300px;
   }
   .chart2-container {
     width: 300px;
@@ -1013,18 +1022,18 @@ canvas {
             flex-direction: column;
     gap: 60px;
   }
+  .chart2 {
+    margin-right: 20px;
+  }
   .chart3-container {
     width: 300px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
-  .chart2 {
-    margin-right: 20px;
+  .daily-label, .sm-user-label {
+    text-align: left;
   }
   .social-flex-parent {
     -webkit-box-orient: horizontal;
@@ -1381,6 +1390,14 @@ canvas {
   }
   .chart2 {
     margin-right: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .chart3 {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .social-group {
     gap: 30px;
@@ -1500,9 +1517,6 @@ canvas {
     margin-top: 0px;
   }
   .notifcation-settings {
-    -webkit-box-pack: stretch;
-        -ms-flex-pack: stretch;
-            justify-content: stretch;
     gap: 30px;
   }
   .form-field, .message-textarea, .button-primary, .button-disabled, .email-container, .profile-container {
@@ -1520,6 +1534,15 @@ canvas {
   .email-span, .profile-span {
     margin-left: 380px;
     margin-top: -17px;
+  }
+  .timezone-settings {
+    margin: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 /*# sourceMappingURL=styles.css.map */

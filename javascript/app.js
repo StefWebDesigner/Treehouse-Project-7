@@ -2,6 +2,10 @@
 
 // GLOBAL VARIABLES
 const alertBanner = document.querySelector("#alert");
+const emailOn = document.querySelector('#toggle-interacation-email');
+const emailOff = document.querySelector('#toggle-interacation-email');
+const profileOn = document.querySelector('#toggle-interacation-profile');
+const profileOff = document.querySelector('#toggle-interacation-profile');
 const traffic = document.querySelector('ul');
 const emailInput = document.querySelector('input[name=email-checkbox]');
 const profileInput = document.querySelector('#profile-checkbox');
@@ -28,6 +32,7 @@ alertBanner.addEventListener('click', e => {
 		alertBanner.style.display = "none"	
 	}
 });
+
 
 // =====================================================
 
@@ -239,15 +244,37 @@ emailInput.addEventListener('change', (e) => {
 			emailInput.checked === false;
 		    console.log("Email Notifications On");
 			alert("Email Notifications On");
+
+			emailOn.innerHTML = 
+			`
+			<a id="toggle-interacation-email">On</a>
+			`
+
 			} else if (emailInput.checked === false) {
 				emailInput.checked === true;
 				console.log("Email Notifications Off");
 				alert("Email Notifications Off");
+				emailOff.innerHTML = 
+				`
+				<a id="toggle-interacation-email">Off</a>
+				`
 			}	else {
 			  console.log('Email Notification Unsuccessful')
-		  }
-		
+		  }	
 });
+
+// const EmailOn = document.querySelector('#toggle-interacation-profile');
+// const EmailOff = document.querySelector('#toggle-interacation-profile');
+
+// alertBanner.innerHTML = 
+// `
+// <div class="alert-banner">
+// <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks
+// to complete</p>
+// <p class="alert-banner-close">x</p>
+// </div>
+// `
+
 
 profileInput.addEventListener('change', (e) => {
 
@@ -257,10 +284,18 @@ profileInput.addEventListener('change', (e) => {
 			profileInput.checked === false;
 			console.log("Profile Notifications On");
 			alert("Profile Notifications On");
+			profileOn.innerHTML = 
+				`
+				<a id="toggle-interacation-profile">On</a>
+				`
 	} else if (profileInput.checked === false) {
 			profileInput.checked === true;
 			console.log("Profile Notifications Off");
 			alert("Profile Notifications Off");
+			profileOff.innerHTML = 
+				`
+				<a id="toggle-interacation-profile">Off</a>
+				`
 	}	else {
 			console.log('Profile Notification Unsuccessful')
 	  }

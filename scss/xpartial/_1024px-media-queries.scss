@@ -185,13 +185,14 @@ main {
 
 .chart2 {
     margin-right: 30px;
+    justify-content: center;
+
 }
-// // .chart3 {
-// //     height: 675px;
-// //     width: 675px;
-// //     margin: auto;
-// //     justify-content: center;
-// // }
+
+.chart3 {
+    // margin: auto;
+    justify-content: center;
+}
 
 
 // // // =========================================
@@ -359,8 +360,10 @@ a.profile-email {
 }
 
 .notifcation-settings {
-    justify-content: stretch;
+    // display: flex;
+    // justify-content: center;
     gap: 30px;
+
 }
 
 .form-field, .message-textarea, .button-primary, .button-disabled, .email-container, .profile-container {
@@ -383,5 +386,12 @@ a.profile-email {
     margin-left: 380px;  
     margin-top: -17px;
 }
+
+.timezone-settings {
+margin: auto;
+justify-content: center;
+align-items: center;
+}
+
 
 }

@@ -15,7 +15,7 @@
 // // General Font Styles
     .traffic-label, .headline, .sm-user-label, .daily-label, .member-label, .message-label, .recent-label, .settings-label {
         font-size: 22px;
-        margin-left: 10px;
+        // margin-left: 10px;
     }
     
 // GENERAL STUFF
@@ -168,12 +168,14 @@ nav svg {
 .chart2-3-flow-container {
     flex-direction: row;
     justify-content: space-evenly;
+    // flex-shrink: 0;
+    // flex-basis: auto;
     // margin: auto;
 }
 
 .chart-2-main, .chart-3-main {
-    width: 320px;
-    justify-content: center;
+    width: 300px;
+    // justify-content: center;
     // margin: auto; 
 }
 
@@ -187,15 +189,21 @@ nav svg {
 
 }
 
+.chart2 {
+    margin-right: 20px;
+}
+
 .chart3-container {
     width: 300px;
     flex-direction: column;
     // margin: left;
-    justify-content: center;
+    // justify-content: center;
 }
 
-.chart2 {
-    margin-right: 20px;
+
+.daily-label, .sm-user-label {
+    // display: flex;
+    text-align: left;
 }
 
 // .chart2 {
@@ -383,6 +391,12 @@ input#userField {
     width: 85%;
 }
 // //====================== Settings
+
+
+
+
+
+
 
 // //CHANGES AND OPERATES THE TIME OPTIONS
 .switch-toggle {
