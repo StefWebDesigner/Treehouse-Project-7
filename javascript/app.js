@@ -64,11 +64,13 @@ let chart1 = document.getElementById('chart1').getContext('2d');
 							}]
 						},
 						options: {
+							plugins: { 
 							legend: { display: false },
 							elements: {
         						line: {
             					tension: .45
 							}
+						}
 						},											
 					}
 			});
@@ -245,19 +247,10 @@ emailInput.addEventListener('change', (e) => {
 		    console.log("Email Notifications On");
 			alert("Email Notifications On");
 
-			emailOn.innerHTML = 
-			`
-			<a id="toggle-interacation-email">On</a>
-			`
-
 			} else if (emailInput.checked === false) {
 				emailInput.checked === true;
 				console.log("Email Notifications Off");
 				alert("Email Notifications Off");
-				emailOff.innerHTML = 
-				`
-				<a id="toggle-interacation-email">Off</a>
-				`
 			}	else {
 			  console.log('Email Notification Unsuccessful')
 		  }	
@@ -284,18 +277,10 @@ profileInput.addEventListener('change', (e) => {
 			profileInput.checked === false;
 			console.log("Profile Notifications On");
 			alert("Profile Notifications On");
-			profileOn.innerHTML = 
-				`
-				<a id="toggle-interacation-profile">On</a>
-				`
 	} else if (profileInput.checked === false) {
 			profileInput.checked === true;
 			console.log("Profile Notifications Off");
 			alert("Profile Notifications Off");
-			profileOff.innerHTML = 
-				`
-				<a id="toggle-interacation-profile">Off</a>
-				`
 	}	else {
 			console.log('Profile Notification Unsuccessful')
 	  }

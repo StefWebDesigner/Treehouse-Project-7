@@ -346,8 +346,7 @@ flex-direction: column;
 }
 
 .email-span, .profile-span {
-// margin-left: 50px;
-margin-left: 230px;
+// margin-left: 230px;
 //THIS INGENIOUSLY WORKS AT PUTTING THEM ON THE SAME LINE
 margin-top: -17px;
 margin-bottom: 10px;
@@ -359,7 +358,12 @@ margin-bottom: 10px;
     margin-left: 10px;
 }
 
-label#email-group, label#profile-group {
+// label#email-group, label#profile-group {
+//     display: flex;
+//     flex-direction: row;
+//         // gap: 1456px;
+// }
+switch-light {
     display: flex;
     flex-direction: row;
         // gap: 1456px;
