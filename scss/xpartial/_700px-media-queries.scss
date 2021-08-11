@@ -1,0 +1,36 @@
+
+
+@media only screen and (min-width: 768px) {
+
+    .grid {
+        grid-template-rows: 50px 1fr;
+        grid-template-columns: 50px 1fr;
+        grid-template-areas:
+            "header header"
+             "nav main";
+    }
+    
+    header {
+        background-color: $main-purple;
+        grid-area: header;
+    }
+    
+    nav {
+        background-color: $secondary-purple;
+        grid-area: nav;
+    }
+    
+    main {
+        background-color: $defult-white;
+        grid-area: main;
+    }
+
+
+    .header-profile-name {
+        font-size: 17px;
+    }
+
+
+
+
+}
