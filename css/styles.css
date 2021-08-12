@@ -7,15 +7,31 @@ h1, h3, p {
 }
 
 .header-app-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-size: 25px;
   color: white;
-  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header-profile-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-size: 15px;
   color: white;
-  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .traffic-label, .sm-user-label, .daily-label, .member-label, .message-label, .recent-label, .settings-label {
@@ -260,13 +276,6 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   gap: 20px;
 }
 

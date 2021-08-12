@@ -15,16 +15,19 @@ h1, h3, p {
 //HEADER  FONTS
 
 .header-app-title {
+  display: flex;
   font-size: 25px;
   color: $defult-white;
-  margin: auto;
-
+  justify-content: center;
+  align-items: center;
 }
 
 .header-profile-name {
+  display: flex;
   font-size: 15px;
   color: $defult-white;
-  margin: auto;
+  justify-content: center;
+  align-items: center;
 }
 
 //TRAFFIC FONTS

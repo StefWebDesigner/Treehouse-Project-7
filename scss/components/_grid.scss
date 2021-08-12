@@ -40,14 +40,12 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    //THIS CAN NEVER BE CENTERED WITH THE CONTAINER
-    // margin: auto;
 }
 
 .header-container {
     display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
+    // justify-content: space-evenly;
+    // flex-direction: row;
     gap: 20px;
 }
 
