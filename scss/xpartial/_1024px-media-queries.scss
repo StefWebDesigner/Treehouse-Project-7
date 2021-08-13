@@ -4,415 +4,415 @@
 
 @media only screen and (min-width: 1024px) {
 
-// //===============================================
-// //Groups Font's
-
-.traffic-label, .sm-user-label, .daily-label, .member-label, .message-label, .recent-label, .settings-label, .headline {
-    font-size: 40px;
-    color: black;
-  }
-
-  .sm-user-label, .daily-label {
-    text-align: left;
-    margin: left;
-
-  }
-  
-  .header-profile-name {
-    font-size: 28px;
-  }
-
-// //Not responsive
-  p.alert_banner {
-    font-size: 35px;
-  }
-
-  .column-divider {
-    border-right: #b3b3b3 solid 1px;
-    width: 768px;
-
-}
-
-//   //===============================================
-
-.grid {
-    // min-width: 1024px;    
-    grid-template-rows: 70px 1fr;
-    grid-template-columns: 70px 1fr;
-    grid-template-areas:
-        "header header"
-         "nav main";
-}
-
-header {
-    background-color: $main-purple;
-    grid-area: header;
-}
-
-nav {
-    background-color: $secondary-purple;
-    grid-area: nav;
-}
-
-main {
-    background-color: $defult-white;
-    grid-area: main;
-}
-
-
-// //========================//
-// // HEADER (FLEX) PROPERTIES //
-// //========================//
-// //(TITLE/BELL ICON/ BREAKLINE/ME)
-
-.header-container {
-    gap: 470px;
-}
-
-// .header-offset {
-//     // gap: -10px;
-// }
-
-.header-app-title {
-    font-size: 40px;
-}
-  
-.header-profile-name {
-    font-size: 30px;
-}
-
-.bell-icon {
-    width: 100px;
-    margin: auto;
-}
-
-.notification .badge {
-    right: 10px;
-}
-
-.header-me {
-    border: solid 1px $defult-white;
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
-    align-items: center;
-    margin: auto;
-}
-
-// nav svg {
-//     height: 50px;
-// }
-
-// // ============================================================
-
-// // MAIN (FLEX) PROPERTIES
-// // SEARCH BAR/ALERT PART
-// //(MAIN HEADER / ALERT)
-
-
-.alert {
-    display: flex;
-    width: 80%;
-    flex-basis: 100%;
-    justify-content: space-between;
-}
-
-.alert-banner {
-    padding-left: 30px;
-    padding-right: 30px;
-}
-
-
-// // ============================================================
-// // SECTION (FLEX) PROPERTIES
-// //TRAFFIC-HEADER/CHART-1-CONTAINER-FULL/DAILY/SM-USER-LABEL/CHART-3-CONTAINER-FULL)
-
-// //TRAFFIC NAVIGATION SECTIONS
-
-.traffic-header {
-    display: flex;
-    flex-direction: row;
-    flex-basis: 100%;
-    justify-content: space-between;
-    gap: 320px;
-}
-
-
-.traffic-nav {
-    gap: 20px;
-    font-size: 28px; 
-
+    // //===============================================
+    // //Groups Font's
     
-}
-
-// .traffic-header .traffic-nav {
-//     gap:.5;
-// }
-
-// .traffic-nav {
-//     gap: 50px;
-//     font-size: 35px; 
-// }
-
-// // ============================================================
-// // SECTION (FLEX) PROPERTIES
-// //Charts
-
-.chart1 {
-    width: 850px;
-}
-
-.chart-2-main, .chart-3-main {
-    width: 500px;
-    justify-content: center;
-    // margin: auto; 
-}
-
-.chart2-container {
-    width: 350px;
-    // margin: left;
-    gap: 60px;
-    //JUSTIFIF CONTENT WORKS---JUST NOT PARTICULAR HELPFUL HERE
-    // justify-content: center;
-
-}
-
-.chart3-container {
-    width: 350px;
-    // margin: left;
-    justify-content: center;
-}
-
-.chart2 {
-    margin-right: 30px;
-    justify-content: center;
-
-}
-
-.chart3 {
-    // margin: auto;
-    justify-content: center;
-}
-
-
-// // // =========================================
-// // ASIDE (FLEX) PROPERTIES
-// //SOCIAL FACT SECTIONS
-// //(SOCIAL-GROUP/MEMBERS/RECENT-ACTIVITY/MESSAGE/SETTINGS)
-
-.social-group {
-    gap: 30px;
-    justify-content: space-around;
-}
-
-.social-image {
-    height: 60px;
-    width: 60px;
-    margin-top: 17px;
-}
-  
-.social-border {
-    width: 100px;
-    height: 100px;
-    margin-left: 5px;
-}
-
-  .platform { 
-    font-size: 25px;
-    margin-bottom: -25px;
-    margin-right: 25px;
-    margin-left: 5px;   
-}
+    .traffic-label, .sm-user-label, .daily-label, .member-label, .message-label, .recent-label, .settings-label, .headline {
+        font-size: 40px;
+        color: black;
+      }
     
-.stat-number {
-    font-size: 40px;
-    color: grey; 
-    margin-top: 20px;
-    margin-bottom: 10px;
-    margin-right: 20px;
-    margin-left: 5px;
-}
+      .sm-user-label, .daily-label {
+        text-align: left;
+        margin: left;
     
-// // MEMBERS SECTIONS
-// //(PROFILE-IMAGE/MEMEBRS-TEXT/PROFILE-NAME/PROFILE-EMAIL-PROFILE-BIRTH)
-// .main-container {
-//     width: 500px;
-// }
-.members-recent-flow-container {
-    display: flex;
-    flex-direction: row;
-}
-
-.members-group {
-    gap: 10px;     
-
-}
-
-a.profile-email {
-    font-size: 15px;
-}
-
-.profile-birth {
-    font-size: 15px;
-
-
-}
-
-
-.members-container {
-    width: 500px;
-}
-
-// .members-group {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-evenly;
-//     // width: 500px;
-//     gap: 22px;
-// }
-
-// //============== RECENT ==============
-
-.recent-flex-container {
-    width: 500px;
-}
-
-.recent-activity-group {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+      }
+      
+      .header-profile-name {
+        font-size: 28px;
+      }
+    
+    // //Not responsive
+      p.alert_banner {
+        font-size: 35px;
+      }
+    
+      .column-divider {
+        border-right: #b3b3b3 solid 1px;
+        width: 768px;
+    
+    }
+    
+    //   //===============================================
+    
+    .grid {
+        // min-width: 1024px;    
+        grid-template-rows: 70px 1fr;
+        grid-template-columns: 70px 1fr;
+        grid-template-areas:
+            "header header"
+             "nav main";
+    }
+    
+    header {
+        background-color: $main-purple;
+        grid-area: header;
+    }
+    
+    nav {
+        background-color: $secondary-purple;
+        grid-area: nav;
+    }
+    
+    main {
+        background-color: $defult-white;
+        grid-area: main;
+    }
+    
+    
+    // //========================//
+    // // HEADER (FLEX) PROPERTIES //
+    // //========================//
+    // //(TITLE/BELL ICON/ BREAKLINE/ME)
+    
+    .header-container {
+        gap: 470px;
+    }
+    
+    // .header-offset {
+    //     // gap: -10px;
+    // }
+    
+    .header-app-title {
+        font-size: 40px;
+    }
+      
+    .header-profile-name {
+        font-size: 30px;
+    }
+    
+    .bell-icon {
+        width: 100px;
+        margin: auto;
+    }
+    
+    .notification .badge {
+        right: 10px;
+    }
+    
+    .header-me {
+        border: solid 1px $defult-white;
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        align-items: center;
+        margin: auto;
+    }
+    
+    // nav svg {
+    //     height: 50px;
+    // }
+    
+    // // ============================================================
+    
+    // // MAIN (FLEX) PROPERTIES
+    // // SEARCH BAR/ALERT PART
+    // //(MAIN HEADER / ALERT)
+    
+    
+    .alert {
+        display: flex;
+        width: 80%;
+        flex-basis: 100%;
+        justify-content: space-between;
+    }
+    
+    .alert-banner {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    
+    // // ============================================================
+    // // SECTION (FLEX) PROPERTIES
+    // //TRAFFIC-HEADER/CHART-1-CONTAINER-FULL/DAILY/SM-USER-LABEL/CHART-3-CONTAINER-FULL)
+    
+    // //TRAFFIC NAVIGATION SECTIONS
+    
+    .traffic-header {
+        display: flex;
+        flex-direction: row;
+        flex-basis: 100%;
+        justify-content: space-between;
+        gap: 320px;
+    }
+    
+    
+    .traffic-nav {
+        gap: 20px;
+        font-size: 28px; 
+    
+        
+    }
+    
+    // .traffic-header .traffic-nav {
+    //     gap:.5;
+    // }
+    
+    // .traffic-nav {
+    //     gap: 50px;
+    //     font-size: 35px; 
+    // }
+    
+    // // ============================================================
+    // // SECTION (FLEX) PROPERTIES
+    // //Charts
+    
+    .chart1 {
+        width: 850px;
+    }
+    
+    .chart-2-main, .chart-3-main {
+        width: 500px;
+        justify-content: center;
+        // margin: auto; 
+    }
+    
+    .chart2-container {
+        width: 350px;
+        // margin: left;
+        gap: 60px;
+        //JUSTIFIF CONTENT WORKS---JUST NOT PARTICULAR HELPFUL HERE
+        // justify-content: center;
+    
+    }
+    
+    .chart3-container {
+        width: 350px;
+        // margin: left;
+        justify-content: center;
+    }
+    
+    .chart2 {
+        margin-right: 30px;
+        justify-content: center;
+    
+    }
+    
+    .chart3 {
+        // margin: auto;
+        justify-content: center;
+    }
+    
+    
+    // // // =========================================
+    // // ASIDE (FLEX) PROPERTIES
+    // //SOCIAL FACT SECTIONS
+    // //(SOCIAL-GROUP/MEMBERS/RECENT-ACTIVITY/MESSAGE/SETTINGS)
+    
+    .social-group {
+        gap: 30px;
+        justify-content: space-around;
+    }
+    
+    .social-image {
+        height: 60px;
+        width: 60px;
+        margin-top: 17px;
+    }
+      
+    .social-border {
+        width: 100px;
+        height: 100px;
+        margin-left: 5px;
+    }
+    
+      .platform { 
+        font-size: 25px;
+        margin-bottom: -25px;
+        margin-right: 25px;
+        margin-left: 5px;   
+    }
+        
+    .stat-number {
+        font-size: 40px;
+        color: grey; 
+        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-right: 20px;
+        margin-left: 5px;
+    }
+        
+    // // MEMBERS SECTIONS
+    // //(PROFILE-IMAGE/MEMEBRS-TEXT/PROFILE-NAME/PROFILE-EMAIL-PROFILE-BIRTH)
+    // .main-container {
+    //     width: 500px;
+    // }
+    .members-recent-flow-container {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .members-group {
+        gap: 10px;     
+    
+    }
+    
+    a.profile-email {
+        font-size: 15px;
+    }
+    
+    .profile-birth {
+        font-size: 15px;
+    
+    
+    }
+    
+    
+    .members-container {
+        width: 500px;
+    }
+    
+    // .members-group {
+    //     display: flex;
+    //     flex-direction: row;
+    //     justify-content: space-evenly;
+    //     // width: 500px;
+    //     gap: 22px;
+    // }
+    
+    // //============== RECENT ==============
+    
+    .recent-flex-container {
+        width: 500px;
+    }
+    
+    .recent-activity-group {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+         
+        gap: 10px;     
      
-    gap: 10px;     
- 
-}
-
-.recent-arrow {
-    padding-right: 5px;
-}
-
-
-
-// // ========
-
-.profile-image {
-    width: 80px;
-    height: 80px;
-    margin: 0;
-    margin-left: 5px;
-  }
-
-.profile-birth {
-    margin: 0;
-    justify-content: end;
-}
- 
-a.profile-email, .profile-birth, .profile-name {
-    font-size: 25px;
-}
-
-a.profile-email {
-    font-size: 20px;
-}
-
-.profile-birth {
-    font-size: 20px;
-}
-
-// // ========
-
-// // Recent Part
-
-.recent-flex-container {
-    width: 500px;
-}
-
-// //Message /Settigns 
-
-.message-setting-flow-container {
-    display: flex;
-    flex-direction: row;
-    // gap: 20px;
-}
-
-.message-container {
-    width: 500px;
-    justify-content: end;
-}
-
-//Setting
-
-.settings {
-    width: 500px;
-}
-// .settings {
-//     width: 500px;
-// }
-
-// .settings-container {
-//     width: 500px;
-// }
-
-.switch-toggle {
-    width: 50%;
-    margin: 0;
-    margin-left: 50px;
-    margin-top: 0px;
-}
-
-.settings {
-    display: flex;
-// flex-direction: column;
-margin: auto;
-
-}
-
-label {
-    display: flex;
-flex-direction: row;}
-
-
-.notifcation-settings {
-    // display: flex;
-    // justify-content: center;
-    gap: 30px;
-
-
-}
-
-.form-field, .message-textarea, .button-primary, .button-primary-save, .button-disabled, .email-container, .profile-container {
-    font-size: 25px;
-}
-
-.form-field {
-    height: 75px;
-}
-
-.message-textarea {
-    height: 149px;
-}
-
-.email-container, .profile-container {
-    gap: 15px;
-}
-
-.email-span, .profile-span {
-    margin-top: -17px;
-}
-
-.timezone-settings {
+    }
+    
+    .recent-arrow {
+        padding-right: 5px;
+    }
+    
+    
+    
+    // // ========
+    
+    .profile-image {
+        width: 80px;
+        height: 80px;
+        margin: 0;
+        margin-left: 5px;
+      }
+    
+    .profile-birth {
+        margin: 0;
+        justify-content: end;
+    }
+     
+    a.profile-email, .profile-birth, .profile-name {
+        font-size: 25px;
+    }
+    
+    a.profile-email {
+        font-size: 20px;
+    }
+    
+    .profile-birth {
+        font-size: 20px;
+    }
+    
+    // // ========
+    
+    // // Recent Part
+    
+    .recent-flex-container {
+        width: 500px;
+    }
+    
+    // //Message /Settigns 
+    
+    .message-setting-flow-container {
+        display: flex;
+        flex-direction: row;
+        // gap: 20px;
+    }
+    
+    .message-container {
+        width: 500px;
+        justify-content: end;
+    }
+    
+    //Setting
+    
+    .settings {
+        width: 500px;
+    }
+    // .settings {
+    //     width: 500px;
+    // }
+    
+    // .settings-container {
+    //     width: 500px;
+    // }
+    
+    .switch-toggle {
+        width: 50%;
+        margin: 0;
+        margin-left: 50px;
+        margin-top: 0px;
+    }
+    
+    .settings {
+        display: flex;
+    // flex-direction: column;
     margin: auto;
-    justify-content: center;
-    align-items: center;
-}
-
-.button-primary-save, .button-disabled {
-    margin: auto;
-    margin-top: 10px;
-    display: flex;
-    width: 45%;
-}
-
-
-
-
-}
+    
+    }
+    
+    label {
+        display: flex;
+    flex-direction: row;}
+    
+    
+    .notifcation-settings {
+        // display: flex;
+        // justify-content: center;
+        gap: 30px;
+    
+    
+    }
+    
+    .form-field, .message-textarea, .button-primary, .button-primary-save, .button-disabled, .email-container, .profile-container {
+        font-size: 25px;
+    }
+    
+    .form-field {
+        height: 75px;
+    }
+    
+    .message-textarea {
+        height: 149px;
+    }
+    
+    .email-container, .profile-container {
+        gap: 15px;
+    }
+    
+    .email-span, .profile-span {
+        margin-top: -17px;
+    }
+    
+    .timezone-settings {
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .button-primary-save, .button-disabled {
+        margin: auto;
+        margin-top: 10px;
+        display: flex;
+        width: 45%;
+    }
+    
+    
+    
+    
+    }

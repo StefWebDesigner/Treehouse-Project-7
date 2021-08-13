@@ -10,6 +10,9 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js" integrity="sha512-VMsZqo0ar06BMtg0tPsdgRADvl0kDHpTbugCBBrL55KmucH6hP9zWdLIWY//OTfMnzz6xWQRxQqsUFefwHuHyg==" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&family=Roboto:ital@1&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 
 <!-- Body Sections -->
@@ -18,7 +21,7 @@
 <!-- HEADER-->
 <header>
 	<div class="header-container">	
-		<h1 class="header-app-title"> Webapp </h1>
+		<h1 class="header-app-title"> WebApp<sup>TM</sup> </h1>
 		<div class="header-offset">
 		<a href="#" class="notification">
 			<svg class="bell-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 117.033 122.88">
@@ -54,19 +57,23 @@
 </nav>
 
 <main>
+	<div class="marginlr">
 	<div class="dashboard-container">
 		<div class="main-container">
 			<div class="main-header">
 				<h2 class="headline">Dashboard</h2>
+
 			</div>
+			<br>
 	<!-- ALERT-->
 			<div class="alert" id="alert">
 			</div>
 		</div>
 	</div>
-
+</div>
 <!-- TRAFFIC NAVIGATION-->
 <div>
+<div class="marginlr">
 	<div class="traffic-header" id="trafficSection">
 			<h3 class="traffic-label">Traffic</h3> 
 			<ul id="traffic_nav" class="traffic-nav">
@@ -82,7 +89,9 @@
 		<div class="chart-1-container-full">
 				<canvas class="chart1" id="chart1"></canvas>
 		</div>
-	</div> <hr>
+	</div>
+</div>
+	 <hr>
 
 
 	<!-- TRAFFIC CHART 2-->
@@ -91,6 +100,8 @@
 		<!-- <h3 class="daily-label">Daily Traffic</h3> -->
 
 		<div class="chart2-container"> 
+
+			<div class="marginlr">
 			<h3 class="daily-label">Daily Traffic</h3>
 			<div class="chart-2-container-full">
 				<canvas class="chart2" id="chart2"></canvas>
@@ -122,14 +133,18 @@
 				}
 				});
 				</script>
-
+</div>
 		</div>
 	</div>
 
 <!-- TRAFFIC CHART 3 --->
+
 	<div class="chart-3-main">
+		<h3 class="sm-user-label">Social Media Users</h3>
 		<div class="chart3-container">
-				<h3 class="sm-user-label">Social Media Users</h3>
+
+			<div class="marginlr">
+				
 				<div class="chart-3-container-full">
 					<canvas class="chart3" id="chart3"></canvas>
 				</div>
@@ -149,8 +164,10 @@
 								options: {},											
 						});
 						</script>
+					</div>
 			</div>
 		</div>
+
 </div>
 </div>
 <hr>
@@ -161,6 +178,7 @@
 <div class="social-flex-parent">
 	<!-- Social status> -->
 	<div class="social-fact-container">
+		<h3 class="sm-user-label">SOCIAL STATS</h3>
 			<div class="social-group"> 
 					<div class="social-text">
 						<div class="social-border">
@@ -206,6 +224,7 @@
 	<div class="members-flex-container">
 	<!-- New memeber widgets -->
 	<div class="members-container column-divider" id="members-link">
+		<div class="marginlr">
 		<h3 class="member-label">New Members</h3>
 
 			<div class="members-group">
@@ -265,6 +284,7 @@
 			</div> 
 
 		<!-- MEBERS OTHER SOMETHING END TAG -->
+	</div>
 		</div>
 		<!-- MEBERS FLEX CONTAINER END TAG -->
 		</div>
@@ -272,6 +292,7 @@
 
 <!-- RECENT ACTIVTY SECTIONS -->
 	<div class="recent-flex-container">
+		<div class="marginlr">
 			<h3 class="recent-label">Recent Activity</h3>
 			<div class="recent-activity-container">
 
@@ -342,6 +363,7 @@
 				</div>
 			<!-- recent-activity-container END TAG -->
 			</div> 
+		</div>
 			<!-- recent-flex-container -->
 			</div>
 		<!-- MEMBERS-RECENT-FLOW-CONTAINER -->
@@ -354,6 +376,7 @@
 	<div class="message-setting-flow-container">
 
 		<div class="message-container column-divider">
+			<div class="marginlr">
 			<h3 class="message-label">Message User</h3>
 			<form class="widget-container">
 				<div class="message-group">
@@ -363,12 +386,12 @@
 					<button id="send" class="button-primary">Enter </button>
 			</form>
 		</div>
-
+</div>
 	<!-- local settings widget -->
 	<div class="settings" id="settings-link">
 		<div class="setting-container">
 			<h3 class="settings-label">Settings</h3>
-		
+		<br>
 			<div class="notifcation-settings">
 				<div class="email-container">
 					<label id="email_group" class="switch-light switch-ios" onclick="">
@@ -401,7 +424,7 @@
 				  </label>
 				</div>
 			</div>
-
+<br>
 			<!-- ============================= -->
 			<div class="timezone-settings">
 				<!-- <fieldset class="switch-toggle switch-candy-blue"> -->

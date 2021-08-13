@@ -8,30 +8,30 @@
 
 //TARGETS ALL HEADER HEADER IMAGES
 header img {
-    width: 37px;
-    height: 37px;
-    border: 1px solid $defult-white;
-    border-radius: 100px;
+  width: 37px;
+  height: 37px;
+  border: 1px solid $defult-white;
+  border-radius: 100px;
 }
 
 .header-me {
-  border: solid 1px $defult-white;
-  border-radius: 50%;
-  width: 55px;
-  height: 50px;
-  align-items: center;
-  margin: auto;
+border: solid 1px $defult-white;
+border-radius: 50%;
+width: 55px;
+height: 50px;
+align-items: center;
+margin: auto;
 }
 
 .svg--SMicon-white {
-  fill: white;
+fill: white;
 }
 
 a .bell-icon {
-  display: flex;
-  height: 55%;
-  position:relative;
-  top: 18px;
+display: flex;
+height: 55%;
+position:relative;
+top: 18px;
 
 }
 
@@ -39,42 +39,42 @@ a .bell-icon {
 //**** IT JUST WORKS ****
 // .bell-icon, nav svg {
 .bell-icon, nav svg {
-  transition: .3s ease-out;
-  width: 2rem;
-  color: $defult-white;
-  margin: auto;
-  &:hover, &:focus {
-    animation: bellshake .5s cubic-bezier(.36,.07,.19,.97) both;
-    backface-visibility: hidden;
-    transform-origin: top right;
-  }
+transition: .3s ease-out;
+width: 2rem;
+color: $defult-white;
+margin: auto;
+&:hover, &:focus {
+  animation: bellshake .5s cubic-bezier(.36,.07,.19,.97) both;
+  backface-visibility: hidden;
+  transform-origin: top right;
+}
 }
 
-    @keyframes bellshake {
-      0% { transform: rotate(0);}
-      15% { transform: rotate(5deg); }
-      30% { transform: rotate(-5deg); }
-      45% { transform: rotate(4deg); }
-      60% { transform: rotate(-4deg); }
-      75% { transform: rotate(2deg); }
-      85% { transform: rotate(-2deg); }
-      92% { transform: rotate(1deg); }
-      100% { transform: rotate(0); }
-    }
-    
+  @keyframes bellshake {
+    0% { transform: rotate(0);}
+    15% { transform: rotate(5deg); }
+    30% { transform: rotate(-5deg); }
+    45% { transform: rotate(4deg); }
+    60% { transform: rotate(-4deg); }
+    75% { transform: rotate(2deg); }
+    85% { transform: rotate(-2deg); }
+    92% { transform: rotate(1deg); }
+    100% { transform: rotate(0); }
+  }
+  
 
 //=========//
 // HOME NAVIGATIONS IMAGES //
 //=========//
 
 nav svg {
-    height: 50%;
-    height: auto;
-    margin: auto;
+  height: 50%;
+  height: auto;
+  margin: auto;
 }
 
 nav a {
-  margin: auto;
+margin: auto;
 }
 
 //=========//
@@ -82,35 +82,35 @@ nav a {
 //=========//
 
 .social-image {
-  height: 30px;
-  width: 30px;
-  margin: auto;
-  margin-top: 12px;
+height: 30px;
+width: 30px;
+margin: auto;
+margin-top: 12px;
 }
 
 .social-border {
-  margin: auto;
-  border: solid 1px $main-purple;
-  border-radius: 70px;
-  background-color: $main-purple;
-  width: 55px;
-  height: 55px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
+margin: auto;
+border: solid 1px $main-purple;
+border-radius: 70px;
+background-color: $main-purple;
+width: 55px;
+height: 55px;
+margin-top: 5px;
+margin-bottom: 5px;
+margin-left: 5px;
+padding-left: 5px;
+padding-right: 5px;
 }
 
 //MEMBERS SECTIONS
 
 .profile-image {
-  border: solid 1px $defult-white;
-  border-radius: 50%;
-  width: 80px;
-  height: 80px;
-  margin: auto;
-  display: flex;
-  border: 3px solid $main-purple;
-  border-radius: 100%;
+border: solid 1px $defult-white;
+border-radius: 50%;
+width: 80px;
+height: 80px;
+margin: auto;
+display: flex;
+border: 3px solid $main-purple;
+border-radius: 100%;
 }
