@@ -339,15 +339,25 @@ flex-direction: column;
 .email-container, .profile-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 60px;
+}
+
+.email-container label, .profile-container label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    // gap: 80px;
+    flex-basis: 60%;
+    // flex-grow: 1.2;
+    // margin: auto;
 }
 
 .email-span, .profile-span {
 // margin-left: 230px;
 //THIS INGENIOUSLY WORKS AT PUTTING THEM ON THE SAME LINE
-margin-top: -17px;
-margin-bottom: 10px;
+// margin-top: -17px;
+// margin-bottom: 10px;
 
 }
 
@@ -364,6 +374,7 @@ margin-bottom: 10px;
 switch-light {
     display: flex;
     flex-direction: row;
+    // width: 10000%;
 }
 
 .settings-button {

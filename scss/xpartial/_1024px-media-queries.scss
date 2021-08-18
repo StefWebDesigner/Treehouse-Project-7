@@ -29,7 +29,7 @@
     
       .column-divider {
         border-right: #b3b3b3 solid 1px;
-        width: 768px;
+        // width: 768px;
     
     }
     
@@ -66,7 +66,13 @@
     // //(TITLE/BELL ICON/ BREAKLINE/ME)
     
     .header-container {
-        gap: 470px;
+        gap: unset;
+        padding: 0 10px;
+        width: 100%;
+    }
+
+    a .bell-icon {
+        height: initial;
     }
     
     // .header-offset {
@@ -74,15 +80,16 @@
     // }
     
     .header-app-title {
-        font-size: 40px;
+        font-size: 24px;
     }
       
     .header-profile-name {
-        font-size: 30px;
+        font-size: 20px;
     }
     
+    
     .bell-icon {
-        width: 100px;
+        width: 50px;
         margin: auto;
     }
     
@@ -93,8 +100,8 @@
     .header-me {
         border: solid 1px $defult-white;
         border-radius: 50%;
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
         align-items: center;
         margin: auto;
     }
@@ -134,7 +141,7 @@
         flex-direction: row;
         flex-basis: 100%;
         justify-content: space-between;
-        gap: 320px;
+        // gap: 320px;
     }
     
     
@@ -158,41 +165,43 @@
     // // SECTION (FLEX) PROPERTIES
     // //Charts
     
-    .chart1 {
-        width: 850px;
-    }
+    // .chart1 {
+    //     width: 850px;
+    // }
     
     .chart-2-main, .chart-3-main {
-        width: 500px;
+        // width: 500px;
+        flex-basis: 50%;
         justify-content: center;
-        // margin: auto; 
+        margin: auto; 
+        // margin: initial;
     }
     
     .chart2-container {
-        width: 350px;
+        // width: 350px;
         // margin: left;
-        gap: 60px;
+        // gap: 60px;
         //JUSTIFIF CONTENT WORKS---JUST NOT PARTICULAR HELPFUL HERE
         // justify-content: center;
     
     }
     
-    .chart3-container {
-        width: 350px;
-        // margin: left;
-        justify-content: center;
-    }
+    // .chart3-container {
+    //     width: 350px;
+    //     margin: left;
+    //     justify-content: center;
+    // }
     
-    .chart2 {
-        margin-right: 30px;
-        justify-content: center;
+    // .chart2 {
+    //     margin-right: 30px;
+    //     justify-content: center;
     
-    }
+    // }
     
-    .chart3 {
-        // margin: auto;
-        justify-content: center;
-    }
+    // .chart3 {
+    //     margin: auto;
+    //     justify-content: center;
+    // }
     
     
     // // // =========================================
@@ -243,10 +252,10 @@
         flex-direction: row;
     }
     
-    .members-group {
-        gap: 10px;     
+    // .members-group {
+    //     gap: 10px;     
     
-    }
+    // }
     
     a.profile-email {
         font-size: 15px;
@@ -259,9 +268,9 @@
     }
     
     
-    .members-container {
-        width: 500px;
-    }
+    // .members-container {
+    //     width: 500px;
+    // }
     
     // .members-group {
     //     display: flex;
@@ -272,9 +281,12 @@
     // }
     
     // //============== RECENT ==============
-    
-    .recent-flex-container {
-        width: 500px;
+    .members-flex-container,
+    .recent-flex-container,
+    .message-container,
+    .settings {
+        // width: 500px;
+        flex-basis: 50%;
     }
     
     .recent-activity-group {
@@ -282,7 +294,7 @@
         flex-direction: row;
         justify-content: space-between;
          
-        gap: 10px;     
+        // gap: 10px;     
      
     }
     
@@ -322,9 +334,9 @@
     
     // // Recent Part
     
-    .recent-flex-container {
-        width: 500px;
-    }
+    // .recent-flex-container {
+    //     width: 500px;
+    // }
     
     // //Message /Settigns 
     
@@ -334,16 +346,16 @@
         // gap: 20px;
     }
     
-    .message-container {
-        width: 500px;
-        justify-content: end;
-    }
+    // .message-container {
+    //     width: 500px;
+    //     justify-content: end;
+    // }
     
     //Setting
     
-    .settings {
-        width: 500px;
-    }
+    // .settings {
+    //     width: 500px;
+    // }
     // .settings {
     //     width: 500px;
     // }
@@ -353,7 +365,7 @@
     // }
     
     .switch-toggle {
-        width: 50%;
+        // width: 50%;
         margin: 0;
         margin-left: 50px;
         margin-top: 0px;
@@ -392,7 +404,7 @@
     }
     
     .email-container, .profile-container {
-        gap: 15px;
+        // gap: 15px;
     }
     
     .email-span, .profile-span {
@@ -409,7 +421,7 @@
         margin: auto;
         margin-top: 10px;
         display: flex;
-        width: 45%;
+        // width: 45%;
     }
     
     

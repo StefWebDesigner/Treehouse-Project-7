@@ -1,5 +1,5 @@
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 h1, h3, p {
@@ -40,6 +40,16 @@ h1, h3, p {
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 10px;
+}
+
+.social-fact-container {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.social-fact-container .sm-user-label {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
 .daily-label {
@@ -684,15 +694,25 @@ div.recent--comment-date-group {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   gap: 60px;
 }
 
-.email-span, .profile-span {
-  margin-top: -17px;
-  margin-bottom: 10px;
+.email-container label, .profile-container label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
 }
 
 .strong-email, .strong-profile {
@@ -946,7 +966,6 @@ canvas {
   }
   .column-divider-chart-2 {
     border-right: #b3b3b3 solid 1px;
-    width: 768px;
   }
   .grid {
     -ms-grid-rows: 50px 1fr;
@@ -1064,31 +1083,12 @@ canvas {
             justify-content: end;
     gap: 20px;
   }
-  .chart1 {
-    width: 610px;
-    aspect-ratio: auto;
-  }
   .chart2-3-flow-container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .chart-2-main, .chart-3-main {
-    width: 350px;
-  }
-  .chart3, .chart2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 300px;
-    margin: auto;
+    gap: unset;
   }
   .daily-label, .sm-user-label {
     text-align: left;
@@ -1338,6 +1338,30 @@ canvas {
     padding-top: 10px;
     padding-bottom: 10px;
   }
+  .members-recent-flow-container * {
+    font-size: 16px !important;
+  }
+  canvas {
+    max-width: 100%;
+  }
+  main {
+    max-width: calc(100vw - 75px);
+  }
+  .social-fact-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .sm-user-label {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .chart-2-main,
+  .chart-3-main {
+    width: 50%;
+  }
+  h3 {
+    font-size: 20px !important;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -1357,7 +1381,6 @@ canvas {
   }
   .column-divider {
     border-right: #b3b3b3 solid 1px;
-    width: 768px;
   }
   .grid {
     -ms-grid-rows: 70px 1fr;
@@ -1386,16 +1409,21 @@ canvas {
     grid-area: main;
   }
   .header-container {
-    gap: 470px;
+    gap: unset;
+    padding: 0 10px;
+    width: 100%;
+  }
+  a .bell-icon {
+    height: initial;
   }
   .header-app-title {
-    font-size: 40px;
+    font-size: 24px;
   }
   .header-profile-name {
-    font-size: 30px;
+    font-size: 20px;
   }
   .bell-icon {
-    width: 100px;
+    width: 50px;
     margin: auto;
   }
   .notification .badge {
@@ -1404,8 +1432,8 @@ canvas {
   .header-me {
     border: solid 1px white;
     border-radius: 50%;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1439,41 +1467,18 @@ canvas {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    gap: 320px;
   }
   .traffic-nav {
     gap: 20px;
     font-size: 28px;
   }
-  .chart1 {
-    width: 850px;
-  }
   .chart-2-main, .chart-3-main {
-    width: 500px;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-  }
-  .chart2-container {
-    width: 350px;
-    gap: 60px;
-  }
-  .chart3-container {
-    width: 350px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .chart2 {
-    margin-right: 30px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .chart3 {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    margin: auto;
   }
   .social-group {
     gap: 30px;
@@ -1513,20 +1518,18 @@ canvas {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .members-group {
-    gap: 10px;
-  }
   a.profile-email {
     font-size: 15px;
   }
   .profile-birth {
     font-size: 15px;
   }
-  .members-container {
-    width: 500px;
-  }
-  .recent-flex-container {
-    width: 500px;
+  .members-flex-container,
+  .recent-flex-container,
+  .message-container,
+  .settings {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
   }
   .recent-activity-group {
     display: -webkit-box;
@@ -1539,7 +1542,6 @@ canvas {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    gap: 10px;
   }
   .recent-arrow {
     padding-right: 5px;
@@ -1565,9 +1567,6 @@ canvas {
   .profile-birth {
     font-size: 20px;
   }
-  .recent-flex-container {
-    width: 500px;
-  }
   .message-setting-flow-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1577,17 +1576,7 @@ canvas {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .message-container {
-    width: 500px;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
-  }
-  .settings {
-    width: 500px;
-  }
   .switch-toggle {
-    width: 50%;
     margin: 0;
     margin-left: 50px;
     margin-top: 0px;
@@ -1619,9 +1608,6 @@ canvas {
   .message-textarea {
     height: 149px;
   }
-  .email-container, .profile-container {
-    gap: 15px;
-  }
   .email-span, .profile-span {
     margin-top: -17px;
   }
@@ -1640,7 +1626,6 @@ canvas {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 45%;
   }
 }
 /*# sourceMappingURL=styles.css.map */
