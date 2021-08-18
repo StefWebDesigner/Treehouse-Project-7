@@ -351,6 +351,7 @@ flex-direction: column;
     gap: 35px;
     // flex grow again not woring...as usual!!
     // flex-grow: 1.2;
+    //THIS FIXED IT FROM STAYING IN THE MARGINS FOR SOME REASON
     margin: auto;
 }
 
