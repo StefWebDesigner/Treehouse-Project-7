@@ -694,10 +694,6 @@ div.recent--comment-date-group {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  gap: 60px;
 }
 
 .email-container label, .profile-container label {
@@ -708,11 +704,13 @@ div.recent--comment-date-group {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -ms-flex-preferred-size: 60%;
-      flex-basis: 60%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  gap: 35px;
+  margin: auto;
 }
 
 .strong-email, .strong-profile {
@@ -741,7 +739,7 @@ switch-light {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 27px;
+  gap: 20px;
 }
 
 header img {

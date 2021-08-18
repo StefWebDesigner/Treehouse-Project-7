@@ -333,24 +333,25 @@ flex-direction: column;
 .notifcation-settings {
     display: flex;
     flex-direction: column;
-    // justify-content: space-between;
+    // justify-content: center;
 }
 
 .email-container, .profile-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    gap: 60px;
+    // justify-content: space-evenly;
+    // gap: 1213212px;
 }
 
 .email-container label, .profile-container label {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    // gap: 80px;
-    flex-basis: 60%;
+    justify-content: center;
+    flex-basis: 100%;
+    gap: 35px;
+    // flex grow again not woring...as usual!!
     // flex-grow: 1.2;
-    // margin: auto;
+    margin: auto;
 }
 
 .email-span, .profile-span {
@@ -366,11 +367,12 @@ flex-direction: column;
     margin-left: 10px;
 }
 
-// label#email-group, label#profile-group {
-//     display: flex;
-//     flex-direction: row;
-//         // gap: 1456px;
-// }
+label#email-group, label#profile-group {
+    // display: flex;
+    // flex-direction: row;
+        // gap: 1264165465px;
+}
+
 switch-light {
     display: flex;
     flex-direction: row;
@@ -381,5 +383,5 @@ switch-light {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 27px;
+    gap: 20px;
 }
