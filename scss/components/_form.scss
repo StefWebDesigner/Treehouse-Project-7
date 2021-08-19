@@ -32,11 +32,14 @@ fieldset {
 }
 
 
+.timezone-settings {
+    padding: 0px 10px;
+}
+
 select#timezone, option {
-    width: 86%;
+    width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
-    margin: auto;
 }
 
 //===================================

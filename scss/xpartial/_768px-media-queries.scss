@@ -9,14 +9,12 @@
     // // General Font Styles
         .traffic-label, .headline, .sm-user-label, .daily-label, .member-label, .message-label, .recent-label, .settings-label {
             font-size: 22px;
-            // margin-left: 10px;
         }
         
     // GENERAL STUFF
     
         .column-divider-chart-2 {
             border-right: #b3b3b3 solid 1px;
-            // width: 768px;
         }
     
     .grid {
@@ -52,11 +50,7 @@
         justify-content: space-between;
         gap: 450px;
     }
-    
-    // .header-offset {
-    //     // gap: 60px;
-    // }
-    
+      
     .header-offset {
         flex-grow: .1;
     }
@@ -109,8 +103,8 @@
     
     .alert-banner {
         display: flex;
-        padding-top: 5px;
-        padding-bottom: 5px;
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
     
     // // ============================================================
@@ -138,82 +132,21 @@
         gap: 20px;
         
     }
-    // // ---------------------------------------------------------------
-    
-    // //CHART 1 SECTIONS
-    // //(CHARTS1)
-    
-    
-    // .chart1 {
-    //     width: 610px;
-    //     aspect-ratio: auto;
-    
-    // }
-    
+
     // // ---------------------------------------------------------------
     
     // //CHART 2 SECTIONS
     // //(DAILY-LABEL/CHART-2-CONTAINER-FULL)
     
-    
-    
     .chart2-3-flow-container {
         flex-direction: row;
-        // justify-content: space-evenly;
-        // align-items: center;
-        // flex-shrink: 0;
-        // flex-basis: auto;
-        // margin: auto;
         gap: unset;
     }
     
-    .chart-2-main, .chart-3-main {
-        // width: 350px;
-        // aspect-ratio: 1 / 1;
-    
-        // justify-content: center;
-        // margin: auto; 
-    }
-    
-    // .chart2-container {
-    //     width: 300px;
-    //     gap: 60px;
-    
-    // }
-    
-    // .chart3-container {
-    //     width: 300px;
-    
-    // }
-    
-    // .chart2 {
-    //     // margin-right: 20px;
-    // }
-    
-    // .chart3, .chart2 {
-    //     display: flex;
-    //     width: 300px;
-    //     margin: auto;
-    
-    // }
-    
-    
     .daily-label, .sm-user-label {
-        // display: flex;
         text-align: left;
     }
-    
-    // .chart2 {
-    //     // margin-top: 50px;
-    //     width: 300px;
-    //     height: 600px;
-    // }
-    
-    // .chart3 {
-    //     height: 300px;
-    //     width: 300px;
-    // }
-    
+
     // // // =========================================
     // // ASIDE (FLEX) PROPERTIES
     // //SOCIAL FACT SECTIONS
@@ -229,7 +162,20 @@
         justify-content: space-evenly;
         gap: 28px;
     }
-    
+
+    .social-text {
+        padding-right: 8px;
+        padding-left: 8px;  
+    }
+
+    .social-border {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        
+    }
+
     // // ---------------------------------------------------------------
     
     // // MEMBERS SECTIONS
@@ -247,14 +193,12 @@
     .members-container {
         display: flex;
         flex-direction: column;
-        // gap: 10px;
     }
     
     .members-group {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        //THIS IS WHAT PISHES OUT THE DATE OF BIRTH
         gap: 45px;     
     }
     
@@ -334,8 +278,6 @@
         gap: 20px;
     }
     
-    
-    
     .recent--comment-date-group {
         margin: left;
         justify-content: center;
@@ -350,8 +292,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        // margin: auto;    
-    
     }
     
     .recent-arrow {
@@ -366,66 +306,39 @@
         flex-direction: column;
     }
     
-    .form-field, .message-textarea, .button-primary, .button-primary-save, .button-disabled, .email-container, .profile-container {
+    .form-field, .message-textarea, .button-primary, .button-primary-save, .button-disabled {
         font-size: 22px;
     }
     
     input#userField {
-        width: 85%;
-        // margin: auto;
+        width: 100%;
         height: 75px;
     }
     
     .message-textarea {
         height: 149px;
         text-align: center;
-        width: 85%;
+        width: 100%;
     }
     
      .alert-btn {
         width: 85%;
     }
     // //====================== Settings
-    
-    
-    
-    
-    
-    
-    
-    // //CHANGES AND OPERATES THE TIME OPTIONS
-    .switch-toggle {
-        // width: 85%;
-        // margin: auto;
-        margin-top: 20px;
+
+    .message-group {
+        padding: 0 10px;
     }
     
+    // //CHANGES AND OPERATES THE TIME OPTIONS
+
     .timezone-settings {
         display: flex;
         flex-direction: column;
     }
     
-    select#timezone, option {
-        display: flex;
-        width: 80%;
-        height: 50px;
-        // padding-top: 30px;
-        // padding-bottom: 30px;
-    }
-    
     .strong-email, .strong-profile {
         font-size: 25px;
-    }
-    
-    
-    .email-container, .profile-container {
-        gap: 30px;
-    }
-    
-    .email-span, .profile-span {
-        // margin-left: 590px;
-        margin-top: -17px;
-        
     }
     
     .button-primary-save, .button-disabled {
@@ -442,18 +355,14 @@
         margin-top: 10px;
         padding-top: 10px;
         padding-bottom: 10px;
-    
     }
+
 .members-recent-flow-container * {
     font-size: 16px !important;
 }
 
 canvas {
     max-width: 100%;
-}
-
-main {
-    max-width: calc(100vw - 75px);
 }
 
 .social-fact-container {

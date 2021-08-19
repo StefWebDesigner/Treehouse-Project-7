@@ -8,6 +8,10 @@
         padding: 0;
 }
 
+a:link{
+        text-decoration: none!important;
+      }
+
 body, main, nav, header {
         background-color: #eee;
 }
@@ -47,6 +51,8 @@ hr {
         display: flex;
         flex-direction: row;
         padding-left: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         padding-right: 10px;
         justify-content: space-between;
         flex-basis: 100%;

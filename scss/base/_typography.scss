@@ -16,7 +16,7 @@ h1, h3, p {
 
 .header-app-title {
   display: flex;
-  font-size: 25px;
+  font-size: 18px;
   color: $defult-white;
   justify-content: center;
   align-items: center;
@@ -52,7 +52,6 @@ h1, h3, p {
 .daily-label {
   display: flex;
 }
-
 
 .headline {
   font-size: 23px;
@@ -99,18 +98,9 @@ h1, h3, p {
 //SETTINGS
 
 a .toggle-interacation-email, .toggle-interacation-profile {
-color: $main-purple;
-
+  color: $main-purple;
 }
 
 .strong-email, .strong-profile {
   font-size: 15px;
-
 }
-
-
-
-
-// span#email-span-off, span#email-span-on {
-// color: black;
-// }

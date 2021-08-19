@@ -31,14 +31,16 @@ button.button-primary {
 
 }
 
-.button-primary-save, .button-disabled {
-    margin: auto;
-    margin-top: 10px;
+.settings-button {
     display: flex;
-    width: 45%;
-    justify-content: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.button-primary-save, .button-disabled {
+    flex-basis: 48%;
+    padding: 10px;
 }
 
 .button-primary-save {

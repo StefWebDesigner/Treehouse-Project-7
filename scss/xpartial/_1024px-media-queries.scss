@@ -22,21 +22,17 @@
         font-size: 28px;
       }
     
-    // //Not responsive
       p.alert_banner {
         font-size: 35px;
       }
     
       .column-divider {
-        border-right: #b3b3b3 solid 1px;
-        // width: 768px;
-    
+        border-right: #b3b3b3 solid 1px;    
     }
     
     //   //===============================================
     
     .grid {
-        // min-width: 1024px;    
         grid-template-rows: 70px 1fr;
         grid-template-columns: 70px 1fr;
         grid-template-areas:
@@ -75,10 +71,6 @@
         height: initial;
     }
     
-    // .header-offset {
-    //     // gap: -10px;
-    // }
-    
     .header-app-title {
         font-size: 24px;
     }
@@ -105,10 +97,6 @@
         align-items: center;
         margin: auto;
     }
-    
-    // nav svg {
-    //     height: 50px;
-    // }
     
     // // ============================================================
     
@@ -141,68 +129,31 @@
         flex-direction: row;
         flex-basis: 100%;
         justify-content: space-between;
-        // gap: 320px;
     }
-    
     
     .traffic-nav {
         gap: 20px;
-        font-size: 28px; 
-    
-        
+        font-size: 28px;    
     }
-    
-    // .traffic-header .traffic-nav {
-    //     gap:.5;
-    // }
-    
-    // .traffic-nav {
-    //     gap: 50px;
-    //     font-size: 35px; 
-    // }
+
+    .members-group {
+        gap: unset;
+    }
+
+    .members-flex-container + hr {
+        display: none;
+    }
+
     
     // // ============================================================
     // // SECTION (FLEX) PROPERTIES
     // //Charts
     
-    // .chart1 {
-    //     width: 850px;
-    // }
-    
     .chart-2-main, .chart-3-main {
-        // width: 500px;
         flex-basis: 50%;
         justify-content: center;
         margin: auto; 
-        // margin: initial;
     }
-    
-    .chart2-container {
-        // width: 350px;
-        // margin: left;
-        // gap: 60px;
-        //JUSTIFIF CONTENT WORKS---JUST NOT PARTICULAR HELPFUL HERE
-        // justify-content: center;
-    
-    }
-    
-    // .chart3-container {
-    //     width: 350px;
-    //     margin: left;
-    //     justify-content: center;
-    // }
-    
-    // .chart2 {
-    //     margin-right: 30px;
-    //     justify-content: center;
-    
-    // }
-    
-    // .chart3 {
-    //     margin: auto;
-    //     justify-content: center;
-    // }
-    
     
     // // // =========================================
     // // ASIDE (FLEX) PROPERTIES
@@ -210,20 +161,28 @@
     // //(SOCIAL-GROUP/MEMBERS/RECENT-ACTIVITY/MESSAGE/SETTINGS)
     
     .social-group {
-        gap: 30px;
         justify-content: space-around;
+    }
+
+    .social-text {
+        padding-right: 25px;
+        padding-left: 12px;  
+
     }
     
     .social-image {
-        height: 60px;
-        width: 60px;
+        height: 45px;
+        width: 45px;
         margin-top: 17px;
     }
       
     .social-border {
-        width: 100px;
-        height: 100px;
-        margin-left: 5px;
+        width: 80px;
+        height: 80px;
+        margin-left: 2px;
+        padding-left: 17px;
+        padding-right: 17px;
+        
     }
     
       .platform { 
@@ -244,18 +203,11 @@
         
     // // MEMBERS SECTIONS
     // //(PROFILE-IMAGE/MEMEBRS-TEXT/PROFILE-NAME/PROFILE-EMAIL-PROFILE-BIRTH)
-    // .main-container {
-    //     width: 500px;
-    // }
+
     .members-recent-flow-container {
         display: flex;
         flex-direction: row;
     }
-    
-    // .members-group {
-    //     gap: 10px;     
-    
-    // }
     
     a.profile-email {
         font-size: 15px;
@@ -263,29 +215,13 @@
     
     .profile-birth {
         font-size: 15px;
-    
-    
     }
-    
-    
-    // .members-container {
-    //     width: 500px;
-    // }
-    
-    // .members-group {
-    //     display: flex;
-    //     flex-direction: row;
-    //     justify-content: space-evenly;
-    //     // width: 500px;
-    //     gap: 22px;
-    // }
     
     // //============== RECENT ==============
     .members-flex-container,
     .recent-flex-container,
     .message-container,
     .settings {
-        // width: 500px;
         flex-basis: 50%;
     }
     
@@ -293,16 +229,11 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-         
-        // gap: 10px;     
-     
     }
     
     .recent-arrow {
         padding-right: 5px;
     }
-    
-    
     
     // // ========
     
@@ -330,101 +261,58 @@
         font-size: 20px;
     }
     
-    // // ========
-    
-    // // Recent Part
-    
-    // .recent-flex-container {
-    //     width: 500px;
-    // }
-    
     // //Message /Settigns 
     
     .message-setting-flow-container {
         display: flex;
         flex-direction: row;
-        // gap: 20px;
     }
-    
-    // .message-container {
-    //     width: 500px;
-    //     justify-content: end;
-    // }
-    
-    //Setting
-    
-    // .settings {
-    //     width: 500px;
-    // }
-    // .settings {
-    //     width: 500px;
-    // }
-    
-    // .settings-container {
-    //     width: 500px;
-    // }
-    
-    .switch-toggle {
-        // width: 50%;
-        margin: 0;
-        margin-left: 50px;
-        margin-top: 0px;
-    }
-    
+
     .settings {
         display: flex;
-    // flex-direction: column;
-    margin: auto;
+        margin: auto;
     
     }
     
     label {
         display: flex;
-    flex-direction: row;}
-    
-    
+        flex-direction: row;
+}
+
     .notifcation-settings {
-        // display: flex;
-        // justify-content: center;
         gap: 30px;
-    
-    
     }
     
-    .form-field, .message-textarea, .button-primary, .button-primary-save, .button-disabled, .email-container, .profile-container {
+    .form-field, .message-textarea, .button-primary, .button-primary-save, .button-disabled {
         font-size: 25px;
     }
     
     .form-field {
-        height: 75px;
+        height: 65px;
     }
-    
+
+    .settings-button {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        text-align: center;
+    }
+
     .message-textarea {
-        height: 149px;
+        height: 150px;
     }
-    
-    .email-container, .profile-container {
-        // gap: 15px;
-    }
-    
-    .email-span, .profile-span {
-        margin-top: -17px;
-    }
-    
-    .timezone-settings {
-        margin: auto;
-        justify-content: center;
-        align-items: center;
+
+    form.widget-container {
+        padding-bottom: 10px;
     }
     
     .button-primary-save, .button-disabled {
-        margin: auto;
         margin-top: 10px;
-        display: flex;
-        // width: 45%;
     }
     
-    
+    .switch-light.switch-ios strong {
+        font-size: 16px;
+        flex-basis: 250px;
+    }
     
     
     }
