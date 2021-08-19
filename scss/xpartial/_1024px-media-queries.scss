@@ -1,318 +1,322 @@
-// // /* ============================================= */
-// // /*              @Media Breakpoints               */
-// // /* ============================================= */
+// /* ============================================= */
+// /*              @Media Breakpoints               */
+// /* ============================================= */
 
 @media only screen and (min-width: 1024px) {
 
-    // //===============================================
-    // //Groups Font's
-    
-    .traffic-label, .sm-user-label, .daily-label, .member-label, .message-label, .recent-label, .settings-label, .headline {
-        font-size: 40px;
-        color: black;
-      }
-    
-      .sm-user-label, .daily-label {
-        text-align: left;
-        margin: left;
-    
-      }
-      
-      .header-profile-name {
-        font-size: 28px;
-      }
-    
-      p.alert_banner {
-        font-size: 35px;
-      }
-    
-      .column-divider {
-        border-right: #b3b3b3 solid 1px;    
-    }
-    
-    //   //===============================================
-    
-    .grid {
-        grid-template-rows: 70px 1fr;
-        grid-template-columns: 70px 1fr;
-        grid-template-areas:
-            "header header"
-             "nav main";
-    }
-    
-    header {
-        background-color: $main-purple;
-        grid-area: header;
-    }
-    
-    nav {
-        background-color: $secondary-purple;
-        grid-area: nav;
-    }
-    
-    main {
-        background-color: $defult-white;
-        grid-area: main;
-    }
-    
-    
-    // //========================//
-    // // HEADER (FLEX) PROPERTIES //
-    // //========================//
-    // //(TITLE/BELL ICON/ BREAKLINE/ME)
-    
-    .header-container {
-        gap: unset;
-        padding: 0 10px;
-        width: 100%;
-    }
+  // ===============================================
+  // Groups Font's
 
-    a .bell-icon {
-        height: initial;
-    }
-    
-    .header-app-title {
-        font-size: 24px;
-    }
-      
-    .header-profile-name {
-        font-size: 20px;
-    }
-    
-    
-    .bell-icon {
-        width: 50px;
-        margin: auto;
-    }
-    
-    .notification .badge {
-        right: 10px;
-    }
-    
-    .header-me {
-        border: solid 1px $defult-white;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        align-items: center;
-        margin: auto;
-    }
-    
-    // // ============================================================
-    
-    // // MAIN (FLEX) PROPERTIES
-    // // SEARCH BAR/ALERT PART
-    // //(MAIN HEADER / ALERT)
-    
-    
-    .alert {
-        display: flex;
-        width: 80%;
-        flex-basis: 100%;
-        justify-content: space-between;
-    }
-    
-    .alert-banner {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-    
-    
-    // // ============================================================
-    // // SECTION (FLEX) PROPERTIES
-    // //TRAFFIC-HEADER/CHART-1-CONTAINER-FULL/DAILY/SM-USER-LABEL/CHART-3-CONTAINER-FULL)
-    
-    // //TRAFFIC NAVIGATION SECTIONS
-    
-    .traffic-header {
-        display: flex;
-        flex-direction: row;
-        flex-basis: 100%;
-        justify-content: space-between;
-    }
-    
-    .traffic-nav {
-        gap: 20px;
-        font-size: 28px;    
-    }
+  .traffic-label,
+  .sm-user-label,
+  .daily-label,
+  .member-label,
+  .message-label,
+  .recent-label,
+  .settings-label,
+  .headline {
+    font-size: 30px;
+    color: black;
+  }
 
-    .members-group {
-        gap: unset;
-    }
+  .settings-label {
+    margin-top: 0;
+  }
 
-    .members-flex-container + hr {
-        display: none;
-    }
+  .sm-user-label,
+  .daily-label {
+    text-align: left;
+    margin: left;
 
-    
-    // // ============================================================
-    // // SECTION (FLEX) PROPERTIES
-    // //Charts
-    
-    .chart-2-main, .chart-3-main {
-        flex-basis: 50%;
-        justify-content: center;
-        margin: auto; 
-    }
-    
-    // // // =========================================
-    // // ASIDE (FLEX) PROPERTIES
-    // //SOCIAL FACT SECTIONS
-    // //(SOCIAL-GROUP/MEMBERS/RECENT-ACTIVITY/MESSAGE/SETTINGS)
-    
-    .social-group {
-        justify-content: space-around;
-    }
+  }
 
-    .social-text {
-        padding-right: 25px;
-        padding-left: 12px;  
+  .header-profile-name {
+    font-size: 28px;
+  }
 
-    }
-    
-    .social-image {
-        height: 45px;
-        width: 45px;
-        margin-top: 17px;
-    }
-      
-    .social-border {
-        width: 80px;
-        height: 80px;
-        margin-left: 2px;
-        padding-left: 17px;
-        padding-right: 17px;
-        
-    }
-    
-      .platform { 
-        font-size: 25px;
-        margin-bottom: -25px;
-        margin-right: 25px;
-        margin-left: 5px;   
-    }
-        
-    .stat-number {
-        font-size: 40px;
-        color: grey; 
-        margin-top: 20px;
-        margin-bottom: 10px;
-        margin-right: 20px;
-        margin-left: 5px;
-    }
-        
-    // // MEMBERS SECTIONS
-    // //(PROFILE-IMAGE/MEMEBRS-TEXT/PROFILE-NAME/PROFILE-EMAIL-PROFILE-BIRTH)
+  p.alert_banner {
+    font-size: 35px;
+  }
 
-    .members-recent-flow-container {
-        display: flex;
-        flex-direction: row;
-    }
-    
-    a.profile-email {
-        font-size: 15px;
-    }
-    
-    .profile-birth {
-        font-size: 15px;
-    }
-    
-    // //============== RECENT ==============
-    .members-flex-container,
-    .recent-flex-container,
-    .message-container,
-    .settings {
-        flex-basis: 50%;
-    }
-    
-    .recent-activity-group {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    
-    .recent-arrow {
-        padding-right: 5px;
-    }
-    
-    // // ========
-    
-    .profile-image {
-        width: 80px;
-        height: 80px;
-        margin: 0;
-        margin-left: 5px;
-      }
-    
-    .profile-birth {
-        margin: 0;
-        justify-content: end;
-    }
-     
-    a.profile-email, .profile-birth, .profile-name {
-        font-size: 25px;
-    }
-    
-    a.profile-email {
-        font-size: 20px;
-    }
-    
-    .profile-birth {
-        font-size: 20px;
-    }
-    
-    // //Message /Settigns 
-    
-    .message-setting-flow-container {
-        display: flex;
-        flex-direction: row;
-    }
+  .column-divider {
+    border-right: #b3b3b3 solid 1px;
+  }
 
-    .settings {
-        display: flex;
-        margin: auto;
-    
-    }
-    
-    label {
-        display: flex;
-        flex-direction: row;
+  //   //===============================================
+
+  .grid {
+    grid-template-rows: 70px 1fr;
+    grid-template-columns: 70px 1fr;
+    grid-template-areas:
+      "header header"
+      "nav main";
+  }
+
+  header {
+    background-color: $main-purple;
+    grid-area: header;
+  }
+
+  nav {
+    background-color: $secondary-purple;
+    grid-area: nav;
+  }
+
+  main {
+    background-color: $defult-white;
+    grid-area: main;
+  }
+
+
+  // ========================//
+  // HEADER (FLEX) PROPERTIES //
+  // ========================//
+  // (TITLE/BELL ICON/ BREAKLINE/ME)
+
+  .header-container {
+    gap: unset;
+    padding: 0 10px;
+    width: 100%;
+  }
+
+  .header-app-title {
+    font-size: 28px;
+  }
+
+  .header-profile-name {
+    font-size: 20px;
+  }
+
+  .header-me {
+    border: solid 1px $defult-white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    margin: auto;
+  }
+
+  // ============================================================
+
+  // MAIN (FLEX) PROPERTIES
+  // SEARCH BAR/ALERT PART
+  // (MAIN HEADER / ALERT)
+
+
+  .alert {
+    display: flex;
+    width: 80%;
+    flex-basis: 100%;
+    justify-content: space-between;
+  }
+
+  .alert-banner {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+
+  // ============================================================
+  // SECTION (FLEX) PROPERTIES
+  // TRAFFIC-HEADER/CHART-1-CONTAINER-FULL/DAILY/SM-USER-LABEL/CHART-3-CONTAINER-FULL)
+
+  // TRAFFIC NAVIGATION SECTIONS
+
+  .traffic-header {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    justify-content: space-between;
+  }
+
+  .traffic-nav {
+    font-size: 20px;
+  }
+
+  .members-group {
+    gap: unset;
+  }
+
+  .members-flex-container+hr {
+    display: none;
+  }
+
+
+  // ============================================================
+  // SECTION (FLEX) PROPERTIES
+  // Charts
+
+  .chart-2-main,
+  .chart-3-main {
+    flex-basis: 50%;
+    justify-content: center;
+    margin: auto;
+  }
+
+  //  =========================================
+  // ASIDE (FLEX) PROPERTIES
+  // SOCIAL FACT SECTIONS
+  // (SOCIAL-GROUP/MEMBERS/RECENT-ACTIVITY/MESSAGE/SETTINGS)
+
+  .social-group {
+    justify-content: space-around;
+  }
+
+  .social-text {
+    padding-right: 25px;
+    padding-left: 12px;
+
+  }
+
+  .social-image {
+    height: 45px;
+    width: 45px;
+    margin-top: 17px;
+  }
+
+  .social-border {
+    width: 80px;
+    height: 80px;
+    margin-left: 2px;
+    padding-left: 17px;
+    padding-right: 17px;
+
+  }
+
+  .platform {
+    font-size: 25px;
+    margin-bottom: -25px;
+    margin-right: 25px;
+    margin-left: 5px;
+  }
+
+  .stat-number {
+    font-size: 40px;
+    color: grey;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    margin-left: 5px;
+  }
+
+  // MEMBERS SECTIONS
+  // (PROFILE-IMAGE/MEMEBRS-TEXT/PROFILE-NAME/PROFILE-EMAIL-PROFILE-BIRTH)
+
+  .members-recent-flow-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  a.profile-email {
+    font-size: 15px;
+  }
+
+  .profile-birth {
+    font-size: 15px;
+  }
+
+  // ============== RECENT ==============
+  .members-flex-container,
+  .recent-flex-container,
+  .message-container,
+  .settings {
+    flex-basis: 50%;
+  }
+
+  .recent-activity-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .recent-arrow {
+    padding-right: 5px;
+  }
+
+  // ========
+
+  .profile-image {
+    width: 80px;
+    height: 80px;
+    margin: 0;
+  }
+
+  .profile-birth {
+    margin: 0;
+    justify-content: end;
+  }
+
+  a.profile-email,
+  .profile-birth,
+  .profile-name {
+    font-size: 25px;
+  }
+
+  a.profile-email {
+    font-size: 20px;
+  }
+
+  .profile-birth {
+    font-size: 20px;
+  }
+
+  // Message /Settigns 
+
+  .message-setting-flow-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .settings {
+    display: flex;
+    margin: auto;
+
+  }
+
+  label {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .notifcation-settings {
+    gap: 30px;
+  }
+
+  .form-field,
+  .message-textarea,
+  .button-primary,
+  .button-primary-save,
+  .button-disabled {
+    font-size: 25px;
+  }
+
+  .form-field {
+    height: 63px;
+  }
+
+  .settings-button {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    text-align: center;
+  }
+
+  .message-textarea {
+    height: 150px;
+  }
+
+  form.widget-container {
+    padding-bottom: 10px;
+  }
+
+  .button-primary-save,
+  .button-disabled {
+    margin-top: 10px;
+  }
+
+  .switch-light.switch-ios strong {
+    font-size: 16px;
+    flex-basis: 250px;
+  }
+
+
 }
-
-    .notifcation-settings {
-        gap: 30px;
-    }
-    
-    .form-field, .message-textarea, .button-primary, .button-primary-save, .button-disabled {
-        font-size: 25px;
-    }
-    
-    .form-field {
-        height: 65px;
-    }
-
-    .settings-button {
-        margin-bottom: 0;
-        padding-bottom: 0;
-        text-align: center;
-    }
-
-    .message-textarea {
-        height: 150px;
-    }
-
-    form.widget-container {
-        padding-bottom: 10px;
-    }
-    
-    .button-primary-save, .button-disabled {
-        margin-top: 10px;
-    }
-    
-    .switch-light.switch-ios strong {
-        font-size: 16px;
-        flex-basis: 250px;
-    }
-    
-    
-    }

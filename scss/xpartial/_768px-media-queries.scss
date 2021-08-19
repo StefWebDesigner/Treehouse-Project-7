@@ -2,384 +2,401 @@
 // /*              @Media Breakpoints                      */
 // /* ============================================= */
 
-// // ============================
+// ============================
 
 @media only screen and (min-width: 768px) {
 
-    // // General Font Styles
-        .traffic-label, .headline, .sm-user-label, .daily-label, .member-label, .message-label, .recent-label, .settings-label {
-            font-size: 22px;
-        }
-        
-    // GENERAL STUFF
-    
-        .column-divider-chart-2 {
-            border-right: #b3b3b3 solid 1px;
-        }
-    
-    .grid {
-        grid-template-rows: 50px 1fr;
-        grid-template-columns: 50px 1fr;
-        grid-template-areas:
-            "header header"
-             "nav main";
-    }
-    
-    header {
-        background-color: $main-purple;
-        grid-area: header;
-    }
-    
-    nav {
-        background-color: $secondary-purple;
-        grid-area: nav;
-    }
-    
-    main {
-        background-color: $defult-white;
-        grid-area: main;
-    }
-    
-    // //========================//
-    // // HEADER (FLEX) PROPERTIES //
-    // //========================//
-    // //(TITLE/BELL ICON/ BREAKLINE/ME)
-    
-    
-    .header-container {
-        justify-content: space-between;
-        gap: 450px;
-    }
-      
-    .header-offset {
-        flex-grow: .1;
-    }
-    
-    a .bell-icon {
-        height: 70%;
-        position:relative;
-        top: 15px;
-    }
-    
-    .header-profile-name {
-        font-size: 20px;
-    }
-    
-    // // ============================================================
-    
-    // HOME NAVIGATIONS FLEX
-    // (NAV - HOME/BAR/MEMEBERS/SETTINGS)
-    
-    nav {
-        flex-direction: column;
-        justify-content: start; 
-    }
-    
-    .nav-container {
-        width: 50px;
-        flex-direction: column;
-        height: 100px;
-        gap: -30px;
-    }
-    
-    nav svg {
-        height: 50px;
-    }
-    
-    // // ============================================================
-    // // MAIN (FLEX) PROPERTIES
-    
-    // // SEARCH BAR/ALERT PART
-    // //(MAIN HEADER / ALERT)
-    
-    .main-header {
-        justify-content: start;
-    }
-    
-    .alert {
-        display: flex;
-        width: 90%;
-    }
-    
-    .alert-banner {
-        display: flex;
-        padding-top: 15px;
-        padding-bottom: 15px;
-    }
-    
-    // // ============================================================
-    // // SECTION (FLEX) PROPERTIES
-    // //TRAFFIC-HEADER/CHART-1-CONTAINER-FULL/DAILY/SM-USER-LABEL/CHART-3-CONTAINER-FULL)
-    
-    // //TRAFFIC NAVIGATION SECTIONS
-    
-    .traffic-header {
-        display: flex;
-        flex-direction: row;
-        flex-basis: 100%;
-        justify-content: space-between;
-        gap: 350px;
-    }
-    
-    .traffic-label {
-        display: flex;
-        justify-content: start;
-    }
-    
-    .traffic-nav {
-        display: flex;
-        justify-content: end;
-        gap: 20px;
-        
-    }
+  // General Font Styles
+  .traffic-label,
+  .headline,
+  .sm-user-label,
+  .daily-label,
+  .member-label,
+  .message-label,
+  .recent-label,
+  .settings-label {
+    font-size: 22px;
+  }
 
-    // // ---------------------------------------------------------------
-    
-    // //CHART 2 SECTIONS
-    // //(DAILY-LABEL/CHART-2-CONTAINER-FULL)
-    
-    .chart2-3-flow-container {
-        flex-direction: row;
-        gap: unset;
-    }
-    
-    .daily-label, .sm-user-label {
-        text-align: left;
-    }
+  // GENERAL STUFF
 
-    // // // =========================================
-    // // ASIDE (FLEX) PROPERTIES
-    // //SOCIAL FACT SECTIONS
-    // //(SOCIAL-GROUP/MEMBERS/RECENT-ACTIVITY/MESSAGE/SETTINGS)
-    
-    .social-flex-parent {
-        flex-direction: row;
-    }
-    
-    .social-group {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        gap: 28px;
-    }
+  .column-divider-chart-2 {
+    border-right: #b3b3b3 solid 1px;
+  }
 
-    .social-text {
-        padding-right: 8px;
-        padding-left: 8px;  
-    }
+  .grid {
+    grid-template-rows: 70px 1fr;
+    grid-template-columns: 70px 1fr;
+    grid-template-areas:
+      "header header"
+      "nav main";
+  }
 
-    .social-border {
-        margin-left: 10px;
-        margin-right: 10px;
-        padding-left: 10px;
-        padding-right: 10px;
-        
-    }
+  header {
+    background-color: $main-purple;
+    grid-area: header;
+  }
 
-    // // ---------------------------------------------------------------
-    
-    // // MEMBERS SECTIONS
-    // // //(PROFILE-IMAGE/MEMEBRS-TEXT/PROFILE-NAME/PROFILE-EMAIL-PROFILE-BIRTH)
-    
-    .members-text, .profile-name, .profile-birth {
-        font-size: 15px;
-    }
-    
-    .members-flex-container {
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-    
-    .members-container {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .members-group {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 45px;     
-    }
-    
-    .members--profile-email-group {
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
-    }
-    
-    .name-email-group {
-        margin: left;
-        justify-content: center;
-    }
-    
-    .profile-name, .profile-email {
-        text-align: left;
-        margin: 0;    
-    }
-    
-    .members--birth-group {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .profile-image {
-        width: 100px;
-        height: 100px;
-        margin: 0;
-        display: flex;
-      }
-    
-    .profile-birth {
+  nav {
+    background-color: $secondary-purple;
+    grid-area: nav;
+  }
+
+  main {
+    background-color: $defult-white;
+    grid-area: main;
+  }
+
+  .header-container {
+    justify-content: space-between;
+  }
+
+  .header-offset>*:not(.notification) {
+    margin: auto 0px auto 20px;
+  }
+
+  .header-app-title {
+    font-size: 24px;
+  }
+
+  a .bell-icon {
+    height: 70%;
+    position: relative;
+    top: 10px;
+  }
+
+  .header-profile-name {
+    font-size: 20px;
+  }
+
+  // ============================================================
+
+  // HOME NAVIGATIONS FLEX
+  // (NAV - HOME/BAR/MEMEBERS/SETTINGS)
+
+  nav {
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  .nav-container {
+    padding-top: 20px;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  nav svg {
+    height: 50px;
+  }
+
+  // ============================================================
+  // MAIN (FLEX) PROPERTIES
+
+  // SEARCH BAR/ALERT PART
+  // //(MAIN HEADER / ALERT)
+
+  .main-header {
+    justify-content: start;
+  }
+
+  .alert {
     display: flex;
-    }
-     
-    a.profile-email, .profile-birth, .profile-name {
-        font-size: 25px;
-    }
-    
-    .profile-birth {
-        padding-right: 30px;
-    
-    }
-    
-    // // ---------------------------------------------------------------
-    // // RECENT ACTIVITY SECTIONS
-    
-    
-    .recent--tracker-comment, .recent--tracker-date {
-        font-size: 15px;
-    }
-    
-    .recent-flex-container {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    
-    }
-    
-    .recent-activity-container {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .recent-activity-group {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between; 
-        gap: 60px;     
-     
-    }
-    
-    .recent--profile-comment-group {
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
-    }
-    
-    .recent--comment-date-group {
-        margin: left;
-        justify-content: center;
-    }
-    
-    .recent--tracker-comment, .recent--tracker-date {
-        text-align: left;
-        margin: 0;    
-    }
-    
-    .recent--arrow-group {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .recent-arrow {
-        display: flex;
-        padding-right: 20px;
-    }
-    
-    // //============================ Message 
-    
-    .message-container {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .form-field, .message-textarea, .button-primary, .button-primary-save, .button-disabled {
-        font-size: 22px;
-    }
-    
-    input#userField {
-        width: 100%;
-        height: 75px;
-    }
-    
-    .message-textarea {
-        height: 149px;
-        text-align: center;
-        width: 100%;
-    }
-    
-     .alert-btn {
-        width: 85%;
-    }
-    // //====================== Settings
+    width: 90%;
+  }
 
-    .message-group {
-        padding: 0 10px;
-    }
-    
-    // //CHANGES AND OPERATES THE TIME OPTIONS
+  .alert-banner {
+    display: flex;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
 
-    .timezone-settings {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .strong-email, .strong-profile {
-        font-size: 25px;
-    }
-    
-    .button-primary-save, .button-disabled {
-        width: 45%;
-    }
-    
-    button.button-primary {
-        display: flex;
-        margin-top: 5px;
-        width: 89%;
-        margin-bottom: 10px;
-        margin: auto;
-        justify-content: center;
-        margin-top: 10px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
+  // ============================================================
+  // SECTION (FLEX) PROPERTIES
+  // //TRAFFIC-HEADER/CHART-1-CONTAINER-FULL/DAILY/SM-USER-LABEL/CHART-3-CONTAINER-FULL)
 
-.members-recent-flow-container * {
-    font-size: 16px !important;
-}
+  // //TRAFFIC NAVIGATION SECTIONS
 
-canvas {
-    max-width: 100%;
-}
-
-.social-fact-container {
-    flex-wrap: wrap;
-}
-
-.sm-user-label {
+  .traffic-header {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
     flex-basis: 100%;
-}
+    justify-content: space-between;
+  }
 
-.chart-2-main,
-.chart-3-main {
+  .traffic-label {
+    display: flex;
+    justify-content: start;
+  }
+
+  .traffic-nav {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+
+  }
+
+  // ---------------------------------------------------------------
+
+  // //CHART 2 SECTIONS
+  // //(DAILY-LABEL/CHART-2-CONTAINER-FULL)
+
+  .chart2-3-flow-container {
+    flex-direction: row;
+    gap: unset;
+  }
+
+  .daily-label,
+  .sm-user-label {
+    text-align: left;
+  }
+
+  // // =========================================
+  // ASIDE (FLEX) PROPERTIES
+  // //SOCIAL FACT SECTIONS
+  // //(SOCIAL-GROUP/MEMBERS/RECENT-ACTIVITY/MESSAGE/SETTINGS)
+
+  .social-flex-parent {
+    flex-direction: row;
+  }
+
+  .social-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .social-text {
+    width: 30.333%;
+  }
+
+  .social-text+.social-text {
+    margin-top: 0;
+  }
+
+  .social-border {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+  }
+
+  // ---------------------------------------------------------------
+
+  // MEMBERS SECTIONS
+  //(PROFILE-IMAGE/MEMEBRS-TEXT/PROFILE-NAME/PROFILE-EMAIL-PROFILE-BIRTH)
+
+  .members-text,
+  .profile-name,
+  .profile-birth {
+    font-size: 15px;
+  }
+
+  .members-flex-container {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .members-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .members-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .members--profile-email-group {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .name-email-group {
+    margin: left;
+    justify-content: center;
+  }
+
+  .profile-name,
+  .profile-email {
+    text-align: left;
+    margin: 0;
+  }
+
+  .members--birth-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profile-image {
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    display: flex;
+  }
+
+  .profile-birth {
+    display: flex;
+  }
+
+  a.profile-email,
+  .profile-birth,
+  .profile-name {
+    font-size: 25px;
+  }
+
+  // ---------------------------------------------------------------
+  // RECENT ACTIVITY SECTIONS
+
+
+  .recent--tracker-comment,
+  .recent--tracker-date {
+    font-size: 15px;
+  }
+
+  .recent-flex-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+  }
+
+  .recent-activity-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .recent-activity-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 60px;
+
+  }
+
+  .recent--profile-comment-group {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .recent--comment-date-group {
+    margin: left;
+    justify-content: center;
+  }
+
+  .recent--tracker-comment,
+  .recent--tracker-date {
+    text-align: left;
+    margin: 0;
+  }
+
+  .recent--arrow-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .recent-arrow {
+    display: flex;
+  }
+
+  // //============================ Message 
+
+  .message-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-field,
+  .message-textarea,
+  .button-primary,
+  .button-primary-save,
+  .button-disabled {
+    font-size: 22px;
+  }
+
+  input#userField {
+    width: 100%;
+    height: 75px;
+  }
+
+  .members-group,
+  .recent-activity-group,
+  .widget-container {
+    padding: 0 10px;
+  }
+
+  .message-textarea {
+    height: 149px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .alert-btn {
+    width: 85%;
+  }
+
+  // //====================== Settings
+
+  // //CHANGES AND OPERATES THE TIME OPTIONS
+
+  .timezone-settings {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .strong-email,
+  .strong-profile {
+    font-size: 25px;
+  }
+
+  .button-primary-save,
+  .button-disabled {
+    width: 45%;
+  }
+
+  button.button-primary {
+    display: flex;
+    margin-top: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+    margin: auto;
+    justify-content: center;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .members-recent-flow-container * {
+    font-size: 16px !important;
+  }
+
+  canvas {
+    max-width: 100%;
+  }
+
+  .social-fact-container {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .sm-user-label {
+    flex-basis: 100%;
+  }
+
+  .chart-2-main,
+  .chart-3-main {
     width: 50%;
-}
+  }
 
-h3 {
+  h3 {
     font-size: 20px !important;
-}
-    
+  }
+
 }

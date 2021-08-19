@@ -24,7 +24,7 @@ h1, h3, p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 15px;
+  font-size: 14px;
   color: white;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -116,7 +116,10 @@ a:link {
   text-decoration: none !important;
 }
 
-body, main, nav, header {
+body,
+main,
+nav,
+header {
   background-color: #eee;
 }
 
@@ -133,10 +136,11 @@ hr {
 }
 
 .notification .badge {
+  font-size: 10px;
   position: absolute;
-  top: 5px;
-  right: -18px;
-  padding: 5px 10px;
+  top: 10px;
+  right: -6px;
+  padding: 3px 6px;
   border-radius: 50%;
   background: green;
   color: white;
@@ -170,11 +174,15 @@ hr {
   cursor: pointer;
 }
 
-.active {
+#traffic_nav li {
+  background-color: transparent;
+  padding: 5px;
+}
+
+#traffic_nav li.active {
   background-color: green;
   border-radius: 5px;
   color: white;
-  padding: 5px;
 }
 
 .alert-btn {
@@ -203,7 +211,7 @@ button.button-primary {
   display: -ms-flexbox;
   display: flex;
   margin-top: 5px;
-  width: 89%;
+  width: 100%;
   margin-bottom: 10px;
   margin: auto;
   -webkit-box-pack: center;
@@ -222,7 +230,7 @@ button.button-primary {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 10px;
-  margin: 10px 0;
+  margin: 20px 0 10px 0;
 }
 
 .button-primary-save, .button-disabled {
@@ -368,16 +376,7 @@ nav {
 }
 
 .main-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  gap: 7px;
+  padding: 10px;
 }
 
 .traffic {
@@ -403,7 +402,7 @@ nav {
           justify-content: space-evenly;
   text-decoration: none;
   list-style: none;
-  margin: auto;
+  margin: auto 5px;
 }
 
 .chart-1-main {
@@ -501,9 +500,6 @@ nav {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .social-fact-container {
@@ -523,56 +519,29 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: 10px 0 20px 0;
   width: 90%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-preferred-size: 260px;
-      flex-basis: 260px;
-}
-
-.social-group:last-child {
-  margin-top: 10px;
-}
-
-.social-group:last-child {
-  margin-bottom: 10px;
 }
 
 .social-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   border: solid 1px grey;
   border-radius: 10px;
-  padding-right: 50px;
   background-color: #e0e0eb;
 }
 
-.social-border {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-}
-
-.social-stat {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+.social-text + .social-text {
+  margin-top: 20px;
 }
 
 .members-recent-flow-container {
@@ -646,7 +615,8 @@ div.recent--comment-date-group {
   gap: -25px;
 }
 
-.recent--tracker-comment, .recent--tracker-date {
+.recent--tracker-comment,
+.recent--tracker-date {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -777,7 +747,8 @@ a .bell-icon {
   top: 18px;
 }
 
-.bell-icon, nav svg {
+.bell-icon,
+nav svg {
   -webkit-transition: .3s ease-out;
   transition: .3s ease-out;
   width: 2rem;
@@ -785,7 +756,9 @@ a .bell-icon {
   margin: auto;
 }
 
-.bell-icon:hover, .bell-icon:focus, nav svg:hover, nav svg:focus {
+.bell-icon:hover, .bell-icon:focus,
+nav svg:hover,
+nav svg:focus {
   -webkit-animation: bellshake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
           animation: bellshake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   -webkit-backface-visibility: hidden;
@@ -896,13 +869,11 @@ nav a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: auto;
+  margin: auto 15px;
+  border-radius: 50%;
   border: solid 1px #7577bf;
-  border-radius: 70px;
   background-color: #7577bf;
   height: 55px;
-  padding-left: 5px;
-  padding-right: 5px;
   -ms-flex-preferred-size: 55px;
       flex-basis: 55px;
 }
@@ -927,6 +898,10 @@ nav a {
   color: white;
 }
 
+.widget-container {
+  padding: 0 10px;
+}
+
 .form-field, .message-textarea {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -934,11 +909,12 @@ nav a {
   margin: auto;
   height: 50px;
   text-align: center;
-  width: 89%;
+  width: 100%;
   background-color: #e0e0eb;
   border: 1px solid #7577bf;
   border-radius: 5px;
   margin-top: 10px;
+  padding: 10px;
 }
 
 .message-textarea {
@@ -964,22 +940,45 @@ select#timezone, option {
   padding-bottom: 10px;
 }
 
+::-webkit-input-placeholder {
+  text-align: left;
+}
+
+:-ms-input-placeholder {
+  text-align: left;
+}
+
+::-ms-input-placeholder {
+  text-align: left;
+}
+
+::placeholder {
+  text-align: left;
+}
+
 canvas {
   max-width: 100%;
 }
 
 @media only screen and (min-width: 768px) {
-  .traffic-label, .headline, .sm-user-label, .daily-label, .member-label, .message-label, .recent-label, .settings-label {
+  .traffic-label,
+  .headline,
+  .sm-user-label,
+  .daily-label,
+  .member-label,
+  .message-label,
+  .recent-label,
+  .settings-label {
     font-size: 22px;
   }
   .column-divider-chart-2 {
     border-right: #b3b3b3 solid 1px;
   }
   .grid {
-    -ms-grid-rows: 50px 1fr;
-        grid-template-rows: 50px 1fr;
-    -ms-grid-columns: 50px 1fr;
-        grid-template-columns: 50px 1fr;
+    -ms-grid-rows: 70px 1fr;
+        grid-template-rows: 70px 1fr;
+    -ms-grid-columns: 70px 1fr;
+        grid-template-columns: 70px 1fr;
         grid-template-areas: "header header" "nav main";
   }
   header {
@@ -1005,17 +1004,17 @@ canvas {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    gap: 450px;
   }
-  .header-offset {
-    -webkit-box-flex: .1;
-        -ms-flex-positive: .1;
-            flex-grow: .1;
+  .header-offset > *:not(.notification) {
+    margin: auto 0px auto 20px;
+  }
+  .header-app-title {
+    font-size: 24px;
   }
   a .bell-icon {
     height: 70%;
     position: relative;
-    top: 15px;
+    top: 10px;
   }
   .header-profile-name {
     font-size: 20px;
@@ -1030,13 +1029,12 @@ canvas {
             justify-content: start;
   }
   .nav-container {
-    width: 50px;
+    padding-top: 20px;
+    width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 100px;
-    gap: -30px;
   }
   nav svg {
     height: 50px;
@@ -1060,6 +1058,7 @@ canvas {
     padding-bottom: 15px;
   }
   .traffic-header {
+    margin-top: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1072,7 +1071,6 @@ canvas {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    gap: 350px;
   }
   .traffic-label {
     display: -webkit-box;
@@ -1098,7 +1096,8 @@ canvas {
             flex-direction: row;
     gap: unset;
   }
-  .daily-label, .sm-user-label {
+  .daily-label,
+  .sm-user-label {
     text-align: left;
   }
   .social-flex-parent {
@@ -1118,11 +1117,13 @@ canvas {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    gap: 28px;
+    width: 100%;
   }
   .social-text {
-    padding-right: 8px;
-    padding-left: 8px;
+    width: 30.333%;
+  }
+  .social-text + .social-text {
+    margin-top: 0;
   }
   .social-border {
     margin-left: 10px;
@@ -1130,7 +1131,9 @@ canvas {
     padding-left: 10px;
     padding-right: 10px;
   }
-  .members-text, .profile-name, .profile-birth {
+  .members-text,
+  .profile-name,
+  .profile-birth {
     font-size: 15px;
   }
   .members-flex-container {
@@ -1162,7 +1165,6 @@ canvas {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    gap: 45px;
   }
   .members--profile-email-group {
     display: -webkit-box;
@@ -1180,7 +1182,8 @@ canvas {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .profile-name, .profile-email {
+  .profile-name,
+  .profile-email {
     text-align: left;
     margin: 0;
   }
@@ -1208,13 +1211,13 @@ canvas {
     display: -ms-flexbox;
     display: flex;
   }
-  a.profile-email, .profile-birth, .profile-name {
+  a.profile-email,
+  .profile-birth,
+  .profile-name {
     font-size: 25px;
   }
-  .profile-birth {
-    padding-right: 30px;
-  }
-  .recent--tracker-comment, .recent--tracker-date {
+  .recent--tracker-comment,
+  .recent--tracker-date {
     font-size: 15px;
   }
   .recent-flex-container {
@@ -1265,7 +1268,8 @@ canvas {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .recent--tracker-comment, .recent--tracker-date {
+  .recent--tracker-comment,
+  .recent--tracker-date {
     text-align: left;
     margin: 0;
   }
@@ -1284,7 +1288,6 @@ canvas {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding-right: 20px;
   }
   .message-container {
     display: -webkit-box;
@@ -1295,12 +1298,21 @@ canvas {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .form-field, .message-textarea, .button-primary, .button-primary-save, .button-disabled {
+  .form-field,
+  .message-textarea,
+  .button-primary,
+  .button-primary-save,
+  .button-disabled {
     font-size: 22px;
   }
   input#userField {
     width: 100%;
     height: 75px;
+  }
+  .members-group,
+  .recent-activity-group,
+  .widget-container {
+    padding: 0 10px;
   }
   .message-textarea {
     height: 149px;
@@ -1309,9 +1321,6 @@ canvas {
   }
   .alert-btn {
     width: 85%;
-  }
-  .message-group {
-    padding: 0 10px;
   }
   .timezone-settings {
     display: -webkit-box;
@@ -1322,10 +1331,12 @@ canvas {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .strong-email, .strong-profile {
+  .strong-email,
+  .strong-profile {
     font-size: 25px;
   }
-  .button-primary-save, .button-disabled {
+  .button-primary-save,
+  .button-disabled {
     width: 45%;
   }
   button.button-primary {
@@ -1333,7 +1344,7 @@ canvas {
     display: -ms-flexbox;
     display: flex;
     margin-top: 5px;
-    width: 89%;
+    width: 100%;
     margin-bottom: 10px;
     margin: auto;
     -webkit-box-pack: center;
@@ -1352,6 +1363,7 @@ canvas {
   .social-fact-container {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    width: 100%;
   }
   .sm-user-label {
     -ms-flex-preferred-size: 100%;
@@ -1367,11 +1379,22 @@ canvas {
 }
 
 @media only screen and (min-width: 1024px) {
-  .traffic-label, .sm-user-label, .daily-label, .member-label, .message-label, .recent-label, .settings-label, .headline {
-    font-size: 40px;
+  .traffic-label,
+  .sm-user-label,
+  .daily-label,
+  .member-label,
+  .message-label,
+  .recent-label,
+  .settings-label,
+  .headline {
+    font-size: 30px;
     color: black;
   }
-  .sm-user-label, .daily-label {
+  .settings-label {
+    margin-top: 0;
+  }
+  .sm-user-label,
+  .daily-label {
     text-align: left;
     margin: left;
   }
@@ -1415,21 +1438,11 @@ canvas {
     padding: 0 10px;
     width: 100%;
   }
-  a .bell-icon {
-    height: initial;
-  }
   .header-app-title {
-    font-size: 24px;
+    font-size: 28px;
   }
   .header-profile-name {
     font-size: 20px;
-  }
-  .bell-icon {
-    width: 50px;
-    margin: auto;
-  }
-  .notification .badge {
-    right: 10px;
   }
   .header-me {
     border: solid 1px white;
@@ -1471,8 +1484,7 @@ canvas {
             justify-content: space-between;
   }
   .traffic-nav {
-    gap: 20px;
-    font-size: 28px;
+    font-size: 20px;
   }
   .members-group {
     gap: unset;
@@ -1480,7 +1492,8 @@ canvas {
   .members-flex-container + hr {
     display: none;
   }
-  .chart-2-main, .chart-3-main {
+  .chart-2-main,
+  .chart-3-main {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
     -webkit-box-pack: center;
@@ -1563,7 +1576,6 @@ canvas {
     width: 80px;
     height: 80px;
     margin: 0;
-    margin-left: 5px;
   }
   .profile-birth {
     margin: 0;
@@ -1571,7 +1583,9 @@ canvas {
         -ms-flex-pack: end;
             justify-content: end;
   }
-  a.profile-email, .profile-birth, .profile-name {
+  a.profile-email,
+  .profile-birth,
+  .profile-name {
     font-size: 25px;
   }
   a.profile-email {
@@ -1607,11 +1621,15 @@ canvas {
   .notifcation-settings {
     gap: 30px;
   }
-  .form-field, .message-textarea, .button-primary, .button-primary-save, .button-disabled {
+  .form-field,
+  .message-textarea,
+  .button-primary,
+  .button-primary-save,
+  .button-disabled {
     font-size: 25px;
   }
   .form-field {
-    height: 65px;
+    height: 63px;
   }
   .settings-button {
     margin-bottom: 0;
@@ -1624,7 +1642,8 @@ canvas {
   form.widget-container {
     padding-bottom: 10px;
   }
-  .button-primary-save, .button-disabled {
+  .button-primary-save,
+  .button-disabled {
     margin-top: 10px;
   }
   .switch-light.switch-ios strong {
